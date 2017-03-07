@@ -16,6 +16,8 @@
 		4C53EC231E6DC7B400725AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C53EC221E6DC7B400725AF8 /* Assets.xcassets */; };
 		4C53EC261E6DC7B400725AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53EC241E6DC7B400725AF8 /* LaunchScreen.storyboard */; };
 		4C53EC311E6DC7B400725AF8 /* fundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC301E6DC7B400725AF8 /* fundsTests.m */; };
+		4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC401E6EFA2100725AF8 /* ApplicationAssembly.m */; };
+		4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC431E6F03EF00725AF8 /* TyphoonAppDelegate.m */; };
 		C296CC9E55F870E1A288A3B1 /* libPods-funds-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,10 @@
 		4C53EC2C1E6DC7B400725AF8 /* fundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53EC301E6DC7B400725AF8 /* fundsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fundsTests.m; sourceTree = "<group>"; };
 		4C53EC321E6DC7B400725AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C53EC3F1E6EFA2100725AF8 /* ApplicationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationAssembly.h; path = LaunchSystem/AppDelegates/ApplicationAssembly.h; sourceTree = "<group>"; };
+		4C53EC401E6EFA2100725AF8 /* ApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationAssembly.m; path = LaunchSystem/AppDelegates/ApplicationAssembly.m; sourceTree = "<group>"; };
+		4C53EC421E6F03EF00725AF8 /* TyphoonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TyphoonAppDelegate.h; path = LaunchSystem/AppDelegates/TyphoonAppDelegate.h; sourceTree = "<group>"; };
+		4C53EC431E6F03EF00725AF8 /* TyphoonAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TyphoonAppDelegate.m; path = LaunchSystem/AppDelegates/TyphoonAppDelegate.m; sourceTree = "<group>"; };
 		55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +101,7 @@
 		4C53EC121E6DC7B400725AF8 /* funds */ = {
 			isa = PBXGroup;
 			children = (
-				4C53EC161E6DC7B400725AF8 /* AppDelegate.h */,
-				4C53EC171E6DC7B400725AF8 /* AppDelegate.m */,
+				4C53EC3D1E6EF60200725AF8 /* LaunchSystem */,
 				4C53EC191E6DC7B400725AF8 /* ViewController.h */,
 				4C53EC1A1E6DC7B400725AF8 /* ViewController.m */,
 				4C53EC1C1E6DC7B400725AF8 /* Main.storyboard */,
@@ -124,6 +129,27 @@
 				4C53EC321E6DC7B400725AF8 /* Info.plist */,
 			);
 			path = fundsTests;
+			sourceTree = "<group>";
+		};
+		4C53EC3D1E6EF60200725AF8 /* LaunchSystem */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC3E1E6EF60D00725AF8 /* AppDelegates */,
+			);
+			name = LaunchSystem;
+			sourceTree = "<group>";
+		};
+		4C53EC3E1E6EF60D00725AF8 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC161E6DC7B400725AF8 /* AppDelegate.h */,
+				4C53EC171E6DC7B400725AF8 /* AppDelegate.m */,
+				4C53EC3F1E6EFA2100725AF8 /* ApplicationAssembly.h */,
+				4C53EC401E6EFA2100725AF8 /* ApplicationAssembly.m */,
+				4C53EC421E6F03EF00725AF8 /* TyphoonAppDelegate.h */,
+				4C53EC431E6F03EF00725AF8 /* TyphoonAppDelegate.m */,
+			);
+			name = AppDelegates;
 			sourceTree = "<group>";
 		};
 		5CA3E39E00CCCA2672461FFE /* Pods */ = {
@@ -349,9 +375,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */,
 				4C53EC1B1E6DC7B400725AF8 /* ViewController.m in Sources */,
 				4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */,
 				4C53EC211E6DC7B400725AF8 /* funds.xcdatamodeld in Sources */,
+				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
