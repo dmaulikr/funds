@@ -11,7 +11,7 @@ target 'funds' do
 
     # Navigation
     #pod 'RamblerSegues', '1.1.2'
-    #pod 'ViperMcFlurry', '1.5.2'
+    pod 'ViperMcFlurry'
 
     # Logging & crash reporting
     pod 'Fabric'
@@ -19,6 +19,7 @@ target 'funds' do
 
     # Other
     pod 'RamblerAppDelegateProxy', '0.0.3'
+    pod 'OCLogTemplate'
 
     # Unit tests dependencies
     target 'fundsTests' do

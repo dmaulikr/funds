@@ -18,6 +18,16 @@
 		4C53EC311E6DC7B400725AF8 /* fundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC301E6DC7B400725AF8 /* fundsTests.m */; };
 		4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC401E6EFA2100725AF8 /* ApplicationAssembly.m */; };
 		4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC431E6F03EF00725AF8 /* TyphoonAppDelegate.m */; };
+		4C53EC4B1E700F2400725AF8 /* AMFTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC4A1E700F2400725AF8 /* AMFTheme.m */; };
+		4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC4D1E7010D500725AF8 /* AMFThemeFactory.m */; };
+		4C53EC611E7039D500725AF8 /* AMFFlowModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC601E7039D500725AF8 /* AMFFlowModuleAssembly.m */; };
+		4C53EC701E704A6400725AF8 /* AMFFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC6F1E704A6400725AF8 /* AMFFlowViewController.m */; };
+		4C53EC771E7051F900725AF8 /* AMFFlowPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC761E7051F900725AF8 /* AMFFlowPresenter.m */; };
+		4C53EC7B1E70536000725AF8 /* AMFFlowIteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC7A1E70536000725AF8 /* AMFFlowIteractor.m */; };
+		4C53EC7E1E70548300725AF8 /* AMFFlowRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC7D1E70548300725AF8 /* AMFFlowRouter.m */; };
+		4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC821E705D1A00725AF8 /* AMFThemeAssembly.m */; };
+		4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */; };
+		4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC891E70700000725AF8 /* AMFDataSupplier.m */; };
 		C296CC9E55F870E1A288A3B1 /* libPods-funds-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +61,39 @@
 		4C53EC401E6EFA2100725AF8 /* ApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationAssembly.m; path = LaunchSystem/AppDelegates/ApplicationAssembly.m; sourceTree = "<group>"; };
 		4C53EC421E6F03EF00725AF8 /* TyphoonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TyphoonAppDelegate.h; path = LaunchSystem/AppDelegates/TyphoonAppDelegate.h; sourceTree = "<group>"; };
 		4C53EC431E6F03EF00725AF8 /* TyphoonAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TyphoonAppDelegate.m; path = LaunchSystem/AppDelegates/TyphoonAppDelegate.m; sourceTree = "<group>"; };
+		4C53EC491E700F2400725AF8 /* AMFTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFTheme.h; path = Themes/AMFTheme.h; sourceTree = "<group>"; };
+		4C53EC4A1E700F2400725AF8 /* AMFTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFTheme.m; path = Themes/AMFTheme.m; sourceTree = "<group>"; };
+		4C53EC4C1E7010D500725AF8 /* AMFThemeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFThemeFactory.h; path = Themes/AMFThemeFactory.h; sourceTree = "<group>"; };
+		4C53EC4D1E7010D500725AF8 /* AMFThemeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFThemeFactory.m; path = Themes/AMFThemeFactory.m; sourceTree = "<group>"; };
+		4C53EC4F1E70140400725AF8 /* funds-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "funds-prefix.pch"; sourceTree = "<group>"; };
+		4C53EC511E701B1700725AF8 /* AMFThemeable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFThemeable.h; path = Themes/AMFThemeable.h; sourceTree = "<group>"; };
+		4C53EC5F1E7039D500725AF8 /* AMFFlowModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowModuleAssembly.h; path = Viper/Flow/AMFFlowModuleAssembly.h; sourceTree = "<group>"; };
+		4C53EC601E7039D500725AF8 /* AMFFlowModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFFlowModuleAssembly.m; path = Viper/Flow/AMFFlowModuleAssembly.m; sourceTree = "<group>"; };
+		4C53EC641E703CF000725AF8 /* AMFDataSupplyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplyProtocol.h; path = DataSource/AMFDataSupplyProtocol.h; sourceTree = "<group>"; };
+		4C53EC681E7040AA00725AF8 /* AMFCurrencyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFCurrencyProtocol.h; path = DataSource/AMFCurrencyProtocol.h; sourceTree = "<group>"; };
+		4C53EC691E70418300725AF8 /* AMFWalletProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletProtocol.h; path = DataSource/AMFWalletProtocol.h; sourceTree = "<group>"; };
+		4C53EC6A1E70418300725AF8 /* AMFCashProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCashProtocol.h; path = DataSource/AMFCashProtocol.h; sourceTree = "<group>"; };
+		4C53EC6B1E7041F700725AF8 /* AMFCategoryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCategoryProtocol.h; path = DataSource/AMFCategoryProtocol.h; sourceTree = "<group>"; };
+		4C53EC6C1E70463D00725AF8 /* AMFCashPageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFCashPageProtocol.h; path = DataSource/AMFCashPageProtocol.h; sourceTree = "<group>"; };
+		4C53EC6D1E70490A00725AF8 /* AMFFlowViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowViewInput.h; path = Viper/Flow/AMFFlowViewInput.h; sourceTree = "<group>"; };
+		4C53EC6E1E704A6400725AF8 /* AMFFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowViewController.h; path = Viper/Flow/AMFFlowViewController.h; sourceTree = "<group>"; };
+		4C53EC6F1E704A6400725AF8 /* AMFFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFFlowViewController.m; path = Viper/Flow/AMFFlowViewController.m; sourceTree = "<group>"; };
+		4C53EC711E7050F800725AF8 /* AMFFlowViewOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFFlowViewOutput.h; path = Viper/Flow/AMFFlowViewOutput.h; sourceTree = "<group>"; };
+		4C53EC751E7051F900725AF8 /* AMFFlowPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowPresenter.h; path = Viper/Flow/AMFFlowPresenter.h; sourceTree = "<group>"; };
+		4C53EC761E7051F900725AF8 /* AMFFlowPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFFlowPresenter.m; path = Viper/Flow/AMFFlowPresenter.m; sourceTree = "<group>"; };
+		4C53EC781E70531900725AF8 /* AMFFlowInteractorInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFFlowInteractorInput.h; path = Viper/Flow/AMFFlowInteractorInput.h; sourceTree = "<group>"; };
+		4C53EC791E70536000725AF8 /* AMFFlowInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowInteractor.h; path = Viper/Flow/AMFFlowInteractor.h; sourceTree = "<group>"; };
+		4C53EC7A1E70536000725AF8 /* AMFFlowIteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFFlowIteractor.m; path = Viper/Flow/AMFFlowIteractor.m; sourceTree = "<group>"; };
+		4C53EC7C1E70548300725AF8 /* AMFFlowRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowRouter.h; path = Viper/Flow/AMFFlowRouter.h; sourceTree = "<group>"; };
+		4C53EC7D1E70548300725AF8 /* AMFFlowRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFFlowRouter.m; path = Viper/Flow/AMFFlowRouter.m; sourceTree = "<group>"; };
+		4C53EC7F1E70549B00725AF8 /* AMFFlowRouterInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFFlowRouterInput.h; path = Viper/Flow/AMFFlowRouterInput.h; sourceTree = "<group>"; };
+		4C53EC811E705D1A00725AF8 /* AMFThemeAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFThemeAssembly.h; path = Themes/AMFThemeAssembly.h; sourceTree = "<group>"; };
+		4C53EC821E705D1A00725AF8 /* AMFThemeAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFThemeAssembly.m; path = Themes/AMFThemeAssembly.m; sourceTree = "<group>"; };
+		4C53EC841E70663200725AF8 /* AMFDataSupplierAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplierAssembly.h; path = DataSource/AMFDataSupplierAssembly.h; sourceTree = "<group>"; };
+		4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFDataSupplierAssembly.m; path = DataSource/AMFDataSupplierAssembly.m; sourceTree = "<group>"; };
+		4C53EC871E706CAE00725AF8 /* AMFFlowInteractorOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFFlowInteractorOutput.h; path = Viper/Flow/AMFFlowInteractorOutput.h; sourceTree = "<group>"; };
+		4C53EC881E70700000725AF8 /* AMFDataSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplier.h; path = DataSource/AMFDataSupplier.h; sourceTree = "<group>"; };
+		4C53EC891E70700000725AF8 /* AMFDataSupplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFDataSupplier.m; path = DataSource/AMFDataSupplier.m; sourceTree = "<group>"; };
 		55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +144,9 @@
 		4C53EC121E6DC7B400725AF8 /* funds */ = {
 			isa = PBXGroup;
 			children = (
+				4C53EC631E703C8800725AF8 /* DataSource */,
+				4C53EC551E70349E00725AF8 /* Viper */,
+				4C53EC481E700EFB00725AF8 /* Themes */,
 				4C53EC3D1E6EF60200725AF8 /* LaunchSystem */,
 				4C53EC191E6DC7B400725AF8 /* ViewController.h */,
 				4C53EC1A1E6DC7B400725AF8 /* ViewController.m */,
@@ -118,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				4C53EC141E6DC7B400725AF8 /* main.m */,
+				4C53EC4F1E70140400725AF8 /* funds-prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,6 +197,123 @@
 				4C53EC431E6F03EF00725AF8 /* TyphoonAppDelegate.m */,
 			);
 			name = AppDelegates;
+			sourceTree = "<group>";
+		};
+		4C53EC481E700EFB00725AF8 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC491E700F2400725AF8 /* AMFTheme.h */,
+				4C53EC4A1E700F2400725AF8 /* AMFTheme.m */,
+				4C53EC4C1E7010D500725AF8 /* AMFThemeFactory.h */,
+				4C53EC4D1E7010D500725AF8 /* AMFThemeFactory.m */,
+				4C53EC511E701B1700725AF8 /* AMFThemeable.h */,
+				4C53EC811E705D1A00725AF8 /* AMFThemeAssembly.h */,
+				4C53EC821E705D1A00725AF8 /* AMFThemeAssembly.m */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
+		4C53EC551E70349E00725AF8 /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC5A1E70353900725AF8 /* Balance */,
+				4C53EC591E70353100725AF8 /* Wallet */,
+				4C53EC561E7034AF00725AF8 /* Flow */,
+			);
+			name = Viper;
+			sourceTree = "<group>";
+		};
+		4C53EC561E7034AF00725AF8 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC5F1E7039D500725AF8 /* AMFFlowModuleAssembly.h */,
+				4C53EC601E7039D500725AF8 /* AMFFlowModuleAssembly.m */,
+				4C53EC5B1E7038F300725AF8 /* View */,
+				4C53EC5C1E70390100725AF8 /* Interactor */,
+				4C53EC5D1E70390D00725AF8 /* Presenter */,
+				4C53EC5E1E70391E00725AF8 /* Router */,
+			);
+			name = Flow;
+			sourceTree = "<group>";
+		};
+		4C53EC591E70353100725AF8 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wallet;
+			sourceTree = "<group>";
+		};
+		4C53EC5A1E70353900725AF8 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Balance;
+			sourceTree = "<group>";
+		};
+		4C53EC5B1E7038F300725AF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC6D1E70490A00725AF8 /* AMFFlowViewInput.h */,
+				4C53EC6E1E704A6400725AF8 /* AMFFlowViewController.h */,
+				4C53EC6F1E704A6400725AF8 /* AMFFlowViewController.m */,
+				4C53EC711E7050F800725AF8 /* AMFFlowViewOutput.h */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C53EC5C1E70390100725AF8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC781E70531900725AF8 /* AMFFlowInteractorInput.h */,
+				4C53EC791E70536000725AF8 /* AMFFlowInteractor.h */,
+				4C53EC7A1E70536000725AF8 /* AMFFlowIteractor.m */,
+				4C53EC871E706CAE00725AF8 /* AMFFlowInteractorOutput.h */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		4C53EC5D1E70390D00725AF8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC751E7051F900725AF8 /* AMFFlowPresenter.h */,
+				4C53EC761E7051F900725AF8 /* AMFFlowPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		4C53EC5E1E70391E00725AF8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC7F1E70549B00725AF8 /* AMFFlowRouterInput.h */,
+				4C53EC7C1E70548300725AF8 /* AMFFlowRouter.h */,
+				4C53EC7D1E70548300725AF8 /* AMFFlowRouter.m */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		4C53EC631E703C8800725AF8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC801E70584700725AF8 /* protocols */,
+				4C53EC841E70663200725AF8 /* AMFDataSupplierAssembly.h */,
+				4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */,
+				4C53EC881E70700000725AF8 /* AMFDataSupplier.h */,
+				4C53EC891E70700000725AF8 /* AMFDataSupplier.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		4C53EC801E70584700725AF8 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC6C1E70463D00725AF8 /* AMFCashPageProtocol.h */,
+				4C53EC641E703CF000725AF8 /* AMFDataSupplyProtocol.h */,
+				4C53EC6A1E70418300725AF8 /* AMFCashProtocol.h */,
+				4C53EC691E70418300725AF8 /* AMFWalletProtocol.h */,
+				4C53EC681E7040AA00725AF8 /* AMFCurrencyProtocol.h */,
+				4C53EC6B1E7041F700725AF8 /* AMFCategoryProtocol.h */,
+			);
+			name = protocols;
 			sourceTree = "<group>";
 		};
 		5CA3E39E00CCCA2672461FFE /* Pods */ = {
@@ -375,11 +539,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */,
+				4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */,
+				4C53EC4B1E700F2400725AF8 /* AMFTheme.m in Sources */,
 				4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */,
+				4C53EC7B1E70536000725AF8 /* AMFFlowIteractor.m in Sources */,
 				4C53EC1B1E6DC7B400725AF8 /* ViewController.m in Sources */,
+				4C53EC7E1E70548300725AF8 /* AMFFlowRouter.m in Sources */,
+				4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */,
 				4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */,
+				4C53EC611E7039D500725AF8 /* AMFFlowModuleAssembly.m in Sources */,
 				4C53EC211E6DC7B400725AF8 /* funds.xcdatamodeld in Sources */,
+				4C53EC701E704A6400725AF8 /* AMFFlowViewController.m in Sources */,
 				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
+				4C53EC771E7051F900725AF8 /* AMFFlowPresenter.m in Sources */,
+				4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +690,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76ZPG43W79;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "funds/funds-prefix.pch";
 				INFOPLIST_FILE = funds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -530,6 +706,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76ZPG43W79;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "funds/funds-prefix.pch";
 				INFOPLIST_FILE = funds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

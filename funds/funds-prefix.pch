@@ -1,0 +1,14 @@
+//
+//  funds-prefix.pch
+//  funds
+//
+//  Created by Michael on 08.03.17.
+//  Copyright © 2017 micartu. All rights reserved.
+//
+
+#ifndef funds_prefix_h
+#define funds_prefix_h
+
+#import "OCLogTemplate.h"
+
+#endif /* funds_prefix_h */
