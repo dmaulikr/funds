@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="1801" y="495"/>
         </scene>
-        <!--View Controller-->
+        <!--Balance View Controller-->
         <scene sceneID="Pyh-eK-uem">
             <objects>
-                <viewController id="m7e-xl-LZD" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="m7e-xl-LZD" customClass="AMFBalanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Y3-iH-xYp"/>
                         <viewControllerLayoutGuide type="bottom" id="Yfa-Zo-0tR"/>
