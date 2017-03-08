@@ -34,6 +34,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EOM-lM-j1i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="AzW-N7-Z3H">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -50,7 +51,7 @@
         <!--wallet-->
         <scene sceneID="KST-Ag-Ir5">
             <objects>
-                <viewController id="5P9-re-tiw" userLabel="wallet" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="5P9-re-tiw" userLabel="wallet" customClass="AMFWalletViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GJ5-FP-Gg3"/>
                         <viewControllerLayoutGuide type="bottom" id="pg0-Uv-q4H"/>

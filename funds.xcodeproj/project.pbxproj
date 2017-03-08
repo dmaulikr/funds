@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AE5592E2B72094B800891E1 /* libPods-funds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51BF1C95C6D79DB02F11704 /* libPods-funds.a */; };
+		0BAF9A333F3614DDE6DD81DA /* AMFWalletViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */; };
 		4C53EC151E6DC7B400725AF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC141E6DC7B400725AF8 /* main.m */; };
 		4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC171E6DC7B400725AF8 /* AppDelegate.m */; };
 		4C53EC1B1E6DC7B400725AF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC1A1E6DC7B400725AF8 /* ViewController.m */; };
@@ -28,7 +29,16 @@
 		4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC821E705D1A00725AF8 /* AMFThemeAssembly.m */; };
 		4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */; };
 		4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC891E70700000725AF8 /* AMFDataSupplier.m */; };
+		4C53EC8D1E708BFB00725AF8 /* AMFWalletAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC8B1E708BFB00725AF8 /* AMFWalletAssembly.m */; };
+		4C53EC921E708C0900725AF8 /* AMFWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC901E708C0900725AF8 /* AMFWalletViewController.m */; };
+		4C53EC961E708C1600725AF8 /* AMFWalletPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC931E708C1600725AF8 /* AMFWalletPresenter.m */; };
+		4C53EC9B1E708C2500725AF8 /* AMFWalletInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC991E708C2500725AF8 /* AMFWalletInteractor.m */; };
+		4C53EC9F1E708C3300725AF8 /* AMFWalletRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC9D1E708C3300725AF8 /* AMFWalletRouter.m */; };
+		8DA2B21A228B50E9D851DEBE /* AMFWalletRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */; };
+		9FB0E5E36CCDD67F1BA82825 /* AMFWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */; };
+		A70B9CDF5731AFBF37A9AD90 /* AMFWalletInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */; };
 		C296CC9E55F870E1A288A3B1 /* libPods-funds-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */; };
+		CB53BC3311DB3251A3CC1FE8 /* AMFWalletPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletAssemblyTests.m; sourceTree = "<group>"; };
 		4553CD5A8CD6D4B4AC51A222 /* Pods-funds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds/Pods-funds.debug.xcconfig"; sourceTree = "<group>"; };
 		4C53EC101E6DC7B400725AF8 /* funds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53EC141E6DC7B400725AF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,9 +105,30 @@
 		4C53EC871E706CAE00725AF8 /* AMFFlowInteractorOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFFlowInteractorOutput.h; path = Viper/Flow/AMFFlowInteractorOutput.h; sourceTree = "<group>"; };
 		4C53EC881E70700000725AF8 /* AMFDataSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplier.h; path = DataSource/AMFDataSupplier.h; sourceTree = "<group>"; };
 		4C53EC891E70700000725AF8 /* AMFDataSupplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFDataSupplier.m; path = DataSource/AMFDataSupplier.m; sourceTree = "<group>"; };
+		4C53EC8B1E708BFB00725AF8 /* AMFWalletAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletAssembly.m; path = funds/Viper/Wallet/Assembly/AMFWalletAssembly.m; sourceTree = SOURCE_ROOT; };
+		4C53EC8C1E708BFB00725AF8 /* AMFWalletAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletAssembly.h; path = funds/Viper/Wallet/Assembly/AMFWalletAssembly.h; sourceTree = SOURCE_ROOT; };
+		4C53EC8E1E708C0900725AF8 /* AMFWalletViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletViewOutput.h; path = funds/Viper/Wallet/View/AMFWalletViewOutput.h; sourceTree = SOURCE_ROOT; };
+		4C53EC8F1E708C0900725AF8 /* AMFWalletViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletViewInput.h; path = funds/Viper/Wallet/View/AMFWalletViewInput.h; sourceTree = SOURCE_ROOT; };
+		4C53EC901E708C0900725AF8 /* AMFWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletViewController.m; path = funds/Viper/Wallet/View/AMFWalletViewController.m; sourceTree = SOURCE_ROOT; };
+		4C53EC911E708C0900725AF8 /* AMFWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletViewController.h; path = funds/Viper/Wallet/View/AMFWalletViewController.h; sourceTree = SOURCE_ROOT; };
+		4C53EC931E708C1600725AF8 /* AMFWalletPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletPresenter.m; path = funds/Viper/Wallet/Presenter/AMFWalletPresenter.m; sourceTree = SOURCE_ROOT; };
+		4C53EC941E708C1600725AF8 /* AMFWalletPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletPresenter.h; path = funds/Viper/Wallet/Presenter/AMFWalletPresenter.h; sourceTree = SOURCE_ROOT; };
+		4C53EC951E708C1600725AF8 /* AMFWalletModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletModuleInput.h; path = funds/Viper/Wallet/Presenter/AMFWalletModuleInput.h; sourceTree = SOURCE_ROOT; };
+		4C53EC971E708C2500725AF8 /* AMFWalletInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletInteractorOutput.h; path = funds/Viper/Wallet/Interactor/AMFWalletInteractorOutput.h; sourceTree = SOURCE_ROOT; };
+		4C53EC981E708C2500725AF8 /* AMFWalletInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletInteractorInput.h; path = funds/Viper/Wallet/Interactor/AMFWalletInteractorInput.h; sourceTree = SOURCE_ROOT; };
+		4C53EC991E708C2500725AF8 /* AMFWalletInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletInteractor.m; path = funds/Viper/Wallet/Interactor/AMFWalletInteractor.m; sourceTree = SOURCE_ROOT; };
+		4C53EC9A1E708C2500725AF8 /* AMFWalletInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletInteractor.h; path = funds/Viper/Wallet/Interactor/AMFWalletInteractor.h; sourceTree = SOURCE_ROOT; };
+		4C53EC9C1E708C3300725AF8 /* AMFWalletRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletRouterInput.h; path = funds/Viper/Wallet/Router/AMFWalletRouterInput.h; sourceTree = SOURCE_ROOT; };
+		4C53EC9D1E708C3300725AF8 /* AMFWalletRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletRouter.m; path = funds/Viper/Wallet/Router/AMFWalletRouter.m; sourceTree = SOURCE_ROOT; };
+		4C53EC9E1E708C3300725AF8 /* AMFWalletRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletRouter.h; path = funds/Viper/Wallet/Router/AMFWalletRouter.h; sourceTree = SOURCE_ROOT; };
 		55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletPresenterTests.m; sourceTree = "<group>"; };
 		A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletRouterTests.m; sourceTree = "<group>"; };
+		E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletViewControllerTests.m; sourceTree = "<group>"; };
 		ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0F100817551440B172BCF0D /* AMFWalletAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFWalletAssembly_Testable.h; sourceTree = "<group>"; };
+		F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletInteractorTests.m; sourceTree = "<group>"; };
 		F22831C4022AD64BBC14907E /* Pods-funds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds/Pods-funds.release.xcconfig"; sourceTree = "<group>"; };
 		F51BF1C95C6D79DB02F11704 /* libPods-funds.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +153,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0857CFAF01A277DDF35A2345 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC951E708C1600725AF8 /* AMFWalletModuleInput.h */,
+				4C53EC941E708C1600725AF8 /* AMFWalletPresenter.h */,
+				4C53EC931E708C1600725AF8 /* AMFWalletPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		11B1BC48D2F4E6BC7A4FEA85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C6AFFB4F3D5233F02A4AEF5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2E9E90E1A6B970DDB7200396 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC971E708C2500725AF8 /* AMFWalletInteractorOutput.h */,
+				4C53EC981E708C2500725AF8 /* AMFWalletInteractorInput.h */,
+				4C53EC991E708C2500725AF8 /* AMFWalletInteractor.m */,
+				4C53EC9A1E708C2500725AF8 /* AMFWalletInteractor.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		31E711352525B4A62B6A2A42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC8F1E708C0900725AF8 /* AMFWalletViewInput.h */,
+				4C53EC911E708C0900725AF8 /* AMFWalletViewController.h */,
+				4C53EC901E708C0900725AF8 /* AMFWalletViewController.m */,
+				4C53EC8E1E708C0900725AF8 /* AMFWalletViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		385554B484A4062C4FD668A9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3E9FAA71A720BBC1EE3FC4AD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC9C1E708C3300725AF8 /* AMFWalletRouterInput.h */,
+				4C53EC9E1E708C3300725AF8 /* AMFWalletRouter.h */,
+				4C53EC9D1E708C3300725AF8 /* AMFWalletRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		43FFBA46B5D932C9849967B0 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				79BBEA932245C5F967F8F81A /* Assembly */,
+				11B1BC48D2F4E6BC7A4FEA85 /* View */,
+				860AE63177F6FC026849C08C /* Presenter */,
+				385554B484A4062C4FD668A9 /* Interactor */,
+				1C6AFFB4F3D5233F02A4AEF5 /* Router */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		4A6FC7988D7AA29D2DCE5862 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC8C1E708BFB00725AF8 /* AMFWalletAssembly.h */,
+				4C53EC8B1E708BFB00725AF8 /* AMFWalletAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		4C53EC071E6DC7B400725AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +293,7 @@
 			children = (
 				4C53EC301E6DC7B400725AF8 /* fundsTests.m */,
 				4C53EC321E6DC7B400725AF8 /* Info.plist */,
+				43FFBA46B5D932C9849967B0 /* Wallet */,
 			);
 			path = fundsTests;
 			sourceTree = "<group>";
@@ -239,6 +359,11 @@
 		4C53EC591E70353100725AF8 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				4A6FC7988D7AA29D2DCE5862 /* Assembly */,
+				31E711352525B4A62B6A2A42 /* View */,
+				2E9E90E1A6B970DDB7200396 /* Interactor */,
+				0857CFAF01A277DDF35A2345 /* Presenter */,
+				3E9FAA71A720BBC1EE3FC4AD /* Router */,
 			);
 			name = Wallet;
 			sourceTree = "<group>";
@@ -334,6 +459,23 @@
 				55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79BBEA932245C5F967F8F81A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */,
+				F0F100817551440B172BCF0D /* AMFWalletAssembly_Testable.h */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		860AE63177F6FC026849C08C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,19 +684,24 @@
 				4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */,
 				4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */,
 				4C53EC4B1E700F2400725AF8 /* AMFTheme.m in Sources */,
+				4C53EC921E708C0900725AF8 /* AMFWalletViewController.m in Sources */,
 				4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */,
 				4C53EC7B1E70536000725AF8 /* AMFFlowIteractor.m in Sources */,
 				4C53EC1B1E6DC7B400725AF8 /* ViewController.m in Sources */,
+				4C53EC961E708C1600725AF8 /* AMFWalletPresenter.m in Sources */,
 				4C53EC7E1E70548300725AF8 /* AMFFlowRouter.m in Sources */,
 				4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */,
 				4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */,
 				4C53EC611E7039D500725AF8 /* AMFFlowModuleAssembly.m in Sources */,
 				4C53EC211E6DC7B400725AF8 /* funds.xcdatamodeld in Sources */,
+				4C53EC8D1E708BFB00725AF8 /* AMFWalletAssembly.m in Sources */,
 				4C53EC701E704A6400725AF8 /* AMFFlowViewController.m in Sources */,
 				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
 				4C53EC771E7051F900725AF8 /* AMFFlowPresenter.m in Sources */,
 				4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
+				4C53EC9B1E708C2500725AF8 /* AMFWalletInteractor.m in Sources */,
+				4C53EC9F1E708C3300725AF8 /* AMFWalletRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +710,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C53EC311E6DC7B400725AF8 /* fundsTests.m in Sources */,
+				9FB0E5E36CCDD67F1BA82825 /* AMFWalletAssemblyTests.m in Sources */,
+				0BAF9A333F3614DDE6DD81DA /* AMFWalletViewControllerTests.m in Sources */,
+				CB53BC3311DB3251A3CC1FE8 /* AMFWalletPresenterTests.m in Sources */,
+				A70B9CDF5731AFBF37A9AD90 /* AMFWalletInteractorTests.m in Sources */,
+				8DA2B21A228B50E9D851DEBE /* AMFWalletRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
