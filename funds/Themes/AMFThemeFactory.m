@@ -38,14 +38,14 @@ static NSString* const kCurrentThemeIndexFileName = @"AMF_CURRENT_THEME_INDEX";
         LogDebug(@"Index file name: %@", indexFileName);
         
         NSInteger index = [[NSString stringWithContentsOfFile:indexFileName encoding:NSUTF8StringEncoding error:nil] integerValue];
-        LogDebug(@"Current theme index is: %li", index);
+        LogDebug(@"Current theme index is: %li", (long)index);
         if (index > [_themes count] - 1) {
             LogDebug(@"!!resetting index");
             index = 0;
         }
         _curtheme = [_themes objectAtIndex:index];
         
-        [[NSString stringWithFormat:@"%li", (index + 1)] writeToFile:indexFileName atomically:NO encoding:NSUTF8StringEncoding error:nil];
+        [[NSString stringWithFormat:@"%li", (long)index] writeToFile:indexFileName atomically:NO encoding:NSUTF8StringEncoding error:nil];
     }
     return _curtheme;
 }
