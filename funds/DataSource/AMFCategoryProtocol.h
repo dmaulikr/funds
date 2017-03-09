@@ -8,7 +8,7 @@
 
 @protocol AMFCategoryProtocol <NSObject>
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *icon_path;
 
 @end

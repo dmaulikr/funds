@@ -8,6 +8,7 @@
 
 @protocol AMFWalletProtocol <NSObject>
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *icon_path;
 
 @end

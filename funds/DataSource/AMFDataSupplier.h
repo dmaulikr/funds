@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AMFDataSupplyProtocol.h"
+#import "AMFStorageHandlerProtocol.h"
 
 @interface AMFDataSupplier : NSObject<AMFDataSupplyProtocol>
+
+@property (nonatomic, strong) id<AMFStorageHandlerProtocol> handler;
+
+-(void)populateContentsWithCSVFile:(NSString*)file;
 
 @end

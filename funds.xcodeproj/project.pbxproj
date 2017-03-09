@@ -40,6 +40,26 @@
 		4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECAE1E70905800725AF8 /* AMFBalanceInteractor.m */; };
 		4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */; };
 		4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */; };
+		4CE158851E7137970009BAF4 /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4CE158841E7137970009BAF4 /* test.csv */; };
+		4CE158B31E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158B01E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m */; };
+		4CE158B41E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158B21E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m */; };
+		4CE158B91E716B950009BAF4 /* AMFWallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158B61E716B950009BAF4 /* AMFWallet+CoreDataClass.m */; };
+		4CE158BA1E716B950009BAF4 /* AMFWallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158B81E716B950009BAF4 /* AMFWallet+CoreDataProperties.m */; };
+		4CE158BF1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158BC1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m */; };
+		4CE158C01E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158BE1E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m */; };
+		4CE158C51E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158C21E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m */; };
+		4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158C41E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m */; };
+		4CE158CB1E716BC90009BAF4 /* AMFPage+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158C81E716BC80009BAF4 /* AMFPage+CoreDataClass.m */; };
+		4CE158CC1E716BC90009BAF4 /* AMFPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158CA1E716BC80009BAF4 /* AMFPage+CoreDataProperties.m */; };
+		4CE158D61E718B390009BAF4 /* AMFSQLCoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158D51E718B390009BAF4 /* AMFSQLCoreDataHandler.m */; };
+		4CE158DA1E71A7BB0009BAF4 /* DataStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158D91E71A7BB0009BAF4 /* DataStorageTests.m */; };
+		4CE158DD1E71B8590009BAF4 /* AMFBudgetCSVReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158DC1E71B8590009BAF4 /* AMFBudgetCSVReader.m */; };
+		4CE158E01E71B9340009BAF4 /* AMFPlainBudgetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158DF1E71B9340009BAF4 /* AMFPlainBudgetData.m */; };
+		4CE158E31E71C4C70009BAF4 /* AMFCashPlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158E21E71C4C70009BAF4 /* AMFCashPlain.m */; };
+		4CE158E61E71C5100009BAF4 /* AMFCategoryPlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158E51E71C5100009BAF4 /* AMFCategoryPlain.m */; };
+		4CE158E91E71C53B0009BAF4 /* AMFWalletPlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158E81E71C53B0009BAF4 /* AMFWalletPlain.m */; };
+		4CE158EC1E71C56E0009BAF4 /* AMFPagePlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158EB1E71C56E0009BAF4 /* AMFPagePlain.m */; };
+		4CE158EF1E71C5890009BAF4 /* AMFCurrencyPlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158EE1E71C5890009BAF4 /* AMFCurrencyPlain.m */; };
 		65360BCB2CB6683E73ABB1B5 /* libPods-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */; };
 		846FF71F03ACD0309A774940 /* AMFBalanceRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29089B491EF2837AD5616F08 /* AMFBalanceRouterTests.m */; };
 		8DA2B21A228B50E9D851DEBE /* AMFWalletRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */; };
@@ -150,6 +170,46 @@
 		4C53ECB31E70906700725AF8 /* AMFBalanceRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceRouter.h; path = funds/Viper/Balance/Router/AMFBalanceRouter.h; sourceTree = SOURCE_ROOT; };
 		4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4CAAF2FC7C1B476F0E36F2DF /* Pods-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFStorageHandlerProtocol.h; path = DataSource/AMFStorageHandlerProtocol.h; sourceTree = "<group>"; };
+		4CE158841E7137970009BAF4 /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
+		4CE158AF1E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCashFlow+CoreDataClass.h"; path = "DataSource/ponso/AMFCashFlow+CoreDataClass.h"; sourceTree = "<group>"; };
+		4CE158B01E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFCashFlow+CoreDataClass.m"; path = "DataSource/ponso/AMFCashFlow+CoreDataClass.m"; sourceTree = "<group>"; };
+		4CE158B11E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCashFlow+CoreDataProperties.h"; path = "DataSource/ponso/AMFCashFlow+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4CE158B21E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFCashFlow+CoreDataProperties.m"; path = "DataSource/ponso/AMFCashFlow+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4CE158B51E716B950009BAF4 /* AMFWallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFWallet+CoreDataClass.h"; path = "DataSource/ponso/AMFWallet+CoreDataClass.h"; sourceTree = "<group>"; };
+		4CE158B61E716B950009BAF4 /* AMFWallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFWallet+CoreDataClass.m"; path = "DataSource/ponso/AMFWallet+CoreDataClass.m"; sourceTree = "<group>"; };
+		4CE158B71E716B950009BAF4 /* AMFWallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFWallet+CoreDataProperties.h"; path = "DataSource/ponso/AMFWallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4CE158B81E716B950009BAF4 /* AMFWallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFWallet+CoreDataProperties.m"; path = "DataSource/ponso/AMFWallet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4CE158BB1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCurrency+CoreDataClass.h"; path = "DataSource/ponso/AMFCurrency+CoreDataClass.h"; sourceTree = "<group>"; };
+		4CE158BC1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFCurrency+CoreDataClass.m"; path = "DataSource/ponso/AMFCurrency+CoreDataClass.m"; sourceTree = "<group>"; };
+		4CE158BD1E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCurrency+CoreDataProperties.h"; path = "DataSource/ponso/AMFCurrency+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4CE158BE1E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFCurrency+CoreDataProperties.m"; path = "DataSource/ponso/AMFCurrency+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4CE158C11E716BBE0009BAF4 /* AMFCategory+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCategory+CoreDataClass.h"; path = "DataSource/ponso/AMFCategory+CoreDataClass.h"; sourceTree = "<group>"; };
+		4CE158C21E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFCategory+CoreDataClass.m"; path = "DataSource/ponso/AMFCategory+CoreDataClass.m"; sourceTree = "<group>"; };
+		4CE158C31E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCategory+CoreDataProperties.h"; path = "DataSource/ponso/AMFCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4CE158C41E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFCategory+CoreDataProperties.m"; path = "DataSource/ponso/AMFCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4CE158C71E716BC80009BAF4 /* AMFPage+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFPage+CoreDataClass.h"; path = "DataSource/ponso/AMFPage+CoreDataClass.h"; sourceTree = "<group>"; };
+		4CE158C81E716BC80009BAF4 /* AMFPage+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFPage+CoreDataClass.m"; path = "DataSource/ponso/AMFPage+CoreDataClass.m"; sourceTree = "<group>"; };
+		4CE158C91E716BC80009BAF4 /* AMFPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFPage+CoreDataProperties.h"; path = "DataSource/ponso/AMFPage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4CE158CA1E716BC80009BAF4 /* AMFPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AMFPage+CoreDataProperties.m"; path = "DataSource/ponso/AMFPage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4CE158CD1E717A750009BAF4 /* AMFPageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFPageProtocol.h; path = DataSource/AMFPageProtocol.h; sourceTree = "<group>"; };
+		4CE158D41E718B390009BAF4 /* AMFSQLCoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSQLCoreDataHandler.h; path = DataSource/CoreData/AMFSQLCoreDataHandler.h; sourceTree = "<group>"; };
+		4CE158D51E718B390009BAF4 /* AMFSQLCoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSQLCoreDataHandler.m; path = DataSource/CoreData/AMFSQLCoreDataHandler.m; sourceTree = "<group>"; };
+		4CE158D91E71A7BB0009BAF4 /* DataStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataStorageTests.m; path = DataStorage/DataStorageTests.m; sourceTree = "<group>"; };
+		4CE158DB1E71B8590009BAF4 /* AMFBudgetCSVReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBudgetCSVReader.h; path = DataSource/utils/AMFBudgetCSVReader.h; sourceTree = "<group>"; };
+		4CE158DC1E71B8590009BAF4 /* AMFBudgetCSVReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFBudgetCSVReader.m; path = DataSource/utils/AMFBudgetCSVReader.m; sourceTree = "<group>"; };
+		4CE158DE1E71B9340009BAF4 /* AMFPlainBudgetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFPlainBudgetData.h; path = DataSource/utils/AMFPlainBudgetData.h; sourceTree = "<group>"; };
+		4CE158DF1E71B9340009BAF4 /* AMFPlainBudgetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFPlainBudgetData.m; path = DataSource/utils/AMFPlainBudgetData.m; sourceTree = "<group>"; };
+		4CE158E11E71C4C70009BAF4 /* AMFCashPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCashPlain.h; path = DataSource/ponso/AMFCashPlain.h; sourceTree = "<group>"; };
+		4CE158E21E71C4C70009BAF4 /* AMFCashPlain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFCashPlain.m; path = DataSource/ponso/AMFCashPlain.m; sourceTree = "<group>"; };
+		4CE158E41E71C5100009BAF4 /* AMFCategoryPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCategoryPlain.h; path = DataSource/ponso/AMFCategoryPlain.h; sourceTree = "<group>"; };
+		4CE158E51E71C5100009BAF4 /* AMFCategoryPlain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFCategoryPlain.m; path = DataSource/ponso/AMFCategoryPlain.m; sourceTree = "<group>"; };
+		4CE158E71E71C53B0009BAF4 /* AMFWalletPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletPlain.h; path = DataSource/ponso/AMFWalletPlain.h; sourceTree = "<group>"; };
+		4CE158E81E71C53B0009BAF4 /* AMFWalletPlain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletPlain.m; path = DataSource/ponso/AMFWalletPlain.m; sourceTree = "<group>"; };
+		4CE158EA1E71C56E0009BAF4 /* AMFPagePlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFPagePlain.h; path = DataSource/ponso/AMFPagePlain.h; sourceTree = "<group>"; };
+		4CE158EB1E71C56E0009BAF4 /* AMFPagePlain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFPagePlain.m; path = DataSource/ponso/AMFPagePlain.m; sourceTree = "<group>"; };
+		4CE158ED1E71C5890009BAF4 /* AMFCurrencyPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCurrencyPlain.h; path = DataSource/ponso/AMFCurrencyPlain.h; sourceTree = "<group>"; };
+		4CE158EE1E71C5890009BAF4 /* AMFCurrencyPlain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFCurrencyPlain.m; path = DataSource/ponso/AMFCurrencyPlain.m; sourceTree = "<group>"; };
 		55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF2E2503CAE6521B3DA5052 /* AMFBalanceViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceViewControllerTests.m; sourceTree = "<group>"; };
 		651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +416,8 @@
 		4C53EC2F1E6DC7B400725AF8 /* fundsTests */ = {
 			isa = PBXGroup;
 			children = (
+				4CE158D81E71A7790009BAF4 /* DataStorage */,
+				4CE158841E7137970009BAF4 /* test.csv */,
 				4C53EC301E6DC7B400725AF8 /* fundsTests.m */,
 				4C53EC321E6DC7B400725AF8 /* Info.plist */,
 				43FFBA46B5D932C9849967B0 /* Wallet */,
@@ -490,11 +552,11 @@
 		4C53EC631E703C8800725AF8 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				4CE158D11E718AB00009BAF4 /* Assembly */,
+				4CE158801E7135880009BAF4 /* Ponsos and core data */,
 				4C53EC801E70584700725AF8 /* protocols */,
-				4C53EC841E70663200725AF8 /* AMFDataSupplierAssembly.h */,
-				4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */,
-				4C53EC881E70700000725AF8 /* AMFDataSupplier.h */,
-				4C53EC891E70700000725AF8 /* AMFDataSupplier.m */,
+				4CE158D21E718AD10009BAF4 /* CoreData */,
+				4CE158D31E718AE90009BAF4 /* Utils */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -508,8 +570,126 @@
 				4C53EC691E70418300725AF8 /* AMFWalletProtocol.h */,
 				4C53EC681E7040AA00725AF8 /* AMFCurrencyProtocol.h */,
 				4C53EC6B1E7041F700725AF8 /* AMFCategoryProtocol.h */,
+				4CE158CD1E717A750009BAF4 /* AMFPageProtocol.h */,
+				4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */,
 			);
 			name = protocols;
+			sourceTree = "<group>";
+		};
+		4CE158801E7135880009BAF4 /* Ponsos and core data */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158A71E7167D00009BAF4 /* AMFCashFlow */,
+				4CE158A81E7167DD0009BAF4 /* AMFCategory */,
+				4CE158A61E7167C30009BAF4 /* AMFWallet */,
+				4CE158A51E7167B70009BAF4 /* AMFPage */,
+				4CE158A41E7167AA0009BAF4 /* AMFCurrency */,
+			);
+			name = "Ponsos and core data";
+			sourceTree = "<group>";
+		};
+		4CE158A41E7167AA0009BAF4 /* AMFCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158BB1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.h */,
+				4CE158BC1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m */,
+				4CE158BD1E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.h */,
+				4CE158BE1E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m */,
+				4CE158ED1E71C5890009BAF4 /* AMFCurrencyPlain.h */,
+				4CE158EE1E71C5890009BAF4 /* AMFCurrencyPlain.m */,
+			);
+			name = AMFCurrency;
+			sourceTree = "<group>";
+		};
+		4CE158A51E7167B70009BAF4 /* AMFPage */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158C71E716BC80009BAF4 /* AMFPage+CoreDataClass.h */,
+				4CE158C81E716BC80009BAF4 /* AMFPage+CoreDataClass.m */,
+				4CE158C91E716BC80009BAF4 /* AMFPage+CoreDataProperties.h */,
+				4CE158CA1E716BC80009BAF4 /* AMFPage+CoreDataProperties.m */,
+				4CE158EA1E71C56E0009BAF4 /* AMFPagePlain.h */,
+				4CE158EB1E71C56E0009BAF4 /* AMFPagePlain.m */,
+			);
+			name = AMFPage;
+			sourceTree = "<group>";
+		};
+		4CE158A61E7167C30009BAF4 /* AMFWallet */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158B51E716B950009BAF4 /* AMFWallet+CoreDataClass.h */,
+				4CE158B61E716B950009BAF4 /* AMFWallet+CoreDataClass.m */,
+				4CE158B71E716B950009BAF4 /* AMFWallet+CoreDataProperties.h */,
+				4CE158B81E716B950009BAF4 /* AMFWallet+CoreDataProperties.m */,
+				4CE158E71E71C53B0009BAF4 /* AMFWalletPlain.h */,
+				4CE158E81E71C53B0009BAF4 /* AMFWalletPlain.m */,
+			);
+			name = AMFWallet;
+			sourceTree = "<group>";
+		};
+		4CE158A71E7167D00009BAF4 /* AMFCashFlow */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158AF1E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.h */,
+				4CE158B01E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m */,
+				4CE158B11E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.h */,
+				4CE158B21E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m */,
+				4CE158E11E71C4C70009BAF4 /* AMFCashPlain.h */,
+				4CE158E21E71C4C70009BAF4 /* AMFCashPlain.m */,
+			);
+			name = AMFCashFlow;
+			sourceTree = "<group>";
+		};
+		4CE158A81E7167DD0009BAF4 /* AMFCategory */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158C11E716BBE0009BAF4 /* AMFCategory+CoreDataClass.h */,
+				4CE158C21E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m */,
+				4CE158C31E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.h */,
+				4CE158C41E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m */,
+				4CE158E41E71C5100009BAF4 /* AMFCategoryPlain.h */,
+				4CE158E51E71C5100009BAF4 /* AMFCategoryPlain.m */,
+			);
+			name = AMFCategory;
+			sourceTree = "<group>";
+		};
+		4CE158D11E718AB00009BAF4 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC841E70663200725AF8 /* AMFDataSupplierAssembly.h */,
+				4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		4CE158D21E718AD10009BAF4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158D41E718B390009BAF4 /* AMFSQLCoreDataHandler.h */,
+				4CE158D51E718B390009BAF4 /* AMFSQLCoreDataHandler.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		4CE158D31E718AE90009BAF4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4C53EC881E70700000725AF8 /* AMFDataSupplier.h */,
+				4C53EC891E70700000725AF8 /* AMFDataSupplier.m */,
+				4CE158DB1E71B8590009BAF4 /* AMFBudgetCSVReader.h */,
+				4CE158DC1E71B8590009BAF4 /* AMFBudgetCSVReader.m */,
+				4CE158DE1E71B9340009BAF4 /* AMFPlainBudgetData.h */,
+				4CE158DF1E71B9340009BAF4 /* AMFPlainBudgetData.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		4CE158D81E71A7790009BAF4 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				4CE158D91E71A7BB0009BAF4 /* DataStorageTests.m */,
+			);
+			name = DataStorage;
 			sourceTree = "<group>";
 		};
 		5CA3E39E00CCCA2672461FFE /* Pods */ = {
@@ -727,6 +907,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE158851E7137970009BAF4 /* test.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,14 +1011,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */,
+				4CE158DD1E71B8590009BAF4 /* AMFBudgetCSVReader.m in Sources */,
+				4CE158E31E71C4C70009BAF4 /* AMFCashPlain.m in Sources */,
 				4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */,
 				4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */,
 				4C53EC4B1E700F2400725AF8 /* AMFTheme.m in Sources */,
 				4C53EC921E708C0900725AF8 /* AMFWalletViewController.m in Sources */,
+				4CE158E01E71B9340009BAF4 /* AMFPlainBudgetData.m in Sources */,
 				4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */,
+				4CE158B31E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m in Sources */,
 				4C53EC7B1E70536000725AF8 /* AMFFlowIteractor.m in Sources */,
 				4C53EC961E708C1600725AF8 /* AMFWalletPresenter.m in Sources */,
+				4CE158BA1E716B950009BAF4 /* AMFWallet+CoreDataProperties.m in Sources */,
+				4CE158B41E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m in Sources */,
+				4CE158B91E716B950009BAF4 /* AMFWallet+CoreDataClass.m in Sources */,
 				4C53EC7E1E70548300725AF8 /* AMFFlowRouter.m in Sources */,
+				4CE158C51E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m in Sources */,
 				4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */,
 				4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */,
 				4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */,
@@ -847,13 +1037,22 @@
 				4C53EC211E6DC7B400725AF8 /* funds.xcdatamodeld in Sources */,
 				4C53EC8D1E708BFB00725AF8 /* AMFWalletAssembly.m in Sources */,
 				4C53EC701E704A6400725AF8 /* AMFFlowViewController.m in Sources */,
+				4CE158E91E71C53B0009BAF4 /* AMFWalletPlain.m in Sources */,
+				4CE158CC1E716BC90009BAF4 /* AMFPage+CoreDataProperties.m in Sources */,
+				4CE158E61E71C5100009BAF4 /* AMFCategoryPlain.m in Sources */,
+				4CE158C01E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m in Sources */,
+				4CE158BF1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m in Sources */,
 				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
+				4CE158D61E718B390009BAF4 /* AMFSQLCoreDataHandler.m in Sources */,
 				4C53EC771E7051F900725AF8 /* AMFFlowPresenter.m in Sources */,
 				4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
+				4CE158EF1E71C5890009BAF4 /* AMFCurrencyPlain.m in Sources */,
 				4C53ECA21E70902700725AF8 /* AMFBalanceAssembly.m in Sources */,
 				4C53EC9B1E708C2500725AF8 /* AMFWalletInteractor.m in Sources */,
+				4CE158CB1E716BC90009BAF4 /* AMFPage+CoreDataClass.m in Sources */,
 				4C53EC9F1E708C3300725AF8 /* AMFWalletRouter.m in Sources */,
+				4CE158EC1E71C56E0009BAF4 /* AMFPagePlain.m in Sources */,
 				4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,6 +1068,7 @@
 				A70B9CDF5731AFBF37A9AD90 /* AMFWalletInteractorTests.m in Sources */,
 				8DA2B21A228B50E9D851DEBE /* AMFWalletRouterTests.m in Sources */,
 				CE2D7E6E4C1CB94E13B17CA9 /* AMFBalanceAssemblyTests.m in Sources */,
+				4CE158DA1E71A7BB0009BAF4 /* DataStorageTests.m in Sources */,
 				1D28856CA868659AE35AC258 /* AMFBalanceViewControllerTests.m in Sources */,
 				DF6074C0FB7E37156C59814B /* AMFBalancePresenterTests.m in Sources */,
 				AB20C6A3A18269E42CFD529F /* AMFBalanceInteractorTests.m in Sources */,

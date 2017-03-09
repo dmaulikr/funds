@@ -20,6 +20,7 @@ target 'funds' do
     # Other
     pod 'RamblerAppDelegateProxy', '0.0.3'
     pod 'OCLogTemplate'
+    pod 'CHCSVParser'
 
 end
 

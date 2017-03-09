@@ -8,7 +8,7 @@
 
 @protocol AMFCurrencyProtocol <NSObject>
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, assign) CGFloat rate;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) double rate;
 
 @end

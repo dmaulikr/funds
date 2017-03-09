@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1212" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="AMFCashFlow" representedClassName="AMFCashFlow" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    <entity name="AMFCashFlow" representedClassName="AMFCashFlow" syncable="YES">
+        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pos_lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="pos_lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFWallet" inverseName="cash" inverseEntity="AMFWallet" syncable="YES"/>
+        <attribute name="pos_lat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pos_lon" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCategory" inverseName="cash" inverseEntity="AMFCategory" syncable="YES"/>
         <relationship name="currency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCurrency" inverseName="cash" inverseEntity="AMFCurrency" syncable="YES"/>
         <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFPage" inverseName="cashflow" inverseEntity="AMFPage" syncable="YES"/>
+        <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFWallet" inverseName="cash" inverseEntity="AMFWallet" syncable="YES"/>
+        <relationship name="wallet2wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="wallet2wallet" inverseEntity="AMFCashFlow" syncable="YES"/>
     </entity>
-    <entity name="AMFCategory" representedClassName="AMFCategory" syncable="YES" codeGenerationType="class">
+    <entity name="AMFCategory" representedClassName="AMFCategory" syncable="YES">
         <attribute name="icon_path" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cash" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="category" inverseEntity="AMFCashFlow" syncable="YES"/>
+        <relationship name="cash" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="category" inverseEntity="AMFCashFlow" syncable="YES"/>
     </entity>
-    <entity name="AMFCurrency" representedClassName="AMFCurrency" syncable="YES" codeGenerationType="class">
+    <entity name="AMFCurrency" representedClassName="AMFCurrency" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="cash" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="currency" inverseEntity="AMFCashFlow" syncable="YES"/>
+        <relationship name="cash" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="currency" inverseEntity="AMFCashFlow" syncable="YES"/>
     </entity>
-    <entity name="AMFPage" representedClassName="AMFPage" syncable="YES" codeGenerationType="class">
+    <entity name="AMFPage" representedClassName="AMFPage" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cashflow" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="page" inverseEntity="AMFCashFlow" syncable="YES"/>
+        <relationship name="cashflow" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="page" inverseEntity="AMFCashFlow" syncable="YES"/>
     </entity>
-    <entity name="AMFWallet" representedClassName="AMFWallet" syncable="YES" codeGenerationType="class">
+    <entity name="AMFWallet" representedClassName="AMFWallet" syncable="YES">
         <attribute name="icon_path" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cash" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="account" inverseEntity="AMFCashFlow" syncable="YES"/>
+        <relationship name="cash" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="wallet" inverseEntity="AMFCashFlow" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AMFWallet" positionX="90" positionY="162" width="128" height="90"/>
-        <element name="AMFCashFlow" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="AMFCategory" positionX="196" positionY="204" width="128" height="88"/>
-        <element name="AMFCurrency" positionX="196" positionY="297" width="128" height="90"/>
-        <element name="AMFPage" positionX="99" positionY="171" width="128" height="75"/>
+        <element name="AMFCashFlow" positionX="-234" positionY="9" width="90" height="195"/>
+        <element name="AMFCategory" positionX="189" positionY="225" width="128" height="88"/>
+        <element name="AMFCurrency" positionX="189" positionY="324" width="128" height="88"/>
+        <element name="AMFPage" positionX="189" positionY="144" width="128" height="73"/>
+        <element name="AMFWallet" positionX="187" positionY="45" width="128" height="88"/>
     </elements>
 </model>

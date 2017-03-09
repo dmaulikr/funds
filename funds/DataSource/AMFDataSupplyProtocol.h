@@ -13,6 +13,14 @@ typedef void(^AMFDataSupplyBlock)(NSArray *data);
 
 @protocol AMFDataSupplyProtocol <NSObject>
 
+/**
+ needed for fetching data from storage and giving it back to the client
+ */
 -(void)fetchDataWithPage:(id<AMFPageCashProtocol>)page andBlock:(AMFDataSupplyBlock) block;
+
+/**
+ needed for preload data from csv format
+ */
+-(void)checkDocumentsFolderForCSV;
 
 @end

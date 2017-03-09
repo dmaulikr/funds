@@ -10,9 +10,11 @@
 #import <Typhoon/Typhoon.h>
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 #import "AMFDataSupplyProtocol.h"
+#import "AMFStorageHandlerProtocol.h"
 
 @interface AMFDataSupplierAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
 -(id<AMFDataSupplyProtocol>) dataSupplier;
+-(id<AMFStorageHandlerProtocol>) storageHandler;
 
 @end
