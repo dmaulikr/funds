@@ -40,6 +40,7 @@
 		4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECAE1E70905800725AF8 /* AMFBalanceInteractor.m */; };
 		4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */; };
 		4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */; };
+		65360BCB2CB6683E73ABB1B5 /* libPods-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */; };
 		846FF71F03ACD0309A774940 /* AMFBalanceRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29089B491EF2837AD5616F08 /* AMFBalanceRouterTests.m */; };
 		8DA2B21A228B50E9D851DEBE /* AMFWalletRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */; };
 		9FB0E5E36CCDD67F1BA82825 /* AMFWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */; };
@@ -148,13 +149,16 @@
 		4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFBalanceRouter.m; path = funds/Viper/Balance/Router/AMFBalanceRouter.m; sourceTree = SOURCE_ROOT; };
 		4C53ECB31E70906700725AF8 /* AMFBalanceRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceRouter.h; path = funds/Viper/Balance/Router/AMFBalanceRouter.h; sourceTree = SOURCE_ROOT; };
 		4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4CAAF2FC7C1B476F0E36F2DF /* Pods-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
 		55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF2E2503CAE6521B3DA5052 /* AMFBalanceViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceViewControllerTests.m; sourceTree = "<group>"; };
+		651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6774CCB5E3F6273E167B15C6 /* AMFBalanceAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFBalanceAssembly_Testable.h; sourceTree = "<group>"; };
 		6F988B8F329D204CF5998903 /* AMFBalancePresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalancePresenterTests.m; sourceTree = "<group>"; };
 		72C498335635EED9650F365E /* AMFBalanceInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceInteractorTests.m; sourceTree = "<group>"; };
 		90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletPresenterTests.m; sourceTree = "<group>"; };
 		A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA5F4FA6CEDBD310FDEA7B46 /* Pods-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletRouterTests.m; sourceTree = "<group>"; };
 		E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletViewControllerTests.m; sourceTree = "<group>"; };
 		ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C296CC9E55F870E1A288A3B1 /* libPods-funds-fundsTests.a in Frameworks */,
+				65360BCB2CB6683E73ABB1B5 /* libPods-fundsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +519,8 @@
 				F22831C4022AD64BBC14907E /* Pods-funds.release.xcconfig */,
 				ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */,
 				A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */,
+				AA5F4FA6CEDBD310FDEA7B46 /* Pods-fundsTests.debug.xcconfig */,
+				4CAAF2FC7C1B476F0E36F2DF /* Pods-fundsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -523,6 +530,7 @@
 			children = (
 				F51BF1C95C6D79DB02F11704 /* libPods-funds.a */,
 				55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */,
+				651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -782,7 +790,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7B0894B8D09BC07923FC544 /* [CP] Embed Pods Frameworks */ = {
@@ -797,7 +805,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF8B1F154CC4153C8FF02CF6 /* [CP] Embed Pods Frameworks */ = {
@@ -1020,7 +1028,7 @@
 		};
 		4C53EC391E6DC7B400725AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */;
+			baseConfigurationReference = AA5F4FA6CEDBD310FDEA7B46 /* Pods-fundsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 76ZPG43W79;
@@ -1034,7 +1042,7 @@
 		};
 		4C53EC3A1E6DC7B400725AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */;
+			baseConfigurationReference = 4CAAF2FC7C1B476F0E36F2DF /* Pods-fundsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 76ZPG43W79;

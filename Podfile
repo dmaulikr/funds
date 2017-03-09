@@ -21,10 +21,11 @@ target 'funds' do
     pod 'RamblerAppDelegateProxy', '0.0.3'
     pod 'OCLogTemplate'
 
-    # Unit tests dependencies
-    target 'fundsTests' do
-        pod 'OCMock', '3.3.1'
-        #pod 'MMBarricade', '~> 1.0.1'
-        pod 'RamblerTyphoonUtils/AssemblyTesting', '1.5.0'
-    end
+end
+
+# Unit tests dependencies
+target 'fundsTests' do
+    pod 'OCMock', '3.3.1'
+    #pod 'MMBarricade', '~> 1.0.1'
+    pod 'RamblerTyphoonUtils/AssemblyTesting', '1.5.0'
 end
