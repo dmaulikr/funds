@@ -39,6 +39,7 @@
 		4C53ECAB1E70904800725AF8 /* AMFBalancePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECA81E70904800725AF8 /* AMFBalancePresenter.m */; };
 		4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECAE1E70905800725AF8 /* AMFBalanceInteractor.m */; };
 		4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */; };
+		4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */; };
 		846FF71F03ACD0309A774940 /* AMFBalanceRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29089B491EF2837AD5616F08 /* AMFBalanceRouterTests.m */; };
 		8DA2B21A228B50E9D851DEBE /* AMFWalletRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */; };
 		9FB0E5E36CCDD67F1BA82825 /* AMFWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */; };
@@ -146,6 +147,7 @@
 		4C53ECB11E70906700725AF8 /* AMFBalanceRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceRouterInput.h; path = funds/Viper/Balance/Router/AMFBalanceRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFBalanceRouter.m; path = funds/Viper/Balance/Router/AMFBalanceRouter.m; sourceTree = SOURCE_ROOT; };
 		4C53ECB31E70906700725AF8 /* AMFBalanceRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceRouter.h; path = funds/Viper/Balance/Router/AMFBalanceRouter.h; sourceTree = SOURCE_ROOT; };
+		4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF2E2503CAE6521B3DA5052 /* AMFBalanceViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceViewControllerTests.m; sourceTree = "<group>"; };
 		6774CCB5E3F6273E167B15C6 /* AMFBalanceAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFBalanceAssembly_Testable.h; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		4C53EC071E6DC7B400725AF8 = {
 			isa = PBXGroup;
 			children = (
+				4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */,
 				4C53EC121E6DC7B400725AF8 /* funds */,
 				4C53EC2F1E6DC7B400725AF8 /* fundsTests */,
 				4C53EC111E6DC7B400725AF8 /* Products */,
@@ -706,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C53EC261E6DC7B400725AF8 /* LaunchScreen.storyboard in Resources */,
+				4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */,
 				4C53EC231E6DC7B400725AF8 /* Assets.xcassets in Resources */,
 				4C53EC1E1E6DC7B400725AF8 /* Main.storyboard in Resources */,
 			);
