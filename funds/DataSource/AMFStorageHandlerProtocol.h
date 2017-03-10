@@ -15,5 +15,6 @@
 -(void) addRecord:(id<AMFCashProtocol>)rec;
 -(void) addRecords:(NSArray*)ar;
 -(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page;
+-(void) removeAll;
 
 @end

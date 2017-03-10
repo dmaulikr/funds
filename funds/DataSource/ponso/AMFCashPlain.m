@@ -21,4 +21,11 @@ currency,
 category,
 page;
 
+-(NSString*) description {
+    return [NSString stringWithFormat:@"CASH Plain: %@ => description: %@, amount: %g",
+            self.date,
+            self.descr,
+            self.amount];
+}
+
 @end

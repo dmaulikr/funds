@@ -64,9 +64,9 @@
         cash.date = rec.date;
         cash.wallet = wal;
         cash.descr = rec.descr;
+        cash.amount = rec.amount;
         AMFCurrencyPlain *c = [[AMFCurrencyPlain alloc] init];
         c.name = rec.currency;
-        c.rate = 1.0;
         cash.currency = c;
         cat.name = rec.category;
         cash.category = cat;
@@ -81,8 +81,9 @@
             cashInto.amount = rec.toWalletAmount;
             cashInto.wallet =  walInto;
             cashInto.category = cat;
+            cashInto.date = rec.date;
+            cashInto.descr = rec.descr;
             cInto.name = rec.toWalletCurrency;
-            cInto.rate = 1.0;
             cashInto.currency = cInto;
         }
         [ar addObject:cash];

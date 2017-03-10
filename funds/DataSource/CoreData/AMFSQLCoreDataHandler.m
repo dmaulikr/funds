@@ -29,7 +29,7 @@
 }
 
 -(void) addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@)", rec.date, rec.descr];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
     if (!cash)
@@ -63,7 +63,26 @@
 }
 
 -(NSArray*) grabAllRecords {
-    return [AMFCashFlow MR_findAll];
+    return [AMFCashFlow MR_findAllSortedBy:@"date" ascending:NO];
+}
+
+-(void) removeAll {
+    for (AMFCashFlow *cash in [AMFCashFlow MR_findAll])
+        [cash MR_deleteEntity];
+
+    for (AMFPage *page in [AMFPage MR_findAll])
+        [page MR_deleteEntity];
+
+    for (AMFCategory *c in [AMFCategory MR_findAll])
+        [c MR_deleteEntity];
+
+    for (AMFWallet *w in [AMFWallet MR_findAll])
+        [w MR_deleteEntity];
+
+    for (AMFCurrency *c in [AMFCurrency MR_findAll])
+        [c MR_deleteEntity];
+
+    [self saveContext];
 }
 
 #pragma mark - Core Data Saving support

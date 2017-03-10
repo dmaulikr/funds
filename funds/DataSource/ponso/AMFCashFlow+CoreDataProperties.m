@@ -26,6 +26,12 @@
 @dynamic page;
 @dynamic wallet2wallet;
 
+-(NSString*) description {
+    return [NSString stringWithFormat:@"CASHFLOW: %@ => description: %@, amount: %g",
+            self.date,
+            self.descr,
+            self.amount];
+}
 
 -(void) updateWith:(id<AMFCashProtocol>)cash {
     self.amount = cash.amount;
