@@ -6,7 +6,7 @@
 //  Copyright © 2017 micartu. All rights reserved.
 //
 
-@protocol AMFPageCashProtocol;
+@protocol AMFPageProtocol;
 @protocol AMFCashProtocol;
 
 typedef void(^AMFDataSupplyBlock)(NSArray *data);
@@ -16,11 +16,11 @@ typedef void(^AMFDataSupplyBlock)(NSArray *data);
 /**
  needed for fetching data from storage and giving it back to the client
  */
--(void)fetchDataWithPage:(id<AMFPageCashProtocol>)page andBlock:(AMFDataSupplyBlock) block;
+-(void)fetchDataWithPage:(id<AMFPageProtocol>)page andBlock:(AMFDataSupplyBlock) block;
 
 /**
- needed for preload data from csv format
+ fetch all records with pages
  */
--(void)checkDocumentsFolderForCSV;
+-(void)fetchAllPagesWithBlock:(AMFDataSupplyBlock)block;
 
 @end

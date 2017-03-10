@@ -6,19 +6,21 @@
 //  Copyright © 2017 micartu. All rights reserved.
 //
 
-@protocol AMFDataSupplyProtocol;
-@protocol AMFCashPageProtocol;
-
 @protocol AMFFlowViewInput <NSObject>
 
 /**
- data source to be used for showing contents
+ records themselves
  */
-@property (nonatomic, strong) id<AMFDataSupplyProtocol> input;
+@property (nonatomic, strong) NSArray *records;
 
 /**
  setups initial state of the view
  */
 - (void)setupInitialState;
+
+/**
+ refreshes data shown to the user
+ */
+- (void)refreshContents;
 
 @end

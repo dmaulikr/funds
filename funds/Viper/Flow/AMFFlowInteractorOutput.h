@@ -6,7 +6,11 @@
 //  Copyright © 2017 micartu. All rights reserved.
 //
 
+@protocol AMFPageProtocol;
+
 @protocol AMFFlowInteractorOutput <NSObject>
 
+-(void) receivedRecords:(NSArray*) records;
+-(void) receivedValidPage:(id<AMFPageProtocol>) page;
 
 @end

@@ -9,7 +9,7 @@
 #import <RamblerTyphoonUtils/AssemblyTesting.h>
 #import <Typhoon/Typhoon.h>
 #import "AMFDataSupplierAssembly.h"
-#import "AMFDataSupplier.h"
+#import "AMFReaderFromCSV.h"
 #import "AMFSQLCoreDataHandler.h"
 
 @interface DataStorageTests : RamblerTyphoonAssemblyTests
@@ -33,12 +33,12 @@
 
 - (void)testAddDataFromCSV {
     // given
-    AMFDataSupplier *supplier = self.assembly.dataSupplier;
+    AMFReaderFromCSV *supplier = self.assembly.csvReader;
     AMFSQLCoreDataHandler *handler = supplier.handler;
     NSString *file = [[NSBundle bundleForClass:[self class]] pathForResource:@"test"
                                                                       ofType:@"csv"];
     // when
-    [supplier populateContentsWithCSVFile:file];
+    [supplier populateContentsWithFile:file];
     
     // then
     XCTAssert([handler grabAllRecords].count == 10);

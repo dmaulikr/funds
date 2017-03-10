@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Typhoon/Typhoon.h>
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
-#import "AMFDataSupplyProtocol.h"
-#import "AMFStorageHandlerProtocol.h"
+
+@protocol AMFDataSupplyProtocol;
+@protocol AMFStorageHandlerProtocol;
+@protocol AMFFileIntoDBReader;
 
 @interface AMFDataSupplierAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
 -(id<AMFDataSupplyProtocol>) dataSupplier;
 -(id<AMFStorageHandlerProtocol>) storageHandler;
+-(id<AMFFileIntoDBReader>) csvReader;
 
 @end

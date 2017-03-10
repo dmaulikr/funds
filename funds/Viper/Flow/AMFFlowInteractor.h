@@ -10,9 +10,18 @@
 #import "AMFFlowInteractorInput.h"
 
 @protocol AMFFlowInteractorOutput;
+@protocol AMFDataSupplyProtocol;
 
 @interface AMFFlowInteractor : NSObject<AMFFlowInteractorInput>
 
+/**
+ data source to be used for showing contents
+ */
+@property (nonatomic, strong) id<AMFDataSupplyProtocol> dataSupply;
+
+/**
+ presenter's link
+ */
 @property (nonatomic, weak) id<AMFFlowInteractorOutput> output;
 
 @end

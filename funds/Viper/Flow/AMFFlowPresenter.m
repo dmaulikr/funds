@@ -11,33 +11,59 @@
 #import "AMFFlowViewInput.h"
 #import "AMFFlowInteractorInput.h"
 #import "AMFFlowRouterInput.h"
+#import "AMFPageProtocol.h"
 
 @implementation AMFFlowPresenter
+
+@synthesize page;
 
 #pragma mark - Methods AMFFlowModuleInput
 
 - (void)configureModule {
-    // configuration of the module which are independent from view
 }
 
-#pragma mark - Interface
+#pragma mark - Methods AMFFlowInteractorOutput
 
+-(void) receivedRecords:(NSArray*) records {
+    self.view.records = records;
+    [self.view refreshContents];
+}
+
+-(void) receivedValidPage:(id<AMFPageProtocol>)p {
+    [self.interactor askForDataWithPage:p];
+}
+
+#pragma mark - Methods AMFFlowViewOutput
 
 -(void)setupView {
-    
+
 }
 
 -(void)pageClicked {
-    
+
 }
 
 -(void)addClicked {
-    
+
+}
+
+- (void)cellSelected: (NSUInteger) index {
+
+}
+
+- (void)cellToDelete: (NSUInteger) index {
+
 }
 
 #pragma mark - State
 
 -(void)didTriggerViewReadyEvent {
     [self.view setupInitialState];
+
+    // ask for data to be shown in view
+    if (self.page == nil)
+        [self.interactor askForAnyValidPage];
+    else
+        [self.interactor askForDataWithPage:self.page];
 }
 @end

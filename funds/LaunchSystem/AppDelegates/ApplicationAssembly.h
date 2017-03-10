@@ -10,11 +10,14 @@
 #import <Typhoon/Typhoon.h>
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
+@class AMFDataSupplierAssembly;
 /**
  @author Michael Artuerhof
 
  Collects all App Delegates together
  */
 @interface ApplicationAssembly : TyphoonAssembly <RamblerInitialAssembly>
+
+@property(nonatomic, strong, readonly) AMFDataSupplierAssembly *dataAssembly;
 
 @end

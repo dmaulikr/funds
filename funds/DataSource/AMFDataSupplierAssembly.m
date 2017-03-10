@@ -9,6 +9,10 @@
 #import "AMFDataSupplierAssembly.h"
 #import "AMFDataSupplier.h"
 #import "AMFSQLCoreDataHandler.h"
+#import "AMFStorageHandlerProtocol.h"
+#import "AMFDataSupplyProtocol.h"
+#import "AMFFileIntoDBReader.h"
+#import "AMFReaderFromCSV.h"
 
 @implementation AMFDataSupplierAssembly
 
@@ -24,6 +28,15 @@
 -(id<AMFStorageHandlerProtocol>) storageHandler {
     return [TyphoonDefinition withClass:[AMFSQLCoreDataHandler class]
                           configuration:^(TyphoonDefinition *definition) {
+                              definition.scope = TyphoonScopeSingleton;
+                          }];
+}
+
+-(id<AMFFileIntoDBReader>) csvReader {
+    return [TyphoonDefinition withClass:[AMFReaderFromCSV class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(handler)
+                                                    with:[self storageHandler]];
                               definition.scope = TyphoonScopeSingleton;
                           }];
 }

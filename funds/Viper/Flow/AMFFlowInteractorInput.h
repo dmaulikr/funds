@@ -6,6 +6,18 @@
 //  Copyright © 2017 micartu. All rights reserved.
 //
 
+@protocol AMFPageProtocol;
+
 @protocol AMFFlowInteractorInput <NSObject>
+
+/**
+ asks for records with page
+ */
+-(void) askForDataWithPage:(id<AMFPageProtocol>) page;
+
+/**
+ if we do not have any page selected try to find one...
+ */
+-(void) askForAnyValidPage;
 
 @end

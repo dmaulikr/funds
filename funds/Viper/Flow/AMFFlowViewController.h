@@ -13,13 +13,9 @@
 
 @protocol AMFFlowViewOutput;
 @class AMFTheme;
+@class AMFFlowModuleAssembly;
 
 @interface AMFFlowViewController : UIViewController <AMFFlowViewInput>
-
-/**
- data source to be used for showing contents
- */
-@property (nonatomic, strong) id<AMFDataSupplyProtocol> input;
 
 /**
  theme to be applied to the view
@@ -30,5 +26,10 @@
  What should be passed over to presenter
  */
 @property (nonatomic, strong) id<AMFFlowViewOutput> output;
+
+/**
+ needed for cells to be able to install themes
+ */
+@property (nonatomic, strong) AMFFlowModuleAssembly *assembly;
 
 @end

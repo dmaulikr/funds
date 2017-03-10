@@ -13,24 +13,26 @@
 #import "AMFFlowRouter.h"
 #import "AMFThemeAssembly.h"
 #import "AMFDataSupplierAssembly.h"
+#import "AMFFlowCell.h"
 
 @implementation AMFFlowModuleAssembly
 
 -(AMFFlowViewController*) viewFlowModule {
     return [TyphoonDefinition withClass:[AMFFlowViewController class]
                           configuration:^(TyphoonDefinition *definition) {
-                              [definition injectProperty:@selector(input)
-                                                    with:_dataProvider.dataSupplier];
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterFlowModule]];
                               [definition injectProperty:@selector(theme)
                                                     with:[_themeProvider currentTheme]];
+                              [definition injectProperty:@selector(assembly) with:self];
                           }];
 }
             
 -(AMFFlowInteractor*) interactorFlowModule {
     return [TyphoonDefinition withClass:[AMFFlowInteractor class]
                           configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(dataSupply)
+                                                    with:_dataProvider.dataSupplier];
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterFlowModule]];
                           }];
@@ -57,6 +59,14 @@
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewFlowModule]];
                               
+                          }];
+}
+
+-(AMFFlowCell*) flowCell {
+    return [TyphoonDefinition withClass:[AMFFlowCell class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(theme)
+                                                    with:[_themeProvider currentTheme]];
                           }];
 }
 @end

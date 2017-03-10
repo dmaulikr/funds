@@ -28,7 +28,7 @@
     [self initStorage];
 }
 
--(void) addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
+-(AMFCashFlow*) addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
@@ -36,12 +36,15 @@
         cash = [AMFCashFlow MR_createEntityInContext:con];
     assert(cash);
     [cash updateWith:rec];
+    return cash;
 }
 
 -(void) addWithRecord:(id<AMFCashProtocol>)rec {
-    [self addNoRecurcyWithRecord:rec];
-    if (rec.wallet2wallet)
-        [self addNoRecurcyWithRecord:rec.wallet2wallet];
+    AMFCashFlow *first = [self addNoRecurcyWithRecord:rec];
+    if (rec.wallet2wallet) {
+        AMFCashFlow *second = [self addNoRecurcyWithRecord:rec.wallet2wallet];
+        first.wallet2wallet = second;
+    }
 }
 
 -(void) addRecord:(id<AMFCashProtocol>)rec {
@@ -64,6 +67,10 @@
 
 -(NSArray*) grabAllRecords {
     return [AMFCashFlow MR_findAllSortedBy:@"date" ascending:NO];
+}
+
+-(NSArray*) grabAllPages {
+    return [AMFPage MR_findAllSortedBy:@"name" ascending:NO];
 }
 
 -(void) removeAll {
