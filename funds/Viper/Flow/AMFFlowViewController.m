@@ -47,6 +47,11 @@ static NSString *const flowCellIndentifier = @"FlowCell";
     [self.tableView reloadData];
 }
 
+- (void)setTitle:(NSString*) title {
+    if (title == nil) return;
+    self.title = title;
+}
+
 #pragma mark - Themes
 
 - (void)applyTheme {

@@ -23,4 +23,9 @@
  */
 - (void)refreshContents;
 
+/**
+ sets title of navigation controller
+ */
+- (void)setTitle:(NSString*) title;
+
 @end

@@ -30,6 +30,8 @@
 }
 
 -(void) receivedValidPage:(id<AMFPageProtocol>)p {
+    self.page = p;
+    [self.view setTitle:self.page.name];
     [self.interactor askForDataWithPage:p];
 }
 
@@ -63,7 +65,9 @@
     // ask for data to be shown in view
     if (self.page == nil)
         [self.interactor askForAnyValidPage];
-    else
+    else {
         [self.interactor askForDataWithPage:self.page];
+        [self.view setTitle:self.page.name];
+    }
 }
 @end
