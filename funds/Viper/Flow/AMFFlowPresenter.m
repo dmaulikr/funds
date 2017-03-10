@@ -8,7 +8,20 @@
 
 #import "AMFFlowPresenter.h"
 
+#import "AMFFlowViewInput.h"
+#import "AMFFlowInteractorInput.h"
+#import "AMFFlowRouterInput.h"
+
 @implementation AMFFlowPresenter
+
+#pragma mark - Methods AMFFlowModuleInput
+
+- (void)configureModule {
+    // configuration of the module which are independent from view
+}
+
+#pragma mark - Interface
+
 
 -(void)setupView {
     
@@ -22,4 +35,9 @@
     
 }
 
+#pragma mark - State
+
+-(void)didTriggerViewReadyEvent {
+    [self.view setupInitialState];
+}
 @end

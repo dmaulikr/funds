@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "AMFFlowViewOutput.h"
+#import "AMFFlowModuleInput.h"
+#import "AMFFlowInteractorOutput.h"
 
 @protocol AMFFlowViewInput;
-@protocol AMFFlowIteractorInput;
+@protocol AMFFlowInteractorInput;
 @protocol AMFFlowRouterInput;
 
-@interface AMFFlowPresenter : NSObject<AMFFlowViewOutput>
+@interface AMFFlowPresenter : NSObject<AMFFlowModuleInput, AMFFlowViewOutput, AMFFlowInteractorOutput>
 
 @property (nonatomic, weak) id<AMFFlowViewInput> view;
-@property (nonatomic, strong) id<AMFFlowIteractorInput> iteractor;
+@property (nonatomic, strong) id<AMFFlowInteractorInput> interactor;
 @property (nonatomic, strong) id<AMFFlowRouterInput> router;
 
 @end

@@ -18,10 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.output didTriggerViewReadyEvent];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Методы AMFWalletViewInput
+
+- (void)setupInitialState {
+    // setups view's elements which are crucial to it (elements, animations, etc.)
 }
 
 #pragma mark - Themes
@@ -32,6 +39,5 @@
 
 - (void)applyTheme {
     LogDebug(@"navigation font: %@; size: %ld", _theme.navigationFontName, (long) _theme.navigationFontSize);
-    
 }
 @end

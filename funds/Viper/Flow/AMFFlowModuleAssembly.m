@@ -42,7 +42,7 @@
                               
                               [definition injectProperty:@selector(view)
                                                     with:[self viewFlowModule]];
-                              [definition injectProperty:@selector(iteractor)
+                              [definition injectProperty:@selector(interactor)
                                                     with:[self interactorFlowModule]];
                               [definition injectProperty:@selector(router)
                                                     with:[self routerFlowModule]];

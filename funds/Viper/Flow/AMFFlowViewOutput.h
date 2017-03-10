@@ -13,4 +13,9 @@
 -(void)addClicked;
 //-(void)entryClicked;
 
+/**
+ Method reports to presenter that it's ready for work
+ */
+- (void)didTriggerViewReadyEvent;
+
 @end

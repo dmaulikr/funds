@@ -17,8 +17,8 @@
 @property (nonatomic, strong) id<AMFDataSupplyProtocol> input;
 
 /**
- what page should be viewed, could be also nil - then find the first or saved one
+ setups initial state of the view
  */
-//@property (nonatomic, strong) id<AMFCashPageProtocol> page;
+- (void)setupInitialState;
 
 @end

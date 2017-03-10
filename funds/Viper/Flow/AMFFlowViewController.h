@@ -14,7 +14,7 @@
 @protocol AMFFlowViewOutput;
 @class AMFTheme;
 
-@interface AMFFlowViewController : UIViewController
+@interface AMFFlowViewController : UIViewController <AMFFlowViewInput>
 
 /**
  data source to be used for showing contents
