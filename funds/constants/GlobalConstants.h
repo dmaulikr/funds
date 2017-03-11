@@ -8,5 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-// seagues
-extern NSString *const kSeagueChoosePage;
+// segues
+extern NSString *const kSegueChoosePage;

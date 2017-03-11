@@ -14,7 +14,7 @@
 @implementation AMFFlowRouter
 
 -(void) showPageChooserWithPageSelected:(id<AMFPageProtocol>)page andOutput:(id<AMFPageChooserModuleOutput>) output {
-    [[self.transitionHandler openModuleUsingSegue:kSeagueChoosePage] thenChainUsingBlock:^id<AMFPageChooserModuleOutput>(id<AMFPageChooserModuleInput> moduleInput) {
+    [[self.transitionHandler openModuleUsingSegue:kSegueChoosePage] thenChainUsingBlock:^id<AMFPageChooserModuleOutput>(id<AMFPageChooserModuleInput> moduleInput) {
         [moduleInput configureModuleWithPageSelected:page];
         return output;
     }];

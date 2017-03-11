@@ -8,4 +8,4 @@
 
 #import "GlobalConstants.h"
 
-NSString *const kSeagueChoosePage = @"choosePage";
+NSString *const kSegueChoosePage = @"choosePage";
