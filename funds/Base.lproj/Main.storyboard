@@ -77,11 +77,49 @@
                     <navigationItem key="navigationItem" id="vRD-ba-pM5"/>
                     <connections>
                         <outlet property="tableView" destination="eoY-d1-J2c" id="Bez-lR-S7R"/>
+                        <segue destination="S8Q-gk-p1I" kind="presentation" identifier="choosePage" id="wuJ-s6-shF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="-169.56521739130437"/>
+        </scene>
+        <!--Page Chooser View Controller-->
+        <scene sceneID="ozC-oJ-7En">
+            <objects>
+                <viewController id="S8Q-gk-p1I" customClass="AMFPageChooserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTX-2b-RM3"/>
+                        <viewControllerLayoutGuide type="bottom" id="m28-nO-yMm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Rm-zX-TKF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOx-nt-2mE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="S8Q-gk-p1I" id="ftb-zE-COG"/>
+                                    <outlet property="delegate" destination="S8Q-gk-p1I" id="DEg-OV-iDM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YOx-nt-2mE" secondAttribute="trailing" id="J6p-yl-Ka2"/>
+                            <constraint firstItem="YOx-nt-2mE" firstAttribute="bottom" secondItem="m28-nO-yMm" secondAttribute="top" id="S32-Ha-W9x"/>
+                            <constraint firstItem="YOx-nt-2mE" firstAttribute="top" secondItem="1Rm-zX-TKF" secondAttribute="top" id="wCa-gc-FHw"/>
+                            <constraint firstItem="YOx-nt-2mE" firstAttribute="leading" secondItem="1Rm-zX-TKF" secondAttribute="leading" id="yf9-qt-HG7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YOx-nt-2mE" id="6xl-Fr-2OM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8i8-fc-1wZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493.5999999999999" y="-963.86806596701661"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7r1-ca-996">
