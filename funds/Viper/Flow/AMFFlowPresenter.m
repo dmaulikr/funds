@@ -41,10 +41,6 @@
 
 }
 
--(void)pageClicked {
-
-}
-
 -(void)addClicked {
 
 }
@@ -54,6 +50,10 @@
 }
 
 - (void)cellToDelete: (NSUInteger) index {
+
+}
+
+- (void) choosePage {
 
 }
 

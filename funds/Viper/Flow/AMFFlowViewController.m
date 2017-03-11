@@ -40,7 +40,12 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 
 - (void)setupInitialState {
     [self applyTheme];
-    // setups view's elements which are crucial to it (elements, animations, etc.)
+    // setup left button - for choosing pages
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PAGES", nil)
+                                                             style:UIBarButtonItemStyleBordered
+                                                            target:self
+                                                            action:@selector(choosePage)];
+    self.navigationItem.leftBarButtonItem = left;
 }
 
 - (void)refreshContents {
@@ -90,5 +95,11 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+}
+
+#pragma mark - Actions
+
+- (void) choosePage {
+    [self.output choosePage];
 }
 @end
