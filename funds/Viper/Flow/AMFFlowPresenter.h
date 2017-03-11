@@ -10,12 +10,13 @@
 #import "AMFFlowViewOutput.h"
 #import "AMFFlowModuleInput.h"
 #import "AMFFlowInteractorOutput.h"
+#import "AMFPageChooserModuleOutput.h"
 
 @protocol AMFFlowViewInput;
 @protocol AMFFlowInteractorInput;
 @protocol AMFFlowRouterInput;
 
-@interface AMFFlowPresenter : NSObject<AMFFlowModuleInput, AMFFlowViewOutput, AMFFlowInteractorOutput>
+@interface AMFFlowPresenter : NSObject<AMFFlowModuleInput, AMFFlowViewOutput, AMFFlowInteractorOutput, AMFPageChooserModuleOutput>
 
 @property (nonatomic, weak) id<AMFFlowViewInput> view;
 @property (nonatomic, strong) id<AMFFlowInteractorInput> interactor;

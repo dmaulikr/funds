@@ -7,7 +7,16 @@
 //
 
 #import "AMFFlowRouter.h"
+#import "GlobalConstants.h"
+#import "AMFPageChooserModuleInput.h"
+#import "AMFPageChooserModuleOutput.h"
 
 @implementation AMFFlowRouter
 
+-(void) showPageChooserWithPageSelected:(id<AMFPageProtocol>)page andOutput:(id<AMFPageChooserModuleOutput>) output {
+    [[self.transitionHandler openModuleUsingSegue:kSeagueChoosePage] thenChainUsingBlock:^id<AMFPageChooserModuleOutput>(id<AMFPageChooserModuleInput> moduleInput) {
+        [moduleInput configureModuleWithPageSelected:page];
+        return output;
+    }];
+}
 @end

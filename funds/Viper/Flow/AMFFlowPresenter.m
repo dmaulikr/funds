@@ -54,7 +54,15 @@
 }
 
 - (void) choosePage {
+    [self.router showPageChooserWithPageSelected:self.page
+                                       andOutput:self];
+}
 
+
+#pragma mark - Methods AMFPageChooserModuleOutput
+
+-(void) pageWasChosen:(id<AMFPageProtocol>)p {
+    [self receivedValidPage:p];
 }
 
 #pragma mark - State

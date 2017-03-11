@@ -8,6 +8,7 @@
 
 #import "AMFPageChooserRouterInput.h"
 
+
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 
 @interface AMFPageChooserRouter : NSObject <AMFPageChooserRouterInput>

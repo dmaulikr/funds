@@ -18,9 +18,4 @@
 -(void) closeDialog;
 
 
-/**
- show up a dialog for page's selection
- */
--(void) showWithPageSelected:(id<AMFPageProtocol>)page;
-
 @end

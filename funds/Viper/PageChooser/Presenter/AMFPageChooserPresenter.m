@@ -12,6 +12,7 @@
 #import "AMFPageChooserInteractorInput.h"
 #import "AMFPageChooserRouterInput.h"
 #import "AMFPageChooserModuleOutput.h"
+#import "AMFPageProtocol.h"
 
 @implementation AMFPageChooserPresenter
 
@@ -32,6 +33,7 @@
 - (void)cellSelected: (NSUInteger) index {
     id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
     [self.moduleOutput pageWasChosen:page];
+    [self.router closeDialog];
 }
 
 #pragma mark - Methods of AMFPageChooserInteractorOutput
@@ -40,5 +42,4 @@
     self.view.pages = pages;
     [self.view refreshContents];
 }
-
 @end

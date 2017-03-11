@@ -9,8 +9,10 @@
 #import "AMFPageChooserRouter.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
+
 #import "GlobalConstants.h"
 #import "AMFPageChooserModuleInput.h"
+#import "AMFPageChooserModuleOutput.h"
 
 @implementation AMFPageChooserRouter
 
@@ -19,12 +21,4 @@
 -(void) closeDialog {
     [self.transitionHandler closeCurrentModule:YES];
 }
-
--(void) showWithPageSelected:(id<AMFPageProtocol>)page {
-    [[self.transitionHandler openModuleUsingSegue:kSeagueChoosePage] thenChainUsingBlock:^id<RamblerViperModuleOutput>(id<AMFPageChooserModuleInput> moduleInput) {
-        [moduleInput configureModuleWithPageSelected:page];
-        return nil;
-    }];
-}
-
 @end

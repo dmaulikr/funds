@@ -11,4 +11,6 @@
 
 #import "OCLogTemplate.h"
 
+#define AMFLocalize(x) NSLocalizedString((x), nil)
+
 #endif /* funds_prefix_h */

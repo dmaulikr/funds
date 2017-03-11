@@ -56,10 +56,8 @@ pages;
     id <AMFPageProtocol> page = [self.pages objectAtIndex:indexPath.row];
     if (self.selectedPage && // selected cell could be nil
         [page.name isEqualToString:self.selectedPage.name]) {
-        [cell setSelected:YES];
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
-    else
-        [cell setSelected:NO];
     cell.textLabel.text = page.name;
     return cell;
 }
