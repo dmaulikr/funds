@@ -28,6 +28,11 @@
 - (void)refreshContents;
 
 /**
+ places selected page into visible area
+ */
+-(void) placeSelectedPageAtCenter;
+
+/**
  Метод настраивает начальный стейт view
  */
 - (void)setupInitialState;

@@ -37,6 +37,21 @@ pages;
     // nothing to intialize
 }
 
+-(void) placeSelectedPageAtCenter {
+    NSInteger index = 0;
+    if (self.selectedPage) {
+        for (id<AMFPageProtocol> p in self.pages) {
+            if ([p.name isEqualToString:self.selectedPage.name]) {
+                break;
+            }
+            else
+                index++;
+        }
+        NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
+        [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    }
+}
+
 - (void)refreshContents {
     [self.tableView reloadData];
 }
@@ -58,6 +73,8 @@ pages;
         [page.name isEqualToString:self.selectedPage.name]) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
+    else
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
     cell.textLabel.text = page.name;
     return cell;
 }

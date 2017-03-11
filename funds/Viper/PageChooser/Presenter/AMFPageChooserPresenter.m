@@ -41,5 +41,6 @@
 -(void) receivedPages:(NSArray*) pages {
     self.view.pages = pages;
     [self.view refreshContents];
+    [self.view placeSelectedPageAtCenter];
 }
 @end
