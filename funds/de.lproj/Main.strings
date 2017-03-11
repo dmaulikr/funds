@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "flow"; ObjectID = "KNb-ap-89p"; */
+"KNb-ap-89p.title" = "flow";
+
+/* Class = "UITabBarItem"; title = "balance"; ObjectID = "KoU-Ch-vI6"; */
+"KoU-Ch-vI6.title" = "balance";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "iNg-A6-0aK"; */
+"iNg-A6-0aK.text" = "Description";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "udi-0I-nM2"; */
+"udi-0I-nM2.text" = "Amount";
+
+/* Class = "UITabBarItem"; title = "wallet"; ObjectID = "uvw-FU-i2G"; */
+"uvw-FU-i2G.title" = "wallet";
