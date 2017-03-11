@@ -13,6 +13,7 @@
 #import "AMFWalletPlain.h"
 #import "AMFCurrencyPlain.h"
 #import "AMFCategoryPlain.h"
+#import "AMFPagePlain.h"
 #import "AMFPageProtocol.h"
 #import "AMFStorageHandlerProtocol.h"
 
@@ -62,31 +63,43 @@
         AMFCashPlain *cash = [[AMFCashPlain alloc] init];
         AMFWalletPlain *wal = [[AMFWalletPlain alloc] init];
         AMFCategoryPlain *cat = [[AMFCategoryPlain alloc] init];
+        AMFPagePlain *page = [[AMFPagePlain alloc] init];
+        AMFCurrencyPlain *c = [[AMFCurrencyPlain alloc] init];
+
         wal.name = rec.wallet;
+        page.name = rec.page;
+        c.name = rec.currency;
+        cat.name = rec.category;
+
         cash.date = rec.date;
-        cash.wallet = wal;
         cash.descr = rec.descr;
         cash.amount = rec.amount;
-        AMFCurrencyPlain *c = [[AMFCurrencyPlain alloc] init];
-        c.name = rec.currency;
+
+        cash.wallet = wal;
         cash.currency = c;
-        cat.name = rec.category;
         cash.category = cat;
+        cash.page = page;
+
         if (rec.toWallet && rec.toWallet.length) {
             // moving money to another account
             AMFWalletPlain *walInto = [[AMFWalletPlain alloc] init];
             AMFCurrencyPlain *cInto = [[AMFCurrencyPlain alloc] init];
-            walInto.name = rec.toWallet;
             AMFCashPlain *cashInto = [[AMFCashPlain alloc] init];
+
+            walInto.name = rec.toWallet;
+
             cashInto.wallet2wallet = cash;
             cash.wallet2wallet = cashInto;
+
             cashInto.amount = rec.toWalletAmount;
-            cashInto.wallet =  walInto;
-            cashInto.category = cat;
             cashInto.date = rec.date;
             cashInto.descr = rec.descr;
             cInto.name = rec.toWalletCurrency;
+
             cashInto.currency = cInto;
+            cashInto.wallet =  walInto;
+            cashInto.category = cat;
+            cashInto.page = page;
         }
         [ar addObject:cash];
     }

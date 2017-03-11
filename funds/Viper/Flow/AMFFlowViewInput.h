@@ -26,6 +26,6 @@
 /**
  sets title of navigation controller
  */
-- (void)setTitle:(NSString*) title;
+- (void)setToolbarTitle:(NSString*) title;
 
 @end
