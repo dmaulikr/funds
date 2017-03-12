@@ -29,9 +29,12 @@
             continue;
         AMFFlowData *f = [[AMFFlowData alloc] init];
         if (r.wallet2wallet) {
+            NSString *wLeft = r.wallet.name;
+            NSString *wRight = r.wallet2wallet.wallet.name;
+            BOOL takenFromLeft = r.amount < 0 ? YES : NO;
             NSString *from = [NSString stringWithFormat:@"%@->%@",
-                              r.wallet.name,
-                              r.wallet2wallet.wallet.name];
+                              takenFromLeft ? wLeft : wRight,
+                              takenFromLeft ? wRight : wLeft];
             f.descr = from;
             f.icon = @"exchange";
             f.amount = [NSString stringWithFormat:@"%g", fabs(r.amount)];
