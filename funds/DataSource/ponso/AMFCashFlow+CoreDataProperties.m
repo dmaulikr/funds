@@ -15,6 +15,7 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCashFlow"];
 }
 
+@dynamic cash_id;
 @dynamic amount;
 @dynamic date;
 @dynamic descr;

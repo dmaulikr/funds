@@ -16,18 +16,24 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFWallet"];
 }
 
++(NSUInteger) generateID {
+    static NSUInteger identification = 0;
+    return identification++;
+}
+
 + (AMFWallet*) findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", wallet.name, wallet.icon_path];
     AMFWallet *w = [AMFWallet MR_findFirstWithPredicate:predicate inContext:con];
     if (!w) {
         w = [AMFWallet MR_createEntityInContext:con];
-        [w updateWith:wallet andCash:cash];
+        w.wallet_id = [AMFWallet generateID];
     }
+    [w updateWith:wallet andCash:cash];
     return w;
 }
 
-
+@dynamic wallet_id;
 @dynamic icon_path;
 @dynamic name;
 @dynamic cash;

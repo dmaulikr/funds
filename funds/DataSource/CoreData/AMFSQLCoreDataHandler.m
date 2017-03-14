@@ -28,12 +28,19 @@
     [self initStorage];
 }
 
++(NSUInteger) generateID {
+    static NSUInteger identification = 0;
+    return identification++;
+}
+
 -(AMFCashFlow*) addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
-    if (!cash)
+    if (!cash) {
         cash = [AMFCashFlow MR_createEntityInContext:con];
+        cash.cash_id = [AMFSQLCoreDataHandler generateID];
+    }
     assert(cash);
     [cash updateWith:rec];
     return cash;
@@ -61,8 +68,7 @@
 -(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY page.name == %@",
                               page.name];
-    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
-    return [AMFCashFlow MR_findAllWithPredicate:predicate inContext:con];
+    return [AMFCashFlow MR_findAllSortedBy:@"cash_id" ascending:NO withPredicate:predicate];
 }
 
 -(NSArray*) grabAllRecords {
@@ -70,7 +76,7 @@
 }
 
 -(NSArray*) grabAllPages {
-    return [AMFPage MR_findAllSortedBy:@"name" ascending:NO];
+    return [AMFPage MR_findAllSortedBy:@"page_id" ascending:NO];
 }
 
 -(void) removeAll {

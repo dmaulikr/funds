@@ -16,17 +16,24 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFPage"];
 }
 
++(NSUInteger) generateID {
+    static NSUInteger identification = 0;
+    return identification++;
+}
+
 + (AMFPage*) findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash {
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", page.name];
     AMFPage *p = [AMFPage MR_findFirstWithPredicate:predicate inContext:con];
     if (!p) {
         p = [AMFPage MR_createEntityInContext:con];
-        [p updateWith:page andCash:cash];
+        p.page_id = [AMFPage generateID];
     }
+    [p updateWith:page andCash:cash];
     return p;
 }
 
+@dynamic page_id;
 @dynamic name;
 @dynamic cashflow;
 

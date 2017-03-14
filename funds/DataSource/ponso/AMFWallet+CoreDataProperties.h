@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (AMFWallet*) findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet
                               andCash:(AMFCashFlow *_Nonnull)cash;
 
+@property (nonatomic, assign) NSUInteger wallet_id;
 @property (nullable, nonatomic, copy) NSString *icon_path;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, retain) NSSet<AMFCashFlow *> *cash;

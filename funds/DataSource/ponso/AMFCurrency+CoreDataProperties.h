@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (AMFCurrency*) findOrCreateWithPage:(id<AMFCurrencyProtocol>)m
                               andCash:(AMFCashFlow*)cash;
 
+@property (nonatomic, assign) NSUInteger cur_id;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nonatomic) double rate;
 @property (nullable, nonatomic, retain) NSSet<AMFCashFlow *> *cash;

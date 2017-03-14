@@ -16,10 +16,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface AMFCashFlow (CoreDataProperties) <AMFCashProtocol>
 
 + (NSFetchRequest<AMFCashFlow *> *)fetchRequest;
 
+@property (nonatomic, assign) NSUInteger cash_id;
 @property (nonatomic) double amount;
 @property (nonatomic, copy) NSDate *date;
 @property (nullable, nonatomic, copy) NSString *descr;

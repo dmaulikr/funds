@@ -16,6 +16,11 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCategory"];
 }
 
++(NSUInteger) generateID {
+    static NSUInteger identification = 0;
+    return identification++;
+}
+
 + (AMFCategory*) findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
                                 andCash:(AMFCashFlow *)cash {
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
@@ -23,11 +28,13 @@
     AMFCategory *c = [AMFCategory MR_findFirstWithPredicate:predicate inContext:con];
     if (!c) {
         c = [AMFCategory MR_createEntityInContext:con];
-        [c updateWith:category andCash:cash];
+        c.cat_id = [AMFCategory generateID];
     }
+    [c updateWith:category andCash:cash];
     return c;
 }
 
+@dynamic cat_id;
 @dynamic icon_path;
 @dynamic name;
 @dynamic cash;

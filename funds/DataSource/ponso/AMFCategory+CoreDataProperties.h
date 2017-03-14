@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (AMFCategory*) findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
                               andCash:(AMFCashFlow *_Nonnull)cash;
 
+@property (nonatomic, assign) NSUInteger cat_id;
 @property (nullable, nonatomic, copy) NSString *icon_path;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, retain) NSSet<AMFCashFlow *> *cash;

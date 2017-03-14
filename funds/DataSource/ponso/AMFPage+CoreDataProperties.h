@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<AMFPage *> *)fetchRequest;
 + (AMFPage*) findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash;
 
+@property (nonatomic, assign) NSUInteger page_id;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, retain) NSSet<AMFCashFlow *> *cashflow;
 
