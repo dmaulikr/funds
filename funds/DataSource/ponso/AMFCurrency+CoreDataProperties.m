@@ -9,6 +9,8 @@
 
 #import "AMFCurrency+CoreDataProperties.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "NSManagedObject+generateID.h"
+#import "AMFgenerateID.h"
 
 @implementation AMFCurrency (CoreDataProperties)
 
@@ -16,18 +18,20 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCurrency"];
 }
 
-+(NSUInteger) generateID {
-    static NSUInteger identification = 0;
-    return identification++;
-}
-
 + (AMFCurrency*) findOrCreateWithPage:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow*)cash {
+    static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", m.name];
     AMFCurrency *mon = [AMFCurrency MR_findFirstWithPredicate:predicate inContext:con];
     if (!mon) {
         mon = [AMFCurrency MR_createEntityInContext:con];
-        mon.cur_id = [AMFCurrency generateID];
+        if (!_gen) {
+            _gen = [[AMFgenerateID alloc] initWithID:
+                    [NSManagedObject nextID:@"cur_id"
+                              forEntityName:@"AMFCurrency"
+                                  inContext:con]];
+        }
+        mon.cur_id = [_gen generateID];
     }
     assert(mon);
     [mon updateWith:m andCash:cash];

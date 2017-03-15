@@ -11,6 +11,7 @@
 #import "AMFDataSupplierAssembly.h"
 #import "AMFReaderFromCSV.h"
 #import "AMFSQLCoreDataHandler.h"
+#import "AMFCashPlain.h"
 
 @interface DataStorageTests : RamblerTyphoonAssemblyTests
 
@@ -41,7 +42,7 @@
     [supplier populateContentsWithFile:file];
     
     // then
-    XCTAssert([handler grabAllRecords].count == 10);
+    long cnt = [handler grabAllRecords].count;
+    XCTAssert(cnt == 10, @"actual cnt: %ld", cnt);
 }
-
 @end

@@ -9,6 +9,8 @@
 
 #import "AMFPage+CoreDataProperties.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "NSManagedObject+generateID.h"
+#import "AMFgenerateID.h"
 
 @implementation AMFPage (CoreDataProperties)
 
@@ -16,18 +18,20 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFPage"];
 }
 
-+(NSUInteger) generateID {
-    static NSUInteger identification = 0;
-    return identification++;
-}
-
 + (AMFPage*) findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash {
+    static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", page.name];
     AMFPage *p = [AMFPage MR_findFirstWithPredicate:predicate inContext:con];
     if (!p) {
         p = [AMFPage MR_createEntityInContext:con];
-        p.page_id = [AMFPage generateID];
+        if (!_gen) {
+            _gen = [[AMFgenerateID alloc] initWithID:
+                    [NSManagedObject nextID:@"page_id"
+                              forEntityName:@"AMFPage"
+                                  inContext:con]];
+        }
+        p.page_id = [_gen generateID];
     }
     [p updateWith:page andCash:cash];
     return p;

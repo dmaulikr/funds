@@ -10,8 +10,12 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "AMFCashFlow+CoreDataClass.h"
 #import "AMFCashFlow+CoreDataProperties.h"
+#import "NSManagedObject+generateID.h"
+#import "AMFgenerateID.h"
 
-@interface AMFSQLCoreDataHandler()
+@interface AMFSQLCoreDataHandler() {
+    AMFgenerateID *_gen;
+}
 
 - (void) saveContext;
 
@@ -28,18 +32,20 @@
     [self initStorage];
 }
 
-+(NSUInteger) generateID {
-    static NSUInteger identification = 0;
-    return identification++;
-}
-
 -(AMFCashFlow*) addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
     if (!cash) {
         cash = [AMFCashFlow MR_createEntityInContext:con];
-        cash.cash_id = [AMFSQLCoreDataHandler generateID];
+        if (!_gen) {
+            _gen = [[AMFgenerateID alloc] initWithID:
+                    [NSManagedObject nextID:@"cash_id"
+                              forEntityName:@"AMFCashFlow"
+                                  inContext:con]];
+        }
+        assert(_gen);
+        cash.cash_id = [_gen generateID];
     }
     assert(cash);
     [cash updateWith:rec];

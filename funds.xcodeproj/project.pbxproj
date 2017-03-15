@@ -20,6 +20,8 @@
 		4C046FC71E73CEF5001E73A6 /* AMFPageChooserInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C046FC41E73CEF5001E73A6 /* AMFPageChooserInteractor.m */; };
 		4C046FCB1E73CF0A001E73A6 /* AMFPageChooserRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C046FC91E73CF0A001E73A6 /* AMFPageChooserRouter.m */; };
 		4C046FCF1E73DFDC001E73A6 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C046FCE1E73DFDC001E73A6 /* GlobalConstants.m */; };
+		4C1E69491E79AB21004A3B4D /* AMFgenerateID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E69481E79AB21004A3B4D /* AMFgenerateID.m */; };
+		4C1E694C1E79B0CD004A3B4D /* NSManagedObject+generateID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E694B1E79B0CD004A3B4D /* NSManagedObject+generateID.m */; };
 		4C53EC151E6DC7B400725AF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC141E6DC7B400725AF8 /* main.m */; };
 		4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC171E6DC7B400725AF8 /* AppDelegate.m */; };
 		4C53EC1E1E6DC7B400725AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53EC1C1E6DC7B400725AF8 /* Main.storyboard */; };
@@ -133,6 +135,10 @@
 		4C046FCD1E73DFDC001E73A6 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = constants/GlobalConstants.h; sourceTree = "<group>"; };
 		4C046FCE1E73DFDC001E73A6 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalConstants.m; path = constants/GlobalConstants.m; sourceTree = "<group>"; };
 		4C046FD11E73E8E4001E73A6 /* AMFPageChooserModuleOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFPageChooserModuleOutput.h; path = funds/Viper/PageChooser/Presenter/AMFPageChooserModuleOutput.h; sourceTree = SOURCE_ROOT; };
+		4C1E69471E79AB21004A3B4D /* AMFgenerateID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFgenerateID.h; path = DataSource/utils/AMFgenerateID.h; sourceTree = "<group>"; };
+		4C1E69481E79AB21004A3B4D /* AMFgenerateID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFgenerateID.m; path = DataSource/utils/AMFgenerateID.m; sourceTree = "<group>"; };
+		4C1E694A1E79B0CD004A3B4D /* NSManagedObject+generateID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+generateID.h"; path = "DataSource/CoreData/NSManagedObject+generateID.h"; sourceTree = "<group>"; };
+		4C1E694B1E79B0CD004A3B4D /* NSManagedObject+generateID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+generateID.m"; path = "DataSource/CoreData/NSManagedObject+generateID.m"; sourceTree = "<group>"; };
 		4C53EC101E6DC7B400725AF8 /* funds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53EC141E6DC7B400725AF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C53EC161E6DC7B400725AF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -484,6 +490,15 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		4C1E694D1E79B681004A3B4D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E694A1E79B0CD004A3B4D /* NSManagedObject+generateID.h */,
+				4C1E694B1E79B0CD004A3B4D /* NSManagedObject+generateID.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		4C53EC071E6DC7B400725AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -664,6 +679,7 @@
 		4CE158801E7135880009BAF4 /* Ponsos and core data */ = {
 			isa = PBXGroup;
 			children = (
+				4C1E694D1E79B681004A3B4D /* Categories */,
 				4CE158A71E7167D00009BAF4 /* AMFCashFlow */,
 				4CE158A81E7167DD0009BAF4 /* AMFCategory */,
 				4CE158A61E7167C30009BAF4 /* AMFWallet */,
@@ -759,6 +775,8 @@
 		4CE158D31E718AE90009BAF4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4C1E69471E79AB21004A3B4D /* AMFgenerateID.h */,
+				4C1E69481E79AB21004A3B4D /* AMFgenerateID.m */,
 				4C53EC881E70700000725AF8 /* AMFDataSupplier.h */,
 				4C53EC891E70700000725AF8 /* AMFDataSupplier.m */,
 				4CE158DB1E71B8590009BAF4 /* AMFBudgetCSVReader.h */,
@@ -1287,6 +1305,7 @@
 				4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */,
 				4CE158DD1E71B8590009BAF4 /* AMFBudgetCSVReader.m in Sources */,
 				4CE158E31E71C4C70009BAF4 /* AMFCashPlain.m in Sources */,
+				4C1E69491E79AB21004A3B4D /* AMFgenerateID.m in Sources */,
 				4CE158FA1E727FFF0009BAF4 /* AMFFlowPresenter.m in Sources */,
 				4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */,
 				4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */,
@@ -1323,6 +1342,7 @@
 				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
 				4CE158D61E718B390009BAF4 /* AMFSQLCoreDataHandler.m in Sources */,
 				4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */,
+				4C1E694C1E79B0CD004A3B4D /* NSManagedObject+generateID.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
 				4CE159081E7299610009BAF4 /* AMFFlowCell.m in Sources */,
 				4C046FB91E73CEA5001E73A6 /* AMFPageChooserAssembly.m in Sources */,
