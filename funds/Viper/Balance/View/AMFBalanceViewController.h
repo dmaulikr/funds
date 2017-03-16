@@ -9,17 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import "AMFBalanceViewInput.h"
+#import "AMFThemeBaseController.h"
 
 @class AMFTheme;
 @protocol AMFBalanceViewOutput;
 
-@interface AMFBalanceViewController : UIViewController <AMFBalanceViewInput>
+@interface AMFBalanceViewController : AMFThemeBaseController <AMFBalanceViewInput>
 
 @property (nonatomic, strong) id<AMFBalanceViewOutput> output;
-
-/**
- theme to be applied to the view
- */
-@property (nonatomic, strong) AMFTheme *theme;
 
 @end

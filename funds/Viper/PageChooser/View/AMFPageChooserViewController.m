@@ -56,6 +56,12 @@ pages;
     [self.tableView reloadData];
 }
 
+#pragma mark - Themes
+
+- (void)applyTheme {
+    [super applyTheme];
+}
+
 #pragma mark - Table View source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

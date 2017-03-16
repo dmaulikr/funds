@@ -33,7 +33,7 @@
 }
 
 - (void)applyTheme {
-    LogDebug(@"AMFBalanceViewController navigation font: %@; size: %ld", _theme.navigationFontName, (long) _theme.navigationFontSize);
+    [super applyTheme];
 }
 
 @end

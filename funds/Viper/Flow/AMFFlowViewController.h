@@ -10,17 +10,13 @@
 #import <ViperMcFlurry/ViperMcFlurry.h>
 #import "AMFFlowViewInput.h"
 #import "AMFThemeable.h"
+#import "AMFThemeBaseController.h"
 
 @protocol AMFFlowViewOutput;
 @class AMFTheme;
 @class AMFFlowModuleAssembly;
 
-@interface AMFFlowViewController : UIViewController <AMFFlowViewInput>
-
-/**
- theme to be applied to the view
- */
-@property (nonatomic, strong) AMFTheme *theme;
+@interface AMFFlowViewController : AMFThemeBaseController <AMFFlowViewInput>
 
 /**
  What should be passed over to presenter

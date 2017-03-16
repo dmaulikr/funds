@@ -9,17 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import "AMFWalletViewInput.h"
+#import "AMFThemeBaseController.h"
 
 @protocol AMFWalletViewOutput;
 @class AMFTheme;
 
-@interface AMFWalletViewController : UIViewController <AMFWalletViewInput>
+@interface AMFWalletViewController : AMFThemeBaseController <AMFWalletViewInput>
 
 @property (nonatomic, strong) id<AMFWalletViewOutput> output;
-
-/**
- theme to be applied to the view
- */
-@property (nonatomic, strong) AMFTheme *theme;
 
 @end

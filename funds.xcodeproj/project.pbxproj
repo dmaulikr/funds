@@ -29,6 +29,7 @@
 		4C2758F81E7AF4BB0010C011 /* AMFAddRecordPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2758F71E7AF4BB0010C011 /* AMFAddRecordPresenter.m */; };
 		4C2758FD1E7AF4C40010C011 /* AMFAddRecordInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2758FA1E7AF4C40010C011 /* AMFAddRecordInteractor.m */; };
 		4C2759011E7AF4CD0010C011 /* AMFAddRecordRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2758FF1E7AF4CD0010C011 /* AMFAddRecordRouter.m */; };
+		4C2759061E7B01280010C011 /* AMFThemeBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2759051E7B01280010C011 /* AMFThemeBaseController.m */; };
 		4C53EC151E6DC7B400725AF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC141E6DC7B400725AF8 /* main.m */; };
 		4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC171E6DC7B400725AF8 /* AppDelegate.m */; };
 		4C53EC1E1E6DC7B400725AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53EC1C1E6DC7B400725AF8 /* Main.storyboard */; };
@@ -167,6 +168,8 @@
 		4C2758FF1E7AF4CD0010C011 /* AMFAddRecordRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddRecordRouter.m; path = funds/Viper/AddRecord/Router/AMFAddRecordRouter.m; sourceTree = SOURCE_ROOT; };
 		4C2759001E7AF4CD0010C011 /* AMFAddRecordRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddRecordRouterInput.h; path = funds/Viper/AddRecord/Router/AMFAddRecordRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C2759021E7AFC310010C011 /* AMFAddRecordModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFAddRecordModuleOutput.h; path = funds/Viper/AddRecord/Presenter/AMFAddRecordModuleOutput.h; sourceTree = SOURCE_ROOT; };
+		4C2759041E7B01280010C011 /* AMFThemeBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFThemeBaseController.h; path = Viper/Common/AMFThemeBaseController.h; sourceTree = "<group>"; };
+		4C2759051E7B01280010C011 /* AMFThemeBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFThemeBaseController.m; path = Viper/Common/AMFThemeBaseController.m; sourceTree = "<group>"; };
 		4C53EC101E6DC7B400725AF8 /* funds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53EC141E6DC7B400725AF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C53EC161E6DC7B400725AF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -570,6 +573,15 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		4C2759031E7B01160010C011 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C2759041E7B01280010C011 /* AMFThemeBaseController.h */,
+				4C2759051E7B01280010C011 /* AMFThemeBaseController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		4C53EC071E6DC7B400725AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -676,6 +688,7 @@
 		4C53EC551E70349E00725AF8 /* Viper */ = {
 			isa = PBXGroup;
 			children = (
+				4C2759031E7B01160010C011 /* Common */,
 				4C53EC5A1E70353900725AF8 /* Balance */,
 				4C53EC591E70353100725AF8 /* Wallet */,
 				4C53EC561E7034AF00725AF8 /* Flow */,
@@ -1477,6 +1490,7 @@
 				4CE158B41E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m in Sources */,
 				4CE159191E73144D0009BAF4 /* AMFFlowData.m in Sources */,
 				4CE158B91E716B950009BAF4 /* AMFWallet+CoreDataClass.m in Sources */,
+				4C2759061E7B01280010C011 /* AMFThemeBaseController.m in Sources */,
 				4CE158C51E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m in Sources */,
 				4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */,
 				4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */,

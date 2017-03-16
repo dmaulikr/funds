@@ -67,7 +67,7 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 #pragma mark - Themes
 
 - (void)applyTheme {
-    LogDebug(@"navigation font: %@; size: %ld", _theme.navigationFontName, (long) _theme.navigationFontSize);
+    [super applyTheme];
 }
 
 #pragma mark - Table View source

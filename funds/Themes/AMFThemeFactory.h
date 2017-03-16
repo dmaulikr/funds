@@ -10,14 +10,28 @@
 
 @class AMFTheme;
 
+extern NSString * const kThemeChanged; // a notification about changing theme
+
 @interface AMFThemeFactory : NSObject {
     AMFTheme *_curtheme;
 }
 
 @property(nonatomic, strong, readonly) NSArray<AMFTheme*> *themes;
 
+/**
+initializes with preloaded themes
+ */
 - (instancetype)initWithThemes:(NSArray *)themes;
 
+/**
+ returns current selected theme
+ */
 - (AMFTheme*) curTheme;
+
+/**
+ changes current theme from installed in the system with index
+ */
+-(void) changeTheme:(NSUInteger) index;
+
 
 @end

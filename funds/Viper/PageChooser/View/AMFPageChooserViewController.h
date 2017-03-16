@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "AMFPageChooserViewInput.h"
+#import "AMFThemeBaseController.h"
 
 @protocol AMFPageChooserViewOutput;
 
-@interface AMFPageChooserViewController : UIViewController <AMFPageChooserViewInput>
+@interface AMFPageChooserViewController : AMFThemeBaseController <AMFPageChooserViewInput>
 
 @property (nonatomic, strong) id<AMFPageChooserViewOutput> output;
 
