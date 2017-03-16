@@ -9,3 +9,4 @@
 #import "GlobalConstants.h"
 
 NSString *const kSegueChoosePage = @"choosePage";
+NSString *const kSegueAddRecord = @"addRecord";

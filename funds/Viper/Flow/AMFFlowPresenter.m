@@ -42,7 +42,7 @@
 }
 
 -(void)addClicked {
-
+    [self.router showAddRecordWithOutput:self];
 }
 
 - (void)cellSelected: (NSUInteger) index {

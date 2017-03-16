@@ -8,6 +8,7 @@
 
 @protocol AMFPageProtocol;
 @protocol AMFPageChooserModuleOutput;
+@protocol AMFAddRecordModuleOutput;
 
 @protocol AMFFlowRouterInput <NSObject>
 
@@ -16,5 +17,10 @@
  */
 -(void) showPageChooserWithPageSelected:(id<AMFPageProtocol>)page
                               andOutput:(id<AMFPageChooserModuleOutput>) output;
+
+/**
+ opens an add dialog window
+ */
+-(void) showAddRecordWithOutput:(id<AMFAddRecordModuleOutput>)output;
 
 @end

@@ -10,3 +10,4 @@
 
 // segues
 extern NSString *const kSegueChoosePage;
+extern NSString *const kSegueAddRecord;

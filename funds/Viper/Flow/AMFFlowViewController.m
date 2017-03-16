@@ -41,11 +41,17 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 - (void)setupInitialState {
     [self applyTheme];
     // setup left button - for choosing pages
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PAGES", nil)
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"PAGES")
                                                              style:UIBarButtonItemStyleBordered
                                                             target:self
                                                             action:@selector(choosePage)];
     self.navigationItem.leftBarButtonItem = left;
+
+    // adding new records:
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                           target:self
+                                                                           action:@selector(addRecord)];
+    self.navigationItem.rightBarButtonItem = right;
 }
 
 - (void)refreshContents {
@@ -101,5 +107,10 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 
 - (void) choosePage {
     [self.output choosePage];
+}
+
+
+- (void) addRecord {
+    [self.output addClicked];
 }
 @end
