@@ -10,6 +10,7 @@
 #import "AMFThemeFactory.h" // for notification about theme's changing
 
 static NSUInteger kIndicatorWidth = 80;
+static NSUInteger kIndicatorCornerRadius = 10;
 
 @implementation AMFThemeBaseController
 
@@ -20,9 +21,8 @@ static NSUInteger kIndicatorWidth = 80;
         _activeIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, kIndicatorWidth, kIndicatorWidth)];
         _activeIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
         _activeIndicator.backgroundColor = [[UIColor alloc] initWithWhite:0.3 alpha:0.8];
-        _activeIndicator.layer.cornerRadius = 10;
+        _activeIndicator.layer.cornerRadius = kIndicatorCornerRadius;
         _activeIndicator.center = self.view.center;
-        [_activeIndicator startAnimating];
 
         [self.view addSubview:_activeIndicator];
     }
@@ -48,6 +48,12 @@ static NSUInteger kIndicatorWidth = 80;
 
 -(void) applyTheme {
 
+}
+
+#pragma mark - Traits
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    self.activeIndicator.center = self.view.center;
 }
 
 @end
