@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *icon;
 @property (nonatomic, strong) NSString *descr;
 @property (nonatomic, strong) NSString *amount;
+@property (nonatomic, strong) NSString *currency;
 
 @end

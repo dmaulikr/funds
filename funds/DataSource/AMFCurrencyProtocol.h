@@ -9,6 +9,7 @@
 @protocol AMFCurrencyProtocol <NSObject>
 
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *symbol;
 @property (nonatomic, assign) double rate;
 
 @end

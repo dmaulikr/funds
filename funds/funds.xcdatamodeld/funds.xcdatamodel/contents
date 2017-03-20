@@ -23,6 +23,7 @@
         <attribute name="cur_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cash" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AMFCashFlow" inverseName="currency" inverseEntity="AMFCashFlow" syncable="YES"/>
     </entity>
     <entity name="AMFPage" representedClassName="AMFPage" syncable="YES">
@@ -39,7 +40,7 @@
     <elements>
         <element name="AMFCashFlow" positionX="-234" positionY="9" width="90" height="210"/>
         <element name="AMFCategory" positionX="189" positionY="225" width="128" height="105"/>
-        <element name="AMFCurrency" positionX="189" positionY="324" width="128" height="105"/>
+        <element name="AMFCurrency" positionX="189" positionY="324" width="128" height="120"/>
         <element name="AMFPage" positionX="189" positionY="144" width="128" height="90"/>
         <element name="AMFWallet" positionX="187" positionY="45" width="128" height="105"/>
     </elements>

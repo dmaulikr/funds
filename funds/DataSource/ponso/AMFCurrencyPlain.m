@@ -10,6 +10,8 @@
 
 @implementation AMFCurrencyPlain
 
-@synthesize name, rate;
+@synthesize name,
+symbol,
+rate;
 
 @end

@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSUInteger cur_id;
 @property (nullable, nonatomic, copy) NSString *name;
+@property (nullable, nonatomic, copy) NSString *symbol;
 @property (nonatomic) double rate;
 @property (nullable, nonatomic, retain) NSSet<AMFCashFlow *> *cash;
 

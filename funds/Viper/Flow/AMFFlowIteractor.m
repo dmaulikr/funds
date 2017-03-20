@@ -13,6 +13,7 @@
 #import "AMFFlowData.h"
 #import "AMFCashProtocol.h"
 #import "AMFWalletProtocol.h"
+#import "AMFCurrencyProtocol.h"
 #import "AMFCategoryProtocol.h"
 
 @interface AMFFlowInteractor ()
@@ -44,8 +45,19 @@
                 f.descr = r.descr;
             else
                 f.descr = r.category.name;
-            f.icon = r.category.icon_path;
+            if (r.category.icon_path.length)
+                f.icon = r.category.icon_path;
+            else
+                f.icon = @"help";
             f.amount = [NSString stringWithFormat:@"%g", r.amount];
+        }
+        if (r.currency) {
+            if (r.currency.name.length > 1) {
+                NSRange range = NSMakeRange(0, 1);
+                f.currency = [r.currency.name substringWithRange:range];
+            }
+            else
+                f.currency = r.currency.name;
         }
         [converted addObject:f];
     }

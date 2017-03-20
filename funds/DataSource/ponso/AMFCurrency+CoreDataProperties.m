@@ -42,6 +42,7 @@
 @dynamic name;
 @dynamic rate;
 @dynamic cash;
+@dynamic symbol;
 
 - (void)updateWith:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow*)cash {
     self.name = m.name;

@@ -18,5 +18,6 @@
 @property (nonatomic, weak) IBOutlet UIImageView *categoryView;
 @property (nonatomic, weak) IBOutlet UILabel *descr;
 @property (nonatomic, weak) IBOutlet UILabel *amount;
+@property (nonatomic, weak) IBOutlet UILabel *currency;
 
 @end

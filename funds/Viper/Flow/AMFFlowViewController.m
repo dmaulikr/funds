@@ -83,7 +83,6 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AMFFlowCell *cell = [tableView dequeueReusableCellWithIdentifier:flowCellIndentifier];
     AMFFlowData *data = [self.records objectAtIndex:indexPath.row];
-    //id<AMFCashProtocol> data = [self.records objectAtIndex:indexPath.row];
 
     assert(cell);
 
@@ -91,9 +90,11 @@ static NSString *const flowCellIndentifier = @"FlowCell";
     [self.assembly inject:cell];
 
     // cell configuration
-    //cell.categoryView.image = [UIImage imageNamed:@"AppIcon"]; // TODO: add me
+    cell.categoryView.image = [UIImage imageNamed:data.icon];
     cell.descr.text = data.descr;
     cell.amount.text = data.amount;
+    cell.currency.text = data.currency;
+    NSLog(@"currency: %@", data.currency);
     return cell;
 }
 
