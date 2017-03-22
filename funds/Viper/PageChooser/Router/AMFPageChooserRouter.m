@@ -13,6 +13,8 @@
 #import "GlobalConstants.h"
 #import "AMFPageChooserModuleInput.h"
 #import "AMFPageChooserModuleOutput.h"
+#import "AMFAddPageModuleInput.h"
+#import "AMFAddPageModuleOutput.h"
 
 @implementation AMFPageChooserRouter
 
@@ -21,4 +23,12 @@
 -(void) closeDialog {
     [self.transitionHandler closeCurrentModule:YES];
 }
+
+-(void) openAddPageWithOutput:(id<AMFAddPageModuleOutput>)output {
+    [[self.transitionHandler openModuleUsingSegue:kSegueAddPage] thenChainUsingBlock:^id<AMFAddPageModuleOutput>(id<AMFAddPageModuleInput> moduleInput) {
+        [moduleInput configureModule];
+        return output;
+    }];
+}
+
 @end

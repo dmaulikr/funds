@@ -10,3 +10,4 @@
 
 NSString *const kSegueChoosePage = @"choosePage";
 NSString *const kSegueAddRecord = @"addRecord";
+NSString *const kSegueAddPage = @"addPage";

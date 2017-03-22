@@ -40,6 +40,12 @@ pages;
                                                             target:self
                                                             action:@selector(cancelAction)];
     self.navigationItem.leftBarButtonItem = cancel;
+    
+    // add new page
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                           target:self
+                                                                           action:@selector(addPage)];
+    self.navigationItem.rightBarButtonItem = right;
 }
 
 -(void) placeSelectedPageAtCenter {
@@ -103,4 +109,7 @@ pages;
     [self.output cancelAction];
 }
 
+-(void) addPage {
+    [self.output addPage];
+}
 @end

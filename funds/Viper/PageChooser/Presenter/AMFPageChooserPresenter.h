@@ -9,13 +9,17 @@
 #import "AMFPageChooserViewOutput.h"
 #import "AMFPageChooserInteractorOutput.h"
 #import "AMFPageChooserModuleInput.h"
+#import "AMFAddPageModuleOutput.h"
 
 @protocol AMFPageChooserViewInput;
 @protocol AMFPageChooserInteractorInput;
 @protocol AMFPageChooserRouterInput;
 @protocol AMFPageChooserModuleOutput;
 
-@interface AMFPageChooserPresenter : NSObject <AMFPageChooserModuleInput, AMFPageChooserViewOutput, AMFPageChooserInteractorOutput>
+@interface AMFPageChooserPresenter : NSObject <AMFPageChooserModuleInput,
+AMFPageChooserViewOutput,
+AMFAddPageModuleOutput,
+AMFPageChooserInteractorOutput>
 
 @property (nonatomic, weak) id<AMFPageChooserViewInput> view;
 @property (nonatomic, strong) id<AMFPageChooserInteractorInput> interactor;

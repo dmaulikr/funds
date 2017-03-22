@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol AMFPageProtocol;
+@protocol AMFAddPageModuleOutput;
 
 @protocol AMFPageChooserRouterInput <NSObject>
 
@@ -17,5 +17,10 @@
  */
 -(void) closeDialog;
 
+
+/**
+ opens an add page dialog
+ */
+-(void) openAddPageWithOutput:(id<AMFAddPageModuleOutput>)output;
 
 @end

@@ -25,4 +25,9 @@
  */
 - (void)cancelAction;
 
+/**
+ user wants to add a new page
+ */
+- (void)addPage;
+
 @end

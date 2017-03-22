@@ -40,6 +40,10 @@
     [self.router closeDialog];
 }
 
+- (void)addPage {
+    [self.router openAddPageWithOutput:self];
+}
+
 #pragma mark - Methods of AMFPageChooserInteractorOutput
 
 -(void) receivedPages:(NSArray*) pages {

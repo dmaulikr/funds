@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOM-lM-j1i">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOM-lM-j1i">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -304,11 +304,30 @@
                     <navigationItem key="navigationItem" id="ewT-BQ-LJg"/>
                     <connections>
                         <outlet property="tableView" destination="YOx-nt-2mE" id="6xl-Fr-2OM"/>
+                        <segue destination="p8n-m5-7lu" kind="show" identifier="addPage" id="tYE-1a-yRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8i8-fc-1wZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3432.8000000000002" y="-963.86806596701661"/>
+            <point key="canvasLocation" x="3532" y="-965"/>
+        </scene>
+        <!--Add Page View Controller-->
+        <scene sceneID="4Vc-Xu-HJS">
+            <objects>
+                <viewController id="p8n-m5-7lu" customClass="AMFAddPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5aA-6f-lmH"/>
+                        <viewControllerLayoutGuide type="bottom" id="lwE-IE-oVB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eg6-AN-YpR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVZ-kh-98j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4370" y="-966"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7r1-ca-996">
