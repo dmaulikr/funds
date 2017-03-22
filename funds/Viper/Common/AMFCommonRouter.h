@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AMFSimpleAlertProtocol.h"
+#import <ViperMcFlurry/ViperMcFlurry.h>
+#import "AMFAlertProtocol.h"
 
 @protocol AMFSimpleAlertProtocol;
 
-@interface AMFCommonRouter : NSObject<AMFSimpleAlertProtocol>
+@interface AMFCommonRouter : NSObject<AMFAlertProtocol>
 
+@property (nonatomic,weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
 @property (nonatomic, strong) id<AMFSimpleAlertProtocol> alertFactory;
 
 @end

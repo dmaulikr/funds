@@ -7,15 +7,19 @@
 //
 
 #import "AMFCommonRouter.h"
+#import "AMFSimpleAlertProtocol.h"
 
 @implementation AMFCommonRouter
 
--(UIAlertController*) acErrorWithMessage:(NSString*) message {
-    return [_alertFactory acErrorWithMessage:message];
+
+-(void) showErrorWithMessage:(NSString*) message {
+    UIAlertController *ac = [_alertFactory acErrorWithMessage:message];
+    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
 }
 
--(UIAlertController*) acWarningWithMessage:(NSString*) message {
-    return [_alertFactory acWarningWithMessage:message];
+-(void) showWarningWithMessage:(NSString*) message {
+    UIAlertController *ac = [_alertFactory acWarningWithMessage:message];
+    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
 }
 
 @end

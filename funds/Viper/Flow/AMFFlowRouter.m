@@ -30,13 +30,4 @@
     }];
 }
 
--(void) showErrorWithMessage:(NSString*) message {
-    UIAlertController *ac = [super acErrorWithMessage:message];
-    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
-}
-
--(void) showWarningWithMessage:(NSString*) message {
-    UIAlertController *ac = [super acWarningWithMessage:message];
-    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
-}
 @end

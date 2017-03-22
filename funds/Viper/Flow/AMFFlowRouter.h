@@ -10,13 +10,10 @@
 #import <ViperMcFlurry/ViperMcFlurry.h>
 #import "AMFCommonRouter.h"
 #import "AMFFlowRouterInput.h"
-#import "AMFAlertProtocol.h"
 
 @protocol AMFSimpleAlertProtocol;
 
 @interface AMFFlowRouter : AMFCommonRouter <AMFFlowRouterInput>
-
-@property (nonatomic,weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
 
 
 @end

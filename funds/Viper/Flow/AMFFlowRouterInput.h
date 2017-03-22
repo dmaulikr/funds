@@ -13,7 +13,7 @@
 @protocol AMFAddRecordModuleOutput;
 @protocol AMFSimpleAlertProtocol;
 
-@protocol AMFFlowRouterInput <AMFSimpleAlertProtocol, AMFAlertProtocol>
+@protocol AMFFlowRouterInput <AMFAlertProtocol>
 
 /**
  show up a dialog for page's selection
