@@ -15,6 +15,7 @@
 #import "AMFPageChooserModuleOutput.h"
 #import "AMFAddPageModuleInput.h"
 #import "AMFAddPageModuleOutput.h"
+#import "AMFSimpleAlertFactory.h"
 
 @implementation AMFPageChooserRouter
 

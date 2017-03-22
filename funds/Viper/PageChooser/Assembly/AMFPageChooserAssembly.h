@@ -10,6 +10,7 @@
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
 @class AMFDataSupplierAssembly;
+@class AMFAlertsAssembly;
 
 /**
  @author Michael Artuerhof
@@ -19,5 +20,6 @@
 @interface AMFPageChooserAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
 @property(nonatomic, strong, readonly) AMFDataSupplierAssembly *dataProvider;
+@property(nonatomic, strong, readonly) AMFAlertsAssembly *alerts;
 
 @end

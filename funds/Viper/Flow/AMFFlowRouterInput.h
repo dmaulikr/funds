@@ -6,11 +6,14 @@
 //  Copyright © 2017 micartu. All rights reserved.
 //
 
+#import "AMFAlertProtocol.h"
+
 @protocol AMFPageProtocol;
 @protocol AMFPageChooserModuleOutput;
 @protocol AMFAddRecordModuleOutput;
+@protocol AMFSimpleAlertProtocol;
 
-@protocol AMFFlowRouterInput <NSObject>
+@protocol AMFFlowRouterInput <AMFSimpleAlertProtocol, AMFAlertProtocol>
 
 /**
  show up a dialog for page's selection

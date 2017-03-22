@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <ViperMcFlurry/ViperMcFlurry.h>
+#import "AMFCommonRouter.h"
 #import "AMFFlowRouterInput.h"
+#import "AMFAlertProtocol.h"
 
-@interface AMFFlowRouter : NSObject<AMFFlowRouterInput>
+@protocol AMFSimpleAlertProtocol;
+
+@interface AMFFlowRouter : AMFCommonRouter <AMFFlowRouterInput>
 
 @property (nonatomic,weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
+
 
 @end

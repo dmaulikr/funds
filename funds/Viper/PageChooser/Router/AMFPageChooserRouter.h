@@ -8,11 +8,13 @@
 
 #import "AMFPageChooserRouterInput.h"
 
+@class AMFSimpleAlertFactory;
 
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 
 @interface AMFPageChooserRouter : NSObject <AMFPageChooserRouterInput>
 
 @property (nonatomic, weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
+@property (nonatomic, strong) AMFSimpleAlertFactory *alertFactory;
 
 @end

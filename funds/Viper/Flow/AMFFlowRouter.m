@@ -12,6 +12,7 @@
 #import "AMFPageChooserModuleOutput.h"
 #import "AMFAddRecordModuleInput.h"
 #import "AMFAddRecordModuleOutput.h"
+#import "AMFSimpleAlertProtocol.h"
 
 @implementation AMFFlowRouter
 
@@ -27,5 +28,15 @@
         [moduleInput configureModule];
         return output;
     }];
+}
+
+-(void) showErrorWithMessage:(NSString*) message {
+    UIAlertController *ac = [super acErrorWithMessage:message];
+    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
+}
+
+-(void) showWarningWithMessage:(NSString*) message {
+    UIAlertController *ac = [super acWarningWithMessage:message];
+    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
 }
 @end

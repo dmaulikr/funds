@@ -13,6 +13,7 @@
 #import "AMFFlowRouter.h"
 #import "AMFThemeAssembly.h"
 #import "AMFDataSupplierAssembly.h"
+#import "AMFAlertsAssembly.h"
 #import "AMFFlowCell.h"
 
 @implementation AMFFlowModuleAssembly
@@ -55,10 +56,10 @@
 -(AMFFlowRouter*) routerFlowModule {
     return [TyphoonDefinition withClass:[AMFFlowRouter class]
                           configuration:^(TyphoonDefinition *definition) {
-                              
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewFlowModule]];
-                              
+                              [definition injectProperty:@selector(alertFactory)
+                                                    with:[_alerts alertFactory]];
                           }];
 }
 

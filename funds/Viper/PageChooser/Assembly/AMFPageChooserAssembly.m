@@ -13,6 +13,7 @@
 #import "AMFPageChooserPresenter.h"
 #import "AMFPageChooserRouter.h"
 #import "AMFDataSupplierAssembly.h"
+#import "AMFAlertsAssembly.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -55,6 +56,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewPageChooser]];
+                              [definition injectProperty:@selector(alertFactory)
+                                                    with:[_alerts alertFactory]];
                           }];
 }
 

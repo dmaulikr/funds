@@ -62,6 +62,9 @@
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
 		4C95F85B1E82B4D200D3491A /* AMFAddPageInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8581E82B4D100D3491A /* AMFAddPageInteractor.m */; };
 		4C95F85F1E82B4DD00D3491A /* AMFAddPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F85D1E82B4DD00D3491A /* AMFAddPageRouter.m */; };
+		4C95F8661E82C1B200D3491A /* AMFSimpleAlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8651E82C1B200D3491A /* AMFSimpleAlertFactory.m */; };
+		4C95F8691E82C64B00D3491A /* AMFAlertsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8681E82C64B00D3491A /* AMFAlertsAssembly.m */; };
+		4C95F86D1E82CA2C00D3491A /* AMFCommonRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F86C1E82CA2C00D3491A /* AMFCommonRouter.m */; };
 		4CE158851E7137970009BAF4 /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4CE158841E7137970009BAF4 /* test.csv */; };
 		4CE158B31E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158B01E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m */; };
 		4CE158B41E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE158B21E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m */; };
@@ -264,6 +267,14 @@
 		4C95F85D1E82B4DD00D3491A /* AMFAddPageRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageRouter.m; path = funds/Viper/AddPage/Router/AMFAddPageRouter.m; sourceTree = SOURCE_ROOT; };
 		4C95F85E1E82B4DD00D3491A /* AMFAddPageRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageRouterInput.h; path = funds/Viper/AddPage/Router/AMFAddPageRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8621E82B7C300D3491A /* AMFAddPageModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFAddPageModuleOutput.h; path = funds/Viper/AddPage/Presenter/AMFAddPageModuleOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95F8641E82C1B200D3491A /* AMFSimpleAlertFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSimpleAlertFactory.h; path = Alerts/AMFSimpleAlertFactory.h; sourceTree = "<group>"; };
+		4C95F8651E82C1B200D3491A /* AMFSimpleAlertFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSimpleAlertFactory.m; path = Alerts/AMFSimpleAlertFactory.m; sourceTree = "<group>"; };
+		4C95F8671E82C64B00D3491A /* AMFAlertsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAlertsAssembly.h; path = Alerts/AMFAlertsAssembly.h; sourceTree = "<group>"; };
+		4C95F8681E82C64B00D3491A /* AMFAlertsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAlertsAssembly.m; path = Alerts/AMFAlertsAssembly.m; sourceTree = "<group>"; };
+		4C95F86A1E82C66800D3491A /* AMFSimpleAlertProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFSimpleAlertProtocol.h; path = Alerts/AMFSimpleAlertProtocol.h; sourceTree = "<group>"; };
+		4C95F86B1E82CA2C00D3491A /* AMFCommonRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCommonRouter.h; path = Viper/Common/AMFCommonRouter.h; sourceTree = "<group>"; };
+		4C95F86C1E82CA2C00D3491A /* AMFCommonRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFCommonRouter.m; path = Viper/Common/AMFCommonRouter.m; sourceTree = "<group>"; };
+		4C95F86E1E82D2F000D3491A /* AMFAlertProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFAlertProtocol.h; path = Alerts/AMFAlertProtocol.h; sourceTree = "<group>"; };
 		4CAAF2FC7C1B476F0E36F2DF /* Pods-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFStorageHandlerProtocol.h; path = DataSource/AMFStorageHandlerProtocol.h; sourceTree = "<group>"; };
 		4CE158841E7137970009BAF4 /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
@@ -630,6 +641,8 @@
 			children = (
 				4C2759041E7B01280010C011 /* AMFThemeBaseController.h */,
 				4C2759051E7B01280010C011 /* AMFThemeBaseController.m */,
+				4C95F86B1E82CA2C00D3491A /* AMFCommonRouter.h */,
+				4C95F86C1E82CA2C00D3491A /* AMFCommonRouter.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -658,6 +671,7 @@
 		4C53EC121E6DC7B400725AF8 /* funds */ = {
 			isa = PBXGroup;
 			children = (
+				4C95F8631E82BF8800D3491A /* Alerts */,
 				4C53EC631E703C8800725AF8 /* DataSource */,
 				4C53EC551E70349E00725AF8 /* Viper */,
 				4C53EC481E700EFB00725AF8 /* Themes */,
@@ -826,6 +840,19 @@
 				6B8BA1169E305702FCF04536 /* Router */,
 			);
 			path = AddRecord;
+			sourceTree = "<group>";
+		};
+		4C95F8631E82BF8800D3491A /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				4C95F86E1E82D2F000D3491A /* AMFAlertProtocol.h */,
+				4C95F86A1E82C66800D3491A /* AMFSimpleAlertProtocol.h */,
+				4C95F8641E82C1B200D3491A /* AMFSimpleAlertFactory.h */,
+				4C95F8651E82C1B200D3491A /* AMFSimpleAlertFactory.m */,
+				4C95F8671E82C64B00D3491A /* AMFAlertsAssembly.h */,
+				4C95F8681E82C64B00D3491A /* AMFAlertsAssembly.m */,
+			);
+			name = Alerts;
 			sourceTree = "<group>";
 		};
 		4CE158801E7135880009BAF4 /* Ponsos and core data */ = {
@@ -1618,6 +1645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C95F8661E82C1B200D3491A /* AMFSimpleAlertFactory.m in Sources */,
 				4C046FC21E73CEDC001E73A6 /* AMFPageChooserPresenter.m in Sources */,
 				4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */,
 				4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */,
@@ -1647,6 +1675,7 @@
 				4CE158B91E716B950009BAF4 /* AMFWallet+CoreDataClass.m in Sources */,
 				4C2759061E7B01280010C011 /* AMFThemeBaseController.m in Sources */,
 				4CE158C51E716BBE0009BAF4 /* AMFCategory+CoreDataClass.m in Sources */,
+				4C95F86D1E82CA2C00D3491A /* AMFCommonRouter.m in Sources */,
 				4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */,
 				4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */,
 				4CE158FF1E7280370009BAF4 /* AMFFlowIteractor.m in Sources */,
@@ -1678,6 +1707,7 @@
 				4CE158EF1E71C5890009BAF4 /* AMFCurrencyPlain.m in Sources */,
 				4C53ECA21E70902700725AF8 /* AMFBalanceAssembly.m in Sources */,
 				4C53EC9B1E708C2500725AF8 /* AMFWalletInteractor.m in Sources */,
+				4C95F8691E82C64B00D3491A /* AMFAlertsAssembly.m in Sources */,
 				4CE158CB1E716BC90009BAF4 /* AMFPage+CoreDataClass.m in Sources */,
 				4C53EC9F1E708C3300725AF8 /* AMFWalletRouter.m in Sources */,
 				4CE158EC1E71C56E0009BAF4 /* AMFPagePlain.m in Sources */,

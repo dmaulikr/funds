@@ -46,7 +46,6 @@
 }
 
 - (void)cellSelected: (NSUInteger) index {
-
 }
 
 - (void)cellToDelete: (NSUInteger) index {
