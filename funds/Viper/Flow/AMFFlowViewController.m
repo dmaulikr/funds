@@ -94,14 +94,13 @@ static NSString *const flowCellIndentifier = @"FlowCell";
     cell.descr.text = data.descr;
     cell.amount.text = data.amount;
     cell.currency.text = data.currency;
-    NSLog(@"currency: %@", data.currency);
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    [self.output cellSelected:indexPath.row];
 }
 
 #pragma mark - Actions
