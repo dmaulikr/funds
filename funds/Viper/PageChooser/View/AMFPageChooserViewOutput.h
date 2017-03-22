@@ -20,4 +20,9 @@
  */
 - (void)cellSelected: (NSUInteger) index;
 
+/**
+ user wants to get out of here
+ */
+- (void)cancelAction;
+
 @end

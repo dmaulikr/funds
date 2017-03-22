@@ -34,7 +34,12 @@ pages;
 #pragma mark - Methods of AMFPageChooserViewInput
 
 - (void)setupInitialState {
-    // nothing to intialize
+    // give the ability to user to close the page chooser dialog
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"CANCEL")
+                                                             style:UIBarButtonItemStyleBordered
+                                                            target:self
+                                                            action:@selector(cancelAction)];
+    self.navigationItem.leftBarButtonItem = cancel;
 }
 
 -(void) placeSelectedPageAtCenter {
@@ -89,6 +94,13 @@ pages;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.output cellSelected:indexPath.row];
+}
+
+
+#pragma mark - Actions
+
+-(void) cancelAction {
+    [self.output cancelAction];
 }
 
 @end

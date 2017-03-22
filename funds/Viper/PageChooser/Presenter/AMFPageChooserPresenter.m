@@ -36,6 +36,10 @@
     [self.router closeDialog];
 }
 
+- (void)cancelAction {
+    [self.router closeDialog];
+}
+
 #pragma mark - Methods of AMFPageChooserInteractorOutput
 
 -(void) receivedPages:(NSArray*) pages {
