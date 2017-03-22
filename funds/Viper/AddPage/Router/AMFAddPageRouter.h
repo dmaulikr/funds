@@ -7,11 +7,11 @@
 //
 
 #import "AMFAddPageRouterInput.h"
+#import "AMFCommonRouter.h"
 
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 
-@interface AMFAddPageRouter : NSObject <AMFAddPageRouterInput>
+@interface AMFAddPageRouter : AMFCommonRouter <AMFAddPageRouterInput>
 
-@property (nonatomic, weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
 
 @end
