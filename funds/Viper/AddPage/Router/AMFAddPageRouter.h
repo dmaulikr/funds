@@ -9,8 +9,6 @@
 #import "AMFAddPageRouterInput.h"
 #import "AMFCommonRouter.h"
 
-@protocol RamblerViperModuleTransitionHandlerProtocol;
-
 @interface AMFAddPageRouter : AMFCommonRouter <AMFAddPageRouterInput>
 
 

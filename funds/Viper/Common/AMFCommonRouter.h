@@ -11,6 +11,7 @@
 #import "AMFAlertProtocol.h"
 
 @protocol AMFSimpleAlertProtocol;
+@protocol RamblerViperModuleTransitionHandlerProtocol;
 
 @interface AMFCommonRouter : NSObject<AMFAlertProtocol>
 

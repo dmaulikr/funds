@@ -11,8 +11,6 @@
 #import "AMFCommonRouter.h"
 #import "AMFFlowRouterInput.h"
 
-@protocol AMFSimpleAlertProtocol;
-
 @interface AMFFlowRouter : AMFCommonRouter <AMFFlowRouterInput>
 
 
