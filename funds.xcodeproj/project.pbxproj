@@ -32,6 +32,7 @@
 		4C2758FD1E7AF4C40010C011 /* AMFAddRecordInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2758FA1E7AF4C40010C011 /* AMFAddRecordInteractor.m */; };
 		4C2759011E7AF4CD0010C011 /* AMFAddRecordRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2758FF1E7AF4CD0010C011 /* AMFAddRecordRouter.m */; };
 		4C2759061E7B01280010C011 /* AMFThemeBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2759051E7B01280010C011 /* AMFThemeBaseController.m */; };
+		4C2F59FC1EAF8C4000550885 /* AMFAppDelegateCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F59FB1EAF8C4000550885 /* AMFAppDelegateCoreData.m */; };
 		4C53EC151E6DC7B400725AF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC141E6DC7B400725AF8 /* main.m */; };
 		4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC171E6DC7B400725AF8 /* AppDelegate.m */; };
 		4C53EC1E1E6DC7B400725AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53EC1C1E6DC7B400725AF8 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECAE1E70905800725AF8 /* AMFBalanceInteractor.m */; };
 		4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */; };
 		4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */; };
+		4C8A08B41EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -184,6 +186,8 @@
 		4C2759021E7AFC310010C011 /* AMFAddRecordModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFAddRecordModuleOutput.h; path = funds/Viper/AddRecord/Presenter/AMFAddRecordModuleOutput.h; sourceTree = SOURCE_ROOT; };
 		4C2759041E7B01280010C011 /* AMFThemeBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFThemeBaseController.h; path = Viper/Common/AMFThemeBaseController.h; sourceTree = "<group>"; };
 		4C2759051E7B01280010C011 /* AMFThemeBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFThemeBaseController.m; path = Viper/Common/AMFThemeBaseController.m; sourceTree = "<group>"; };
+		4C2F59FA1EAF8C4000550885 /* AMFAppDelegateCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAppDelegateCoreData.h; path = LaunchSystem/AppDelegates/AMFAppDelegateCoreData.h; sourceTree = "<group>"; };
+		4C2F59FB1EAF8C4000550885 /* AMFAppDelegateCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAppDelegateCoreData.m; path = LaunchSystem/AppDelegates/AMFAppDelegateCoreData.m; sourceTree = "<group>"; };
 		4C53EC101E6DC7B400725AF8 /* funds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53EC141E6DC7B400725AF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C53EC161E6DC7B400725AF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 		4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFBalanceRouter.m; path = funds/Viper/Balance/Router/AMFBalanceRouter.m; sourceTree = SOURCE_ROOT; };
 		4C53ECB31E70906700725AF8 /* AMFBalanceRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceRouter.h; path = funds/Viper/Balance/Router/AMFBalanceRouter.h; sourceTree = SOURCE_ROOT; };
 		4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4C8A08B21EAFB8BE00A514A3 /* NSUserDefaults+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Archiver.h"; path = "categories/NSUserDefaults+Archiver.h"; sourceTree = "<group>"; };
+		4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Archiver.m"; path = "categories/NSUserDefaults+Archiver.m"; sourceTree = "<group>"; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -562,9 +568,9 @@
 		369A0D6CC01A290E65392D46 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				4C2759001E7AF4CD0010C011 /* AMFAddRecordRouterInput.h */,
 				4C2758FE1E7AF4CD0010C011 /* AMFAddRecordRouter.h */,
 				4C2758FF1E7AF4CD0010C011 /* AMFAddRecordRouter.m */,
-				4C2759001E7AF4CD0010C011 /* AMFAddRecordRouterInput.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -671,6 +677,7 @@
 		4C53EC121E6DC7B400725AF8 /* funds */ = {
 			isa = PBXGroup;
 			children = (
+				4C8A08B11EAFB89400A514A3 /* Categories */,
 				4C95F8631E82BF8800D3491A /* Alerts */,
 				4C53EC631E703C8800725AF8 /* DataSource */,
 				4C53EC551E70349E00725AF8 /* Viper */,
@@ -726,6 +733,8 @@
 		4C53EC3E1E6EF60D00725AF8 /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
+				4C2F59FA1EAF8C4000550885 /* AMFAppDelegateCoreData.h */,
+				4C2F59FB1EAF8C4000550885 /* AMFAppDelegateCoreData.m */,
 				4C53EC161E6DC7B400725AF8 /* AppDelegate.h */,
 				4C53EC171E6DC7B400725AF8 /* AppDelegate.m */,
 				4C53EC3F1E6EFA2100725AF8 /* ApplicationAssembly.h */,
@@ -819,12 +828,12 @@
 			isa = PBXGroup;
 			children = (
 				4C53EC641E703CF000725AF8 /* AMFDataSupplyProtocol.h */,
+				4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */,
 				4C53EC6A1E70418300725AF8 /* AMFCashProtocol.h */,
 				4C53EC691E70418300725AF8 /* AMFWalletProtocol.h */,
 				4C53EC681E7040AA00725AF8 /* AMFCurrencyProtocol.h */,
 				4C53EC6B1E7041F700725AF8 /* AMFCategoryProtocol.h */,
 				4CE158CD1E717A750009BAF4 /* AMFPageProtocol.h */,
-				4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */,
 				4CE1590D1E72FAE70009BAF4 /* AMFFileIntoDBReader.h */,
 			);
 			name = protocols;
@@ -840,6 +849,15 @@
 				6B8BA1169E305702FCF04536 /* Router */,
 			);
 			path = AddRecord;
+			sourceTree = "<group>";
+		};
+		4C8A08B11EAFB89400A514A3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A08B21EAFB8BE00A514A3 /* NSUserDefaults+Archiver.h */,
+				4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		4C95F8631E82BF8800D3491A /* Alerts */ = {
@@ -997,9 +1015,9 @@
 		52008B251B3D97DCCCA82B0E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				4C2758FB1E7AF4C40010C011 /* AMFAddRecordInteractorInput.h */,
 				4C2758F91E7AF4C40010C011 /* AMFAddRecordInteractor.h */,
 				4C2758FA1E7AF4C40010C011 /* AMFAddRecordInteractor.m */,
-				4C2758FB1E7AF4C40010C011 /* AMFAddRecordInteractorInput.h */,
 				4C2758FC1E7AF4C40010C011 /* AMFAddRecordInteractorOutput.h */,
 			);
 			path = Interactor;
@@ -1494,7 +1512,7 @@
 				TargetAttributes = {
 					4C53EC0F1E6DC7B400725AF8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 76ZPG43W79;
+						DevelopmentTeam = QR4V9984C7;
 						ProvisioningStyle = Automatic;
 					};
 					4C53EC2B1E6DC7B400725AF8 = {
@@ -1663,6 +1681,7 @@
 				4C046FC71E73CEF5001E73A6 /* AMFPageChooserInteractor.m in Sources */,
 				4CE158B31E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m in Sources */,
 				4C95F85F1E82B4DD00D3491A /* AMFAddPageRouter.m in Sources */,
+				4C8A08B41EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m in Sources */,
 				4C53EC961E708C1600725AF8 /* AMFWalletPresenter.m in Sources */,
 				4CE159131E7301320009BAF4 /* AMFAppDelegateForReadingCSV.m in Sources */,
 				4C2758FD1E7AF4C40010C011 /* AMFAddRecordInteractor.m in Sources */,
@@ -1681,6 +1700,7 @@
 				4CE158FF1E7280370009BAF4 /* AMFFlowIteractor.m in Sources */,
 				4C2758F41E7AF4B30010C011 /* AMFAddRecordViewController.m in Sources */,
 				4C53EC181E6DC7B400725AF8 /* AppDelegate.m in Sources */,
+				4C2F59FC1EAF8C4000550885 /* AMFAppDelegateCoreData.m in Sources */,
 				4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */,
 				4C046FCB1E73CF0A001E73A6 /* AMFPageChooserRouter.m in Sources */,
 				4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */,
@@ -1889,7 +1909,7 @@
 			baseConfigurationReference = 4553CD5A8CD6D4B4AC51A222 /* Pods-funds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 76ZPG43W79;
+				DEVELOPMENT_TEAM = QR4V9984C7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "funds/funds-prefix.pch";
 				INFOPLIST_FILE = funds/Info.plist;
@@ -1905,7 +1925,7 @@
 			baseConfigurationReference = F22831C4022AD64BBC14907E /* Pods-funds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 76ZPG43W79;
+				DEVELOPMENT_TEAM = QR4V9984C7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "funds/funds-prefix.pch";
 				INFOPLIST_FILE = funds/Info.plist;

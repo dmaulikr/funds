@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "AMFAppDelegateForReadingCSV.h"
 #import "AMFDataSupplierAssembly.h"
+#import "AMFAppDelegateCoreData.h"
 #import <RamblerAppDelegateProxy/RamblerAppDelegateProxy.h>
 
 @implementation ApplicationAssembly
@@ -21,6 +22,7 @@
                                             parameters:^(TyphoonMethod *method) {
                                                 NSArray *appDelegates = @[
                                                          [self defaultAppDelegate],
+                                                         [self coreDataDelegate],
                                                          [self delegateForImportCSV]
                                                 ];
                                                 [method injectParameterWith:appDelegates];
@@ -31,6 +33,10 @@
 
 - (AppDelegate *)defaultAppDelegate {
     return [TyphoonDefinition withClass:[AppDelegate class]];
+}
+
+- (AMFAppDelegateCoreData *)coreDataDelegate {
+    return [TyphoonDefinition withClass:[AMFAppDelegateCoreData class]];
 }
 
 - (AMFAppDelegateForReadingCSV*)delegateForImportCSV {

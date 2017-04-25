@@ -11,6 +11,4 @@
 
 @interface AMFSQLCoreDataHandler : NSObject<AMFStorageHandlerProtocol>
 
--(NSArray*) grabAllRecords; // needed for tests
-
 @end

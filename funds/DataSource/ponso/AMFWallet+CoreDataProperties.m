@@ -12,6 +12,9 @@
 #import "NSManagedObject+generateID.h"
 #import "AMFgenerateID.h"
 
+static NSString *const kName = @"name";
+static NSString *const kIcon = @"icon";
+
 @implementation AMFWallet (CoreDataProperties)
 
 + (NSFetchRequest<AMFWallet *> *)fetchRequest {
@@ -47,6 +50,21 @@
     self.icon_path = wallet.icon_path;
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];
+}
+
+#pragma mark - NSCoding protocol
+
+- (instancetype)initWithCoder:(NSCoder *)aCoder {
+    if (self = [super init]) {
+        self.name = [aCoder decodeObjectForKey:kName];
+        self.icon_path = [aCoder decodeObjectForKey:kIcon];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.name forKey:kName];
+    [aCoder encodeObject:self.icon_path forKey:kIcon];
 }
 
 @end

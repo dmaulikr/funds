@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AMFCashProtocol.h"
 
-@interface AMFCashPlain : NSObject <AMFCashProtocol>
+@interface AMFCashPlain : NSObject <AMFCashProtocol, NSCoding>
 
 @end

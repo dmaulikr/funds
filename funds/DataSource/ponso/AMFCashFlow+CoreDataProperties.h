@@ -17,7 +17,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface AMFCashFlow (CoreDataProperties) <AMFCashProtocol>
+@interface AMFCashFlow (CoreDataProperties) <AMFCashProtocol, NSCoding>
 
 + (NSFetchRequest<AMFCashFlow *> *)fetchRequest;
 

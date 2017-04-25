@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AMFWalletProtocol.h"
 
-@interface AMFWalletPlain : NSObject <AMFWalletProtocol>
+@interface AMFWalletPlain : NSObject <AMFWalletProtocol, NSCoding>
 
 @end

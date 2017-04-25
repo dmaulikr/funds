@@ -12,3 +12,9 @@
 extern NSString *const kSegueChoosePage;
 extern NSString *const kSegueAddRecord;
 extern NSString *const kSegueAddPage;
+
+// common constants
+
+// constants for user defaults
+extern NSString *const kLastCategory;
+extern NSString *const kLastWallet;

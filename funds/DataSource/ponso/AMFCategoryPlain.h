@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AMFCategoryProtocol.h"
 
-@interface AMFCategoryPlain : NSObject <AMFCategoryProtocol>
+@interface AMFCategoryPlain : NSObject <AMFCategoryProtocol, NSCoding>
 
 @end
