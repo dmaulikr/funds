@@ -58,6 +58,7 @@ pages;
             else
                 index++;
         }
+        if (index == self.pages.count) return;
         NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
         [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     }
