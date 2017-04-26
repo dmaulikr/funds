@@ -12,7 +12,8 @@
 #import "AMFChooseCategoryInteractor.h"
 #import "AMFChooseCategoryPresenter.h"
 #import "AMFChooseCategoryRouter.h"
-
+#import "AMFAlertsAssembly.h"
+#import "AMFDataSupplierAssembly.h"
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
 @implementation AMFChooseCategoryAssembly
@@ -52,6 +53,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewChooseCategory]];
+                              [definition injectProperty:@selector(alertFactory)
+                                                    with:[_alerts alertFactory]];
                           }];
 }
 

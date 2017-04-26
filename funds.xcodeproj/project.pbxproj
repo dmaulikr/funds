@@ -463,9 +463,9 @@
 		075D400DB513D8834E1D3853 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				4CFD9CA31EB0E1C200825F6E /* AMFChooseCategoryInteractorInput.h */,
 				4CFD9CA11EB0E1C200825F6E /* AMFChooseCategoryInteractor.h */,
 				4CFD9CA21EB0E1C200825F6E /* AMFChooseCategoryInteractor.m */,
-				4CFD9CA31EB0E1C200825F6E /* AMFChooseCategoryInteractorInput.h */,
 				4CFD9CA41EB0E1C200825F6E /* AMFChooseCategoryInteractorOutput.h */,
 			);
 			path = Interactor;
@@ -1221,9 +1221,9 @@
 		63A0F4FBA7953143A91932E4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				4CFD9CA81EB0E1CF00825F6E /* AMFChooseCategoryRouterInput.h */,
 				4CFD9CA61EB0E1CF00825F6E /* AMFChooseCategoryRouter.h */,
 				4CFD9CA71EB0E1CF00825F6E /* AMFChooseCategoryRouter.m */,
-				4CFD9CA81EB0E1CF00825F6E /* AMFChooseCategoryRouterInput.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
