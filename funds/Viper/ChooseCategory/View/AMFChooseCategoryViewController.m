@@ -10,6 +10,8 @@
 
 #import "AMFChooseCategoryViewOutput.h"
 
+static NSString *const chooseCatCellIndentifier = @"chooseCategoryCell";
+
 @implementation AMFChooseCategoryViewController
 
 #pragma mark - Life Cycle Methods
