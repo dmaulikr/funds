@@ -7,6 +7,9 @@
 //
 
 #import "AMFAddRecordRouter.h"
+#import "AMFChooseCategoryModuleInput.h"
+#import "AMFChooseCategoryModuleOutput.h"
+#import "GlobalConstants.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -16,6 +19,14 @@
 
 - (void)closeMe {
     [self.transitionHandler closeCurrentModule:YES];
+}
+
+- (void)showCategoryChooserWithCategorySelected:(id<AMFCategoryProtocol>)category
+                                      andOutput:(id<AMFChooseCategoryModuleOutput>) output {
+    [[self.transitionHandler openModuleUsingSegue:kSegueChooseCategory] thenChainUsingBlock:^id<AMFChooseCategoryModuleOutput>(id<AMFChooseCategoryModuleInput> moduleInput) {
+        [moduleInput configureModuleWithCategorySelected:category];
+        return output;
+    }];
 }
 
 @end

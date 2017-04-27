@@ -10,4 +10,6 @@
 
 @protocol AMFChooseCategoryInteractorOutput <NSObject>
 
+- (void)categoriesReceived:(NSArray*)categories;
+
 @end

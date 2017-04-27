@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
+@protocol AMFCategoryProtocol;
+
 @protocol AMFChooseCategoryModuleInput <RamblerViperModuleInput>
 
 /**
- @author Michael Artuerhof
-
- Method initializes the starting configuration of the module
+ * @author Michael Artuerhof
+ * configures module with selected page - could be also nil
+ * @param category to be selected after module is openned
  */
-- (void)configureModule;
+- (void)configureModuleWithCategorySelected:(id<AMFCategoryProtocol>)category;
 
 @end

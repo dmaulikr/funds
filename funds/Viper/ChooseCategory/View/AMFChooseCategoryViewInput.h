@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFCategoryProtocol;
+
 @protocol AMFChooseCategoryViewInput <NSObject>
 
 /**
@@ -16,5 +18,20 @@
  sets initial state of the view
  */
 - (void)setupInitialState;
+
+/**
+ categories to be shown
+ */
+@property (nonatomic, strong) NSArray *categories;
+
+/**
+ what's already selected
+ */
+@property (nonatomic, strong) id<AMFCategoryProtocol> selectedCategory;
+
+/**
+ refreshes data shown to the user
+ */
+- (void)refreshContents;
 
 @end

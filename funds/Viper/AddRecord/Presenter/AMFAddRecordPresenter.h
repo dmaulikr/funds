@@ -9,12 +9,16 @@
 #import "AMFAddRecordViewOutput.h"
 #import "AMFAddRecordInteractorOutput.h"
 #import "AMFAddRecordModuleInput.h"
+#import "AMFChooseCategoryModuleOutput.h"
 
 @protocol AMFAddRecordViewInput;
 @protocol AMFAddRecordInteractorInput;
 @protocol AMFAddRecordRouterInput;
 
-@interface AMFAddRecordPresenter : NSObject <AMFAddRecordModuleInput, AMFAddRecordViewOutput, AMFAddRecordInteractorOutput>
+@interface AMFAddRecordPresenter : NSObject <AMFAddRecordModuleInput,
+AMFAddRecordViewOutput,
+AMFChooseCategoryModuleOutput,
+AMFAddRecordInteractorOutput>
 
 @property (nonatomic, weak) id<AMFAddRecordViewInput> view;
 @property (nonatomic, strong) id<AMFAddRecordInteractorInput> interactor;

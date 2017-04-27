@@ -60,15 +60,23 @@
 }
 
 - (void)selectedCategory:(id<AMFCategoryProtocol>)category {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _category = category;
+    [defaults persistObjAsData:_category forKey:kLastCategory];
 }
 
 - (void)selectedWallet:(id<AMFWalletProtocol>)wallet {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _wallet = wallet;
+    [defaults persistObjAsData:_wallet forKey:kLastWallet];
 }
 
 - (void)withdrawalWallet:(id<AMFWalletProtocol>)wallet {
     _wwallet = wallet;
+}
+
+- (id<AMFCategoryProtocol>)currentCategory {
+    return _category;
 }
 
 @end

@@ -81,6 +81,10 @@
     return [AMFCashFlow MR_findAllSortedBy:@"date" ascending:NO];
 }
 
+-(NSArray*) grabAllCategories {
+    return [AMFCategory MR_findAllSortedBy:@"cat_id" ascending:NO];
+}
+
 -(NSArray*) grabAllPages {
     return [AMFPage MR_findAllSortedBy:@"page_id" ascending:NO];
 }

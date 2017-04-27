@@ -9,8 +9,14 @@
 #import "AMFChooseCategoryInteractorInput.h"
 
 @protocol AMFChooseCategoryInteractorOutput;
+@protocol AMFStorageHandlerProtocol;
 
 @interface AMFChooseCategoryInteractor : NSObject <AMFChooseCategoryInteractorInput>
+
+/**
+ * data source to be used for showing contents
+ */
+@property (nonatomic, strong) id<AMFStorageHandlerProtocol> storage;
 
 @property (nonatomic, weak) id<AMFChooseCategoryInteractorOutput> output;
 

@@ -269,6 +269,7 @@
 		4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4C8A08B21EAFB8BE00A514A3 /* NSUserDefaults+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Archiver.h"; path = "categories/NSUserDefaults+Archiver.h"; sourceTree = "<group>"; };
 		4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Archiver.m"; path = "categories/NSUserDefaults+Archiver.m"; sourceTree = "<group>"; };
+		4C8A08B51EB0FF1E00A514A3 /* AMFChooseCategoryModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFChooseCategoryModuleOutput.h; path = funds/Viper/ChooseCategory/Presenter/AMFChooseCategoryModuleOutput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -560,6 +561,7 @@
 				4CFD9C9D1EB0E1AF00825F6E /* AMFChooseCategoryModuleInput.h */,
 				4CFD9C9E1EB0E1AF00825F6E /* AMFChooseCategoryPresenter.h */,
 				4CFD9C9F1EB0E1AF00825F6E /* AMFChooseCategoryPresenter.m */,
+				4C8A08B51EB0FF1E00A514A3 /* AMFChooseCategoryModuleOutput.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -710,8 +712,8 @@
 			children = (
 				3860802A978668D755DA00F9 /* Assembly */,
 				20733A982D86D2E8144BEE0A /* View */,
-				1EA03CDF1B9360037EEDD376 /* Presenter */,
 				075D400DB513D8834E1D3853 /* Interactor */,
+				1EA03CDF1B9360037EEDD376 /* Presenter */,
 				63A0F4FBA7953143A91932E4 /* Router */,
 			);
 			path = ChooseCategory;

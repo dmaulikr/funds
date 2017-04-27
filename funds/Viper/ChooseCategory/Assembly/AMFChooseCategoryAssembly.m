@@ -31,6 +31,8 @@
 - (AMFChooseCategoryInteractor *)interactorChooseCategory {
     return [TyphoonDefinition withClass:[AMFChooseCategoryInteractor class]
                           configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(storage)
+                                                    with:_dataProvider.storageHandler];
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterChooseCategory]];
                           }];

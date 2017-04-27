@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMFCategoryProtocol.h"
 
 @protocol AMFChooseCategoryViewOutput <NSObject>
 
@@ -16,5 +17,10 @@
  tells the presenter that the view is ready for work
  */
 - (void)didTriggerViewReadyEvent;
+
+/**
+ * which category was selected
+ */
+- (void)categorySelected:(id<AMFCategoryProtocol>)category;
 
 @end

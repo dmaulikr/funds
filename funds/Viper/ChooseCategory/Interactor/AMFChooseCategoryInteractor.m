@@ -7,11 +7,16 @@
 //
 
 #import "AMFChooseCategoryInteractor.h"
+#import "AMFStorageHandlerProtocol.h"
 
 #import "AMFChooseCategoryInteractorOutput.h"
 
 @implementation AMFChooseCategoryInteractor
 
 #pragma mark - Methods of AMFChooseCategoryInteractorInput
+
+- (void)receiveAllCategories {
+    [self.output categoriesReceived:[self.storage grabAllCategories]];
+}
 
 @end

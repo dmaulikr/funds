@@ -13,11 +13,13 @@
 @protocol AMFChooseCategoryViewInput;
 @protocol AMFChooseCategoryInteractorInput;
 @protocol AMFChooseCategoryRouterInput;
+@protocol AMFChooseCategoryModuleOutput;
 
 @interface AMFChooseCategoryPresenter : NSObject <AMFChooseCategoryModuleInput, AMFChooseCategoryViewOutput, AMFChooseCategoryInteractorOutput>
 
 @property (nonatomic, weak) id<AMFChooseCategoryViewInput> view;
 @property (nonatomic, strong) id<AMFChooseCategoryInteractorInput> interactor;
 @property (nonatomic, strong) id<AMFChooseCategoryRouterInput> router;
+@property (nonatomic, strong) id<AMFChooseCategoryModuleOutput> output;
 
 @end

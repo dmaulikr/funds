@@ -16,6 +16,7 @@
 -(void) addRecords:(NSArray*)ar;
 -(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page;
 -(NSArray*) grabAllPages;
+-(NSArray*) grabAllCategories;
 -(void) removeAll;
 
 @end

@@ -10,4 +10,9 @@
 
 @protocol AMFChooseCategoryInteractorInput <NSObject>
 
+/**
+ receives all availble categories
+ */
+- (void)receiveAllCategories;
+
 @end

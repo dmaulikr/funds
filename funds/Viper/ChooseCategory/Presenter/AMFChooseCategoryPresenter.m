@@ -11,13 +11,17 @@
 #import "AMFChooseCategoryViewInput.h"
 #import "AMFChooseCategoryInteractorInput.h"
 #import "AMFChooseCategoryRouterInput.h"
+#import "AMFChooseCategoryModuleOutput.h"
+#import "AMFCategoryProtocol.h"
+
+static NSString *const categoryCellIndentifier = @"chooseCategoryCell";
 
 @implementation AMFChooseCategoryPresenter
 
 #pragma mark - Methods of AMFChooseCategoryModuleInput
 
-- (void)configureModule {
-    // the starting config of the module
+- (void)configureModuleWithCategorySelected:(id<AMFCategoryProtocol>)category {
+    [self.interactor receiveAllCategories];
 }
 
 #pragma mark - Methods of AMFChooseCategoryViewOutput
@@ -26,6 +30,16 @@
 	[self.view setupInitialState];
 }
 
+- (void)categorySelected:(id<AMFCategoryProtocol>)category {
+    [self.output categoryChosen:category];
+    [self.router closeMe];
+}
+
 #pragma mark - Methods of AMFChooseCategoryInteractorOutput
+
+- (void)categoriesReceived:(NSArray*)categories {
+    self.view.categories = categories;
+    [self.view refreshContents];
+}
 
 @end

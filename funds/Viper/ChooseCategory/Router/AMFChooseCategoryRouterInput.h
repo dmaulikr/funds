@@ -11,4 +11,6 @@
 
 @protocol AMFChooseCategoryRouterInput <AMFAlertProtocol>
 
+- (void)closeMe;
+
 @end

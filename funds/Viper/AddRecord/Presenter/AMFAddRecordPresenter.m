@@ -43,7 +43,8 @@
 }
 
 - (void)changeCatogory {
-    // open another module
+    [self.router showCategoryChooserWithCategorySelected:[self.interactor currentCategory]
+                                               andOutput:self];
 }
 
 - (void)changeWallet {
@@ -58,6 +59,13 @@
     else {
         [self.router showErrorWithMessage:[er.userInfo objectForKey:@"msg"]];
     }
+}
+
+
+#pragma mark - Methods of AMFChooseCategoryModuleOutput
+
+- (void)categoryChosen:(id<AMFCategoryProtocol>)category {
+    [self.interactor selectedCategory:category];
 }
 
 @end
