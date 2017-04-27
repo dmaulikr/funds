@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMFCategoryProtocol.h"
 
 @protocol AMFAddRecordViewInput <NSObject>
 
@@ -16,5 +17,13 @@
  sets initial state of the view
  */
 - (void)setupInitialState;
+
+/**
+ * setups additional elements of the view
+ */
+- (void)setupView;
+
+/// which category was selected
+@property (nonatomic, strong) id<AMFCategoryProtocol> selectedCategory;
 
 @end

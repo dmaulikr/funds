@@ -23,6 +23,8 @@
 #pragma mark - Methods of AMFAddRecordViewOutput
 
 - (void)didTriggerViewReadyEvent {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.view.selectedCategory = [defaults objectFromDataWithKey:kLastCategory];
 	[self.view setupInitialState];
 }
 
