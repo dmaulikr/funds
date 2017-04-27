@@ -40,7 +40,11 @@
 #pragma mark - Methods AMFFlowViewOutput
 
 -(void)setupView {
-
+    // ask for data to be shown in view
+    if (self.page == nil)
+        [self.interactor askForAnyValidPage];
+    else
+        [self receivedValidPage:self.page];
 }
 
 -(void)addClicked {
@@ -70,11 +74,5 @@
 
 -(void)didTriggerViewReadyEvent {
     [self.view setupInitialState];
-
-    // ask for data to be shown in view
-    if (self.page == nil)
-        [self.interactor askForAnyValidPage];
-    else
-        [self receivedValidPage:self.page];
 }
 @end

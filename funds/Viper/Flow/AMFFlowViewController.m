@@ -32,6 +32,15 @@ static NSString *const flowCellIndentifier = @"FlowCell";
     [self.output didTriggerViewReadyEvent];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.output setupView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (!self.records.count)
+        [self.output setupView];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -108,7 +117,6 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 - (void) choosePage {
     [self.output choosePage];
 }
-
 
 - (void) addRecord {
     [self.output addClicked];
