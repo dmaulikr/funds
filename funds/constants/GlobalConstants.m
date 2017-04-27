@@ -13,6 +13,6 @@ NSString *const kSegueAddRecord = @"addRecord";
 NSString *const kSegueAddPage = @"addPage";
 NSString *const kSegueChooseCategory = @"chooseCategory";
 
-
 NSString *const kLastCategory = @"lastUsedCategory";
 NSString *const kLastWallet = @"lastUsedWallet";
+NSString *const kLastPage = @"lastUsedPage";

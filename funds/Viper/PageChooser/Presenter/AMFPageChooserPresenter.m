@@ -13,6 +13,8 @@
 #import "AMFPageChooserRouterInput.h"
 #import "AMFPageChooserModuleOutput.h"
 #import "AMFPageProtocol.h"
+#import "NSUserDefaults+Archiver.h"
+#import "GlobalConstants.h"
 
 @implementation AMFPageChooserPresenter
 
@@ -31,7 +33,9 @@
 }
 
 - (void)cellSelected: (NSUInteger) index {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
+    [defaults persistObjAsData:page forKey:kLastPage];
     [self.moduleOutput pageWasChosen:page];
     [self.router closeDialog];
 }

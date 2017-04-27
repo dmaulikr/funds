@@ -12,6 +12,8 @@
 #import "AMFFlowInteractorInput.h"
 #import "AMFFlowRouterInput.h"
 #import "AMFPageProtocol.h"
+#import "GlobalConstants.h"
+#import "NSUserDefaults+Archiver.h"
 
 @implementation AMFFlowPresenter
 
@@ -30,6 +32,8 @@
 }
 
 -(void) receivedValidPage:(id<AMFPageProtocol>)p {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults persistObjAsData:p forKey:kLastPage];
     self.page = p;
     [self.view setToolbarTitle:self.page.name];
     [self.interactor askForDataWithPage:p];

@@ -11,6 +11,7 @@
 #import "AMFAddRecordInteractorOutput.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFWalletProtocol.h"
+#import "AMFPageProtocol.h"
 #import "AMFWalletPlain.h"
 #import "AMFCashPlain.h"
 #import "AMFCategoryPlain.h"
@@ -21,6 +22,7 @@
     id<AMFCategoryProtocol> _category;
     id<AMFWalletProtocol> _wallet;
     id<AMFWalletProtocol> _wwallet;
+    id<AMFPageProtocol> _page;
 }
 @end
 
@@ -38,7 +40,7 @@
             [defaults persistObjAsData:_category forKey:kLastCategory];
         }
     }
-    
+
     if (!_wallet) { // find one
         _wallet = [defaults objectFromDataWithKey:kLastWallet];
         if (!_wallet) { // create a new one
@@ -47,14 +49,21 @@
             [defaults persistObjAsData:_wallet forKey:kLastWallet];
         }
     }
-    
+
+    if (!_page) {
+        _page = [defaults objectFromDataWithKey:kLastPage];
+        if (!_page) { // create one
+        }
+    }
+
     AMFCashPlain *cash = [[AMFCashPlain alloc] init];
     cash.amount = amount;
     cash.descr = descr;
     cash.pos_lat = 0; // TODO: add a location
     cash.pos_lon = 0; // TODO: add a location
     cash.date = [NSDate date];
-    
+    cash.page = _page;
+
     [self.storage addRecord:cash];
     [self.output recordCreatedWithError:nil];
 }

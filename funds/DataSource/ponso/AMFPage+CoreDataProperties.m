@@ -12,6 +12,8 @@
 #import "NSManagedObject+generateID.h"
 #import "AMFgenerateID.h"
 
+static NSString *const kName = @"name";
+
 @implementation AMFPage (CoreDataProperties)
 
 + (NSFetchRequest<AMFPage *> *)fetchRequest {
@@ -45,6 +47,19 @@
     self.name = page.name;
     if (![self.cashflow containsObject:cash])
         [self addCashflowObject:cash];
+}
+
+#pragma mark - NSCoding protocol
+
+- (instancetype)initWithCoder:(NSCoder *)aCoder {
+    NSString *name = [aCoder decodeObjectForKey:kName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", name];
+    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
+    return [AMFPage MR_findFirstWithPredicate:predicate inContext:con];
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.name forKey:kName];
 }
 
 @end

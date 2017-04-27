@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AMFPageProtocol.h"
 
-@interface AMFPagePlain : NSObject <AMFPageProtocol>
+@interface AMFPagePlain : NSObject <AMFPageProtocol, NSCoding>
 
 @end

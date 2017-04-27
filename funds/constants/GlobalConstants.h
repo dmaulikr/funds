@@ -19,3 +19,4 @@ extern NSString *const kSegueChooseCategory;
 // constants for user defaults
 extern NSString *const kLastCategory;
 extern NSString *const kLastWallet;
+extern NSString *const kLastPage;
