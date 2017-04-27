@@ -27,6 +27,14 @@
 	[self.view setupInitialState];
 }
 
+- (void)doneWithPageName:(NSString*)pname {
+    if (!pname.length) {
+        [self.router showErrorWithMessage:AMFLocalize(@"no name for page!")];
+        return;
+    }
+    [self.router closeMe];
+}
+
 #pragma mark - Methods of AMFAddPageInteractorOutput
 
 @end

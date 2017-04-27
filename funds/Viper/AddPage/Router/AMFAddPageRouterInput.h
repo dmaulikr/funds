@@ -11,4 +11,6 @@
 
 @protocol AMFAddPageRouterInput <AMFAlertProtocol>
 
+- (void)closeMe;
+
 @end

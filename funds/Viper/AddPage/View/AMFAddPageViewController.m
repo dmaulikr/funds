@@ -10,6 +10,12 @@
 
 #import "AMFAddPageViewOutput.h"
 
+@interface AMFAddPageViewController ()
+
+@property (nonatomic, weak) IBOutlet UITextField *pageName;
+
+@end
+
 @implementation AMFAddPageViewController
 
 #pragma mark - Live cycle methods
@@ -20,10 +26,20 @@
 	[self.output didTriggerViewReadyEvent];
 }
 
+- (void)done {
+    [self.output doneWithPageName:self.pageName.text];
+}
+
 #pragma mark - Methods of AMFAddPageViewInput
 
 - (void)setupInitialState {
-	// initial setup of the view
+    if (!self.navigationItem.rightBarButtonItem) {
+        UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"done"]
+                                                                 style:UIBarButtonItemStyleDone
+                                                                target:self
+                                                                action:@selector(done)];
+        self.navigationItem.rightBarButtonItem = done;
+    }
 }
 
 #pragma mark - Themes

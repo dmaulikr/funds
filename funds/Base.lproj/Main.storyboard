@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -403,12 +404,28 @@
                     <view key="view" contentMode="scaleToFill" id="Eg6-AN-YpR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Oe-M5-IUE">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Oe-M5-IUE" firstAttribute="leading" secondItem="Eg6-AN-YpR" secondAttribute="leadingMargin" id="JKr-km-7Br"/>
+                            <constraint firstItem="4Oe-M5-IUE" firstAttribute="centerY" secondItem="Eg6-AN-YpR" secondAttribute="centerY" id="U37-1o-R8h"/>
+                            <constraint firstItem="4Oe-M5-IUE" firstAttribute="trailing" secondItem="Eg6-AN-YpR" secondAttribute="trailingMargin" id="gbL-KI-yDd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageName" destination="4Oe-M5-IUE" id="YpP-aY-OxP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVZ-kh-98j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4370" y="-966"/>
+            <point key="canvasLocation" x="4368.8000000000002" y="-966.56671664167925"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7r1-ca-996">

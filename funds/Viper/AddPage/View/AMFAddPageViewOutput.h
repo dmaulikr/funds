@@ -17,4 +17,10 @@
  */
 - (void)didTriggerViewReadyEvent;
 
+
+/**
+ * done was touched
+ */
+- (void)doneWithPageName:(NSString*)pname;
+
 @end
