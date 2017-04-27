@@ -35,7 +35,13 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	[self.output didTriggerViewReadyEvent];
+    [super viewWillAppear:animated];
+    [self.output didTriggerViewReadyEvent];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    [self.category sizeToFit];
 }
 
 #pragma mark - Methods AMFAddRecordViewInput
