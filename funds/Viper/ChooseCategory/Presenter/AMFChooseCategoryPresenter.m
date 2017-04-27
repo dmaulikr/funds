@@ -31,6 +31,8 @@ static NSString *const categoryCellIndentifier = @"chooseCategoryCell";
 }
 
 - (void)categorySelected:(id<AMFCategoryProtocol>)category {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults persistObjAsData:category forKey:kLastCategory];
     [self.output categoryChosen:category];
     [self.router closeMe];
 }

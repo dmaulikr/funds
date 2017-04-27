@@ -12,8 +12,6 @@
 #import "AMFFlowInteractorInput.h"
 #import "AMFFlowRouterInput.h"
 #import "AMFPageProtocol.h"
-#import "GlobalConstants.h"
-#import "NSUserDefaults+Archiver.h"
 
 @implementation AMFFlowPresenter
 

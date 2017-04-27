@@ -10,6 +10,8 @@
 #define funds_prefix_h
 
 #import "OCLogTemplate.h"
+#import "NSUserDefaults+Archiver.h"
+#import "GlobalConstants.h"
 
 #define AMFLocalize(x) NSLocalizedString((x), nil)
 

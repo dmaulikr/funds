@@ -15,8 +15,6 @@
 #import "AMFWalletPlain.h"
 #import "AMFCashPlain.h"
 #import "AMFCategoryPlain.h"
-#import "NSUserDefaults+Archiver.h"
-#import "GlobalConstants.h"
 
 @interface AMFAddRecordInteractor () {
     id<AMFCategoryProtocol> _category;
@@ -63,6 +61,8 @@
     cash.pos_lon = 0; // TODO: add a location
     cash.date = [NSDate date];
     cash.page = _page;
+    cash.wallet = _wallet;
+    cash.category = _category;
 
     [self.storage addRecord:cash];
     [self.output recordCreatedWithError:nil];

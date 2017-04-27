@@ -55,11 +55,11 @@ static NSString *const kIcon = @"icon";
 #pragma mark - NSCoding protocol
 
 - (instancetype)initWithCoder:(NSCoder *)aCoder {
-    if (self = [super init]) {
-        self.name = [aCoder decodeObjectForKey:kName];
-        self.icon_path = [aCoder decodeObjectForKey:kIcon];
-    }
-    return self;
+    NSString *name = [aCoder decodeObjectForKey:kName];
+    NSString *icon_path = [aCoder decodeObjectForKey:kIcon];
+    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", name, icon_path];
+    return [AMFWallet MR_findFirstWithPredicate:predicate inContext:con];
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
