@@ -26,7 +26,8 @@
 
 @implementation AMFAddRecordViewController
 
-@synthesize selectedCategory;
+@synthesize selectedCategory,
+selectedCurrency;
 
 #pragma mark - Life Cycle Methods
 
@@ -55,6 +56,14 @@
         self.navigationItem.rightBarButtonItem = done;
     }
 
+    [self refreshView];
+}
+
+- (void)setupView {
+    [self refreshView];
+}
+
+- (void)refreshView {
     if (self.selectedCategory) {
         NSString *img = self.selectedCategory.icon_path;
         if (img.length)
@@ -63,10 +72,12 @@
             self.categoryImage.image = [UIImage imageNamed:@"help"];
         self.category.text = self.selectedCategory.name;
     }
-}
 
-- (void)setupView {
-
+    if (self.selectedCurrency) {
+        self.inputCurrency.text = self.selectedCurrency.symbol.length ?
+        self.selectedCurrency.symbol :
+        self.selectedCurrency.name;
+    }
 }
 
 #pragma mark - Themes

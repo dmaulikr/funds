@@ -17,6 +17,7 @@
 -(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page;
 -(NSArray*) grabAllPages;
 -(NSArray*) grabAllCategories;
+-(NSArray*) grabAllCurrencies;
 -(void) removeAll;
 
 @end

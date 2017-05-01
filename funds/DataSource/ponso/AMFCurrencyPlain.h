@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AMFCurrencyProtocol.h"
 
-@interface AMFCurrencyPlain : NSObject <AMFCurrencyProtocol>
+@interface AMFCurrencyPlain : NSObject <AMFCurrencyProtocol, NSCoding>
 
 @end

@@ -23,8 +23,8 @@
 #pragma mark - Methods of AMFAddRecordViewOutput
 
 - (void)didTriggerViewReadyEvent {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.view.selectedCategory = [defaults objectFromDataWithKey:kLastCategory];
+    self.view.selectedCategory = [self.interactor currentCategory];
+    self.view.selectedCurrency = [self.interactor currentCurrency];
 	[self.view setupInitialState];
 }
 
@@ -41,7 +41,8 @@
 }
 
 - (void)changeInputCurrency {
-    
+    self.view.selectedCurrency = [self.interactor nextCurrency];
+    [self.view refreshView];
 }
 
 - (void)changeCatogory {
@@ -68,6 +69,8 @@
 
 - (void)categoryChosen:(id<AMFCategoryProtocol>)category {
     [self.interactor selectedCategory:category];
+    self.view.selectedCategory = category;
+    [self.view refreshView];
 }
 
 @end

@@ -89,6 +89,10 @@
     return [AMFPage MR_findAllSortedBy:@"page_id" ascending:NO];
 }
 
+-(NSArray*) grabAllCurrencies {
+    return [AMFCurrency MR_findAllSortedBy:@"cur_id" ascending:NO];
+}
+
 -(void) removeAll {
     for (AMFCashFlow *cash in [AMFCashFlow MR_findAll])
         [cash MR_deleteEntity];

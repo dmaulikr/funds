@@ -9,7 +9,6 @@
 #import "AMFAddRecordRouter.h"
 #import "AMFChooseCategoryModuleInput.h"
 #import "AMFChooseCategoryModuleOutput.h"
-#import "GlobalConstants.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 

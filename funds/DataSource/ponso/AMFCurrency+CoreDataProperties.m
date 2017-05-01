@@ -12,6 +12,10 @@
 #import "NSManagedObject+generateID.h"
 #import "AMFgenerateID.h"
 
+static NSString *const kName = @"cname";
+static NSString *const kSymbol = @"csymbol";
+static NSString *const kRate = @"crate";
+
 @implementation AMFCurrency (CoreDataProperties)
 
 + (NSFetchRequest<AMFCurrency *> *)fetchRequest {
@@ -49,6 +53,19 @@
     self.rate = m.rate;
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];
+}
+
+#pragma mark - NSCoding protocol
+
+- (instancetype)initWithCoder:(NSCoder *)aCoder {
+    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
+    NSString *name = [aCoder decodeObjectForKey:kName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", name];
+    return [AMFCurrency MR_findFirstWithPredicate:predicate inContext:con];
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.name forKey:kName];
 }
 
 @end

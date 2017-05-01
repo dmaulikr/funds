@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFCurrencyProtocol;
 @protocol AMFCategoryProtocol;
 @protocol AMFWalletProtocol;
 
@@ -40,5 +41,15 @@
 
 
 - (id<AMFCategoryProtocol>)currentCategory;
+
+/**
+ * returns next available currency
+ */
+- (id<AMFCurrencyProtocol>)nextCurrency;
+
+/**
+ * current (saved one) currency
+ */
+- (id<AMFCurrencyProtocol>)currentCurrency;
 
 @end

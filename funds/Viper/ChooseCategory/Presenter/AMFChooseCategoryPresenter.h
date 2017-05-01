@@ -20,6 +20,6 @@
 @property (nonatomic, weak) id<AMFChooseCategoryViewInput> view;
 @property (nonatomic, strong) id<AMFChooseCategoryInteractorInput> interactor;
 @property (nonatomic, strong) id<AMFChooseCategoryRouterInput> router;
-@property (nonatomic, strong) id<AMFChooseCategoryModuleOutput> output;
+@property (nonatomic, weak) id<AMFChooseCategoryModuleOutput> moduleOutput;
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AMFCategoryProtocol.h"
+#import "AMFCurrencyProtocol.h"
 
 @protocol AMFAddRecordViewInput <NSObject>
 
@@ -23,7 +24,15 @@
  */
 - (void)setupView;
 
+/**
+ * forces the view to update itself
+ */
+- (void)refreshView;
+
 /// which category was selected
 @property (nonatomic, strong) id<AMFCategoryProtocol> selectedCategory;
+
+/// which currency was selected
+@property (nonatomic, strong) id<AMFCurrencyProtocol> selectedCurrency;
 
 @end

@@ -16,3 +16,4 @@ NSString *const kSegueChooseCategory = @"chooseCategory";
 NSString *const kLastCategory = @"lastUsedCategory";
 NSString *const kLastWallet = @"lastUsedWallet";
 NSString *const kLastPage = @"lastUsedPage";
+NSString *const kLastCurrency = @"lastUsedCurrency";
