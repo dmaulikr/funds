@@ -15,6 +15,12 @@ static NSString *const kIcon = @"icon";
 
 @synthesize name, icon_path;
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"Wallet Plain name: %@, icon_path: %@",
+            self.name,
+            self.icon_path];
+}
+
 #pragma mark - NSCoding protocol
 
 - (instancetype)initWithCoder:(NSCoder *)aCoder {

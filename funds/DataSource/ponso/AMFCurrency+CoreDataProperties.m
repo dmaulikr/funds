@@ -18,6 +18,13 @@ static NSString *const kRate = @"crate";
 
 @implementation AMFCurrency (CoreDataProperties)
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"AMFCurrency Plain name: %@ symbol: %@ rate: %g",
+            self.name,
+            self.symbol,
+            self.rate];
+}
+
 + (NSFetchRequest<AMFCurrency *> *)fetchRequest {
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCurrency"];
 }

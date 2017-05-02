@@ -17,6 +17,12 @@ static NSString *const kIcon = @"icon";
 
 @implementation AMFWallet (CoreDataProperties)
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"AMFWallet name: %@, icon_path: %@",
+            self.name,
+            self.icon_path];
+}
+
 + (NSFetchRequest<AMFWallet *> *)fetchRequest {
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFWallet"];
 }

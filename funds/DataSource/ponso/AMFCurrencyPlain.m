@@ -18,6 +18,13 @@ static NSString *const kRate = @"rate";
 symbol,
 rate;
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"Currency Plain name: %@ symbol: %@ rate: %g",
+            self.name,
+            self.symbol,
+            self.rate];
+}
+
 #pragma mark - NSCoding protocol
 
 - (instancetype)initWithCoder:(NSCoder *)aCoder {

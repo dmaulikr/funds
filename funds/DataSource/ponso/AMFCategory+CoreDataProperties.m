@@ -15,7 +15,13 @@
 static NSString *const kName = @"name";
 static NSString *const kIcon = @"icon";
 
-@implementation AMFCategory (CoreDataProperties) 
+@implementation AMFCategory (CoreDataProperties)
+
+- (NSString*)description {
+    return [NSString stringWithFormat:@"AMFCategory name: %@, icon_path: %@",
+            self.name,
+            self.icon_path];
+}
 
 + (NSFetchRequest<AMFCategory *> *)fetchRequest {
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCategory"];

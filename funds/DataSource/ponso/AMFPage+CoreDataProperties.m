@@ -16,6 +16,11 @@ static NSString *const kName = @"name";
 
 @implementation AMFPage (CoreDataProperties)
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"AMFPage name: %@",
+            self.name];
+}
+
 + (NSFetchRequest<AMFPage *> *)fetchRequest {
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFPage"];
 }

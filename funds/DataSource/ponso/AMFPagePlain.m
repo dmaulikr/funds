@@ -15,6 +15,11 @@ static NSString *const kName = @"name";
 
 @synthesize name;
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"Page Plain name: %@",
+            self.name];
+}
+
 #pragma mark - NSCoding protocol
 
 - (instancetype)initWithCoder:(NSCoder *)aCoder {
