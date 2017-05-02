@@ -315,13 +315,58 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chooseCategoryCell" id="xpM-g9-lhC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chooseCategoryCell" id="xpM-g9-lhC" customClass="AMFSwipeableCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xpM-g9-lhC" id="cvU-yD-rAQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-Uy-h5g">
+                                                    <rect key="frame" x="295" y="0.0" width="80" height="44"/>
+                                                    <color key="backgroundColor" red="0.18889508928571427" green="0.88297991071428572" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="gaB-mf-9WC"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="editClicked:" destination="xpM-g9-lhC" eventType="touchUpInside" id="ypq-G0-lT0"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FX-nl-EOZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYR-a5-NIc">
+                                                            <rect key="frame" x="20" y="12" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tYR-a5-NIc" firstAttribute="leading" secondItem="1FX-nl-EOZ" secondAttribute="leading" constant="20" id="32h-MR-aiK"/>
+                                                        <constraint firstItem="tYR-a5-NIc" firstAttribute="centerY" secondItem="1FX-nl-EOZ" secondAttribute="centerY" id="c6k-JH-ScG"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4Hb-Uy-h5g" firstAttribute="top" secondItem="cvU-yD-rAQ" secondAttribute="top" id="Jbw-h6-JtZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="4Hb-Uy-h5g" secondAttribute="trailing" id="l3k-ag-te4"/>
+                                                <constraint firstItem="1FX-nl-EOZ" firstAttribute="leading" secondItem="cvU-yD-rAQ" secondAttribute="leading" id="ucV-jM-dRo"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Hb-Uy-h5g" secondAttribute="bottom" id="uhC-14-Jn9"/>
+                                                <constraint firstItem="1FX-nl-EOZ" firstAttribute="top" secondItem="cvU-yD-rAQ" secondAttribute="top" id="vr1-CW-PkR"/>
+                                                <constraint firstAttribute="bottom" secondItem="1FX-nl-EOZ" secondAttribute="bottom" id="xdH-Q3-PJa"/>
+                                                <constraint firstAttribute="trailing" secondItem="1FX-nl-EOZ" secondAttribute="trailing" id="xnt-wf-J4A"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button_edit" destination="4Hb-Uy-h5g" id="5fo-l5-qmi"/>
+                                            <outlet property="contentViewLeftConstraint" destination="ucV-jM-dRo" id="i9L-zl-JaA"/>
+                                            <outlet property="contentViewRightConstraint" destination="xnt-wf-J4A" id="jl6-eT-Rw7"/>
+                                            <outlet property="customContentView" destination="cvU-yD-rAQ" id="1LA-mg-TdW"/>
+                                            <outlet property="label" destination="tYR-a5-NIc" id="vhC-ng-0m7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

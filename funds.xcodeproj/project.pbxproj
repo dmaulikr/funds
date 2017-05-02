@@ -68,6 +68,7 @@
 		4C95E5881EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5871EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m */; };
 		4C95E58D1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58A1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m */; };
 		4C95E5911EB861D500EBE5C9 /* AMFEditCategoryRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */; };
+		4C95E5981EB893B600EBE5C9 /* AMFSwipeableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -296,6 +297,8 @@
 		4C95E58E1EB861D500EBE5C9 /* AMFEditCategoryRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryRouter.h; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouter.h; sourceTree = SOURCE_ROOT; };
 		4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFEditCategoryRouter.m; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouter.m; sourceTree = SOURCE_ROOT; };
 		4C95E5901EB861D500EBE5C9 /* AMFEditCategoryRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryRouterInput.h; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouterInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5961EB893B600EBE5C9 /* AMFSwipeableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSwipeableCell.h; path = funds/Viper/Common/cells/AMFSwipeableCell.h; sourceTree = SOURCE_ROOT; };
+		4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSwipeableCell.m; path = funds/Viper/Common/cells/AMFSwipeableCell.m; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -798,6 +801,7 @@
 		4C2759031E7B01160010C011 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C95E5921EB8839900EBE5C9 /* cells */,
 				4C2759041E7B01280010C011 /* AMFThemeBaseController.h */,
 				4C2759051E7B01280010C011 /* AMFThemeBaseController.m */,
 				4C95F86B1E82CA2C00D3491A /* AMFCommonRouter.h */,
@@ -1015,6 +1019,16 @@
 				4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		4C95E5921EB8839900EBE5C9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5961EB893B600EBE5C9 /* AMFSwipeableCell.h */,
+				4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */,
+			);
+			name = cells;
+			path = ChooseCategory/View;
 			sourceTree = "<group>";
 		};
 		4C95F8631E82BF8800D3491A /* Alerts */ = {
@@ -1972,6 +1986,7 @@
 				4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */,
 				4CE158DD1E71B8590009BAF4 /* AMFBudgetCSVReader.m in Sources */,
 				4CE158E31E71C4C70009BAF4 /* AMFCashPlain.m in Sources */,
+				4C95E5981EB893B600EBE5C9 /* AMFSwipeableCell.m in Sources */,
 				4C1E69491E79AB21004A3B4D /* AMFgenerateID.m in Sources */,
 				4CE158FA1E727FFF0009BAF4 /* AMFFlowPresenter.m in Sources */,
 				4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */,
