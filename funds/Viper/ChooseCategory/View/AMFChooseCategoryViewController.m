@@ -50,7 +50,6 @@ categories;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"count: %ld", (long)self.categories.count);
     return self.categories.count;
 }
 
@@ -63,6 +62,7 @@ categories;
     }
     else
         [cell setAccessoryType:UITableViewCellAccessoryNone];
+    cell.path = indexPath;
     cell.itemText = category.name;
     cell.delegate = self;
     return cell;
@@ -81,8 +81,10 @@ categories;
 
 #pragma mark - AMFSwipeableCellDelegate
 
-- (void)editActionForItem:(NSString *)itemText {
-    LogDebug(@"edit for %@", itemText);
+- (void)editActionForItem:(NSString *)itemText andCell:(AMFSwipeableCell*)cell {
+    id <AMFCategoryProtocol> category = [self.categories objectAtIndex:cell.path.row];
+    [cell prepareForReuse]; // close cell
+    [self.output editCategory:category];
 }
 
 @end

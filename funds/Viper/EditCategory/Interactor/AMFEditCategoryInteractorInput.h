@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFCategoryProtocol;
+
 @protocol AMFEditCategoryInteractorInput <NSObject>
+
+- (void)changeCategory:(id<AMFCategoryProtocol>)category modifyName:(NSString*)name;
+
+- (void)changeCategory:(id<AMFCategoryProtocol>)category modifyIcon:(NSString*)name;
 
 @end

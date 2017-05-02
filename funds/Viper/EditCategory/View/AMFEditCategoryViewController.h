@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMFThemeBaseController.h"
 
 #import "AMFEditCategoryViewInput.h"
 
 @protocol AMFEditCategoryViewOutput;
 
-@interface AMFEditCategoryViewController : UIViewController <AMFEditCategoryViewInput>
+@interface AMFEditCategoryViewController : AMFThemeBaseController <AMFEditCategoryViewInput>
 
 @property (nonatomic, strong) id<AMFEditCategoryViewOutput> output;
 

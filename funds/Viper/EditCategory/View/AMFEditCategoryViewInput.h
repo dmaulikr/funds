@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
+@protocol AMFCategoryProtocol;
+
 @protocol AMFEditCategoryViewInput <NSObject>
 
 /**
@@ -16,5 +19,15 @@
  sets initial state of the view
  */
 - (void)setupInitialState;
+
+/**
+ * category being edited
+ */
+@property (nonatomic, strong) id<AMFCategoryProtocol> category;
+
+/**
+ * refreshes data shown to the user
+ */
+- (void)refreshContents;
 
 @end

@@ -11,6 +11,7 @@
 #import "AMFCashFlow+CoreDataClass.h"
 #import "AMFCashFlow+CoreDataProperties.h"
 #import "NSManagedObject+generateID.h"
+#import "AMFCategoryProtocol.h"
 #import "AMFgenerateID.h"
 
 @interface AMFSQLCoreDataHandler() {
@@ -72,7 +73,7 @@
 }
 
 -(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY page.name == %@",
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"page.name == %@",
                               page.name];
     return [AMFCashFlow MR_findAllSortedBy:@"cash_id" ascending:NO withPredicate:predicate];
 }
@@ -91,6 +92,15 @@
 
 -(NSArray*) grabAllCurrencies {
     return [AMFCurrency MR_findAllSortedBy:@"cur_id" ascending:NO];
+}
+
+- (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString*)name {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@",
+                              name];
+    return [AMFCategory MR_findFirstWithPredicate:predicate
+                                         sortedBy:@"cat_id"
+                                        ascending:NO
+                                        inContext:[NSManagedObjectContext MR_defaultContext]];
 }
 
 -(void) removeAll {

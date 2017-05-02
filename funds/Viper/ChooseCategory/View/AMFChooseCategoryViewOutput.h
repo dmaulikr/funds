@@ -23,4 +23,9 @@
  */
 - (void)categorySelected:(id<AMFCategoryProtocol>)category;
 
+/**
+ * edit that category
+ */
+- (void)editCategory:(id<AMFCategoryProtocol>)category;
+
 @end

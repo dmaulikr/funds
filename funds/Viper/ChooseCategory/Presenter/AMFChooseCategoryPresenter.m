@@ -37,11 +37,23 @@ static NSString *const categoryCellIndentifier = @"chooseCategoryCell";
     [self.router closeMe];
 }
 
+- (void)editCategory:(id<AMFCategoryProtocol>)category {
+    [self.router editCategoryName:category
+                        andOutput:self];
+}
+
 #pragma mark - Methods of AMFChooseCategoryInteractorOutput
 
 - (void)categoriesReceived:(NSArray*)categories {
     self.view.categories = categories;
     [self.view refreshContents];
+}
+
+#pragma mark - Methods of AMFEditCategoryModuleOutput
+
+- (void)categoryEditingFinished {
+    // update view
+    [self.interactor receiveAllCategories];
 }
 
 @end

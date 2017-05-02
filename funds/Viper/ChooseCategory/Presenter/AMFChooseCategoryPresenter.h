@@ -9,13 +9,17 @@
 #import "AMFChooseCategoryViewOutput.h"
 #import "AMFChooseCategoryInteractorOutput.h"
 #import "AMFChooseCategoryModuleInput.h"
+#import "AMFEditCategoryModuleOutput.h"
 
 @protocol AMFChooseCategoryViewInput;
 @protocol AMFChooseCategoryInteractorInput;
 @protocol AMFChooseCategoryRouterInput;
 @protocol AMFChooseCategoryModuleOutput;
 
-@interface AMFChooseCategoryPresenter : NSObject <AMFChooseCategoryModuleInput, AMFChooseCategoryViewOutput, AMFChooseCategoryInteractorOutput>
+@interface AMFChooseCategoryPresenter : NSObject <AMFChooseCategoryModuleInput,
+AMFChooseCategoryViewOutput,
+AMFEditCategoryModuleOutput,
+AMFChooseCategoryInteractorOutput>
 
 @property (nonatomic, weak) id<AMFChooseCategoryViewInput> view;
 @property (nonatomic, strong) id<AMFChooseCategoryInteractorInput> interactor;

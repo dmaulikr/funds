@@ -299,6 +299,7 @@
 		4C95E5901EB861D500EBE5C9 /* AMFEditCategoryRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryRouterInput.h; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C95E5961EB893B600EBE5C9 /* AMFSwipeableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSwipeableCell.h; path = funds/Viper/Common/cells/AMFSwipeableCell.h; sourceTree = SOURCE_ROOT; };
 		4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSwipeableCell.m; path = funds/Viper/Common/cells/AMFSwipeableCell.m; sourceTree = SOURCE_ROOT; };
+		4C95E5991EB89E7C00EBE5C9 /* AMFEditCategoryModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryModuleOutput.h; path = funds/Viper/EditCategory/Presenter/AMFEditCategoryModuleOutput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -1585,6 +1586,7 @@
 				4C95E5851EB861BA00EBE5C9 /* AMFEditCategoryModuleInput.h */,
 				4C95E5861EB861BA00EBE5C9 /* AMFEditCategoryPresenter.h */,
 				4C95E5871EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m */,
+				4C95E5991EB89E7C00EBE5C9 /* AMFEditCategoryModuleOutput.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";

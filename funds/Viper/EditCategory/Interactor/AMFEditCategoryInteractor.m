@@ -10,9 +10,33 @@
 
 #import "AMFEditCategoryInteractorOutput.h"
 #import "AMFStorageHandlerProtocol.h"
+#import "AMFCategoryProtocol.h"
+
+@interface AMFEditCategoryInteractor () {
+    id<AMFCategoryProtocol> _category;
+}
+@end
 
 @implementation AMFEditCategoryInteractor
 
 #pragma mark - Methods of AMFEditCategoryInteractorInput
+
+- (void)changeCategory:(id<AMFCategoryProtocol>)category modifyName:(NSString*)name {
+    if (!_category) {
+        _category = [self.storage grabCategoryWithName:category.name];
+    }
+    if (_category) {
+        _category.name = name;
+    }
+}
+
+- (void)changeCategory:(id<AMFCategoryProtocol>)category modifyIcon:(NSString*)icon_name {
+    if (!_category) {
+        _category = [self.storage grabCategoryWithName:category.name];
+    }
+    if (_category) {
+        _category.icon_path = icon_name;
+    }
+}
 
 @end

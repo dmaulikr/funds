@@ -9,8 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "AMFAlertProtocol.h"
 
+@protocol AMFCategoryProtocol;
+@protocol AMFEditCategoryModuleOutput;
+
 @protocol AMFChooseCategoryRouterInput <AMFAlertProtocol>
 
+/**
+ * closes a dialog which chooses the category
+ */
 - (void)closeMe;
+
+/**
+ * opens a dialog for category editing
+ */
+- (void)editCategoryName:(id<AMFCategoryProtocol>)category
+               andOutput:(id<AMFEditCategoryModuleOutput>) output;
 
 @end

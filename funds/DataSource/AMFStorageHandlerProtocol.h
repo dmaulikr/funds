@@ -8,16 +8,18 @@
 
 @protocol AMFCashProtocol;
 @protocol AMFPageProtocol;
+@protocol AMFCategoryProtocol;
 
 @protocol AMFStorageHandlerProtocol <NSObject>
 
--(void) initStorage;
--(void) addRecord:(id<AMFCashProtocol>)rec;
--(void) addRecords:(NSArray*)ar;
--(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page;
--(NSArray*) grabAllPages;
--(NSArray*) grabAllCategories;
--(NSArray*) grabAllCurrencies;
--(void) removeAll;
+- (void)initStorage;
+- (void)addRecord:(id<AMFCashProtocol>)rec;
+- (void)addRecords:(NSArray*)ar;
+- (NSArray*)grabRecordsForPage:(id<AMFPageProtocol>)page;
+- (NSArray*)grabAllPages;
+- (NSArray*)grabAllCategories;
+- (NSArray*)grabAllCurrencies;
+- (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString*)name;
+- (void)removeAll;
 
 @end

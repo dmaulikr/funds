@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class AMFSwipeableCell;
+
 @protocol AMFSwipeableCellDelegate <NSObject>
 @required
-- (void)editActionForItem:(NSString *)itemText;
+- (void)editActionForItem:(NSString *)itemText andCell:(AMFSwipeableCell*)cell;
 
 @optional
 - (void)cellDidOpen:(UITableViewCell *)cell;
@@ -21,6 +23,7 @@
 
 @property (nonatomic, weak) id <AMFSwipeableCellDelegate> delegate;
 @property (nonatomic, strong) NSString *itemText;
+@property (nonatomic, strong) NSIndexPath *path;
 
 - (void)openCell;
 

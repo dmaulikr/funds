@@ -17,4 +17,9 @@
  */
 - (void)didTriggerViewReadyEvent;
 
+/**
+ * category was edited
+ */
+- (void)doneEditingWithName:(NSString*)name andIcon:(NSString*)icon;
+
 @end

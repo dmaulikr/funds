@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
+@protocol AMFCategoryProtocol;
+
 @protocol AMFEditCategoryModuleInput <RamblerViperModuleInput>
 
 /**
- @author Michael Artuerhof
-
- Method initializes the starting configuration of the module
+ * @author Michael Artuerhof
+ * Method initializes the starting configuration of the module
+ * @param category to be edited
  */
-- (void)configureModule;
+- (void)configureModuleWithCategoryName:(id<AMFCategoryProtocol>)category;
 
 @end

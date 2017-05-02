@@ -184,7 +184,7 @@ static CGFloat const kBounceValue = 20.0f;
 
 - (IBAction)editClicked:(id)sender {
     if (self.delegate)
-        [self.delegate editActionForItem:self.itemText];
+        [self.delegate editActionForItem:self.itemText andCell:self];
 }
 
 #pragma mark - UIGestureRecognizerDelegate

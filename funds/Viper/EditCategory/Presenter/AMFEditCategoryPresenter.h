@@ -13,11 +13,13 @@
 @protocol AMFEditCategoryViewInput;
 @protocol AMFEditCategoryInteractorInput;
 @protocol AMFEditCategoryRouterInput;
+@protocol AMFEditCategoryModuleOutput;
 
 @interface AMFEditCategoryPresenter : NSObject <AMFEditCategoryModuleInput, AMFEditCategoryViewOutput, AMFEditCategoryInteractorOutput>
 
 @property (nonatomic, weak) id<AMFEditCategoryViewInput> view;
 @property (nonatomic, strong) id<AMFEditCategoryInteractorInput> interactor;
 @property (nonatomic, strong) id<AMFEditCategoryRouterInput> router;
+@property (nonatomic, weak) id<AMFEditCategoryModuleOutput> moduleOutput;
 
 @end
