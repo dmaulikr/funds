@@ -13,6 +13,7 @@ extern NSString *const kSegueChoosePage;
 extern NSString *const kSegueAddRecord;
 extern NSString *const kSegueAddPage;
 extern NSString *const kSegueChooseCategory;
+extern NSString *const kSegueEditCategory;
 
 // common constants
 

@@ -13,9 +13,12 @@
 		0AE5592E2B72094B800891E1 /* libPods-funds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51BF1C95C6D79DB02F11704 /* libPods-funds.a */; };
 		0BAF9A333F3614DDE6DD81DA /* AMFWalletViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */; };
 		13CA6DC27DDED31453915E65 /* AMFAddRecordRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF709D4767CCFEAEC965A9D8 /* AMFAddRecordRouterTests.m */; };
+		19D4932AD60F2C2C6DEF79CF /* AMFEditCategoryPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D41E43EFFE52B0B2CCF843 /* AMFEditCategoryPresenterTests.m */; };
 		1D28856CA868659AE35AC258 /* AMFBalanceViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2E2503CAE6521B3DA5052 /* AMFBalanceViewControllerTests.m */; };
 		1E9753CF972B0F1A1932B8D7 /* AMFAddRecordViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F718FC446225A3D50CC16 /* AMFAddRecordViewControllerTests.m */; };
+		22BF38B53C1DB4EE03757361 /* AMFEditCategoryInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF526FCE257AB74976A18AD0 /* AMFEditCategoryInteractorTests.m */; };
 		2C07B9AE4E8EA27DCD2DF0AE /* AMFPageChooserInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B6B7CE9B1B69AFD349563 /* AMFPageChooserInteractorTests.m */; };
+		3D02C8011093C750F1999E76 /* AMFEditCategoryRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BA18D3288CD009F0DB2C84 /* AMFEditCategoryRouterTests.m */; };
 		3DB5496F2EF81C63E2D4F3C5 /* AMFFlowInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE43B30512ACF84EF1C8DB8 /* AMFFlowInteractorTests.m */; };
 		49458A9C89DE1BDAB07C9920 /* AMFChooseCategoryPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2C244FBE87332758EFB984 /* AMFChooseCategoryPresenterTests.m */; };
 		4C046FAB1E73C37C001E73A6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C046FA91E73C37C001E73A6 /* Localizable.strings */; };
@@ -60,6 +63,11 @@
 		4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */; };
 		4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */; };
 		4C8A08B41EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */; };
+		4C95E57F1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E57E1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m */; };
+		4C95E5841EB861AB00EBE5C9 /* AMFEditCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5811EB861AB00EBE5C9 /* AMFEditCategoryViewController.m */; };
+		4C95E5881EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5871EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m */; };
+		4C95E58D1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58A1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m */; };
+		4C95E5911EB861D500EBE5C9 /* AMFEditCategoryRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -102,6 +110,7 @@
 		4CFD9CA01EB0E1AF00825F6E /* AMFChooseCategoryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD9C9F1EB0E1AF00825F6E /* AMFChooseCategoryPresenter.m */; };
 		4CFD9CA51EB0E1C200825F6E /* AMFChooseCategoryInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD9CA21EB0E1C200825F6E /* AMFChooseCategoryInteractor.m */; };
 		4CFD9CA91EB0E1CF00825F6E /* AMFChooseCategoryRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD9CA71EB0E1CF00825F6E /* AMFChooseCategoryRouter.m */; };
+		4FC7FC2CEB7C7303855ED4FE /* AMFEditCategoryAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EBC3F245452D0F5C38E818 /* AMFEditCategoryAssemblyTests.m */; };
 		544199E9665F70F289ED7A12 /* AMFChooseCategoryInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD0352BBFF7921537DCEF76 /* AMFChooseCategoryInteractorTests.m */; };
 		57F3B401EAF3DEB94E60B815 /* AMFFlowPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84122EB5322F8255F74FB277 /* AMFFlowPresenterTests.m */; };
 		5AEAB5CF9B7EE971CC73651B /* AMFPageChooserRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B32D3BAE2EED8FD41C62E17 /* AMFPageChooserRouterTests.m */; };
@@ -120,6 +129,7 @@
 		A70B9CDF5731AFBF37A9AD90 /* AMFWalletInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */; };
 		AB20C6A3A18269E42CFD529F /* AMFBalanceInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C498335635EED9650F365E /* AMFBalanceInteractorTests.m */; };
 		B28EF746BE1CDF645FB2F9D0 /* AMFFlowViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35998CE25D285D7C9B73912C /* AMFFlowViewControllerTests.m */; };
+		B9EB0CEFAB16BF628B02618E /* AMFEditCategoryViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2275B812F551DC2463A0B6C /* AMFEditCategoryViewControllerTests.m */; };
 		BA5F30E35D3047E8953E44DD /* AMFAddPagePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F914590D001A07FD923E7E /* AMFAddPagePresenterTests.m */; };
 		C296CC9E55F870E1A288A3B1 /* libPods-funds-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD0A71B43CC5D35DB871FD /* libPods-funds-fundsTests.a */; };
 		C622E005D0F7EC16DC0AEB20 /* AMFAddRecordAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C546F2AB23F28DCB31E78C /* AMFAddRecordAssemblyTests.m */; };
@@ -270,6 +280,22 @@
 		4C8A08B21EAFB8BE00A514A3 /* NSUserDefaults+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Archiver.h"; path = "categories/NSUserDefaults+Archiver.h"; sourceTree = "<group>"; };
 		4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Archiver.m"; path = "categories/NSUserDefaults+Archiver.m"; sourceTree = "<group>"; };
 		4C8A08B51EB0FF1E00A514A3 /* AMFChooseCategoryModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFChooseCategoryModuleOutput.h; path = funds/Viper/ChooseCategory/Presenter/AMFChooseCategoryModuleOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E57D1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryAssembly.h; path = funds/Viper/EditCategory/Assembly/AMFEditCategoryAssembly.h; sourceTree = SOURCE_ROOT; };
+		4C95E57E1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFEditCategoryAssembly.m; path = funds/Viper/EditCategory/Assembly/AMFEditCategoryAssembly.m; sourceTree = SOURCE_ROOT; };
+		4C95E5801EB861AB00EBE5C9 /* AMFEditCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryViewController.h; path = funds/Viper/EditCategory/View/AMFEditCategoryViewController.h; sourceTree = SOURCE_ROOT; };
+		4C95E5811EB861AB00EBE5C9 /* AMFEditCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFEditCategoryViewController.m; path = funds/Viper/EditCategory/View/AMFEditCategoryViewController.m; sourceTree = SOURCE_ROOT; };
+		4C95E5821EB861AB00EBE5C9 /* AMFEditCategoryViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryViewInput.h; path = funds/Viper/EditCategory/View/AMFEditCategoryViewInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5831EB861AB00EBE5C9 /* AMFEditCategoryViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryViewOutput.h; path = funds/Viper/EditCategory/View/AMFEditCategoryViewOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5851EB861BA00EBE5C9 /* AMFEditCategoryModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryModuleInput.h; path = funds/Viper/EditCategory/Presenter/AMFEditCategoryModuleInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5861EB861BA00EBE5C9 /* AMFEditCategoryPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryPresenter.h; path = funds/Viper/EditCategory/Presenter/AMFEditCategoryPresenter.h; sourceTree = SOURCE_ROOT; };
+		4C95E5871EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFEditCategoryPresenter.m; path = funds/Viper/EditCategory/Presenter/AMFEditCategoryPresenter.m; sourceTree = SOURCE_ROOT; };
+		4C95E5891EB861C900EBE5C9 /* AMFEditCategoryInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryInteractor.h; path = funds/Viper/EditCategory/Interactor/AMFEditCategoryInteractor.h; sourceTree = SOURCE_ROOT; };
+		4C95E58A1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFEditCategoryInteractor.m; path = funds/Viper/EditCategory/Interactor/AMFEditCategoryInteractor.m; sourceTree = SOURCE_ROOT; };
+		4C95E58B1EB861C900EBE5C9 /* AMFEditCategoryInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryInteractorInput.h; path = funds/Viper/EditCategory/Interactor/AMFEditCategoryInteractorInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E58C1EB861C900EBE5C9 /* AMFEditCategoryInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryInteractorOutput.h; path = funds/Viper/EditCategory/Interactor/AMFEditCategoryInteractorOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E58E1EB861D500EBE5C9 /* AMFEditCategoryRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryRouter.h; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouter.h; sourceTree = SOURCE_ROOT; };
+		4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFEditCategoryRouter.m; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouter.m; sourceTree = SOURCE_ROOT; };
+		4C95E5901EB861D500EBE5C9 /* AMFEditCategoryRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryRouterInput.h; path = funds/Viper/EditCategory/Router/AMFEditCategoryRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -394,10 +420,14 @@
 		6FBA4D486FA70765D2DB70D7 /* AMFPageChooserViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFPageChooserViewControllerTests.m; sourceTree = "<group>"; };
 		72C498335635EED9650F365E /* AMFBalanceInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceInteractorTests.m; sourceTree = "<group>"; };
 		84122EB5322F8255F74FB277 /* AMFFlowPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFFlowPresenterTests.m; sourceTree = "<group>"; };
+		8938CE6C7E8C472C41BB5834 /* AMFEditCategoryAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFEditCategoryAssembly_Testable.h; sourceTree = "<group>"; };
 		90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletPresenterTests.m; sourceTree = "<group>"; };
 		96F914590D001A07FD923E7E /* AMFAddPagePresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPagePresenterTests.m; sourceTree = "<group>"; };
+		97EBC3F245452D0F5C38E818 /* AMFEditCategoryAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryAssemblyTests.m; sourceTree = "<group>"; };
 		A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA5F4FA6CEDBD310FDEA7B46 /* Pods-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF526FCE257AB74976A18AD0 /* AMFEditCategoryInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryInteractorTests.m; sourceTree = "<group>"; };
+		B2275B812F551DC2463A0B6C /* AMFEditCategoryViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryViewControllerTests.m; sourceTree = "<group>"; };
 		BF709D4767CCFEAEC965A9D8 /* AMFAddRecordRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddRecordRouterTests.m; sourceTree = "<group>"; };
 		C3C546F2AB23F28DCB31E78C /* AMFAddRecordAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddRecordAssemblyTests.m; sourceTree = "<group>"; };
 		D1D5803732FB284A24A63706 /* AMFAddPageAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPageAssemblyTests.m; sourceTree = "<group>"; };
@@ -405,6 +435,7 @@
 		D6D92F7164D9A4353F3EDD95 /* AMFChooseCategoryRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseCategoryRouterTests.m; sourceTree = "<group>"; };
 		DDD4A9895A549DF0C5796B3A /* AMFFlowRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFFlowRouterTests.m; sourceTree = "<group>"; };
 		DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletRouterTests.m; sourceTree = "<group>"; };
+		E4D41E43EFFE52B0B2CCF843 /* AMFEditCategoryPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryPresenterTests.m; sourceTree = "<group>"; };
 		E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletViewControllerTests.m; sourceTree = "<group>"; };
 		EB18BF1F10283EE5E3EE9C11 /* AMFAddPageAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFAddPageAssembly_Testable.h; sourceTree = "<group>"; };
 		ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -412,6 +443,7 @@
 		F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletInteractorTests.m; sourceTree = "<group>"; };
 		F22831C4022AD64BBC14907E /* Pods-funds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds/Pods-funds.release.xcconfig"; sourceTree = "<group>"; };
 		F51BF1C95C6D79DB02F11704 /* libPods-funds.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7BA18D3288CD009F0DB2C84 /* AMFEditCategoryRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryRouterTests.m; sourceTree = "<group>"; };
 		FAD0E3A60D2518FCB944F64D /* AMFAddRecordPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddRecordPresenterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -585,6 +617,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		2D5482F85665DF7B853B0FBB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E57D1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.h */,
+				4C95E57E1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		2DA5F2EE794EC9C2550C6957 /* AddRecord */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +707,15 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		3C4152AC79F25D7E599E56E0 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				97EBC3F245452D0F5C38E818 /* AMFEditCategoryAssemblyTests.m */,
+				8938CE6C7E8C472C41BB5834 /* AMFEditCategoryAssembly_Testable.h */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		3C773EE598CE51ADDBB16600 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,6 +755,14 @@
 				1C6AFFB4F3D5233F02A4AEF5 /* Router */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		45BCAE509D208EB7F2077E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2275B812F551DC2463A0B6C /* AMFEditCategoryViewControllerTests.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		485F507A128A83973957E73E /* ChooseCategory */ = {
@@ -814,6 +872,7 @@
 				4C7B4D5A82C778F95BB3A42B /* AddRecord */,
 				62E75095A45B6315C82FC54D /* AddPage */,
 				53DD60225AD1354103F180F2 /* ChooseCategory */,
+				AD625963F420D25E480593A1 /* EditCategory */,
 			);
 			path = fundsTests;
 			sourceTree = "<group>";
@@ -868,6 +927,7 @@
 				C9D918D3285772DEF44549EE /* AddPage */,
 				2DA5F2EE794EC9C2550C6957 /* AddRecord */,
 				485F507A128A83973957E73E /* ChooseCategory */,
+				E1D405ED07CA2EC03B70D3C2 /* EditCategory */,
 			);
 			name = Viper;
 			sourceTree = "<group>";
@@ -1298,6 +1358,25 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		732C47818A1443F248C08769 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA18D3288CD009F0DB2C84 /* AMFEditCategoryRouterTests.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7646CFB936FA1073180A54C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E58B1EB861C900EBE5C9 /* AMFEditCategoryInteractorInput.h */,
+				4C95E5891EB861C900EBE5C9 /* AMFEditCategoryInteractor.h */,
+				4C95E58A1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m */,
+				4C95E58C1EB861C900EBE5C9 /* AMFEditCategoryInteractorOutput.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		76B8DEF0865CCD937B7E1226 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1341,6 +1420,17 @@
 				4C2758F01E7AF4B30010C011 /* AMFAddRecordViewController.h */,
 				4C2758F11E7AF4B30010C011 /* AMFAddRecordViewController.m */,
 				4C2758F31E7AF4B30010C011 /* AMFAddRecordViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81CEED8068D24488F7AF4ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5821EB861AB00EBE5C9 /* AMFEditCategoryViewInput.h */,
+				4C95E5801EB861AB00EBE5C9 /* AMFEditCategoryViewController.h */,
+				4C95E5811EB861AB00EBE5C9 /* AMFEditCategoryViewController.m */,
+				4C95E5831EB861AB00EBE5C9 /* AMFEditCategoryViewOutput.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1457,6 +1547,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		A0F8BE7682DCE6F9B910FEE6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AF526FCE257AB74976A18AD0 /* AMFEditCategoryInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		A107CD6CBD8C48812204A5D6 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1465,6 +1563,28 @@
 				4CE159011E72804F0009BAF4 /* AMFFlowRouter.m */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		A5A4CC78EFC3CEE60A16869C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5851EB861BA00EBE5C9 /* AMFEditCategoryModuleInput.h */,
+				4C95E5861EB861BA00EBE5C9 /* AMFEditCategoryPresenter.h */,
+				4C95E5871EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AD625963F420D25E480593A1 /* EditCategory */ = {
+			isa = PBXGroup;
+			children = (
+				3C4152AC79F25D7E599E56E0 /* Assembly */,
+				45BCAE509D208EB7F2077E0D /* View */,
+				FA8C5C9229FC8801BA780CE0 /* Presenter */,
+				A0F8BE7682DCE6F9B910FEE6 /* Interactor */,
+				732C47818A1443F248C08769 /* Router */,
+			);
+			path = EditCategory;
 			sourceTree = "<group>";
 		};
 		AE3AD5E4F4BBE363C8046C2F /* Assembly */ = {
@@ -1552,6 +1672,28 @@
 			path = Balance;
 			sourceTree = "<group>";
 		};
+		E1D405ED07CA2EC03B70D3C2 /* EditCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2D5482F85665DF7B853B0FBB /* Assembly */,
+				81CEED8068D24488F7AF4ADB /* View */,
+				A5A4CC78EFC3CEE60A16869C /* Presenter */,
+				7646CFB936FA1073180A54C2 /* Interactor */,
+				E73F9FCE2940CB10D5ED22EF /* Router */,
+			);
+			path = EditCategory;
+			sourceTree = "<group>";
+		};
+		E73F9FCE2940CB10D5ED22EF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5901EB861D500EBE5C9 /* AMFEditCategoryRouterInput.h */,
+				4C95E58E1EB861D500EBE5C9 /* AMFEditCategoryRouter.h */,
+				4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		E9C19009E8CB4E667201FA5C /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -1587,6 +1729,14 @@
 				35998CE25D285D7C9B73912C /* AMFFlowViewControllerTests.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FA8C5C9229FC8801BA780CE0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E4D41E43EFFE52B0B2CCF843 /* AMFEditCategoryPresenterTests.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		FA9C63E11827C5AE933F0E5F /* Router */ = {
@@ -1815,6 +1965,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C95E5911EB861D500EBE5C9 /* AMFEditCategoryRouter.m in Sources */,
 				4C95F8661E82C1B200D3491A /* AMFSimpleAlertFactory.m in Sources */,
 				4C046FC21E73CEDC001E73A6 /* AMFPageChooserPresenter.m in Sources */,
 				4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */,
@@ -1840,6 +1991,7 @@
 				4CE158F71E727FB90009BAF4 /* AMFFlowViewController.m in Sources */,
 				4CE158BA1E716B950009BAF4 /* AMFWallet+CoreDataProperties.m in Sources */,
 				4C2759011E7AF4CD0010C011 /* AMFAddRecordRouter.m in Sources */,
+				4C95E58D1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m in Sources */,
 				4CE158B41E716B8A0009BAF4 /* AMFCashFlow+CoreDataProperties.m in Sources */,
 				4CE159191E73144D0009BAF4 /* AMFFlowData.m in Sources */,
 				4C95F85B1E82B4D200D3491A /* AMFAddPageInteractor.m in Sources */,
@@ -1856,6 +2008,7 @@
 				4C2F59FC1EAF8C4000550885 /* AMFAppDelegateCoreData.m in Sources */,
 				4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */,
 				4C046FCB1E73CF0A001E73A6 /* AMFPageChooserRouter.m in Sources */,
+				4C95E5841EB861AB00EBE5C9 /* AMFEditCategoryViewController.m in Sources */,
 				4CFD9CA51EB0E1C200825F6E /* AMFChooseCategoryInteractor.m in Sources */,
 				4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */,
 				4C53ECAB1E70904800725AF8 /* AMFBalancePresenter.m in Sources */,
@@ -1868,6 +2021,7 @@
 				4CE158E91E71C53B0009BAF4 /* AMFWalletPlain.m in Sources */,
 				4CFD9C9C1EB0E19B00825F6E /* AMFChooseCategoryViewController.m in Sources */,
 				4CE158CC1E716BC90009BAF4 /* AMFPage+CoreDataProperties.m in Sources */,
+				4C95E57F1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m in Sources */,
 				4CFD9C971EB0E18E00825F6E /* AMFChooseCategoryAssembly.m in Sources */,
 				4CE158E61E71C5100009BAF4 /* AMFCategoryPlain.m in Sources */,
 				4CE158C01E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m in Sources */,
@@ -1885,6 +2039,7 @@
 				4C53ECA21E70902700725AF8 /* AMFBalanceAssembly.m in Sources */,
 				4C53EC9B1E708C2500725AF8 /* AMFWalletInteractor.m in Sources */,
 				4C95F8691E82C64B00D3491A /* AMFAlertsAssembly.m in Sources */,
+				4C95E5881EB861BA00EBE5C9 /* AMFEditCategoryPresenter.m in Sources */,
 				4CE158CB1E716BC90009BAF4 /* AMFPage+CoreDataClass.m in Sources */,
 				4C53EC9F1E708C3300725AF8 /* AMFWalletRouter.m in Sources */,
 				4CE158EC1E71C56E0009BAF4 /* AMFPagePlain.m in Sources */,
@@ -1935,6 +2090,11 @@
 				49458A9C89DE1BDAB07C9920 /* AMFChooseCategoryPresenterTests.m in Sources */,
 				544199E9665F70F289ED7A12 /* AMFChooseCategoryInteractorTests.m in Sources */,
 				EC4EEF325FDA1FD20AA0E888 /* AMFChooseCategoryRouterTests.m in Sources */,
+				4FC7FC2CEB7C7303855ED4FE /* AMFEditCategoryAssemblyTests.m in Sources */,
+				B9EB0CEFAB16BF628B02618E /* AMFEditCategoryViewControllerTests.m in Sources */,
+				19D4932AD60F2C2C6DEF79CF /* AMFEditCategoryPresenterTests.m in Sources */,
+				22BF38B53C1DB4EE03757361 /* AMFEditCategoryInteractorTests.m in Sources */,
+				3D02C8011093C750F1999E76 /* AMFEditCategoryRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
