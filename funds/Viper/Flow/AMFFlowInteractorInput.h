@@ -13,11 +13,16 @@
 /**
  asks for records with page
  */
--(void) askForDataWithPage:(id<AMFPageProtocol>) page;
+- (void)askForDataWithPage:(id<AMFPageProtocol>)page;
 
 /**
  if we do not have any page selected try to find one...
  */
--(void) askForAnyValidPage;
+- (void)askForAnyValidPage;
+
+/**
+ * user wants remove a record
+ */
+- (void)removeCashFlowWithIndex:(NSInteger)index;
 
 @end

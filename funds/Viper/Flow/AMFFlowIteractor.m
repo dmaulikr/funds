@@ -16,13 +16,14 @@
 #import "AMFCurrencyProtocol.h"
 #import "AMFCategoryProtocol.h"
 
-@interface AMFFlowInteractor ()
-
+@interface AMFFlowInteractor () {
+    NSArray *_records;
+}
 @end
 
 @implementation AMFFlowInteractor
 
--(NSArray<AMFFlowData*>*) convertRecords:(NSArray*) recs {
+- (NSArray<AMFFlowData*>*)convertRecords:(NSArray*)recs {
     NSMutableArray *used = [[NSMutableArray alloc] initWithCapacity:recs.count];
     NSMutableArray *converted = [[NSMutableArray alloc] initWithCapacity:recs.count];
     for (id<AMFCashProtocol> r in recs) {
@@ -64,25 +65,27 @@
     return converted;
 }
 
--(void) askForDataWithPage:(id<AMFPageProtocol>) page {
+- (void)askForDataWithPage:(id<AMFPageProtocol>)page {
     [self.dataSupply fetchDataWithPage:page andBlock: ^(NSArray *data) {
-        LogDebug(@"we've got %ld record(s)", (long) data.count);
         NSArray* converted = [self convertRecords:data];
+        _records = converted;
         dispatch_async(dispatch_get_main_queue(), ^ {
             [self.output receivedRecords:converted];
         });
     }];
 }
 
--(void) askForAnyValidPage {
+- (void)askForAnyValidPage {
     [self.dataSupply fetchAllPagesWithBlock:^(NSArray *pages) {
-        LogDebug(@"we've got %ld page(s)", (long) pages.count);
         if (pages.count) {
             dispatch_async(dispatch_get_main_queue(), ^ {
                 [self.output receivedValidPage:pages.firstObject];
             });
         }
     }];
+}
+
+- (void)removeCashFlowWithIndex:(NSInteger)index {
 }
 
 @end

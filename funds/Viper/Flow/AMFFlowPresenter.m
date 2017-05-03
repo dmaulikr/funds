@@ -24,12 +24,12 @@
 
 #pragma mark - Methods AMFFlowInteractorOutput
 
--(void) receivedRecords:(NSArray*) records {
+- (void)receivedRecords:(NSArray*) records {
     self.view.records = records;
     [self.view refreshContents];
 }
 
--(void) receivedValidPage:(id<AMFPageProtocol>)p {
+- (void)receivedValidPage:(id<AMFPageProtocol>)p {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults persistObjAsData:p forKey:kLastPage];
     self.page = p;
@@ -39,7 +39,7 @@
 
 #pragma mark - Methods AMFFlowViewOutput
 
--(void)setupView {
+- (void)setupView {
     // ask for data to be shown in view
     if (self.page == nil)
         [self.interactor askForAnyValidPage];
@@ -47,18 +47,18 @@
         [self receivedValidPage:self.page];
 }
 
--(void)addClicked {
+- (void)addClicked {
     [self.router showAddRecordWithOutput:self];
 }
 
-- (void)cellSelected: (NSUInteger) index {
+- (void)cellSelected:(NSUInteger)index {
 }
 
-- (void)cellToDelete: (NSUInteger) index {
-
+- (void)cellToDelete:(NSUInteger)index {
+    [self.interactor removeCashFlowWithIndex:index];
 }
 
-- (void) choosePage {
+- (void)choosePage {
     [self.router showPageChooserWithPageSelected:self.page
                                        andOutput:self];
 }
@@ -66,13 +66,13 @@
 
 #pragma mark - Methods AMFPageChooserModuleOutput
 
--(void) pageWasChosen:(id<AMFPageProtocol>)p {
+- (void)pageWasChosen:(id<AMFPageProtocol>)p {
     [self receivedValidPage:p];
 }
 
 #pragma mark - State
 
--(void)didTriggerViewReadyEvent {
+- (void)didTriggerViewReadyEvent {
     [self.view setupInitialState];
 }
 @end
