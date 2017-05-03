@@ -22,4 +22,4 @@ extern NSString *const kLastCategory;
 extern NSString *const kLastWallet;
 extern NSString *const kLastPage;
 extern NSString *const kLastCurrency;
-extern NSString *const kPossibleIcons[44];
+extern NSString *const kPossibleIcons[62];
