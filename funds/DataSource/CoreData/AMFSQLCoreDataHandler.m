@@ -76,6 +76,15 @@
     [AMFPage findOrCreateWithPage:page];
 }
 
+- (void)removeRecord:(id<AMFCashProtocol>)rec {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
+    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
+    AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
+    if (cash) {
+        [cash MR_deleteEntity];
+    }
+}
+
 - (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name {
     id<AMFPageProtocol> p = [AMFPage findOrCreateWithPage:page];
     p.name = name;

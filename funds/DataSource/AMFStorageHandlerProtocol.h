@@ -16,6 +16,7 @@
 - (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name;
 - (void)addPage:(id<AMFPageProtocol>)page;
 - (void)addRecord:(id<AMFCashProtocol>)rec;
+- (void)removeRecord:(id<AMFCashProtocol>)rec;
 - (void)addRecords:(NSArray*)ar;
 - (NSArray*)grabRecordsForPage:(id<AMFPageProtocol>)page;
 - (NSArray*)grabAllPages;

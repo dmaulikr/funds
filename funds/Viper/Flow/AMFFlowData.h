@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *descr;
 @property (nonatomic, strong) NSString *amount;
 @property (nonatomic, strong) NSString *currency;
+@property (nonatomic, strong) NSArray *realRecords;
 
 @end

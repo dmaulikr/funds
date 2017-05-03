@@ -17,7 +17,7 @@
 #import "AMFCategoryProtocol.h"
 
 @interface AMFFlowInteractor () {
-    NSArray *_records;
+    NSArray<AMFFlowData*> *_records;
 }
 @end
 
@@ -41,6 +41,7 @@
             f.icon = @"exchange";
             f.amount = [NSString stringWithFormat:@"%g", fabs(r.amount)];
             [used addObject:r.wallet2wallet];
+            f.realRecords = [NSArray arrayWithObjects:r, r.wallet2wallet, nil];
         } else {
             if (r.descr && r.descr.length)
                 f.descr = r.descr;
@@ -51,6 +52,7 @@
             else
                 f.icon = @"help";
             f.amount = [NSString stringWithFormat:@"%g", r.amount];
+            f.realRecords = [NSArray arrayWithObjects:r, nil];
         }
         if (r.currency) {
             if (r.currency.name.length > 1) {
@@ -78,6 +80,10 @@
 }
 
 - (void)removeCashFlowWithIndex:(NSInteger)index {
+    NSArray *recs = _records[index].realRecords;
+    for (id<AMFCashProtocol> rec in recs) {
+        [self.storage removeRecord:rec];
+    }
 }
 
 @end

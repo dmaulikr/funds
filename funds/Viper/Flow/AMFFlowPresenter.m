@@ -56,6 +56,7 @@
 
 - (void)cellToDelete:(NSUInteger)index {
     [self.interactor removeCashFlowWithIndex:index];
+    [self setupView];
 }
 
 - (void)choosePage {
