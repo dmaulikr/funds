@@ -9,12 +9,16 @@
 #import "AMFChooseCategoryViewController.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFSwipeableCell.h"
+#import "AMFChooseCategoryCell.h"
 
 #import "AMFChooseCategoryViewOutput.h"
 
 static NSString *const chooseCatCellIndentifier = @"chooseCategoryCell";
 
-@interface AMFChooseCategoryViewController () <UITableViewDelegate, UITableViewDataSource, AMFSwipeableCellDelegate>
+@interface AMFChooseCategoryViewController () <UITableViewDelegate,
+UITableViewDataSource,
+AMFChooseCategoryCellDelegate,
+AMFSwipeableCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -54,7 +58,7 @@ categories;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AMFSwipeableCell *cell = [tableView dequeueReusableCellWithIdentifier:chooseCatCellIndentifier];
+    AMFChooseCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:chooseCatCellIndentifier];
     id <AMFCategoryProtocol> category = [self.categories objectAtIndex:indexPath.row];
     if (self.selectedCategory && // selected cell could be nil
         [category.name isEqualToString:self.selectedCategory.name]) {
@@ -66,6 +70,7 @@ categories;
     cell.itemText = category.name;
     cell.itemIcon = category.icon_path.length ? category.icon_path : @"help";
     cell.delegate = self;
+    cell.edit_delegate = self;
     return cell;
 }
 
@@ -80,7 +85,7 @@ categories;
     [self.output categorySelected:category];
 }
 
-#pragma mark - AMFSwipeableCellDelegate
+#pragma mark - AMFChooseCategoryCellDelegate
 
 - (void)editActionForItem:(NSString *)itemText andCell:(AMFSwipeableCell*)cell {
     id <AMFCategoryProtocol> category = [self.categories objectAtIndex:cell.path.row];

@@ -13,7 +13,7 @@ static CGFloat const kImageWH = 32.0f;
 
 @interface AMFSwipeableCell() <UIGestureRecognizerDelegate>
 
-@property (nonatomic, weak) IBOutlet UIButton *button_edit;
+@property (nonatomic, weak) IBOutlet UIView *customButtonsView;
 @property (nonatomic, weak) IBOutlet UIView *customContentView;
 @property (nonatomic, weak) IBOutlet UILabel *label;
 @property (nonatomic, weak) IBOutlet UIImageView *customImageView;
@@ -34,8 +34,7 @@ static CGFloat const kImageWH = 32.0f;
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.button_edit.hidden = YES;
-    [self.button_edit setTitle:AMFLocalize(@"Edit") forState:UIControlStateNormal];
+    self.customButtonsView.hidden = YES;
 
     // no image initially
     self.imageWidthConstraint.constant = 0;
@@ -117,7 +116,7 @@ static CGFloat const kImageWH = 32.0f;
 }
 
 - (CGFloat)buttonTotalWidth {
-    return CGRectGetWidth(self.frame) - CGRectGetMinX(self.button_edit.frame);
+    return CGRectGetWidth(self.frame) - CGRectGetMinX(self.customButtonsView.frame);
 }
 
 - (void)resetConstraintContstantsToZero:(BOOL)animated notifyDelegateDidClose:(BOOL)endEditing
@@ -138,7 +137,7 @@ static CGFloat const kImageWH = 32.0f;
         [self updateConstraintsIfNeeded:animated completion:^(BOOL finished) {
             self.startingRightLayoutConstraintConstant = self.contentViewRightConstraint.constant;
 
-            self.button_edit.hidden = YES;
+            self.customButtonsView.hidden = YES;
         }];
     }];
 
@@ -154,7 +153,7 @@ static CGFloat const kImageWH = 32.0f;
         return;
     }
 
-    self.button_edit.hidden = NO;
+    self.customButtonsView.hidden = NO;
 
     self.contentViewLeftConstraint.constant = -[self buttonTotalWidth] - kBounceValue;
     self.contentViewRightConstraint.constant = [self buttonTotalWidth] + kBounceValue;
@@ -184,7 +183,7 @@ static CGFloat const kImageWH = 32.0f;
     } completion:completion];
 }
 
-#pragma mark - user actions
+#pragma mark - manual properties
 
 - (void)setItemText:(NSString*) text {
     self.label.text = text;
@@ -196,11 +195,6 @@ static CGFloat const kImageWH = 32.0f;
     self.imageWidthConstraint.constant = kImageWH;
     self.imageHeightConstraint.constant = kImageWH;
     self.customImageView.image = [UIImage imageNamed:icon];
-}
-
-- (IBAction)editClicked:(id)sender {
-    if (self.delegate)
-        [self.delegate editActionForItem:self.itemText andCell:self];
 }
 
 #pragma mark - UIGestureRecognizerDelegate

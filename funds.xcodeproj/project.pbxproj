@@ -62,6 +62,7 @@
 		4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECAE1E70905800725AF8 /* AMFBalanceInteractor.m */; };
 		4C53ECB41E70906700725AF8 /* AMFBalanceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */; };
 		4C53ECB91E71129D00725AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */; };
+		4C673CEB1EBA3A36009D90D9 /* AMFChooseCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C673CEA1EBA3A36009D90D9 /* AMFChooseCategoryCell.m */; };
 		4C8A08B41EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */; };
 		4C95E57F1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E57E1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m */; };
 		4C95E5841EB861AB00EBE5C9 /* AMFEditCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5811EB861AB00EBE5C9 /* AMFEditCategoryViewController.m */; };
@@ -278,6 +279,8 @@
 		4C53ECB21E70906700725AF8 /* AMFBalanceRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFBalanceRouter.m; path = funds/Viper/Balance/Router/AMFBalanceRouter.m; sourceTree = SOURCE_ROOT; };
 		4C53ECB31E70906700725AF8 /* AMFBalanceRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceRouter.h; path = funds/Viper/Balance/Router/AMFBalanceRouter.h; sourceTree = SOURCE_ROOT; };
 		4C53ECB81E71129D00725AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4C673CE91EBA3A36009D90D9 /* AMFChooseCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseCategoryCell.h; path = funds/Viper/ChooseCategory/View/cells/AMFChooseCategoryCell.h; sourceTree = SOURCE_ROOT; };
+		4C673CEA1EBA3A36009D90D9 /* AMFChooseCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseCategoryCell.m; path = funds/Viper/ChooseCategory/View/cells/AMFChooseCategoryCell.m; sourceTree = SOURCE_ROOT; };
 		4C8A08B21EAFB8BE00A514A3 /* NSUserDefaults+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Archiver.h"; path = "categories/NSUserDefaults+Archiver.h"; sourceTree = "<group>"; };
 		4C8A08B31EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Archiver.m"; path = "categories/NSUserDefaults+Archiver.m"; sourceTree = "<group>"; };
 		4C8A08B51EB0FF1E00A514A3 /* AMFChooseCategoryModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFChooseCategoryModuleOutput.h; path = funds/Viper/ChooseCategory/Presenter/AMFChooseCategoryModuleOutput.h; sourceTree = SOURCE_ROOT; };
@@ -605,6 +608,7 @@
 		20733A982D86D2E8144BEE0A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C673CE81EBA39CC009D90D9 /* cells */,
 				4CFD9C9A1EB0E19B00825F6E /* AMFChooseCategoryViewInput.h */,
 				4CFD9C981EB0E19B00825F6E /* AMFChooseCategoryViewController.h */,
 				4CFD9C991EB0E19B00825F6E /* AMFChooseCategoryViewController.m */,
@@ -999,6 +1003,16 @@
 				4CE1590D1E72FAE70009BAF4 /* AMFFileIntoDBReader.h */,
 			);
 			name = protocols;
+			sourceTree = "<group>";
+		};
+		4C673CE81EBA39CC009D90D9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C673CE91EBA3A36009D90D9 /* AMFChooseCategoryCell.h */,
+				4C673CEA1EBA3A36009D90D9 /* AMFChooseCategoryCell.m */,
+			);
+			name = cells;
+			path = ../../EditCategory/View;
 			sourceTree = "<group>";
 		};
 		4C7B4D5A82C778F95BB3A42B /* AddRecord */ = {
@@ -1997,6 +2011,7 @@
 				4C53EC921E708C0900725AF8 /* AMFWalletViewController.m in Sources */,
 				4CE159031E72804F0009BAF4 /* AMFFlowRouter.m in Sources */,
 				4CE158E01E71B9340009BAF4 /* AMFPlainBudgetData.m in Sources */,
+				4C673CEB1EBA3A36009D90D9 /* AMFChooseCategoryCell.m in Sources */,
 				4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */,
 				4C046FC71E73CEF5001E73A6 /* AMFPageChooserInteractor.m in Sources */,
 				4CE158B31E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m in Sources */,

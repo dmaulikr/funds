@@ -11,9 +11,6 @@
 @class AMFSwipeableCell;
 
 @protocol AMFSwipeableCellDelegate <NSObject>
-@required
-- (void)editActionForItem:(NSString *)itemText andCell:(AMFSwipeableCell*)cell;
-
 @optional
 - (void)cellDidOpen:(UITableViewCell *)cell;
 - (void)cellDidClose:(UITableViewCell *)cell;
