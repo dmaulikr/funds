@@ -23,6 +23,7 @@
 
 @property (nonatomic, weak) id <AMFSwipeableCellDelegate> delegate;
 @property (nonatomic, strong) NSString *itemText;
+@property (nonatomic, strong) NSString *itemIcon;
 @property (nonatomic, strong) NSIndexPath *path;
 
 - (void)openCell;

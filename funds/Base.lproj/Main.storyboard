@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOM-lM-j1i">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOM-lM-j1i">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -319,11 +319,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xpM-g9-lhC" id="cvU-yD-rAQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-Uy-h5g">
-                                                    <rect key="frame" x="295" y="0.0" width="80" height="44"/>
+                                                    <rect key="frame" x="295" y="0.0" width="80" height="43.5"/>
                                                     <color key="backgroundColor" red="0.18889508928571427" green="0.88297991071428572" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="gaB-mf-9WC"/>
@@ -334,19 +334,28 @@
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FX-nl-EOZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYR-a5-NIc">
-                                                            <rect key="frame" x="20" y="12" width="42" height="21"/>
+                                                            <rect key="frame" x="40" y="12" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="835-n2-t2y" userLabel="Image">
+                                                            <rect key="frame" x="6" y="6" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="Agp-Bt-vgX"/>
+                                                                <constraint firstAttribute="height" constant="32" id="xjb-8i-Suy"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="tYR-a5-NIc" firstAttribute="leading" secondItem="1FX-nl-EOZ" secondAttribute="leading" constant="20" id="32h-MR-aiK"/>
+                                                        <constraint firstItem="tYR-a5-NIc" firstAttribute="leading" secondItem="835-n2-t2y" secondAttribute="trailing" constant="2" id="8xo-IQ-aqS"/>
                                                         <constraint firstItem="tYR-a5-NIc" firstAttribute="centerY" secondItem="1FX-nl-EOZ" secondAttribute="centerY" id="c6k-JH-ScG"/>
+                                                        <constraint firstItem="835-n2-t2y" firstAttribute="leading" secondItem="1FX-nl-EOZ" secondAttribute="leading" constant="6" id="qhX-PR-JdK"/>
+                                                        <constraint firstItem="835-n2-t2y" firstAttribute="centerY" secondItem="1FX-nl-EOZ" secondAttribute="centerY" id="vzw-x6-L7q"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -365,6 +374,9 @@
                                             <outlet property="contentViewLeftConstraint" destination="ucV-jM-dRo" id="i9L-zl-JaA"/>
                                             <outlet property="contentViewRightConstraint" destination="xnt-wf-J4A" id="jl6-eT-Rw7"/>
                                             <outlet property="customContentView" destination="cvU-yD-rAQ" id="1LA-mg-TdW"/>
+                                            <outlet property="customImageView" destination="835-n2-t2y" id="K3u-Bl-ivz"/>
+                                            <outlet property="imageHeightConstraint" destination="xjb-8i-Suy" id="nAf-C8-b0A"/>
+                                            <outlet property="imageWidthConstraint" destination="Agp-Bt-vgX" id="BYD-2U-M2d"/>
                                             <outlet property="label" destination="tYR-a5-NIc" id="vhC-ng-0m7"/>
                                         </connections>
                                     </tableViewCell>

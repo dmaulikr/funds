@@ -9,18 +9,23 @@
 #import "AMFSwipeableCell.h"
 
 static CGFloat const kBounceValue = 20.0f;
+static CGFloat const kImageWH = 32.0f;
 
 @interface AMFSwipeableCell() <UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *button_edit;
 @property (nonatomic, weak) IBOutlet UIView *customContentView;
 @property (nonatomic, weak) IBOutlet UILabel *label;
+@property (nonatomic, weak) IBOutlet UIImageView *customImageView;
 
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic, assign) CGPoint panStartPoint;
 @property (nonatomic, assign) CGFloat startingRightLayoutConstraintConstant;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *contentViewRightConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *contentViewLeftConstraint;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *imageWidthConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *imageHeightConstraint;
 
 @end
 
@@ -31,6 +36,10 @@ static CGFloat const kBounceValue = 20.0f;
 
     self.button_edit.hidden = YES;
     [self.button_edit setTitle:AMFLocalize(@"Edit") forState:UIControlStateNormal];
+
+    // no image initially
+    self.imageWidthConstraint.constant = 0;
+    self.imageHeightConstraint.constant = 0;
 
     self.panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panThisCell:)];
     self.panRecognizer.delegate = self;
@@ -180,6 +189,13 @@ static CGFloat const kBounceValue = 20.0f;
 - (void)setItemText:(NSString*) text {
     self.label.text = text;
     _itemText = text;
+}
+
+- (void)setItemIcon:(NSString*) icon {
+    _itemIcon = icon;
+    self.imageWidthConstraint.constant = kImageWH;
+    self.imageHeightConstraint.constant = kImageWH;
+    self.customImageView.image = [UIImage imageNamed:icon];
 }
 
 - (IBAction)editClicked:(id)sender {

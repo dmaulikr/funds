@@ -64,6 +64,7 @@ categories;
         [cell setAccessoryType:UITableViewCellAccessoryNone];
     cell.path = indexPath;
     cell.itemText = category.name;
+    cell.itemIcon = category.icon_path.length ? category.icon_path : @"help";
     cell.delegate = self;
     return cell;
 }
