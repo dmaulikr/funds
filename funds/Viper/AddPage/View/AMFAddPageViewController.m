@@ -61,7 +61,7 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         NSArray *months = [formatter standaloneMonthSymbols];
         self.pageName.text = [NSString stringWithFormat:@"%@ %ld",
-                              [months[dateComponents.month] capitalizedString],
+                              [months[dateComponents.month - 1] capitalizedString],
                               dateComponents.year];
     }
 }

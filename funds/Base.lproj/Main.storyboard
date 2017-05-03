@@ -565,12 +565,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVl-Qm-gdh">
+                                <rect key="frame" x="142.5" y="288" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eVl-Qm-gdh" firstAttribute="centerX" secondItem="Eg6-AN-YpR" secondAttribute="centerX" id="Bel-we-nUV"/>
                             <constraint firstItem="4Oe-M5-IUE" firstAttribute="leading" secondItem="Eg6-AN-YpR" secondAttribute="leadingMargin" id="JKr-km-7Br"/>
                             <constraint firstItem="4Oe-M5-IUE" firstAttribute="centerY" secondItem="Eg6-AN-YpR" secondAttribute="centerY" id="U37-1o-R8h"/>
                             <constraint firstItem="4Oe-M5-IUE" firstAttribute="trailing" secondItem="Eg6-AN-YpR" secondAttribute="trailingMargin" id="gbL-KI-yDd"/>
+                            <constraint firstItem="eVl-Qm-gdh" firstAttribute="bottom" secondItem="4Oe-M5-IUE" secondAttribute="top" constant="-10" id="wNA-Tq-Vc3"/>
                         </constraints>
                     </view>
                     <connections>
