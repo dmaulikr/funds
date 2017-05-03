@@ -8,7 +8,7 @@
 
 #import "AMFFlowInteractor.h"
 #import "AMFFlowInteractorOutput.h"
-#import "AMFDataSupplyProtocol.h"
+#import "AMFStorageHandlerProtocol.h"
 #import "AMFPageProtocol.h"
 #import "AMFFlowData.h"
 #import "AMFCashProtocol.h"
@@ -66,23 +66,15 @@
 }
 
 - (void)askForDataWithPage:(id<AMFPageProtocol>)page {
-    [self.dataSupply fetchDataWithPage:page andBlock: ^(NSArray *data) {
-        NSArray* converted = [self convertRecords:data];
-        _records = converted;
-        dispatch_async(dispatch_get_main_queue(), ^ {
-            [self.output receivedRecords:converted];
-        });
-    }];
+    NSArray *flow = [self.storage grabRecordsForPage:page];
+    _records = [self convertRecords:flow];
+    [self.output receivedRecords:_records];
 }
 
 - (void)askForAnyValidPage {
-    [self.dataSupply fetchAllPagesWithBlock:^(NSArray *pages) {
-        if (pages.count) {
-            dispatch_async(dispatch_get_main_queue(), ^ {
-                [self.output receivedValidPage:pages.firstObject];
-            });
-        }
-    }];
+    NSArray *pages = [self.storage grabAllPages];
+    if (pages.count)
+        [self.output receivedValidPage:pages.firstObject];
 }
 
 - (void)removeCashFlowWithIndex:(NSInteger)index {

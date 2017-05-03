@@ -50,7 +50,6 @@
 		4C53EC4E1E7010D500725AF8 /* AMFThemeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC4D1E7010D500725AF8 /* AMFThemeFactory.m */; };
 		4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC821E705D1A00725AF8 /* AMFThemeAssembly.m */; };
 		4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */; };
-		4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC891E70700000725AF8 /* AMFDataSupplier.m */; };
 		4C53EC8D1E708BFB00725AF8 /* AMFWalletAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC8B1E708BFB00725AF8 /* AMFWalletAssembly.m */; };
 		4C53EC921E708C0900725AF8 /* AMFWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC901E708C0900725AF8 /* AMFWalletViewController.m */; };
 		4C53EC961E708C1600725AF8 /* AMFWalletPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53EC931E708C1600725AF8 /* AMFWalletPresenter.m */; };
@@ -235,7 +234,6 @@
 		4C53EC4D1E7010D500725AF8 /* AMFThemeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFThemeFactory.m; path = Themes/AMFThemeFactory.m; sourceTree = "<group>"; };
 		4C53EC4F1E70140400725AF8 /* funds-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "funds-prefix.pch"; sourceTree = "<group>"; };
 		4C53EC511E701B1700725AF8 /* AMFThemeable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFThemeable.h; path = Themes/AMFThemeable.h; sourceTree = "<group>"; };
-		4C53EC641E703CF000725AF8 /* AMFDataSupplyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplyProtocol.h; path = DataSource/AMFDataSupplyProtocol.h; sourceTree = "<group>"; };
 		4C53EC681E7040AA00725AF8 /* AMFCurrencyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFCurrencyProtocol.h; path = DataSource/AMFCurrencyProtocol.h; sourceTree = "<group>"; };
 		4C53EC691E70418300725AF8 /* AMFWalletProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletProtocol.h; path = DataSource/AMFWalletProtocol.h; sourceTree = "<group>"; };
 		4C53EC6A1E70418300725AF8 /* AMFCashProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFCashProtocol.h; path = DataSource/AMFCashProtocol.h; sourceTree = "<group>"; };
@@ -244,8 +242,6 @@
 		4C53EC821E705D1A00725AF8 /* AMFThemeAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFThemeAssembly.m; path = Themes/AMFThemeAssembly.m; sourceTree = "<group>"; };
 		4C53EC841E70663200725AF8 /* AMFDataSupplierAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplierAssembly.h; path = DataSource/AMFDataSupplierAssembly.h; sourceTree = "<group>"; };
 		4C53EC851E70663200725AF8 /* AMFDataSupplierAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFDataSupplierAssembly.m; path = DataSource/AMFDataSupplierAssembly.m; sourceTree = "<group>"; };
-		4C53EC881E70700000725AF8 /* AMFDataSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFDataSupplier.h; path = DataSource/AMFDataSupplier.h; sourceTree = "<group>"; };
-		4C53EC891E70700000725AF8 /* AMFDataSupplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFDataSupplier.m; path = DataSource/AMFDataSupplier.m; sourceTree = "<group>"; };
 		4C53EC8B1E708BFB00725AF8 /* AMFWalletAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFWalletAssembly.m; path = funds/Viper/Wallet/Assembly/AMFWalletAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C53EC8C1E708BFB00725AF8 /* AMFWalletAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletAssembly.h; path = funds/Viper/Wallet/Assembly/AMFWalletAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C53EC8E1E708C0900725AF8 /* AMFWalletViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFWalletViewOutput.h; path = funds/Viper/Wallet/View/AMFWalletViewOutput.h; sourceTree = SOURCE_ROOT; };
@@ -993,7 +989,6 @@
 		4C53EC801E70584700725AF8 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4C53EC641E703CF000725AF8 /* AMFDataSupplyProtocol.h */,
 				4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */,
 				4C53EC6A1E70418300725AF8 /* AMFCashProtocol.h */,
 				4C53EC691E70418300725AF8 /* AMFWalletProtocol.h */,
@@ -1160,8 +1155,6 @@
 			children = (
 				4C1E69471E79AB21004A3B4D /* AMFgenerateID.h */,
 				4C1E69481E79AB21004A3B4D /* AMFgenerateID.m */,
-				4C53EC881E70700000725AF8 /* AMFDataSupplier.h */,
-				4C53EC891E70700000725AF8 /* AMFDataSupplier.m */,
 				4CE158DB1E71B8590009BAF4 /* AMFBudgetCSVReader.h */,
 				4CE158DC1E71B8590009BAF4 /* AMFBudgetCSVReader.m */,
 				4CE158DE1E71B9340009BAF4 /* AMFPlainBudgetData.h */,
@@ -2061,7 +2054,6 @@
 				4CE158BF1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m in Sources */,
 				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
 				4CE158D61E718B390009BAF4 /* AMFSQLCoreDataHandler.m in Sources */,
-				4C53EC8A1E70700000725AF8 /* AMFDataSupplier.m in Sources */,
 				4C1E694C1E79B0CD004A3B4D /* NSManagedObject+generateID.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
 				4CE159081E7299610009BAF4 /* AMFFlowCell.m in Sources */,

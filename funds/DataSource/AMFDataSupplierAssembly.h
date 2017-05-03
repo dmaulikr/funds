@@ -10,13 +10,11 @@
 #import <Typhoon/Typhoon.h>
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
-@protocol AMFDataSupplyProtocol;
 @protocol AMFStorageHandlerProtocol;
 @protocol AMFFileIntoDBReader;
 
 @interface AMFDataSupplierAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
--(id<AMFDataSupplyProtocol>) dataSupplier;
 -(id<AMFStorageHandlerProtocol>) storageHandler;
 -(id<AMFFileIntoDBReader>) csvReader;
 

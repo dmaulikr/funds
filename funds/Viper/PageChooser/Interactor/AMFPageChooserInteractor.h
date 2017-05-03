@@ -8,15 +8,13 @@
 
 #import "AMFPageChooserInteractorInput.h"
 
-@protocol AMFDataSupplyProtocol;
+@protocol AMFStorageHandlerProtocol;
 @protocol AMFPageChooserInteractorOutput;
 
 @interface AMFPageChooserInteractor : NSObject <AMFPageChooserInteractorInput>
 
-/**
- data source to be used for showing contents
- */
-@property (nonatomic, strong) id<AMFDataSupplyProtocol> dataSupply;
+/// through the property we'll get access to data storage
+@property (nonatomic, strong) id<AMFStorageHandlerProtocol> storage;
 
 /**
  what's selected

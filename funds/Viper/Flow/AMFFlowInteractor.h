@@ -9,15 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "AMFFlowInteractorInput.h"
 
+@protocol AMFStorageHandlerProtocol;
 @protocol AMFFlowInteractorOutput;
-@protocol AMFDataSupplyProtocol;
 
 @interface AMFFlowInteractor : NSObject<AMFFlowInteractorInput>
 
-/**
- data source to be used for showing contents
- */
-@property (nonatomic, strong) id<AMFDataSupplyProtocol> dataSupply;
+/// through the property we'll get access to data storage
+@property (nonatomic, strong) id<AMFStorageHandlerProtocol> storage;
 
 /**
  presenter's link

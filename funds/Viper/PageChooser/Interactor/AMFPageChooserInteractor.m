@@ -7,19 +7,16 @@
 //
 
 #import "AMFPageChooserInteractor.h"
-#import "AMFDataSupplyProtocol.h"
 #import "AMFPageChooserInteractorOutput.h"
+#import "AMFStorageHandlerProtocol.h"
 
 @implementation AMFPageChooserInteractor
 
 #pragma mark - Методы AMFPageChooserInteractorInput
 
 -(void) receiveAllPages {
-    [self.dataSupply fetchAllPagesWithBlock:^(NSArray *pages) {
-        dispatch_async(dispatch_get_main_queue(), ^ {
-            [self.output receivedPages:pages];
-        });
-    }];
+    NSArray *pages = [self.storage grabAllPages];
+    [self.output receivedPages:pages];
 }
 
 @end

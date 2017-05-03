@@ -32,8 +32,8 @@
 -(AMFFlowInteractor*) interactorFlowModule {
     return [TyphoonDefinition withClass:[AMFFlowInteractor class]
                           configuration:^(TyphoonDefinition *definition) {
-                              [definition injectProperty:@selector(dataSupply)
-                                                    with:_dataProvider.dataSupplier];
+                              [definition injectProperty:@selector(storage)
+                                                    with:_dataProvider.storageHandler];
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterFlowModule]];
                           }];
