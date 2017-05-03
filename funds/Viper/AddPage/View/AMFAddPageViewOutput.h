@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFPageProtocol;
+
 @protocol AMFAddPageViewOutput <NSObject>
 
 /**
@@ -17,10 +19,14 @@
  */
 - (void)didTriggerViewReadyEvent;
 
+/**
+ * update an existing page
+ */
+- (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)pname;
 
 /**
- * done was touched
+ * create a new page
  */
-- (void)doneWithPageName:(NSString*)pname;
+- (void)createNewWithPageName:(NSString*)pname;
 
 @end

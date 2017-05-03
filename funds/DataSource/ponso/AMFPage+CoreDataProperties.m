@@ -25,7 +25,7 @@ static NSString *const kName = @"name";
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFPage"];
 }
 
-+ (AMFPage*) findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash {
++ (AMFPage*)findOrCreateWithPage:(id<AMFPageProtocol>)page {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", page.name];
@@ -39,8 +39,15 @@ static NSString *const kName = @"name";
                                   inContext:con]];
         }
         p.page_id = [_gen generateID];
+        p.name = page.name;
     }
-    [p updateWith:page andCash:cash];
+    return p;
+}
+
++ (AMFPage*)findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash {
+    AMFPage *p = [self findOrCreateWithPage:page];
+    if (p)
+        [p updateWith:page andCash:cash];
     return p;
 }
 

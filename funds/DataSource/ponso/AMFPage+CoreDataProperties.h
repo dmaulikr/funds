@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMFPage (CoreDataProperties) <AMFPageProtocol, NSCoding>
 
 + (NSFetchRequest<AMFPage *> *)fetchRequest;
++ (AMFPage*) findOrCreateWithPage:(id<AMFPageProtocol>)page;
 + (AMFPage*) findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash;
 
 @property (nonatomic, assign) NSUInteger page_id;

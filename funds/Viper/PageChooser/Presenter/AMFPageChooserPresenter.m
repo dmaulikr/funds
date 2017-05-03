@@ -55,4 +55,11 @@
     [self.view refreshContents];
     [self.view placeSelectedPageAtCenter];
 }
+
+#pragma mark - Methods of AMFAddPageModuleOutput
+
+- (void)pageUpdatedOrCreated {
+    [self.interactor receiveAllPages];
+}
+
 @end

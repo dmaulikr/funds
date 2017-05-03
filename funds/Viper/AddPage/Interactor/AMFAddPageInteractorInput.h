@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFPageProtocol;
+
 @protocol AMFAddPageInteractorInput <NSObject>
+
+- (void)createPageWithName:(NSString*)pageName;
+- (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name;
 
 @end

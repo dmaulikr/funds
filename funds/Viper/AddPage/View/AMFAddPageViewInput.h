@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMFPageProtocol.h"
 
 @protocol AMFAddPageViewInput <NSObject>
 
@@ -16,5 +17,8 @@
  Method initializes the state
  */
 - (void)setupInitialState;
+
+/// show page's info
+@property (nonatomic, strong) id<AMFPageProtocol> page;
 
 @end

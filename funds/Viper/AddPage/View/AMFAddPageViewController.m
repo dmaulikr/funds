@@ -7,6 +7,7 @@
 //
 
 #import "AMFAddPageViewController.h"
+#import "AMFPageProtocol.h"
 
 #import "AMFAddPageViewOutput.h"
 
@@ -18,6 +19,8 @@
 
 @implementation AMFAddPageViewController
 
+@synthesize page;
+
 #pragma mark - Live cycle methods
 
 - (void)viewDidLoad {
@@ -27,7 +30,10 @@
 }
 
 - (void)done {
-    [self.output doneWithPageName:self.pageName.text];
+    if (self.page)
+        [self.output updatePage:self.page withName:self.pageName.text];
+    else
+        [self.output createNewWithPageName:self.pageName.text];
 }
 
 #pragma mark - Methods of AMFAddPageViewInput
@@ -39,6 +45,24 @@
                                                                 target:self
                                                                 action:@selector(done)];
         self.navigationItem.rightBarButtonItem = done;
+    }
+    if (self.page) { // if user wants to change current page
+        self.pageName.text = page.name;
+    } else { // or if user wants to create a new one
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitMonth | NSCalendarUnitYear)
+                                                       fromDate:[NSDate date]];
+        if (dateComponents.month < 12)
+            [dateComponents setMonth:dateComponents.month + 1];
+        else {
+            [dateComponents setMonth:1];
+            [dateComponents setYear:dateComponents.year + 1];
+        }
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        NSArray *months = [formatter standaloneMonthSymbols];
+        self.pageName.text = [NSString stringWithFormat:@"%@ %ld",
+                              [months[dateComponents.month] capitalizedString],
+                              dateComponents.year];
     }
 }
 

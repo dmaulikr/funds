@@ -8,5 +8,6 @@
 
 @protocol AMFAddPageModuleOutput <RamblerViperModuleOutput>
 
+- (void)pageUpdatedOrCreated;
 
 @end

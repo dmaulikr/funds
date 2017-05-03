@@ -9,9 +9,13 @@
 #import "AMFAddPageInteractorInput.h"
 
 @protocol AMFAddPageInteractorOutput;
+@protocol AMFStorageHandlerProtocol;
 
 @interface AMFAddPageInteractor : NSObject <AMFAddPageInteractorInput>
 
 @property (nonatomic, weak) id<AMFAddPageInteractorOutput> output;
+
+/// through the property we'll get access to data storage
+@property (nonatomic, strong) id<AMFStorageHandlerProtocol> storage;
 
 @end

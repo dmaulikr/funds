@@ -27,12 +27,28 @@
 	[self.view setupInitialState];
 }
 
-- (void)doneWithPageName:(NSString*)pname {
+- (BOOL)checkLength:(NSString*)pname {
     if (!pname.length) {
         [self.router showErrorWithMessage:AMFLocalize(@"no name for page!")];
-        return;
+        return NO;
     }
-    [self.router closeMe];
+    return YES;
+}
+
+- (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)pname {
+    if ([self checkLength:pname]) {
+        [self.interactor updatePage:page withName:pname];
+        [self.moduleOutput pageUpdatedOrCreated];
+        [self.router closeMe];
+    }
+}
+
+- (void)createNewWithPageName:(NSString *)pname {
+    if ([self checkLength:pname]) {
+        [self.interactor createPageWithName:pname];
+        [self.moduleOutput pageUpdatedOrCreated];
+        [self.router closeMe];
+    }
 }
 
 #pragma mark - Methods of AMFAddPageInteractorOutput

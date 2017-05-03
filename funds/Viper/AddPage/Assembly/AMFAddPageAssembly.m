@@ -13,6 +13,7 @@
 #import "AMFAddPagePresenter.h"
 #import "AMFAddPageRouter.h"
 #import "AMFAlertsAssembly.h"
+#import "AMFDataSupplierAssembly.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -33,6 +34,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterAddPage]];
+                              [definition injectProperty:@selector(storage)
+                                                    with:_dataProvider.storageHandler];
                           }];
 }
 

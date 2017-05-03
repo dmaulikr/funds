@@ -72,6 +72,15 @@
     [self saveContext];
 }
 
+- (void)addPage:(id<AMFPageProtocol>)page {
+    [AMFPage findOrCreateWithPage:page];
+}
+
+- (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name {
+    id<AMFPageProtocol> p = [AMFPage findOrCreateWithPage:page];
+    p.name = name;
+}
+
 -(NSArray*) grabRecordsForPage:(id<AMFPageProtocol>)page {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"page.name == %@",
                               page.name];
