@@ -12,7 +12,7 @@
 @implementation AMFAppDelegateCoreData
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"pos"];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"funds"];
     return YES;
 }
 

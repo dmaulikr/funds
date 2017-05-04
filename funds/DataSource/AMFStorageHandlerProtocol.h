@@ -12,7 +12,6 @@
 
 @protocol AMFStorageHandlerProtocol <NSObject>
 
-- (void)initStorage;
 - (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name;
 - (void)addPage:(id<AMFPageProtocol>)page;
 - (void)removePage:(id<AMFPageProtocol>)page;

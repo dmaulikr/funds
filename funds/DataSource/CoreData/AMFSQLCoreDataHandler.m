@@ -24,15 +24,6 @@
 
 @implementation AMFSQLCoreDataHandler
 
-- (void)initStorage {
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"funds"];
-    LogDebug(@"Storage 'funds' initialized!");
-}
-
-- (void)typhoonDidInject {
-    [self initStorage];
-}
-
 - (AMFCashFlow*)addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
