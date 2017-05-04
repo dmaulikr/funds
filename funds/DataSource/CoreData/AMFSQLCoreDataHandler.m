@@ -72,6 +72,12 @@
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
     if (cash) {
+        if (cash.wallet) {
+            // restore amount of the wallet
+            NSLog(@"wallet: %@", cash.wallet);
+            cash.wallet.amount += -(cash.amount);
+            NSLog(@"wallet after: %@ amount: %g", cash.wallet, cash.amount);
+        }
         [cash MR_deleteEntity];
     }
 }
@@ -137,6 +143,10 @@
                                          sortedBy:@"cat_id"
                                         ascending:NO
                                         inContext:[NSManagedObjectContext MR_defaultContext]];
+}
+
+- (NSArray*)grabAllWallets {
+    return [AMFWallet MR_findAllSortedBy:@"wallet_id" ascending:NO];
 }
 
 - (void)removeAll {

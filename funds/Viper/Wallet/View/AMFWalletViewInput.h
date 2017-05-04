@@ -17,4 +17,14 @@
  */
 - (void)setupInitialState;
 
+/**
+ * refreshes data shown to the user
+ */
+- (void)refreshContents;
+
+/**
+ * what to show
+ */
+@property (nonatomic, strong) NSArray *records;
+
 @end

@@ -17,15 +17,30 @@
 #pragma mark - Методы AMFWalletModuleInput
 
 - (void)configureModule {
-    // Стартовая конфигурация модуля, не привязанная к состоянию view
 }
 
 #pragma mark - Методы AMFWalletViewOutput
 
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
+    [self.interactor receiveAllWallets];
+}
+
+- (void)cellSelected:(NSUInteger)index {
+}
+
+- (void)editWalletWithIndex:(NSUInteger)index {
+}
+
+- (void)addWallet {
+    [self.router showErrorWithMessage:@"Add me!"];
 }
 
 #pragma mark - Методы AMFWalletInteractorOutput
+
+- (void)walletsReceived:(NSArray*)w {
+    self.view.records = w;
+    [self.view refreshContents];
+}
 
 @end

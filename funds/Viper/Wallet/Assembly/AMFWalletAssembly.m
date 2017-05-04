@@ -13,6 +13,8 @@
 #import "AMFWalletPresenter.h"
 #import "AMFWalletRouter.h"
 #import "AMFThemeAssembly.h"
+#import "AMFAlertsAssembly.h"
+#import "AMFDataSupplierAssembly.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -33,6 +35,8 @@
 - (AMFWalletInteractor *)interactorWallet {
     return [TyphoonDefinition withClass:[AMFWalletInteractor class]
                           configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(storage)
+                                                    with:_dataProvider.storageHandler];
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterWallet]];
                           }];
@@ -55,6 +59,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewWallet]];
+                              [definition injectProperty:@selector(alertFactory)
+                                                    with:[_alerts alertFactory]];
                           }];
 }
 

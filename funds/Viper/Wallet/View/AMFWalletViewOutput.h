@@ -11,10 +11,23 @@
 @protocol AMFWalletViewOutput <NSObject>
 
 /**
- @author Michael Artuerhof
-
- Метод сообщает презентеру о том, что view готова к работе
+ * view is ready to go
  */
 - (void)didTriggerViewReadyEvent;
+
+/**
+ * a cell with a given number was selected
+ */
+- (void)cellSelected:(NSUInteger)index;
+
+/**
+ * edit wallet please
+ */
+- (void)editWalletWithIndex:(NSUInteger)index;
+
+/**
+ * add a wallet please
+ */
+- (void)addWallet;
 
 @end

@@ -22,6 +22,7 @@
 - (NSArray*)grabAllPages;
 - (NSArray*)grabAllCategories;
 - (NSArray*)grabAllCurrencies;
+- (NSArray*)grabAllWallets;
 - (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString*)name;
 - (void)removeAll;
 

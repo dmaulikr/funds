@@ -9,23 +9,54 @@
 #import "AMFWalletViewController.h"
 #import "AMFTheme.h"
 #import "AMFWalletViewOutput.h"
+#import "AMFWalletProtocol.h"
+
+static NSString *const walletCellIndentifier = @"walletCell";
+
+@interface AMFWalletViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@end
 
 @implementation AMFWalletViewController
 
-#pragma mark - Методы жизненного цикла
+@synthesize records;
+
+#pragma mark - Life Cycle Methods
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    
-    LogDebug(@"AMFWalletViewController didLoad");
 
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - Методы AMFWalletViewInput
+#pragma mark - Methods of AMFWalletViewInput
 
 - (void)setupInitialState {
-	// В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)
+    // setup left button - for choosing pages
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"Edit")
+                                                             style:UIBarButtonItemStyleBordered
+                                                            target:self
+                                                            action:@selector(editWallets)];
+    self.navigationItem.leftBarButtonItem = left;
+
+    // adding new wallets:
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                           target:self
+                                                                           action:@selector(addWallet)];
+    self.navigationItem.rightBarButtonItem = right;
+}
+
+- (void)refreshContents {
+    [self.tableView reloadData];
+}
+
+- (void)editWallets {
+}
+
+- (void)addWallet {
+    [self.output addWallet];
 }
 
 #pragma mark - Themes
@@ -36,5 +67,42 @@
 
 - (void)applyTheme {
     [super applyTheme];
+}
+
+#pragma mark - Table View source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.records.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:walletCellIndentifier];
+    id<AMFWalletProtocol> wallet = self.records[indexPath.row];
+    cell.textLabel.text = wallet.name;
+    cell.imageView.image = [UIImage imageNamed:wallet.icon_path.length ? wallet.icon_path : @"wallet-icon"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%g", wallet.amount];
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.output cellToDelete:indexPath.row];
+    }
+     */
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.output cellSelected:indexPath.row];
 }
 @end

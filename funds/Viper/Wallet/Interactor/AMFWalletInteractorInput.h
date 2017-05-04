@@ -10,4 +10,9 @@
 
 @protocol AMFWalletInteractorInput <NSObject>
 
+/**
+ * ask for available wallets in storage
+ */
+- (void)receiveAllWallets;
+
 @end

@@ -13,12 +13,15 @@ static NSString *const kIcon = @"icon";
 
 @implementation AMFWalletPlain
 
-@synthesize name, icon_path;
+@synthesize name,
+icon_path,
+amount;
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"Wallet Plain name: %@, icon_path: %@",
+    return [NSString stringWithFormat:@"Wallet Plain name: %@, icon_path: %@ amount: %g",
             self.name,
-            self.icon_path];
+            self.icon_path,
+            self.amount];
 }
 
 #pragma mark - NSCoding protocol

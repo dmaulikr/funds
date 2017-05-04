@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMFAlertProtocol.h"
 
-@protocol AMFWalletRouterInput <NSObject>
+@protocol AMFWalletRouterInput <AMFAlertProtocol>
 
 @end

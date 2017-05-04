@@ -7,11 +7,10 @@
 //
 
 #import "AMFWalletRouterInput.h"
+#import "AMFCommonRouter.h"
 
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 
-@interface AMFWalletRouter : NSObject <AMFWalletRouterInput>
-
-@property (nonatomic, weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
+@interface AMFWalletRouter : AMFCommonRouter <AMFWalletRouterInput>
 
 @end

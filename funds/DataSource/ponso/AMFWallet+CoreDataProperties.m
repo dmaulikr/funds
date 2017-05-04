@@ -11,6 +11,7 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "NSManagedObject+generateID.h"
 #import "AMFgenerateID.h"
+#import "AMFCashFlow+CoreDataProperties.h"
 
 static NSString *const kName = @"name";
 static NSString *const kIcon = @"icon";
@@ -18,16 +19,17 @@ static NSString *const kIcon = @"icon";
 @implementation AMFWallet (CoreDataProperties)
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"AMFWallet name: %@, icon_path: %@",
+    return [NSString stringWithFormat:@"AMFWallet name: %@, icon_path: %@, amount: %g",
             self.name,
-            self.icon_path];
+            self.icon_path,
+            self.amount];
 }
 
 + (NSFetchRequest<AMFWallet *> *)fetchRequest {
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFWallet"];
 }
 
-+ (AMFWallet*) findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
++ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", wallet.name, wallet.icon_path];
@@ -41,6 +43,7 @@ static NSString *const kIcon = @"icon";
                                   inContext:con]];
         }
         w.wallet_id = [_gen generateID];
+        w.amount = 0;
     }
     [w updateWith:wallet andCash:cash];
     return w;
@@ -50,10 +53,12 @@ static NSString *const kIcon = @"icon";
 @dynamic icon_path;
 @dynamic name;
 @dynamic cash;
+@dynamic amount;
 
 - (void)updateWith:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
     self.name = wallet.name;
     self.icon_path = wallet.icon_path;
+    self.amount += cash.amount;
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];
 }

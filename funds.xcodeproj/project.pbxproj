@@ -648,10 +648,10 @@
 		2E9E90E1A6B970DDB7200396 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				4C53EC971E708C2500725AF8 /* AMFWalletInteractorOutput.h */,
 				4C53EC981E708C2500725AF8 /* AMFWalletInteractorInput.h */,
-				4C53EC991E708C2500725AF8 /* AMFWalletInteractor.m */,
 				4C53EC9A1E708C2500725AF8 /* AMFWalletInteractor.h */,
+				4C53EC991E708C2500725AF8 /* AMFWalletInteractor.m */,
+				4C53EC971E708C2500725AF8 /* AMFWalletInteractorOutput.h */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";

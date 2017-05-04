@@ -10,4 +10,6 @@
 
 @protocol AMFWalletInteractorOutput <NSObject>
 
+- (void)walletsReceived:(NSArray*)w;
+
 @end
