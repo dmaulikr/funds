@@ -46,7 +46,9 @@
 }
 
 - (void)deleteCell:(NSUInteger)index {
-    //id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
+    id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
+    [self.interactor deletePage:page];
+    [self.interactor receiveAllPages]; // update contents
 }
 
 - (void)cancelAction {
@@ -59,7 +61,7 @@
 
 #pragma mark - Methods of AMFPageChooserInteractorOutput
 
--(void) receivedPages:(NSArray*) pages {
+- (void)receivedPages:(NSArray*) pages {
     self.view.pages = pages;
     [self.view refreshContents];
     [self.view placeSelectedPageAtCenter];

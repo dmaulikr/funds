@@ -14,9 +14,13 @@
 
 #pragma mark - Методы AMFPageChooserInteractorInput
 
--(void) receiveAllPages {
+- (void)receiveAllPages {
     NSArray *pages = [self.storage grabAllPages];
     [self.output receivedPages:pages];
+}
+
+- (void)deletePage:(id<AMFPageProtocol>)page {
+    [self.storage removePage:page];
 }
 
 @end

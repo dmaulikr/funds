@@ -15,6 +15,7 @@
 - (void)initStorage;
 - (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name;
 - (void)addPage:(id<AMFPageProtocol>)page;
+- (void)removePage:(id<AMFPageProtocol>)page;
 - (void)addRecord:(id<AMFCashProtocol>)rec;
 - (void)removeRecord:(id<AMFCashProtocol>)rec;
 - (void)addRecords:(NSArray*)ar;
