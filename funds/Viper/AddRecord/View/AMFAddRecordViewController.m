@@ -122,7 +122,7 @@ selectedCurrency;
     double f = [self.inputAmount.text doubleValue];
     if (f < 0) {
         self.inputAmount.text = [self.inputAmount.text substringFromIndex:1];
-    } else if (fabs(f) > 0.00001) {
+    } else if (f > 0.001) {
         self.inputAmount.text = [NSString stringWithFormat:@"-%@", self.inputAmount.text];
     }
 }
