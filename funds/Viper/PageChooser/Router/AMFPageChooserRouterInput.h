@@ -9,18 +9,24 @@
 #import <Foundation/Foundation.h>
 
 @protocol AMFAddPageModuleOutput;
+@protocol AMFPageProtocol;
 
 @protocol AMFPageChooserRouterInput <NSObject>
 
 /**
- closes page chooser
+ * closes page chooser
  */
--(void) closeDialog;
+- (void)closeDialog;
 
 
 /**
- opens an add page dialog
+ * opens an add page dialog
  */
--(void) openAddPageWithOutput:(id<AMFAddPageModuleOutput>)output;
+- (void)openAddPageWithOutput:(id<AMFAddPageModuleOutput>)output;
+
+/**
+ * opens an edit page dialog
+ */
+- (void)openEditPageWithPage:(id<AMFPageProtocol>)page andOutput:(id<AMFAddPageModuleOutput>)output;
 
 @end

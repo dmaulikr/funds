@@ -9,10 +9,13 @@
 #import "AMFPageChooserViewController.h"
 #import "AMFPageProtocol.h"
 #import "AMFPageChooserViewOutput.h"
+#import "AMFPageChooserCell.h"
 
 static NSString *const pageChooserCellIndentifier = @"PageCell";
 
-@interface AMFPageChooserViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface AMFPageChooserViewController () <UITableViewDelegate,
+AMFPageChooserCellDelegate,
+UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -85,7 +88,7 @@ pages;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pageChooserCellIndentifier];
+    AMFPageChooserCell *cell = [tableView dequeueReusableCellWithIdentifier:pageChooserCellIndentifier];
     id <AMFPageProtocol> page = [self.pages objectAtIndex:indexPath.row];
     if (self.selectedPage && // selected cell could be nil
         [page.name isEqualToString:self.selectedPage.name]) {
@@ -93,8 +96,14 @@ pages;
     }
     else
         [cell setAccessoryType:UITableViewCellAccessoryNone];
-    cell.textLabel.text = page.name;
+    cell.path = indexPath;
+    cell.itemText = page.name;
+    cell.edit_delegate = self;
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
 }
 
 #pragma mark - UITableViewDelegate
@@ -103,14 +112,24 @@ pages;
     [self.output cellSelected:indexPath.row];
 }
 
-
 #pragma mark - Actions
 
--(void) cancelAction {
+-(void)cancelAction {
     [self.output cancelAction];
 }
 
--(void) addPage {
+-(void)addPage {
     [self.output addPage];
 }
+
+#pragma mark - AMFPageChooserCellDelegate
+
+- (void)editActionForItem:(NSString *)itemText andCell:(AMFSwipeableCell*)cell {
+    [self.output editCell:cell.path.row];
+}
+
+- (void)deleteActionForItem:(NSString *)itemText andCell:(AMFSwipeableCell*)cell {
+    [self.output deleteCell:cell.path.row];
+}
+
 @end

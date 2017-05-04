@@ -32,12 +32,21 @@
     [self.interactor receiveAllPages];
 }
 
-- (void)cellSelected: (NSUInteger) index {
+- (void)cellSelected:(NSUInteger)index {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
     [defaults persistObjAsData:page forKey:kLastPage];
     [self.moduleOutput pageWasChosen:page];
     [self.router closeDialog];
+}
+
+- (void)editCell:(NSUInteger)index {
+    id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
+    [self.router openEditPageWithPage:page andOutput:self];
+}
+
+- (void)deleteCell:(NSUInteger)index {
+    //id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
 }
 
 - (void)cancelAction {

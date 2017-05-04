@@ -18,4 +18,9 @@
  */
 - (void)configureModule;
 
+/**
+ * configures module for changing page
+ */
+- (void)configureModuleWithPage:(id<AMFPageProtocol>)page;
+
 @end

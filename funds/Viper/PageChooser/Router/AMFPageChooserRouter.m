@@ -16,18 +16,26 @@
 #import "AMFAddPageModuleInput.h"
 #import "AMFAddPageModuleOutput.h"
 #import "AMFSimpleAlertFactory.h"
+#import "AMFPageProtocol.h"
 
 @implementation AMFPageChooserRouter
 
 #pragma mark - Методы AMFPageChooserRouterInput
 
--(void) closeDialog {
+- (void)closeDialog {
     [self.transitionHandler closeCurrentModule:YES];
 }
 
--(void) openAddPageWithOutput:(id<AMFAddPageModuleOutput>)output {
+- (void)openAddPageWithOutput:(id<AMFAddPageModuleOutput>)output {
     [[self.transitionHandler openModuleUsingSegue:kSegueAddPage] thenChainUsingBlock:^id<AMFAddPageModuleOutput>(id<AMFAddPageModuleInput> moduleInput) {
         [moduleInput configureModule];
+        return output;
+    }];
+}
+
+- (void)openEditPageWithPage:(id<AMFPageProtocol>)page andOutput:(id<AMFAddPageModuleOutput>)output {
+    [[self.transitionHandler openModuleUsingSegue:kSegueAddPage] thenChainUsingBlock:^id<AMFAddPageModuleOutput>(id<AMFAddPageModuleInput> moduleInput) {
+        [moduleInput configureModuleWithPage:page];
         return output;
     }];
 }

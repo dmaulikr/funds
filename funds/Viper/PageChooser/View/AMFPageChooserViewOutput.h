@@ -18,7 +18,7 @@
 /**
  user selected a cell with index
  */
-- (void)cellSelected: (NSUInteger) index;
+- (void)cellSelected:(NSUInteger)index;
 
 /**
  user wants to get out of here
@@ -29,5 +29,15 @@
  user wants to add a new page
  */
 - (void)addPage;
+
+/**
+ * user wants a cell to be edited
+ */
+- (void)editCell:(NSUInteger)index;
+
+/**
+ * user wants a cell to be deleted
+ */
+- (void)deleteCell:(NSUInteger)index;
 
 @end

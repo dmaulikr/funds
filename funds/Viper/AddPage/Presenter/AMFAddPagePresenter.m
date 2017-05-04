@@ -12,6 +12,7 @@
 #import "AMFAddPageInteractorInput.h"
 #import "AMFAddPageRouterInput.h"
 #import "AMFAddPageModuleOutput.h"
+#import "AMFPageProtocol.h"
 
 @implementation AMFAddPagePresenter
 
@@ -19,6 +20,11 @@
 
 - (void)configureModule {
     // starting configuration of the module
+}
+
+
+- (void)configureModuleWithPage:(id<AMFPageProtocol>)page {
+    self.view.page = page;
 }
 
 #pragma mark - Methods of AMFAddPageViewOutput

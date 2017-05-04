@@ -69,6 +69,7 @@
 		4C95E58D1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58A1EB861C900EBE5C9 /* AMFEditCategoryInteractor.m */; };
 		4C95E5911EB861D500EBE5C9 /* AMFEditCategoryRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */; };
 		4C95E5981EB893B600EBE5C9 /* AMFSwipeableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */; };
+		4C95E59D1EBB56D600EBE5C9 /* AMFPageChooserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E59C1EBB56D600EBE5C9 /* AMFPageChooserCell.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -299,6 +300,8 @@
 		4C95E5961EB893B600EBE5C9 /* AMFSwipeableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSwipeableCell.h; path = funds/Viper/Common/cells/AMFSwipeableCell.h; sourceTree = SOURCE_ROOT; };
 		4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSwipeableCell.m; path = funds/Viper/Common/cells/AMFSwipeableCell.m; sourceTree = SOURCE_ROOT; };
 		4C95E5991EB89E7C00EBE5C9 /* AMFEditCategoryModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryModuleOutput.h; path = funds/Viper/EditCategory/Presenter/AMFEditCategoryModuleOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E59B1EBB56D600EBE5C9 /* AMFPageChooserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFPageChooserCell.h; path = funds/Viper/PageChooser/View/cells/AMFPageChooserCell.h; sourceTree = SOURCE_ROOT; };
+		4C95E59C1EBB56D600EBE5C9 /* AMFPageChooserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFPageChooserCell.m; path = funds/Viper/PageChooser/View/cells/AMFPageChooserCell.m; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -723,6 +726,7 @@
 		3C773EE598CE51ADDBB16600 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C95E59A1EBB564100EBE5C9 /* cells */,
 				4C046FBC1E73CEB8001E73A6 /* AMFPageChooserViewInput.h */,
 				4C046FBA1E73CEB8001E73A6 /* AMFPageChooserViewController.h */,
 				4C046FBB1E73CEB8001E73A6 /* AMFPageChooserViewController.m */,
@@ -1039,6 +1043,15 @@
 			);
 			name = cells;
 			path = ChooseCategory/View;
+			sourceTree = "<group>";
+		};
+		4C95E59A1EBB564100EBE5C9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E59B1EBB56D600EBE5C9 /* AMFPageChooserCell.h */,
+				4C95E59C1EBB56D600EBE5C9 /* AMFPageChooserCell.m */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		4C95F8631E82BF8800D3491A /* Alerts */ = {
@@ -2067,6 +2080,7 @@
 				4CE158CB1E716BC90009BAF4 /* AMFPage+CoreDataClass.m in Sources */,
 				4C53EC9F1E708C3300725AF8 /* AMFWalletRouter.m in Sources */,
 				4CE158EC1E71C56E0009BAF4 /* AMFPagePlain.m in Sources */,
+				4C95E59D1EBB56D600EBE5C9 /* AMFPageChooserCell.m in Sources */,
 				4C53ECB01E70905800725AF8 /* AMFBalanceInteractor.m in Sources */,
 				4C046FBE1E73CEB8001E73A6 /* AMFPageChooserViewController.m in Sources */,
 				4C046FCF1E73DFDC001E73A6 /* GlobalConstants.m in Sources */,
