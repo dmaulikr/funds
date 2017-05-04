@@ -27,25 +27,31 @@ static NSString *const walletCellIndentifier = @"walletCell";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+}
 
-	[self.output didTriggerViewReadyEvent];
+- (void)viewWillAppear:(BOOL)animated {
+    [self.output didTriggerViewReadyEvent];
 }
 
 #pragma mark - Methods of AMFWalletViewInput
 
 - (void)setupInitialState {
-    // setup left button - for choosing pages
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"Edit")
-                                                             style:UIBarButtonItemStyleBordered
-                                                            target:self
-                                                            action:@selector(editWallets)];
-    self.navigationItem.leftBarButtonItem = left;
+    if (!self.navigationItem.leftBarButtonItem) {
+        // setup left button - for choosing pages
+        UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"Edit")
+                                                                 style:UIBarButtonItemStyleBordered
+                                                                target:self
+                                                                action:@selector(editWallets)];
+        self.navigationItem.leftBarButtonItem = left;
+    }
 
-    // adding new wallets:
-    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                           target:self
-                                                                           action:@selector(addWallet)];
-    self.navigationItem.rightBarButtonItem = right;
+    if (!self.navigationItem.rightBarButtonItem) {
+        // adding new wallets:
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                               target:self
+                                                                               action:@selector(addWallet)];
+        self.navigationItem.rightBarButtonItem = right;
+    }
 }
 
 - (void)refreshContents {
