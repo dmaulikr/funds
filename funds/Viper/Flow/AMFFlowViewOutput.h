@@ -28,7 +28,7 @@
 /**
  user wants to select another page
  */
-- (void) choosePage;
+- (void)choosePage;
 
 /**
  Method reports to presenter that it's ready for work

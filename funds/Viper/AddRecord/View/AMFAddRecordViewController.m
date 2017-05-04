@@ -108,4 +108,22 @@ selectedCurrency;
     [self.output changeCatogory];
 }
 
+- (IBAction)inputAmountBegan:(id)sender {
+    if (!self.inputAmount.text)
+        self.inputAmount.text = @"";
+
+    if (self.inputAmount.text.length)
+        return;
+
+    self.inputAmount.text = [NSString stringWithFormat:@"-%@", self.inputAmount.text];
+}
+
+- (IBAction)changeSign:(id)sender {
+    double f = [self.inputAmount.text doubleValue];
+    if (f < 0) {
+        self.inputAmount.text = [self.inputAmount.text substringFromIndex:1];
+    } else if (fabs(f) > 0.00001) {
+        self.inputAmount.text = [NSString stringWithFormat:@"-%@", self.inputAmount.text];
+    }
+}
 @end

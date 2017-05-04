@@ -124,11 +124,12 @@ static NSString *const flowCellIndentifier = @"FlowCell";
 
 #pragma mark - Actions
 
-- (void) choosePage {
+- (void)choosePage {
     [self.output choosePage];
 }
 
-- (void) addRecord {
+- (void)addRecord {
     [self.output addClicked];
 }
+
 @end
