@@ -164,7 +164,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsP-eq-dhP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsP-eq-dhP" userLabel="input_currency">
                                         <rect key="frame" x="345" y="34" width="30" height="22"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -271,7 +271,7 @@
                                     <constraint firstItem="f4R-9p-dje" firstAttribute="trailing" secondItem="dDm-Qz-01J" secondAttribute="trailing" id="xC3-TI-bKc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CD-mX-vP1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CD-mX-vP1" userLabel="PlusMinusButton">
                                 <rect key="frame" x="155" y="273" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="dxd-Wc-RY0"/>
@@ -476,8 +476,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="5P9-re-tiw" id="j0H-iI-E2n"/>
-                                    <outlet property="delegate" destination="5P9-re-tiw" id="J4C-19-hAp"/>
+                                    <outlet property="dataSource" destination="p6A-48-TBa" id="Q0y-3r-i44"/>
+                                    <outlet property="delegate" destination="p6A-48-TBa" id="6Zh-2v-ZUc"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -489,6 +489,9 @@
                             <constraint firstAttribute="bottom" secondItem="GAp-xw-HcJ" secondAttribute="bottom" id="t2w-88-e4A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="GAp-xw-HcJ" id="CgS-Wc-Z9d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MwP-EL-DQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

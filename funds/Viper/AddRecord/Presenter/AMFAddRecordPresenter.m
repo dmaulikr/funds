@@ -12,6 +12,11 @@
 #import "AMFAddRecordInteractorInput.h"
 #import "AMFAddRecordRouterInput.h"
 
+@interface AMFAddRecordPresenter () {
+    BOOL _withdrawalSelection;
+}
+@end
+
 @implementation AMFAddRecordPresenter
 
 #pragma mark - Methods of AMFAddRecordModuleInput
@@ -25,6 +30,7 @@
 - (void)didTriggerViewReadyEvent {
     self.view.selectedCategory = [self.interactor currentCategory];
     self.view.selectedCurrency = [self.interactor currentCurrency];
+    self.view.selectedWallet = [self.interactor currentWallet];
 	[self.view setupInitialState];
 }
 
@@ -51,7 +57,9 @@
 }
 
 - (void)changeWallet {
-    // open another module
+    _withdrawalSelection = NO;
+    [self.router showWalletChooserWithWalletSelected:[self.interactor currentWallet]
+                                           andOutput:self];
 }
 
 #pragma mark - Methods of AMFAddRecordInteractorOutput
@@ -70,6 +78,19 @@
 - (void)categoryChosen:(id<AMFCategoryProtocol>)category {
     [self.interactor selectedCategory:category];
     self.view.selectedCategory = category;
+    [self.view refreshView];
+}
+
+
+#pragma mark - Methods of AMFChooseWalletModuleOutput
+
+- (void)walletChosen:(id<AMFWalletProtocol>)wallet {
+    if (_withdrawalSelection)
+        [self.interactor withdrawalWallet:wallet];
+    else {
+        [self.interactor selectedWallet:wallet];
+        self.view.selectedWallet = [self.interactor currentWallet];
+    }
     [self.view refreshView];
 }
 

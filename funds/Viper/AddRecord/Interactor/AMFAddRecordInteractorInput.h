@@ -40,6 +40,11 @@
 - (void)withdrawalWallet:(id<AMFWalletProtocol>)wallet;
 
 
+/**
+ * current wallet
+ */
+- (id<AMFWalletProtocol>)currentWallet;
+
 - (id<AMFCategoryProtocol>)currentCategory;
 
 /**

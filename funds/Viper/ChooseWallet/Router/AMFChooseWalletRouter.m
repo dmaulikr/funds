@@ -14,4 +14,8 @@
 
 #pragma mark - Methods of AMFChooseWalletRouterInput
 
+- (void)closeMe {
+    [self.transitionHandler closeCurrentModule:YES];
+}
+
 @end

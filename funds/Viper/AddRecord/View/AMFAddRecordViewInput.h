@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AMFCategoryProtocol.h"
 #import "AMFCurrencyProtocol.h"
+#import "AMFWalletProtocol.h"
 
 @protocol AMFAddRecordViewInput <NSObject>
 
@@ -34,5 +35,8 @@
 
 /// which currency was selected
 @property (nonatomic, strong) id<AMFCurrencyProtocol> selectedCurrency;
+
+/// which currency was selected
+@property (nonatomic, strong) id<AMFWalletProtocol> selectedWallet;
 
 @end

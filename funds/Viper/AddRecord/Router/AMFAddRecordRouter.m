@@ -9,6 +9,8 @@
 #import "AMFAddRecordRouter.h"
 #import "AMFChooseCategoryModuleInput.h"
 #import "AMFChooseCategoryModuleOutput.h"
+#import "AMFChooseWalletModuleInput.h"
+#import "AMFChooseWalletModuleOutput.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -24,6 +26,14 @@
                                       andOutput:(id<AMFChooseCategoryModuleOutput>) output {
     [[self.transitionHandler openModuleUsingSegue:kSegueChooseCategory] thenChainUsingBlock:^id<AMFChooseCategoryModuleOutput>(id<AMFChooseCategoryModuleInput> moduleInput) {
         [moduleInput configureModuleWithCategorySelected:category];
+        return output;
+    }];
+}
+
+- (void)showWalletChooserWithWalletSelected:(id<AMFWalletProtocol>)wallet
+                                      andOutput:(id<AMFChooseWalletModuleOutput>)output {
+    [[self.transitionHandler openModuleUsingSegue:kSegueChooseWallet] thenChainUsingBlock:^id<AMFChooseWalletModuleOutput>(id<AMFChooseWalletModuleInput> moduleInput) {
+        [moduleInput configureModuleWithWallet:wallet];
         return output;
     }];
 }

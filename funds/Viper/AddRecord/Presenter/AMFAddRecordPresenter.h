@@ -10,6 +10,7 @@
 #import "AMFAddRecordInteractorOutput.h"
 #import "AMFAddRecordModuleInput.h"
 #import "AMFChooseCategoryModuleOutput.h"
+#import "AMFChooseWalletModuleOutput.h"
 
 @protocol AMFAddRecordViewInput;
 @protocol AMFAddRecordInteractorInput;
@@ -18,6 +19,7 @@
 @interface AMFAddRecordPresenter : NSObject <AMFAddRecordModuleInput,
 AMFAddRecordViewOutput,
 AMFChooseCategoryModuleOutput,
+AMFChooseWalletModuleOutput,
 AMFAddRecordInteractorOutput>
 
 @property (nonatomic, weak) id<AMFAddRecordViewInput> view;

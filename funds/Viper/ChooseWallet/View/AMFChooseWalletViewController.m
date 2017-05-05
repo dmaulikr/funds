@@ -98,7 +98,7 @@ static NSString *const walletCellIndentifier = @"walletCell";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   //self.output cellSelected:indexPath.row];
+   [self.output cellSelected:indexPath.row];
 }
 
 @end

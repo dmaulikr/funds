@@ -329,6 +329,7 @@
 		4C95E5B61EBC56B400EBE5C9 /* AMFChooseWalletRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletRouter.h; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouter.h; sourceTree = SOURCE_ROOT; };
 		4C95E5B71EBC56B400EBE5C9 /* AMFChooseWalletRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletRouter.m; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouter.m; sourceTree = SOURCE_ROOT; };
 		4C95E5B81EBC56B400EBE5C9 /* AMFChooseWalletRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletRouterInput.h; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouterInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5BA1EBC635A00EBE5C9 /* AMFChooseWalletModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletModuleOutput.h; path = funds/Viper/ChooseWallet/Presenter/AMFChooseWalletModuleOutput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -1456,6 +1457,7 @@
 				4C95E5A81EBC569400EBE5C9 /* AMFChooseWalletModuleInput.h */,
 				4C95E5A91EBC569400EBE5C9 /* AMFChooseWalletPresenter.h */,
 				4C95E5AA1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m */,
+				4C95E5BA1EBC635A00EBE5C9 /* AMFChooseWalletModuleOutput.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";

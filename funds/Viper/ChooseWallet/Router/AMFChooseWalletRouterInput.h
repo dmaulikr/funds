@@ -11,4 +11,6 @@
 
 @protocol AMFChooseWalletRouterInput <AMFAlertProtocol>
 
+- (void)closeMe;
+
 @end

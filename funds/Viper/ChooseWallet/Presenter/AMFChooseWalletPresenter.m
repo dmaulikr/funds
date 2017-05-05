@@ -11,6 +11,7 @@
 #import "AMFChooseWalletViewInput.h"
 #import "AMFChooseWalletInteractorInput.h"
 #import "AMFChooseWalletRouterInput.h"
+#import "AMFChooseWalletModuleOutput.h"
 #import "AMFWalletProtocol.h"
 
 @implementation AMFChooseWalletPresenter
@@ -29,6 +30,9 @@
 }
 
 - (void)cellSelected:(NSUInteger)index {
+    id<AMFWalletProtocol> wallet = self.view.records[index];
+    [self.moduleOutput walletChosen:wallet];
+    [self.router closeMe];
 }
 
 - (void)editWalletWithIndex:(NSUInteger)index {

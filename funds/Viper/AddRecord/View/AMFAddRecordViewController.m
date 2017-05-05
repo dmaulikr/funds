@@ -27,6 +27,7 @@
 @implementation AMFAddRecordViewController
 
 @synthesize selectedCategory,
+selectedWallet,
 selectedCurrency;
 
 #pragma mark - Life Cycle Methods
@@ -77,6 +78,13 @@ selectedCurrency;
         self.inputCurrency.text = self.selectedCurrency.symbol.length ?
         self.selectedCurrency.symbol :
         self.selectedCurrency.name;
+    }
+
+    if (self.selectedWallet) {
+        self.walletName.text = self.selectedWallet.name;
+        if (self.selectedWallet.icon_path.length) {
+            self.walletImage.image = [UIImage imageNamed:self.selectedWallet.icon_path];
+        }
     }
 }
 

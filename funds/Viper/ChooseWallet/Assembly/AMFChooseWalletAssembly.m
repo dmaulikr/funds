@@ -36,6 +36,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterChooseWallet]];
+                              [definition injectProperty:@selector(storage)
+                                                    with:[_dataProvider storageHandler]];
                           }];
 }
 

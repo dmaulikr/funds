@@ -41,11 +41,8 @@
 
     if (!_wallet) { // find one
         _wallet = [defaults objectFromDataWithKey:kLastWallet];
-        if (!_wallet) { // create a new one
-            _wallet = [[AMFWalletPlain alloc] init];
-            _wallet.name = @"?";
-            [defaults persistObjAsData:_wallet forKey:kLastWallet];
-        }
+        if (!_wallet)
+            _wallet = [self currentWallet];
     }
 
     if (!_page) {
@@ -84,6 +81,20 @@
 
 - (void)withdrawalWallet:(id<AMFWalletProtocol>)wallet {
     _wwallet = wallet;
+}
+
+
+- (id<AMFWalletProtocol>)currentWallet {
+    if (!_wallet) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        _wallet = [defaults objectFromDataWithKey:kLastWallet];
+        if (!_wallet) { // create a new one
+            _wallet = [[AMFWalletPlain alloc] init];
+            _wallet.name = @"?";
+        }
+        [defaults persistObjAsData:_wallet forKey:kLastWallet];
+    }
+    return _wallet;
 }
 
 - (id<AMFCategoryProtocol>)currentCategory {

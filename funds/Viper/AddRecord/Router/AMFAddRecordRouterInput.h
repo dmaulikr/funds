@@ -11,6 +11,8 @@
 
 @protocol AMFCategoryProtocol;
 @protocol AMFChooseCategoryModuleOutput;
+@protocol AMFWalletProtocol;
+@protocol AMFChooseWalletModuleOutput;
 
 @protocol AMFAddRecordRouterInput <AMFAlertProtocol>
 
@@ -18,5 +20,9 @@
 
 - (void)showCategoryChooserWithCategorySelected:(id<AMFCategoryProtocol>)category
                                       andOutput:(id<AMFChooseCategoryModuleOutput>) output;
+
+
+- (void)showWalletChooserWithWalletSelected:(id<AMFWalletProtocol>)wallet
+                                  andOutput:(id<AMFChooseWalletModuleOutput>)output;
 
 @end
