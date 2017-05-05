@@ -52,6 +52,9 @@ static CGFloat const kImageWH = 32.0f;
         case UIGestureRecognizerStateBegan:
             self.panStartPoint = [recognizer translationInView:self.customContentView];
             self.startingRightLayoutConstraintConstant = self.contentViewRightConstraint.constant;
+
+            self.customButtonsView.hidden = NO;
+
             //NSLog(@"Pan Began at %@", NSStringFromCGPoint(self.panStartPoint));
             break;
         case UIGestureRecognizerStateChanged: {
