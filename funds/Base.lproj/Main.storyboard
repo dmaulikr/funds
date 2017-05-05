@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOM-lM-j1i">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOM-lM-j1i">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -309,6 +309,7 @@
                         <outlet property="walletImage" destination="m6c-Qa-aCp" id="Lxb-F0-hSs"/>
                         <outlet property="walletName" destination="zZj-r2-pdA" id="agl-Hx-BOp"/>
                         <segue destination="dzi-uG-73S" kind="show" identifier="chooseCategory" id="4rF-bc-6BD"/>
+                        <segue destination="p6A-48-TBa" kind="show" identifier="chooseWallet" id="6kX-Ia-KmQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2g-1D-nnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +433,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awZ-X0-679" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3720.8000000000002" y="-169.56521739130437"/>
+        </scene>
+        <!--Choose Wallet View Controller-->
+        <scene sceneID="WR3-q4-Y3L">
+            <objects>
+                <viewController id="p6A-48-TBa" customClass="AMFChooseWalletViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4pS-Gk-UDf"/>
+                        <viewControllerLayoutGuide type="bottom" id="yup-yO-Sye"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m9A-oz-W5L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAp-xw-HcJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="walletCell" textLabel="gmb-Bg-xXp" detailTextLabel="Csm-fw-rAQ" style="IBUITableViewCellStyleValue1" id="4uT-Gt-f0t">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4uT-Gt-f0t" id="CPA-4v-p2d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmb-Bg-xXp">
+                                                    <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Csm-fw-rAQ">
+                                                    <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5P9-re-tiw" id="j0H-iI-E2n"/>
+                                    <outlet property="delegate" destination="5P9-re-tiw" id="J4C-19-hAp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GAp-xw-HcJ" firstAttribute="top" secondItem="m9A-oz-W5L" secondAttribute="top" id="7eK-r1-eSP"/>
+                            <constraint firstAttribute="trailing" secondItem="GAp-xw-HcJ" secondAttribute="trailing" id="8pg-er-4MA"/>
+                            <constraint firstItem="GAp-xw-HcJ" firstAttribute="leading" secondItem="m9A-oz-W5L" secondAttribute="leading" id="W87-Qu-Ro3"/>
+                            <constraint firstAttribute="bottom" secondItem="GAp-xw-HcJ" secondAttribute="bottom" id="t2w-88-e4A"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MwP-EL-DQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3721" y="530"/>
         </scene>
         <!--Edit Category View Controller-->
         <scene sceneID="1r6-2L-xLn">

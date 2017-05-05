@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03E0DD72BD3367636C73AC20 /* AMFAddPageAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5803732FB284A24A63706 /* AMFAddPageAssemblyTests.m */; };
 		052B33E033227D020F154AD3 /* AMFAddPageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA7E682FD1FCEC287E36930 /* AMFAddPageViewControllerTests.m */; };
+		09BA4F07D94A53F905B399DA /* AMFChooseWalletRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E95FFDF98D35EA7107AFFD40 /* AMFChooseWalletRouterTests.m */; };
 		0A1FB2AC26F69CA4CAFA62D3 /* AMFPageChooserAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 471C3A901884450DAA859773 /* AMFPageChooserAssemblyTests.m */; };
 		0AE5592E2B72094B800891E1 /* libPods-funds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51BF1C95C6D79DB02F11704 /* libPods-funds.a */; };
 		0BAF9A333F3614DDE6DD81DA /* AMFWalletViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */; };
@@ -70,6 +71,11 @@
 		4C95E5911EB861D500EBE5C9 /* AMFEditCategoryRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E58F1EB861D500EBE5C9 /* AMFEditCategoryRouter.m */; };
 		4C95E5981EB893B600EBE5C9 /* AMFSwipeableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5971EB893B600EBE5C9 /* AMFSwipeableCell.m */; };
 		4C95E59D1EBB56D600EBE5C9 /* AMFPageChooserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E59C1EBB56D600EBE5C9 /* AMFPageChooserCell.m */; };
+		4C95E5A21EBC568100EBE5C9 /* AMFChooseWalletAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5A11EBC568100EBE5C9 /* AMFChooseWalletAssembly.m */; };
+		4C95E5A71EBC568A00EBE5C9 /* AMFChooseWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5A41EBC568A00EBE5C9 /* AMFChooseWalletViewController.m */; };
+		4C95E5AB1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5AA1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m */; };
+		4C95E5B01EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5AD1EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m */; };
+		4C95E5B91EBC56B400EBE5C9 /* AMFChooseWalletRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5B71EBC56B400EBE5C9 /* AMFChooseWalletRouter.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -118,6 +124,7 @@
 		5AEAB5CF9B7EE971CC73651B /* AMFPageChooserRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B32D3BAE2EED8FD41C62E17 /* AMFPageChooserRouterTests.m */; };
 		65360BCB2CB6683E73ABB1B5 /* libPods-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */; };
 		65731FE78B4A814EFB7DC054 /* AMFPageChooserViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBA4D486FA70765D2DB70D7 /* AMFPageChooserViewControllerTests.m */; };
+		6EBD9D3056934628A69F01E6 /* AMFChooseWalletPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B13442A5356F2C0AB2052341 /* AMFChooseWalletPresenterTests.m */; };
 		71EAD43B8328713B975A2023 /* AMFFlowRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4A9895A549DF0C5796B3A /* AMFFlowRouterTests.m */; };
 		7361B9C6E890C7746AA6C2EC /* AMFAddRecordPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0E3A60D2518FCB944F64D /* AMFAddRecordPresenterTests.m */; };
 		7ACE4948754C3D9CA5CA6D92 /* AMFFlowAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F4CD3B7673FBCBDE1EBE90 /* AMFFlowAssemblyTests.m */; };
@@ -130,6 +137,7 @@
 		9FB0E5E36CCDD67F1BA82825 /* AMFWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */; };
 		A70B9CDF5731AFBF37A9AD90 /* AMFWalletInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */; };
 		AB20C6A3A18269E42CFD529F /* AMFBalanceInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C498335635EED9650F365E /* AMFBalanceInteractorTests.m */; };
+		B2180246D803D3966E3770DD /* AMFChooseWalletViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D1A1880EB37FD00F086A2 /* AMFChooseWalletViewControllerTests.m */; };
 		B28EF746BE1CDF645FB2F9D0 /* AMFFlowViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35998CE25D285D7C9B73912C /* AMFFlowViewControllerTests.m */; };
 		B9EB0CEFAB16BF628B02618E /* AMFEditCategoryViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2275B812F551DC2463A0B6C /* AMFEditCategoryViewControllerTests.m */; };
 		BA5F30E35D3047E8953E44DD /* AMFAddPagePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F914590D001A07FD923E7E /* AMFAddPagePresenterTests.m */; };
@@ -137,9 +145,11 @@
 		C622E005D0F7EC16DC0AEB20 /* AMFAddRecordAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C546F2AB23F28DCB31E78C /* AMFAddRecordAssemblyTests.m */; };
 		CB53BC3311DB3251A3CC1FE8 /* AMFWalletPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */; };
 		CE2D7E6E4C1CB94E13B17CA9 /* AMFBalanceAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 008441584AEAA0D5BE9C24ED /* AMFBalanceAssemblyTests.m */; };
+		D2E98BBE3755B291E92140E3 /* AMFChooseWalletInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 166437C56DE3C6BBE88FA91F /* AMFChooseWalletInteractorTests.m */; };
 		DC0EA69F673FD43732C8B16C /* AMFAddPageInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CB71E4E1FAA63FCBB20205 /* AMFAddPageInteractorTests.m */; };
 		DF6074C0FB7E37156C59814B /* AMFBalancePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F988B8F329D204CF5998903 /* AMFBalancePresenterTests.m */; };
 		E0157B228E7D9D6710E5C470 /* AMFAddRecordInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B92D91503280BBD678B660 /* AMFAddRecordInteractorTests.m */; };
+		E548D8564C151435FFE1F865 /* AMFChooseWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E3F8AE853621926083B3B2 /* AMFChooseWalletAssemblyTests.m */; };
 		EC4EEF325FDA1FD20AA0E888 /* AMFChooseCategoryRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D92F7164D9A4353F3EDD95 /* AMFChooseCategoryRouterTests.m */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +167,7 @@
 		008441584AEAA0D5BE9C24ED /* AMFBalanceAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceAssemblyTests.m; sourceTree = "<group>"; };
 		02B1A067BA644F956F99A55D /* AMFPageChooserAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFPageChooserAssembly_Testable.h; sourceTree = "<group>"; };
 		06245CFEF399F73327DD8492 /* AMFAddPageRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPageRouterTests.m; sourceTree = "<group>"; };
+		166437C56DE3C6BBE88FA91F /* AMFChooseWalletInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseWalletInteractorTests.m; sourceTree = "<group>"; };
 		1E0B6B7CE9B1B69AFD349563 /* AMFPageChooserInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFPageChooserInteractorTests.m; sourceTree = "<group>"; };
 		29089B491EF2837AD5616F08 /* AMFBalanceRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceRouterTests.m; sourceTree = "<group>"; };
 		34F55867F6D5C928118C4769 /* AMFChooseCategoryViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseCategoryViewControllerTests.m; sourceTree = "<group>"; };
@@ -302,6 +313,22 @@
 		4C95E5991EB89E7C00EBE5C9 /* AMFEditCategoryModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFEditCategoryModuleOutput.h; path = funds/Viper/EditCategory/Presenter/AMFEditCategoryModuleOutput.h; sourceTree = SOURCE_ROOT; };
 		4C95E59B1EBB56D600EBE5C9 /* AMFPageChooserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFPageChooserCell.h; path = funds/Viper/PageChooser/View/cells/AMFPageChooserCell.h; sourceTree = SOURCE_ROOT; };
 		4C95E59C1EBB56D600EBE5C9 /* AMFPageChooserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFPageChooserCell.m; path = funds/Viper/PageChooser/View/cells/AMFPageChooserCell.m; sourceTree = SOURCE_ROOT; };
+		4C95E5A01EBC568100EBE5C9 /* AMFChooseWalletAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletAssembly.h; path = funds/Viper/ChooseWallet/Assembly/AMFChooseWalletAssembly.h; sourceTree = SOURCE_ROOT; };
+		4C95E5A11EBC568100EBE5C9 /* AMFChooseWalletAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletAssembly.m; path = funds/Viper/ChooseWallet/Assembly/AMFChooseWalletAssembly.m; sourceTree = SOURCE_ROOT; };
+		4C95E5A31EBC568A00EBE5C9 /* AMFChooseWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletViewController.h; path = funds/Viper/ChooseWallet/View/AMFChooseWalletViewController.h; sourceTree = SOURCE_ROOT; };
+		4C95E5A41EBC568A00EBE5C9 /* AMFChooseWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletViewController.m; path = funds/Viper/ChooseWallet/View/AMFChooseWalletViewController.m; sourceTree = SOURCE_ROOT; };
+		4C95E5A51EBC568A00EBE5C9 /* AMFChooseWalletViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletViewInput.h; path = funds/Viper/ChooseWallet/View/AMFChooseWalletViewInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5A61EBC568A00EBE5C9 /* AMFChooseWalletViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletViewOutput.h; path = funds/Viper/ChooseWallet/View/AMFChooseWalletViewOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5A81EBC569400EBE5C9 /* AMFChooseWalletModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletModuleInput.h; path = funds/Viper/ChooseWallet/Presenter/AMFChooseWalletModuleInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5A91EBC569400EBE5C9 /* AMFChooseWalletPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletPresenter.h; path = funds/Viper/ChooseWallet/Presenter/AMFChooseWalletPresenter.h; sourceTree = SOURCE_ROOT; };
+		4C95E5AA1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletPresenter.m; path = funds/Viper/ChooseWallet/Presenter/AMFChooseWalletPresenter.m; sourceTree = SOURCE_ROOT; };
+		4C95E5AC1EBC569F00EBE5C9 /* AMFChooseWalletInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletInteractor.h; path = funds/Viper/ChooseWallet/Interactor/AMFChooseWalletInteractor.h; sourceTree = SOURCE_ROOT; };
+		4C95E5AD1EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletInteractor.m; path = funds/Viper/ChooseWallet/Interactor/AMFChooseWalletInteractor.m; sourceTree = SOURCE_ROOT; };
+		4C95E5AE1EBC569F00EBE5C9 /* AMFChooseWalletInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletInteractorInput.h; path = funds/Viper/ChooseWallet/Interactor/AMFChooseWalletInteractorInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5AF1EBC569F00EBE5C9 /* AMFChooseWalletInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletInteractorOutput.h; path = funds/Viper/ChooseWallet/Interactor/AMFChooseWalletInteractorOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5B61EBC56B400EBE5C9 /* AMFChooseWalletRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletRouter.h; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouter.h; sourceTree = SOURCE_ROOT; };
+		4C95E5B71EBC56B400EBE5C9 /* AMFChooseWalletRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletRouter.m; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouter.m; sourceTree = SOURCE_ROOT; };
+		4C95E5B81EBC56B400EBE5C9 /* AMFChooseWalletRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletRouterInput.h; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -417,6 +444,7 @@
 		5887DE5EFC568694A4B4C920 /* AMFPageChooserPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFPageChooserPresenterTests.m; sourceTree = "<group>"; };
 		5C6842F5427FA91A7D60D6E7 /* AMFFlowAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFFlowAssembly_Testable.h; sourceTree = "<group>"; };
 		5FF2E2503CAE6521B3DA5052 /* AMFBalanceViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceViewControllerTests.m; sourceTree = "<group>"; };
+		60E3F8AE853621926083B3B2 /* AMFChooseWalletAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseWalletAssemblyTests.m; sourceTree = "<group>"; };
 		62F4CD3B7673FBCBDE1EBE90 /* AMFFlowAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFFlowAssemblyTests.m; sourceTree = "<group>"; };
 		651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fundsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6774CCB5E3F6273E167B15C6 /* AMFBalanceAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFBalanceAssembly_Testable.h; sourceTree = "<group>"; };
@@ -432,7 +460,10 @@
 		97EBC3F245452D0F5C38E818 /* AMFEditCategoryAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryAssemblyTests.m; sourceTree = "<group>"; };
 		A0750F4BE648FA527D861588 /* Pods-funds-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA5F4FA6CEDBD310FDEA7B46 /* Pods-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC54F154849E775185B9F9C6 /* AMFChooseWalletAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFChooseWalletAssembly_Testable.h; sourceTree = "<group>"; };
+		AF4D1A1880EB37FD00F086A2 /* AMFChooseWalletViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseWalletViewControllerTests.m; sourceTree = "<group>"; };
 		AF526FCE257AB74976A18AD0 /* AMFEditCategoryInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryInteractorTests.m; sourceTree = "<group>"; };
+		B13442A5356F2C0AB2052341 /* AMFChooseWalletPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseWalletPresenterTests.m; sourceTree = "<group>"; };
 		B2275B812F551DC2463A0B6C /* AMFEditCategoryViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryViewControllerTests.m; sourceTree = "<group>"; };
 		BF709D4767CCFEAEC965A9D8 /* AMFAddRecordRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddRecordRouterTests.m; sourceTree = "<group>"; };
 		C3C546F2AB23F28DCB31E78C /* AMFAddRecordAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddRecordAssemblyTests.m; sourceTree = "<group>"; };
@@ -443,6 +474,7 @@
 		DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletRouterTests.m; sourceTree = "<group>"; };
 		E4D41E43EFFE52B0B2CCF843 /* AMFEditCategoryPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryPresenterTests.m; sourceTree = "<group>"; };
 		E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletViewControllerTests.m; sourceTree = "<group>"; };
+		E95FFDF98D35EA7107AFFD40 /* AMFChooseWalletRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseWalletRouterTests.m; sourceTree = "<group>"; };
 		EB18BF1F10283EE5E3EE9C11 /* AMFAddPageAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFAddPageAssembly_Testable.h; sourceTree = "<group>"; };
 		ECB71916FF87A012D0090D81 /* Pods-funds-fundsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds-fundsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funds-fundsTests/Pods-funds-fundsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0F100817551440B172BCF0D /* AMFWalletAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFWalletAssembly_Testable.h; sourceTree = "<group>"; };
@@ -882,6 +914,7 @@
 				62E75095A45B6315C82FC54D /* AddPage */,
 				53DD60225AD1354103F180F2 /* ChooseCategory */,
 				AD625963F420D25E480593A1 /* EditCategory */,
+				9C8C79DBBDC4FCA5216BF4A1 /* ChooseWallet */,
 			);
 			path = fundsTests;
 			sourceTree = "<group>";
@@ -937,6 +970,7 @@
 				2DA5F2EE794EC9C2550C6957 /* AddRecord */,
 				485F507A128A83973957E73E /* ChooseCategory */,
 				E1D405ED07CA2EC03B70D3C2 /* EditCategory */,
+				5DA4006BE731EB613C8F0B48 /* ChooseWallet */,
 			);
 			name = Viper;
 			sourceTree = "<group>";
@@ -1285,6 +1319,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5D29F6493E2D29B2F7EFDE70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5AE1EBC569F00EBE5C9 /* AMFChooseWalletInteractorInput.h */,
+				4C95E5AC1EBC569F00EBE5C9 /* AMFChooseWalletInteractor.h */,
+				4C95E5AD1EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m */,
+				4C95E5AF1EBC569F00EBE5C9 /* AMFChooseWalletInteractorOutput.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		5D32CB76C2AB695433D34728 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -1292,6 +1337,18 @@
 				5C6842F5427FA91A7D60D6E7 /* AMFFlowAssembly_Testable.h */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		5DA4006BE731EB613C8F0B48 /* ChooseWallet */ = {
+			isa = PBXGroup;
+			children = (
+				FED3D73F082929DA27AD5DFD /* Assembly */,
+				AC4F551451A58A7AF15FE412 /* View */,
+				7297A0B898D21DE6F6AD08D8 /* Presenter */,
+				5D29F6493E2D29B2F7EFDE70 /* Interactor */,
+				EDCFD9A410703249FEDC2AC7 /* Router */,
+			);
+			path = ChooseWallet;
 			sourceTree = "<group>";
 		};
 		5E1D0A55B9185D18BB2C0EE4 /* Assembly */ = {
@@ -1393,6 +1450,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		7297A0B898D21DE6F6AD08D8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5A81EBC569400EBE5C9 /* AMFChooseWalletModuleInput.h */,
+				4C95E5A91EBC569400EBE5C9 /* AMFChooseWalletPresenter.h */,
+				4C95E5AA1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		732C47818A1443F248C08769 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1446,6 +1513,14 @@
 				5887DE5EFC568694A4B4C920 /* AMFPageChooserPresenterTests.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7DB10C0F9D7649613A8B2968 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D1A1880EB37FD00F086A2 /* AMFChooseWalletViewControllerTests.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7DEAD46E5A3978DE91FB303B /* View */ = {
@@ -1536,6 +1611,15 @@
 			path = PageChooser;
 			sourceTree = "<group>";
 		};
+		95A5C17361CF172706EC8E11 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				60E3F8AE853621926083B3B2 /* AMFChooseWalletAssemblyTests.m */,
+				AC54F154849E775185B9F9C6 /* AMFChooseWalletAssembly_Testable.h */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		9825D461C3055D11F7A924A5 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1552,6 +1636,18 @@
 				D5CB71E4E1FAA63FCBB20205 /* AMFAddPageInteractorTests.m */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9C8C79DBBDC4FCA5216BF4A1 /* ChooseWallet */ = {
+			isa = PBXGroup;
+			children = (
+				95A5C17361CF172706EC8E11 /* Assembly */,
+				7DB10C0F9D7649613A8B2968 /* View */,
+				B8305DF6D6EFD2C9BBFE3D13 /* Presenter */,
+				B204402B3CF0D188A42355C9 /* Interactor */,
+				E8FA170A5E2F7447FBFE4077 /* Router */,
+			);
+			path = ChooseWallet;
 			sourceTree = "<group>";
 		};
 		9DC6A83674F889B74B1D91A2 /* Interactor */ = {
@@ -1611,6 +1707,17 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		AC4F551451A58A7AF15FE412 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5A51EBC568A00EBE5C9 /* AMFChooseWalletViewInput.h */,
+				4C95E5A31EBC568A00EBE5C9 /* AMFChooseWalletViewController.h */,
+				4C95E5A41EBC568A00EBE5C9 /* AMFChooseWalletViewController.m */,
+				4C95E5A61EBC568A00EBE5C9 /* AMFChooseWalletViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AD625963F420D25E480593A1 /* EditCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -1632,6 +1739,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		B204402B3CF0D188A42355C9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				166437C56DE3C6BBE88FA91F /* AMFChooseWalletInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		B3D83662EF35263CEF262B2C /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1647,6 +1762,14 @@
 				4C53ECA01E70902700725AF8 /* AMFBalanceAssembly.m */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B8305DF6D6EFD2C9BBFE3D13 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B13442A5356F2C0AB2052341 /* AMFChooseWalletPresenterTests.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B88A9B52A3D6FED6B629C1E8 /* Assembly */ = {
@@ -1730,6 +1853,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		E8FA170A5E2F7447FBFE4077 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E95FFDF98D35EA7107AFFD40 /* AMFChooseWalletRouterTests.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		E9C19009E8CB4E667201FA5C /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -1745,6 +1876,16 @@
 				6BA7E682FD1FCEC287E36930 /* AMFAddPageViewControllerTests.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EDCFD9A410703249FEDC2AC7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5B81EBC56B400EBE5C9 /* AMFChooseWalletRouterInput.h */,
+				4C95E5B61EBC56B400EBE5C9 /* AMFChooseWalletRouter.h */,
+				4C95E5B71EBC56B400EBE5C9 /* AMFChooseWalletRouter.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F2C273048A544BDE50368286 /* PageChooser */ = {
@@ -1793,6 +1934,15 @@
 				4CE158F81E727FFF0009BAF4 /* AMFFlowPresenter.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FED3D73F082929DA27AD5DFD /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5A01EBC568100EBE5C9 /* AMFChooseWalletAssembly.h */,
+				4C95E5A11EBC568100EBE5C9 /* AMFChooseWalletAssembly.m */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2006,6 +2156,7 @@
 				4C046FC21E73CEDC001E73A6 /* AMFPageChooserPresenter.m in Sources */,
 				4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */,
 				4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */,
+				4C95E5AB1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m in Sources */,
 				4CE158DD1E71B8590009BAF4 /* AMFBudgetCSVReader.m in Sources */,
 				4CE158E31E71C4C70009BAF4 /* AMFCashPlain.m in Sources */,
 				4C95E5981EB893B600EBE5C9 /* AMFSwipeableCell.m in Sources */,
@@ -2056,19 +2207,23 @@
 				4CE158F21E727F8F0009BAF4 /* AMFFlowModuleAssembly.m in Sources */,
 				4C53EC211E6DC7B400725AF8 /* funds.xcdatamodeld in Sources */,
 				4C53EC8D1E708BFB00725AF8 /* AMFWalletAssembly.m in Sources */,
+				4C95E5B01EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m in Sources */,
 				4CE158E91E71C53B0009BAF4 /* AMFWalletPlain.m in Sources */,
 				4CFD9C9C1EB0E19B00825F6E /* AMFChooseCategoryViewController.m in Sources */,
 				4CE158CC1E716BC90009BAF4 /* AMFPage+CoreDataProperties.m in Sources */,
+				4C95E5A21EBC568100EBE5C9 /* AMFChooseWalletAssembly.m in Sources */,
 				4C95E57F1EB8619F00EBE5C9 /* AMFEditCategoryAssembly.m in Sources */,
 				4CFD9C971EB0E18E00825F6E /* AMFChooseCategoryAssembly.m in Sources */,
 				4CE158E61E71C5100009BAF4 /* AMFCategoryPlain.m in Sources */,
 				4CE158C01E716BA20009BAF4 /* AMFCurrency+CoreDataProperties.m in Sources */,
+				4C95E5B91EBC56B400EBE5C9 /* AMFChooseWalletRouter.m in Sources */,
 				4C2758EF1E7AF4A20010C011 /* AMFAddRecordAssembly.m in Sources */,
 				4CE158BF1E716BA20009BAF4 /* AMFCurrency+CoreDataClass.m in Sources */,
 				4C53EC411E6EFA2100725AF8 /* ApplicationAssembly.m in Sources */,
 				4CE158D61E718B390009BAF4 /* AMFSQLCoreDataHandler.m in Sources */,
 				4C1E694C1E79B0CD004A3B4D /* NSManagedObject+generateID.m in Sources */,
 				4C53EC151E6DC7B400725AF8 /* main.m in Sources */,
+				4C95E5A71EBC568A00EBE5C9 /* AMFChooseWalletViewController.m in Sources */,
 				4CE159081E7299610009BAF4 /* AMFFlowCell.m in Sources */,
 				4C046FB91E73CEA5001E73A6 /* AMFPageChooserAssembly.m in Sources */,
 				4CE159101E72FC790009BAF4 /* AMFReaderFromCSV.m in Sources */,
@@ -2133,6 +2288,11 @@
 				19D4932AD60F2C2C6DEF79CF /* AMFEditCategoryPresenterTests.m in Sources */,
 				22BF38B53C1DB4EE03757361 /* AMFEditCategoryInteractorTests.m in Sources */,
 				3D02C8011093C750F1999E76 /* AMFEditCategoryRouterTests.m in Sources */,
+				E548D8564C151435FFE1F865 /* AMFChooseWalletAssemblyTests.m in Sources */,
+				B2180246D803D3966E3770DD /* AMFChooseWalletViewControllerTests.m in Sources */,
+				6EBD9D3056934628A69F01E6 /* AMFChooseWalletPresenterTests.m in Sources */,
+				D2E98BBE3755B291E92140E3 /* AMFChooseWalletInteractorTests.m in Sources */,
+				09BA4F07D94A53F905B399DA /* AMFChooseWalletRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
