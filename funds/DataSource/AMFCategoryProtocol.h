@@ -10,5 +10,6 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *icon_path;
+@property (nonatomic, assign) double amount;
 
 @end

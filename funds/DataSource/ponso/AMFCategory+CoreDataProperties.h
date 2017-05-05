@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSUInteger cat_id;
 @property (nullable, nonatomic, copy) NSString *icon_path;
 @property (nullable, nonatomic, copy) NSString *name;
+@property (nonatomic, assign) double amount;
 @property (nullable, nonatomic, retain) NSSet<AMFCashFlow *> *cash;
 
 @end

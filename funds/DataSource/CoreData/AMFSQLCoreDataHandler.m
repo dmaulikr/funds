@@ -74,9 +74,10 @@
     if (cash) {
         if (cash.wallet) {
             // restore amount of the wallet
-            NSLog(@"wallet: %@", cash.wallet);
             cash.wallet.amount += -(cash.amount);
-            NSLog(@"wallet after: %@ amount: %g", cash.wallet, cash.amount);
+        }
+        if (cash.category) {
+            cash.category.amount += -(cash.amount);
         }
         [cash MR_deleteEntity];
     }

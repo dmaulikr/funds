@@ -8,6 +8,7 @@
 //
 
 #import "AMFCategory+CoreDataProperties.h"
+#import "AMFCashFlow+CoreDataProperties.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "NSManagedObject+generateID.h"
 #import "AMFgenerateID.h"
@@ -18,9 +19,10 @@ static NSString *const kIcon = @"icon";
 @implementation AMFCategory (CoreDataProperties)
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"AMFCategory name: %@, icon_path: %@",
+    return [NSString stringWithFormat:@"AMFCategory name: %@, icon_path: %@, amount: %g",
             self.name,
-            self.icon_path];
+            self.icon_path,
+            self.amount];
 }
 
 + (NSFetchRequest<AMFCategory *> *)fetchRequest {
@@ -42,6 +44,7 @@ static NSString *const kIcon = @"icon";
                                   inContext:con]];
         }
         c.cat_id = [_gen generateID];
+        c.amount = 0;
     }
     [c updateWith:category andCash:cash];
     return c;
@@ -51,10 +54,12 @@ static NSString *const kIcon = @"icon";
 @dynamic icon_path;
 @dynamic name;
 @dynamic cash;
+@dynamic amount;
 
 - (void)updateWith:(id<AMFCategoryProtocol>)category andCash:(AMFCashFlow*)cash {
     self.name = category.name;
     self.icon_path = category.icon_path;
+    self.amount += cash.amount;
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];
 }
