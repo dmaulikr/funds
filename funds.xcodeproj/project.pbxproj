@@ -14,6 +14,7 @@
 		0AE5592E2B72094B800891E1 /* libPods-funds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51BF1C95C6D79DB02F11704 /* libPods-funds.a */; };
 		0BAF9A333F3614DDE6DD81DA /* AMFWalletViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */; };
 		13CA6DC27DDED31453915E65 /* AMFAddRecordRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF709D4767CCFEAEC965A9D8 /* AMFAddRecordRouterTests.m */; };
+		18529E20B55332F1343448D6 /* AMFNameIconSetterInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADCA8D97D076E5DB23DB6A /* AMFNameIconSetterInteractorTests.m */; };
 		19D4932AD60F2C2C6DEF79CF /* AMFEditCategoryPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D41E43EFFE52B0B2CCF843 /* AMFEditCategoryPresenterTests.m */; };
 		1D28856CA868659AE35AC258 /* AMFBalanceViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2E2503CAE6521B3DA5052 /* AMFBalanceViewControllerTests.m */; };
 		1E9753CF972B0F1A1932B8D7 /* AMFAddRecordViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F718FC446225A3D50CC16 /* AMFAddRecordViewControllerTests.m */; };
@@ -21,6 +22,7 @@
 		2C07B9AE4E8EA27DCD2DF0AE /* AMFPageChooserInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B6B7CE9B1B69AFD349563 /* AMFPageChooserInteractorTests.m */; };
 		3D02C8011093C750F1999E76 /* AMFEditCategoryRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BA18D3288CD009F0DB2C84 /* AMFEditCategoryRouterTests.m */; };
 		3DB5496F2EF81C63E2D4F3C5 /* AMFFlowInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE43B30512ACF84EF1C8DB8 /* AMFFlowInteractorTests.m */; };
+		4487D9AB16BE781B4EB90CA0 /* AMFNameIconSetterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AD63816CEAD809459E808D /* AMFNameIconSetterViewControllerTests.m */; };
 		49458A9C89DE1BDAB07C9920 /* AMFChooseCategoryPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2C244FBE87332758EFB984 /* AMFChooseCategoryPresenterTests.m */; };
 		4C046FAB1E73C37C001E73A6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C046FA91E73C37C001E73A6 /* Localizable.strings */; };
 		4C046FB91E73CEA5001E73A6 /* AMFPageChooserAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C046FB71E73CEA5001E73A6 /* AMFPageChooserAssembly.m */; };
@@ -76,6 +78,11 @@
 		4C95E5AB1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5AA1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m */; };
 		4C95E5B01EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5AD1EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m */; };
 		4C95E5B91EBC56B400EBE5C9 /* AMFChooseWalletRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5B71EBC56B400EBE5C9 /* AMFChooseWalletRouter.m */; };
+		4C95E5D21EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5D11EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.m */; };
+		4C95E5D71EBCABA800EBE5C9 /* AMFNameIconSetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5D41EBCABA800EBE5C9 /* AMFNameIconSetterViewController.m */; };
+		4C95E5DB1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5DA1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m */; };
+		4C95E5E01EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5DD1EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m */; };
+		4C95E5E41EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5E21EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -124,6 +131,7 @@
 		5AEAB5CF9B7EE971CC73651B /* AMFPageChooserRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B32D3BAE2EED8FD41C62E17 /* AMFPageChooserRouterTests.m */; };
 		65360BCB2CB6683E73ABB1B5 /* libPods-fundsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 651AD28E37C586B5897ACA75 /* libPods-fundsTests.a */; };
 		65731FE78B4A814EFB7DC054 /* AMFPageChooserViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBA4D486FA70765D2DB70D7 /* AMFPageChooserViewControllerTests.m */; };
+		6D9C8057E7B7216C1FD0205A /* AMFNameIconSetterAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12255B6945AAAD8AFB9CDEC4 /* AMFNameIconSetterAssemblyTests.m */; };
 		6EBD9D3056934628A69F01E6 /* AMFChooseWalletPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B13442A5356F2C0AB2052341 /* AMFChooseWalletPresenterTests.m */; };
 		71EAD43B8328713B975A2023 /* AMFFlowRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4A9895A549DF0C5796B3A /* AMFFlowRouterTests.m */; };
 		7361B9C6E890C7746AA6C2EC /* AMFAddRecordPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0E3A60D2518FCB944F64D /* AMFAddRecordPresenterTests.m */; };
@@ -137,6 +145,7 @@
 		9FB0E5E36CCDD67F1BA82825 /* AMFWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3596188E8037A4F1EF66BAED /* AMFWalletAssemblyTests.m */; };
 		A70B9CDF5731AFBF37A9AD90 /* AMFWalletInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D55D38C6EE88D761EE5012 /* AMFWalletInteractorTests.m */; };
 		AB20C6A3A18269E42CFD529F /* AMFBalanceInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C498335635EED9650F365E /* AMFBalanceInteractorTests.m */; };
+		AF5E21D622442A33C2669B6F /* AMFNameIconSetterRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02786098D42991E017EDA8AB /* AMFNameIconSetterRouterTests.m */; };
 		B2180246D803D3966E3770DD /* AMFChooseWalletViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D1A1880EB37FD00F086A2 /* AMFChooseWalletViewControllerTests.m */; };
 		B28EF746BE1CDF645FB2F9D0 /* AMFFlowViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35998CE25D285D7C9B73912C /* AMFFlowViewControllerTests.m */; };
 		B9EB0CEFAB16BF628B02618E /* AMFEditCategoryViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2275B812F551DC2463A0B6C /* AMFEditCategoryViewControllerTests.m */; };
@@ -149,6 +158,7 @@
 		DC0EA69F673FD43732C8B16C /* AMFAddPageInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CB71E4E1FAA63FCBB20205 /* AMFAddPageInteractorTests.m */; };
 		DF6074C0FB7E37156C59814B /* AMFBalancePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F988B8F329D204CF5998903 /* AMFBalancePresenterTests.m */; };
 		E0157B228E7D9D6710E5C470 /* AMFAddRecordInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B92D91503280BBD678B660 /* AMFAddRecordInteractorTests.m */; };
+		E282756908DD5FEF1720CB57 /* AMFNameIconSetterPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3EF32FF4B10F86A0061A7F /* AMFNameIconSetterPresenterTests.m */; };
 		E548D8564C151435FFE1F865 /* AMFChooseWalletAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E3F8AE853621926083B3B2 /* AMFChooseWalletAssemblyTests.m */; };
 		EC4EEF325FDA1FD20AA0E888 /* AMFChooseCategoryRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D92F7164D9A4353F3EDD95 /* AMFChooseCategoryRouterTests.m */; };
 /* End PBXBuildFile section */
@@ -165,8 +175,11 @@
 
 /* Begin PBXFileReference section */
 		008441584AEAA0D5BE9C24ED /* AMFBalanceAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceAssemblyTests.m; sourceTree = "<group>"; };
+		02786098D42991E017EDA8AB /* AMFNameIconSetterRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFNameIconSetterRouterTests.m; sourceTree = "<group>"; };
 		02B1A067BA644F956F99A55D /* AMFPageChooserAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFPageChooserAssembly_Testable.h; sourceTree = "<group>"; };
 		06245CFEF399F73327DD8492 /* AMFAddPageRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPageRouterTests.m; sourceTree = "<group>"; };
+		09ADCA8D97D076E5DB23DB6A /* AMFNameIconSetterInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFNameIconSetterInteractorTests.m; sourceTree = "<group>"; };
+		12255B6945AAAD8AFB9CDEC4 /* AMFNameIconSetterAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFNameIconSetterAssemblyTests.m; sourceTree = "<group>"; };
 		166437C56DE3C6BBE88FA91F /* AMFChooseWalletInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseWalletInteractorTests.m; sourceTree = "<group>"; };
 		1E0B6B7CE9B1B69AFD349563 /* AMFPageChooserInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFPageChooserInteractorTests.m; sourceTree = "<group>"; };
 		29089B491EF2837AD5616F08 /* AMFBalanceRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceRouterTests.m; sourceTree = "<group>"; };
@@ -330,6 +343,22 @@
 		4C95E5B71EBC56B400EBE5C9 /* AMFChooseWalletRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseWalletRouter.m; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouter.m; sourceTree = SOURCE_ROOT; };
 		4C95E5B81EBC56B400EBE5C9 /* AMFChooseWalletRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletRouterInput.h; path = funds/Viper/ChooseWallet/Router/AMFChooseWalletRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C95E5BA1EBC635A00EBE5C9 /* AMFChooseWalletModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFChooseWalletModuleOutput.h; path = funds/Viper/ChooseWallet/Presenter/AMFChooseWalletModuleOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5D01EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterAssembly.h; path = funds/Viper/NameIconSetter/Assembly/AMFNameIconSetterAssembly.h; sourceTree = SOURCE_ROOT; };
+		4C95E5D11EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFNameIconSetterAssembly.m; path = funds/Viper/NameIconSetter/Assembly/AMFNameIconSetterAssembly.m; sourceTree = SOURCE_ROOT; };
+		4C95E5D31EBCABA800EBE5C9 /* AMFNameIconSetterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterViewController.h; path = funds/Viper/NameIconSetter/View/AMFNameIconSetterViewController.h; sourceTree = SOURCE_ROOT; };
+		4C95E5D41EBCABA800EBE5C9 /* AMFNameIconSetterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFNameIconSetterViewController.m; path = funds/Viper/NameIconSetter/View/AMFNameIconSetterViewController.m; sourceTree = SOURCE_ROOT; };
+		4C95E5D51EBCABA800EBE5C9 /* AMFNameIconSetterViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterViewInput.h; path = funds/Viper/NameIconSetter/View/AMFNameIconSetterViewInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5D61EBCABA800EBE5C9 /* AMFNameIconSetterViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterViewOutput.h; path = funds/Viper/NameIconSetter/View/AMFNameIconSetterViewOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5D81EBCABB400EBE5C9 /* AMFNameIconSetterModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterModuleInput.h; path = funds/Viper/NameIconSetter/Presenter/AMFNameIconSetterModuleInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5D91EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterPresenter.h; path = funds/Viper/NameIconSetter/Presenter/AMFNameIconSetterPresenter.h; sourceTree = SOURCE_ROOT; };
+		4C95E5DA1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFNameIconSetterPresenter.m; path = funds/Viper/NameIconSetter/Presenter/AMFNameIconSetterPresenter.m; sourceTree = SOURCE_ROOT; };
+		4C95E5DC1EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterInteractor.h; path = funds/Viper/NameIconSetter/Interactor/AMFNameIconSetterInteractor.h; sourceTree = SOURCE_ROOT; };
+		4C95E5DD1EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFNameIconSetterInteractor.m; path = funds/Viper/NameIconSetter/Interactor/AMFNameIconSetterInteractor.m; sourceTree = SOURCE_ROOT; };
+		4C95E5DE1EBCABC300EBE5C9 /* AMFNameIconSetterInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterInteractorInput.h; path = funds/Viper/NameIconSetter/Interactor/AMFNameIconSetterInteractorInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5DF1EBCABC300EBE5C9 /* AMFNameIconSetterInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterInteractorOutput.h; path = funds/Viper/NameIconSetter/Interactor/AMFNameIconSetterInteractorOutput.h; sourceTree = SOURCE_ROOT; };
+		4C95E5E11EBCABD000EBE5C9 /* AMFNameIconSetterRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterRouter.h; path = funds/Viper/NameIconSetter/Router/AMFNameIconSetterRouter.h; sourceTree = SOURCE_ROOT; };
+		4C95E5E21EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFNameIconSetterRouter.m; path = funds/Viper/NameIconSetter/Router/AMFNameIconSetterRouter.m; sourceTree = SOURCE_ROOT; };
+		4C95E5E31EBCABD000EBE5C9 /* AMFNameIconSetterRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterRouterInput.h; path = funds/Viper/NameIconSetter/Router/AMFNameIconSetterRouterInput.h; sourceTree = SOURCE_ROOT; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -356,6 +385,7 @@
 		4C95F86C1E82CA2C00D3491A /* AMFCommonRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFCommonRouter.m; path = Viper/Common/AMFCommonRouter.m; sourceTree = "<group>"; };
 		4C95F86E1E82D2F000D3491A /* AMFAlertProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFAlertProtocol.h; path = Alerts/AMFAlertProtocol.h; sourceTree = "<group>"; };
 		4CAAF2FC7C1B476F0E36F2DF /* Pods-fundsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fundsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fundsTests/Pods-fundsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CBD8DF31EBE513500B8C679 /* AMFNameIconSetterModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterModuleOutput.h; path = funds/Viper/NameIconSetter/Presenter/AMFNameIconSetterModuleOutput.h; sourceTree = SOURCE_ROOT; };
 		4CE1587F1E7134630009BAF4 /* AMFStorageHandlerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMFStorageHandlerProtocol.h; path = DataSource/AMFStorageHandlerProtocol.h; sourceTree = "<group>"; };
 		4CE158841E7137970009BAF4 /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
 		4CE158AF1E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AMFCashFlow+CoreDataClass.h"; path = "DataSource/ponso/AMFCashFlow+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -455,6 +485,7 @@
 		6FBA4D486FA70765D2DB70D7 /* AMFPageChooserViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFPageChooserViewControllerTests.m; sourceTree = "<group>"; };
 		72C498335635EED9650F365E /* AMFBalanceInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFBalanceInteractorTests.m; sourceTree = "<group>"; };
 		84122EB5322F8255F74FB277 /* AMFFlowPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFFlowPresenterTests.m; sourceTree = "<group>"; };
+		88AD63816CEAD809459E808D /* AMFNameIconSetterViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFNameIconSetterViewControllerTests.m; sourceTree = "<group>"; };
 		8938CE6C7E8C472C41BB5834 /* AMFEditCategoryAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFEditCategoryAssembly_Testable.h; sourceTree = "<group>"; };
 		90F1CD55E8D152D64779856D /* AMFWalletPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletPresenterTests.m; sourceTree = "<group>"; };
 		96F914590D001A07FD923E7E /* AMFAddPagePresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPagePresenterTests.m; sourceTree = "<group>"; };
@@ -471,6 +502,7 @@
 		D1D5803732FB284A24A63706 /* AMFAddPageAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPageAssemblyTests.m; sourceTree = "<group>"; };
 		D5CB71E4E1FAA63FCBB20205 /* AMFAddPageInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddPageInteractorTests.m; sourceTree = "<group>"; };
 		D6D92F7164D9A4353F3EDD95 /* AMFChooseCategoryRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFChooseCategoryRouterTests.m; sourceTree = "<group>"; };
+		DD3EF32FF4B10F86A0061A7F /* AMFNameIconSetterPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFNameIconSetterPresenterTests.m; sourceTree = "<group>"; };
 		DDD4A9895A549DF0C5796B3A /* AMFFlowRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFFlowRouterTests.m; sourceTree = "<group>"; };
 		DF646DB673DEC62964BBF9C6 /* AMFWalletRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFWalletRouterTests.m; sourceTree = "<group>"; };
 		E4D41E43EFFE52B0B2CCF843 /* AMFEditCategoryPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryPresenterTests.m; sourceTree = "<group>"; };
@@ -483,6 +515,7 @@
 		F22831C4022AD64BBC14907E /* Pods-funds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funds.release.xcconfig"; path = "Pods/Target Support Files/Pods-funds/Pods-funds.release.xcconfig"; sourceTree = "<group>"; };
 		F51BF1C95C6D79DB02F11704 /* libPods-funds.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funds.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BA18D3288CD009F0DB2C84 /* AMFEditCategoryRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFEditCategoryRouterTests.m; sourceTree = "<group>"; };
+		F8FD873038A6D7079FCBE9A1 /* AMFNameIconSetterAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AMFNameIconSetterAssembly_Testable.h; sourceTree = "<group>"; };
 		FAD0E3A60D2518FCB944F64D /* AMFAddRecordPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AMFAddRecordPresenterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -530,6 +563,14 @@
 				1E0B6B7CE9B1B69AFD349563 /* AMFPageChooserInteractorTests.m */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		06D67DF6717764A4088125EE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EF32FF4B10F86A0061A7F /* AMFNameIconSetterPresenterTests.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		075D400DB513D8834E1D3853 /* Interactor */ = {
@@ -583,6 +624,18 @@
 				E6FF58B489D2C6442E9274EA /* AMFWalletViewControllerTests.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A839A554EC2C84A5A27309B /* NameIconSetter */ = {
+			isa = PBXGroup;
+			children = (
+				41A4C867FF1A7E5835C85CA9 /* Assembly */,
+				FC8DE728036D8543228BC465 /* View */,
+				6C74337BB9BB03752D5931C8 /* Presenter */,
+				6440903EB18DFE9F48F785D2 /* Interactor */,
+				A438E4D8E818E3BB954CAC53 /* Router */,
+			);
+			path = NameIconSetter;
 			sourceTree = "<group>";
 		};
 		1B4CD4AD928803124787A3D6 /* Interactor */ = {
@@ -786,6 +839,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		41A4C867FF1A7E5835C85CA9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5D01EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.h */,
+				4C95E5D11EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		43FFBA46B5D932C9849967B0 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
@@ -916,6 +978,7 @@
 				53DD60225AD1354103F180F2 /* ChooseCategory */,
 				AD625963F420D25E480593A1 /* EditCategory */,
 				9C8C79DBBDC4FCA5216BF4A1 /* ChooseWallet */,
+				E63D3FC1956A632BE6067848 /* NameIconSetter */,
 			);
 			path = fundsTests;
 			sourceTree = "<group>";
@@ -972,6 +1035,7 @@
 				485F507A128A83973957E73E /* ChooseCategory */,
 				E1D405ED07CA2EC03B70D3C2 /* EditCategory */,
 				5DA4006BE731EB613C8F0B48 /* ChooseWallet */,
+				1A839A554EC2C84A5A27309B /* NameIconSetter */,
 			);
 			name = Viper;
 			sourceTree = "<group>";
@@ -1391,6 +1455,17 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		6440903EB18DFE9F48F785D2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5DE1EBCABC300EBE5C9 /* AMFNameIconSetterInteractorInput.h */,
+				4C95E5DC1EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.h */,
+				4C95E5DD1EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m */,
+				4C95E5DF1EBCABC300EBE5C9 /* AMFNameIconSetterInteractorOutput.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		65C5DD8C2F09B67A37B88E5A /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -1415,6 +1490,17 @@
 				BF709D4767CCFEAEC965A9D8 /* AMFAddRecordRouterTests.m */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		6C74337BB9BB03752D5931C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5D81EBCABB400EBE5C9 /* AMFNameIconSetterModuleInput.h */,
+				4C95E5D91EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.h */,
+				4C95E5DA1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m */,
+				4CBD8DF31EBE513500B8C679 /* AMFNameIconSetterModuleOutput.h */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		6CDDB3FB45F2FF4636AA218B /* View */ = {
@@ -1515,6 +1601,14 @@
 				5887DE5EFC568694A4B4C920 /* AMFPageChooserPresenterTests.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7A776CB0841038241157F9C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88AD63816CEAD809459E808D /* AMFNameIconSetterViewControllerTests.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7DB10C0F9D7649613A8B2968 /* View */ = {
@@ -1698,6 +1792,16 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		A438E4D8E818E3BB954CAC53 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5E31EBCABD000EBE5C9 /* AMFNameIconSetterRouterInput.h */,
+				4C95E5E11EBCABD000EBE5C9 /* AMFNameIconSetterRouter.h */,
+				4C95E5E21EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		A5A4CC78EFC3CEE60A16869C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1805,6 +1909,15 @@
 			path = AddPage;
 			sourceTree = "<group>";
 		};
+		CC5480874259B3CA2FBE81C4 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				12255B6945AAAD8AFB9CDEC4 /* AMFNameIconSetterAssemblyTests.m */,
+				F8FD873038A6D7079FCBE9A1 /* AMFNameIconSetterAssembly_Testable.h */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		CCC6C0BE54157748E60B6305 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1843,6 +1956,26 @@
 				E73F9FCE2940CB10D5ED22EF /* Router */,
 			);
 			path = EditCategory;
+			sourceTree = "<group>";
+		};
+		E22907742040FBF0F6623585 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				09ADCA8D97D076E5DB23DB6A /* AMFNameIconSetterInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E63D3FC1956A632BE6067848 /* NameIconSetter */ = {
+			isa = PBXGroup;
+			children = (
+				CC5480874259B3CA2FBE81C4 /* Assembly */,
+				7A776CB0841038241157F9C5 /* View */,
+				06D67DF6717764A4088125EE /* Presenter */,
+				E22907742040FBF0F6623585 /* Interactor */,
+				FE421E414583948292DFAE28 /* Router */,
+			);
+			path = NameIconSetter;
 			sourceTree = "<group>";
 		};
 		E73F9FCE2940CB10D5ED22EF /* Router */ = {
@@ -1936,6 +2069,25 @@
 				4CE158F81E727FFF0009BAF4 /* AMFFlowPresenter.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FC8DE728036D8543228BC465 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E5D51EBCABA800EBE5C9 /* AMFNameIconSetterViewInput.h */,
+				4C95E5D31EBCABA800EBE5C9 /* AMFNameIconSetterViewController.h */,
+				4C95E5D41EBCABA800EBE5C9 /* AMFNameIconSetterViewController.m */,
+				4C95E5D61EBCABA800EBE5C9 /* AMFNameIconSetterViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE421E414583948292DFAE28 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				02786098D42991E017EDA8AB /* AMFNameIconSetterRouterTests.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		FED3D73F082929DA27AD5DFD /* Assembly */ = {
@@ -2157,6 +2309,7 @@
 				4C95F8661E82C1B200D3491A /* AMFSimpleAlertFactory.m in Sources */,
 				4C046FC21E73CEDC001E73A6 /* AMFPageChooserPresenter.m in Sources */,
 				4CE158C61E716BBE0009BAF4 /* AMFCategory+CoreDataProperties.m in Sources */,
+				4C95E5E41EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m in Sources */,
 				4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */,
 				4C95E5AB1EBC569400EBE5C9 /* AMFChooseWalletPresenter.m in Sources */,
 				4CE158DD1E71B8590009BAF4 /* AMFBudgetCSVReader.m in Sources */,
@@ -2166,16 +2319,20 @@
 				4CE158FA1E727FFF0009BAF4 /* AMFFlowPresenter.m in Sources */,
 				4C53EC831E705D1A00725AF8 /* AMFThemeAssembly.m in Sources */,
 				4C53EC861E70663200725AF8 /* AMFDataSupplierAssembly.m in Sources */,
+				4C95E5DB1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m in Sources */,
 				4C53EC4B1E700F2400725AF8 /* AMFTheme.m in Sources */,
 				4C53EC921E708C0900725AF8 /* AMFWalletViewController.m in Sources */,
 				4CE159031E72804F0009BAF4 /* AMFFlowRouter.m in Sources */,
 				4CE158E01E71B9340009BAF4 /* AMFPlainBudgetData.m in Sources */,
 				4C673CEB1EBA3A36009D90D9 /* AMFChooseCategoryCell.m in Sources */,
+				4C95E5D71EBCABA800EBE5C9 /* AMFNameIconSetterViewController.m in Sources */,
 				4C53EC441E6F03EF00725AF8 /* TyphoonAppDelegate.m in Sources */,
 				4C046FC71E73CEF5001E73A6 /* AMFPageChooserInteractor.m in Sources */,
 				4CE158B31E716B8A0009BAF4 /* AMFCashFlow+CoreDataClass.m in Sources */,
 				4C95F85F1E82B4DD00D3491A /* AMFAddPageRouter.m in Sources */,
+				4C95E5E01EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m in Sources */,
 				4C8A08B41EAFB8BE00A514A3 /* NSUserDefaults+Archiver.m in Sources */,
+				4C95E5D21EBCAB9D00EBE5C9 /* AMFNameIconSetterAssembly.m in Sources */,
 				4C53EC961E708C1600725AF8 /* AMFWalletPresenter.m in Sources */,
 				4CE159131E7301320009BAF4 /* AMFAppDelegateForReadingCSV.m in Sources */,
 				4C2758FD1E7AF4C40010C011 /* AMFAddRecordInteractor.m in Sources */,
@@ -2295,6 +2452,11 @@
 				6EBD9D3056934628A69F01E6 /* AMFChooseWalletPresenterTests.m in Sources */,
 				D2E98BBE3755B291E92140E3 /* AMFChooseWalletInteractorTests.m in Sources */,
 				09BA4F07D94A53F905B399DA /* AMFChooseWalletRouterTests.m in Sources */,
+				6D9C8057E7B7216C1FD0205A /* AMFNameIconSetterAssemblyTests.m in Sources */,
+				4487D9AB16BE781B4EB90CA0 /* AMFNameIconSetterViewControllerTests.m in Sources */,
+				E282756908DD5FEF1720CB57 /* AMFNameIconSetterPresenterTests.m in Sources */,
+				18529E20B55332F1343448D6 /* AMFNameIconSetterInteractorTests.m in Sources */,
+				AF5E21D622442A33C2669B6F /* AMFNameIconSetterRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

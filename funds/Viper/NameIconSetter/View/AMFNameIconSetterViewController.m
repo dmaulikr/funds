@@ -1,31 +1,27 @@
 //
-//  AMFEditCategoryViewController.m
+//  AMFNameIconSetterViewController.m
 //  funds
 //
-//  Created by Michael Artuerhof on 02/05/2017.
+//  Created by Michael Artuerhof on 05/05/2017.
 //  Copyright © 2017 micartu. All rights reserved.
 //
 
-#import "AMFEditCategoryViewController.h"
+#import "AMFNameIconSetterViewController.h"
 
-#import "AMFEditCategoryViewOutput.h"
-#import "AMFCategoryProtocol.h"
+#import "AMFNameIconSetterViewOutput.h"
 
-static NSString *const kIconCatCellIndentifier = @"iconCategoryCell";
+static NSString *const kIconCellIndentifier = @"iconCell";
 
-@interface AMFEditCategoryViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface AMFNameIconSetterViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *_icons;
     NSString *_icon_selected;
 }
-
 @property (weak, nonatomic) IBOutlet UITextField *categoryName;
-
-
 @end
 
-@implementation AMFEditCategoryViewController
+@implementation AMFNameIconSetterViewController
 
-@synthesize category;
+@synthesize name, icon;
 
 #pragma mark - Life Cycle Methods
 
@@ -38,7 +34,7 @@ static NSString *const kIconCatCellIndentifier = @"iconCategoryCell";
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - Методы AMFEditCategoryViewInput
+#pragma mark - Methods of AMFNameIconSetterViewInput
 
 - (void)setupInitialState {
     if (!self.navigationItem.rightBarButtonItem) {
@@ -51,8 +47,8 @@ static NSString *const kIconCatCellIndentifier = @"iconCategoryCell";
 }
 
 - (void)refreshContents {
-    self.categoryName.text = category.name;
-    _icon_selected = category.icon_path;
+    self.categoryName.text = self.name;
+    _icon_selected = self.icon;
 }
 
 #pragma mark - Themes
@@ -78,7 +74,7 @@ static NSString *const kIconCatCellIndentifier = @"iconCategoryCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIconCatCellIndentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIconCellIndentifier];
     cell.imageView.image = [UIImage imageNamed:_icons[indexPath.row]];
     cell.textLabel.text = _icons[indexPath.row];
     return cell;

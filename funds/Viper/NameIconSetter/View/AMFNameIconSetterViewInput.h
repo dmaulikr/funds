@@ -1,0 +1,35 @@
+//
+//  AMFNameIconSetterViewInput.h
+//  funds
+//
+//  Created by Michael Artuerhof on 05/05/2017.
+//  Copyright © 2017 micartu. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@protocol AMFNameIconSetterViewInput <NSObject>
+
+/**
+ @author Michael Artuerhof
+
+ sets initial state of the view
+ */
+- (void)setupInitialState;
+
+/**
+ * name to be displayed
+ */
+@property (nonatomic, strong) NSString *name;
+
+/**
+ * icon to be chosen
+ */
+@property (nonatomic, strong) NSString *icon;
+
+/**
+ * refreshes data shown to the user
+ */
+- (void)refreshContents;
+
+@end
