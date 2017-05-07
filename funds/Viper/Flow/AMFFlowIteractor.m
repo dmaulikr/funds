@@ -86,4 +86,11 @@
     }
 }
 
+- (id<AMFCashProtocol>)cashFlowWithIndex:(NSInteger)index {
+    NSArray *recs = _records[index].realRecords;
+    if (recs.count)
+        return recs.firstObject;
+    return nil;
+}
+
 @end

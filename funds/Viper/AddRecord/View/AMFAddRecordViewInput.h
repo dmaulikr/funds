@@ -11,6 +11,8 @@
 #import "AMFCurrencyProtocol.h"
 #import "AMFWalletProtocol.h"
 
+@protocol AMFCashProtocol;
+
 @protocol AMFAddRecordViewInput <NSObject>
 
 /**
@@ -38,5 +40,8 @@
 
 /// which currency was selected
 @property (nonatomic, strong) id<AMFWalletProtocol> selectedWallet;
+
+/// in edit mode cash to be edited
+@property (nonatomic, strong) id<AMFCashProtocol> cash;
 
 @end

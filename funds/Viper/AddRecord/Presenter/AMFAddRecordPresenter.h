@@ -15,6 +15,7 @@
 @protocol AMFAddRecordViewInput;
 @protocol AMFAddRecordInteractorInput;
 @protocol AMFAddRecordRouterInput;
+@protocol AMFAddRecordModuleOutput;
 
 @interface AMFAddRecordPresenter : NSObject <AMFAddRecordModuleInput,
 AMFAddRecordViewOutput,
@@ -25,5 +26,6 @@ AMFAddRecordInteractorOutput>
 @property (nonatomic, weak) id<AMFAddRecordViewInput> view;
 @property (nonatomic, strong) id<AMFAddRecordInteractorInput> interactor;
 @property (nonatomic, strong) id<AMFAddRecordRouterInput> router;
+@property (nonatomic, weak) id<AMFAddRecordModuleOutput> moduleOutput;
 
 @end

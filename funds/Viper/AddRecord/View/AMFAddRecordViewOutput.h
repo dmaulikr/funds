@@ -42,6 +42,6 @@
  * @param amount how much to withdraw
  * @param descr record's description
  */
-- (void)createRecordWithTitle:(NSString*)amount andDescription:(NSString*)descr;
+- (void)editOfRecordDoneWithTitle:(NSString*)amount andDescription:(NSString*)descr;
 
 @end

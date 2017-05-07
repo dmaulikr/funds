@@ -12,6 +12,7 @@
 #import "AMFFlowInteractorInput.h"
 #import "AMFFlowRouterInput.h"
 #import "AMFPageProtocol.h"
+#import "AMFCashProtocol.h"
 
 @implementation AMFFlowPresenter
 
@@ -52,6 +53,8 @@
 }
 
 - (void)cellSelected:(NSUInteger)index {
+    id<AMFCashProtocol> cash = [self.interactor cashFlowWithIndex:index];
+    [self.router showEditRecordWithCash:cash andOutput:self];
 }
 
 - (void)cellToDelete:(NSUInteger)index {
@@ -76,4 +79,11 @@
 - (void)didTriggerViewReadyEvent {
     [self.view setupInitialState];
 }
+
+#pragma mark - Methods AMFAddRecordModuleOutput
+
+- (void)doneRecordEditing {
+    [self setupView];
+}
+
 @end

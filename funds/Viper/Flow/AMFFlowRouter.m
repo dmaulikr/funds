@@ -16,16 +16,23 @@
 
 @implementation AMFFlowRouter
 
--(void) showPageChooserWithPageSelected:(id<AMFPageProtocol>)page andOutput:(id<AMFPageChooserModuleOutput>) output {
+- (void)showPageChooserWithPageSelected:(id<AMFPageProtocol>)page andOutput:(id<AMFPageChooserModuleOutput>) output {
     [[self.transitionHandler openModuleUsingSegue:kSegueChoosePage] thenChainUsingBlock:^id<AMFPageChooserModuleOutput>(id<AMFPageChooserModuleInput> moduleInput) {
         [moduleInput configureModuleWithPageSelected:page];
         return output;
     }];
 }
 
--(void) showAddRecordWithOutput:(id<AMFAddRecordModuleOutput>)output {
+- (void)showAddRecordWithOutput:(id<AMFAddRecordModuleOutput>)output {
     [[self.transitionHandler openModuleUsingSegue:kSegueAddRecord] thenChainUsingBlock:^id<AMFAddRecordModuleOutput>(id<AMFAddRecordModuleInput> moduleInput) {
         [moduleInput configureModule];
+        return output;
+    }];
+}
+
+- (void)showEditRecordWithCash:(id<AMFCashProtocol>)cash andOutput:(id<AMFAddRecordModuleOutput>)output {
+    [[self.transitionHandler openModuleUsingSegue:kSegueAddRecord] thenChainUsingBlock:^id<AMFAddRecordModuleOutput>(id<AMFAddRecordModuleInput> moduleInput) {
+        [moduleInput configureModuleWithCash:cash];
         return output;
     }];
 }

@@ -15,3 +15,4 @@
 "no name for page!" = "The page must be named. Input something!";
 "Edit" = "Edit";
 "Delete" = "Delete";
+"No Record in DB" = "Cannot find a record in inner Database";

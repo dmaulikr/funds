@@ -31,14 +31,14 @@ static NSString *const kDate = @"date";
 static NSString *const kAmount = @"amount";
 static NSString *const kDescr = @"descript";
 
--(NSString*) description {
+-(NSString*)description {
     return [NSString stringWithFormat:@"CASHFLOW: %@ => description: %@, amount: %g",
             self.date,
             self.descr,
             self.amount];
 }
 
--(void) updateWith:(id<AMFCashProtocol>)cash {
+-(void)updateWith:(id<AMFCashProtocol>)cash {
     self.amount = cash.amount;
     self.descr = cash.descr;
     self.date = cash.date;

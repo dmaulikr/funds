@@ -67,10 +67,22 @@
     [AMFPage findOrCreateWithPage:page];
 }
 
-- (void)removeRecord:(id<AMFCashProtocol>)rec {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
-    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
-    AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
+- (id<AMFCashProtocol>)findCashInStorage:(id<AMFCashProtocol>)rec {
+    if (![rec isKindOfClass:[AMFCashFlow class]]) { // only a description of a record: try to find one in the db
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (category.name == %@) AND (descr = %@) AND (amount = %g)",
+                                  rec.date,
+                                  rec.category.name,
+                                  rec.descr,
+                                  rec.amount];
+        NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
+        AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
+        return cash;
+    }
+    return rec; // already a class in storage
+}
+
+- (AMFCashFlow*)restoreAmountOfRecord:(id<AMFCashProtocol>)rec {
+    AMFCashFlow *cash = (AMFCashFlow*)[self findCashInStorage:rec];
     if (cash) {
         if (cash.wallet) {
             // restore amount of the wallet
@@ -79,6 +91,22 @@
         if (cash.category) {
             cash.category.amount += -(cash.amount);
         }
+        return cash;
+    }
+    return nil;
+}
+
+- (void)updateRecord:(id<AMFCashProtocol>)rec withAmount:(double)amount {
+    AMFCashFlow *cash = [self restoreAmountOfRecord:rec];
+    if (cash) {
+        cash.amount = amount;
+        [cash updateWith:rec];
+    }
+}
+
+- (void)removeRecord:(id<AMFCashProtocol>)rec {
+    AMFCashFlow *cash = [self restoreAmountOfRecord:rec];
+    if (cash) {
         [cash MR_deleteEntity];
     }
 }

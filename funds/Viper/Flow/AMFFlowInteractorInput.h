@@ -7,6 +7,7 @@
 //
 
 @protocol AMFPageProtocol;
+@protocol AMFCashProtocol;
 
 @protocol AMFFlowInteractorInput <NSObject>
 
@@ -24,5 +25,10 @@
  * user wants remove a record
  */
 - (void)removeCashFlowWithIndex:(NSInteger)index;
+
+/**
+ * returns real record in db by its index
+ */
+- (id<AMFCashProtocol>)cashFlowWithIndex:(NSInteger)index;
 
 @end

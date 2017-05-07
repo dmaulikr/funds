@@ -19,6 +19,8 @@ extern NSString *const kSegueChangeNameIconForCategory;
 
 // common constants
 
+extern NSString *const kDomain;
+
 // constants for user defaults
 extern NSString *const kLastCategory;
 extern NSString *const kLastWallet;

@@ -17,6 +17,8 @@
 - (void)addPage:(id<AMFPageProtocol>)page;
 - (void)removePage:(id<AMFPageProtocol>)page;
 - (void)addRecord:(id<AMFCashProtocol>)rec;
+- (id<AMFCashProtocol>)findCashInStorage:(id<AMFCashProtocol>)rec;
+- (void)updateRecord:(id<AMFCashProtocol>)rec withAmount:(double)amount;
 - (void)removeRecord:(id<AMFCashProtocol>)rec;
 - (void)updateWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon;
 - (void)addRecords:(NSArray*)ar;

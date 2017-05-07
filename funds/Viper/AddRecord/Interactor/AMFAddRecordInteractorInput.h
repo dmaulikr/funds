@@ -11,6 +11,7 @@
 @protocol AMFCurrencyProtocol;
 @protocol AMFCategoryProtocol;
 @protocol AMFWalletProtocol;
+@protocol AMFCashProtocol;
 
 @protocol AMFAddRecordInteractorInput <NSObject>
 
@@ -20,6 +21,13 @@
  * @param descr - description of the withdrawal of money
  */
 - (void)addRecordWithAmount:(double)amount andDescription:(NSString*)descr;
+
+/**
+ * updates an existring record to money flow
+ * @param amount of the withdrawal of money
+ * @param descr - description of the withdrawal of money
+ */
+- (void)updateRecordWithAmount:(double)amount andDescription:(NSString*)descr;
 
 /**
  * user changed the category
@@ -32,6 +40,18 @@
  * @param wallet from where user wants to take\put money
  */
 - (void)selectedWallet:(id<AMFWalletProtocol>)wallet;
+
+/**
+ * user changed the current currency
+ * @param currency which user wants
+ */
+- (void)selectedCurrency:(id<AMFCurrencyProtocol>)currency;
+
+/**
+ * in edit mode sets cash flow
+ * @param cash which user edits
+ */
+- (void)setCashForEdit:(id<AMFCashProtocol>)cash;
 
 /**
  * withdraw wallet (if user wants to move money from one account to another)

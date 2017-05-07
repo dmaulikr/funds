@@ -11,9 +11,12 @@
 #import "AMFAddRecordViewInput.h"
 #import "AMFAddRecordInteractorInput.h"
 #import "AMFAddRecordRouterInput.h"
+#import "AMFCashProtocol.h"
+#import "AMFAddRecordModuleOutput.h"
 
 @interface AMFAddRecordPresenter () {
     BOOL _withdrawalSelection;
+    BOOL _createMode;
 }
 @end
 
@@ -22,7 +25,13 @@
 #pragma mark - Methods of AMFAddRecordModuleInput
 
 - (void)configureModule {
-    // try to find out which category was used last
+    _createMode = YES;
+}
+
+- (void)configureModuleWithCash:(id<AMFCashProtocol>)cash {
+    _createMode = NO;
+    [self.interactor setCashForEdit:cash];
+    self.view.cash = cash;
 }
 
 #pragma mark - Methods of AMFAddRecordViewOutput
@@ -34,12 +43,15 @@
 	[self.view setupInitialState];
 }
 
-- (void)createRecordWithTitle:(NSString*)amount andDescription:(NSString*)descr {
+- (void)editOfRecordDoneWithTitle:(NSString*)amount andDescription:(NSString*)descr {
     if (!amount.length) {
         [self.router showErrorWithMessage:AMFLocalize(@"no amount!")];
         return;
     }
-    [self.interactor addRecordWithAmount:[amount doubleValue] andDescription:descr];
+    if (_createMode)
+        [self.interactor addRecordWithAmount:[amount doubleValue] andDescription:descr];
+    else
+        [self.interactor updateRecordWithAmount:[amount doubleValue] andDescription:descr];
 }
 
 - (void)changeWalletCurrency {
@@ -65,13 +77,14 @@
 #pragma mark - Methods of AMFAddRecordInteractorOutput
 
 - (void)recordCreatedWithError:(NSError*)er {
-    if (!er)
+    if (!er) {
+        [self.moduleOutput doneRecordEditing];
         [self.router closeMe];
+    }
     else {
         [self.router showErrorWithMessage:[er.userInfo objectForKey:@"msg"]];
     }
 }
-
 
 #pragma mark - Methods of AMFChooseCategoryModuleOutput
 
@@ -80,7 +93,6 @@
     self.view.selectedCategory = category;
     [self.view refreshView];
 }
-
 
 #pragma mark - Methods of AMFChooseWalletModuleOutput
 

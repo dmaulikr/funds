@@ -9,6 +9,7 @@
 #import "AMFAddRecordViewController.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFAddRecordViewOutput.h"
+#import "AMFCashProtocol.h"
 
 @interface AMFAddRecordViewController ()
 
@@ -28,6 +29,7 @@
 
 @synthesize selectedCategory,
 selectedWallet,
+cash,
 selectedCurrency;
 
 #pragma mark - Life Cycle Methods
@@ -55,6 +57,11 @@ selectedCurrency;
                                                                 target:self
                                                                 action:@selector(done)];
         self.navigationItem.rightBarButtonItem = done;
+    }
+
+    if (self.cash) {
+        self.inputAmount.text = [NSString stringWithFormat:@"%g", self.cash.amount];
+        self.descr.text = self.cash.descr;
     }
 
     [self refreshView];
@@ -97,7 +104,7 @@ selectedCurrency;
 #pragma mark - Actions
 
 - (void)done {
-    [self.output createRecordWithTitle:self.inputAmount.text andDescription:self.descr.text];
+    [self.output editOfRecordDoneWithTitle:self.inputAmount.text andDescription:self.descr.text];
 }
 
 - (IBAction)inputCurrencyTouched:(id)sender {

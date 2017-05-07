@@ -17,6 +17,7 @@
 #import "AMFCashPlain.h"
 #import "AMFCurrencyPlain.h"
 #import "AMFCategoryPlain.h"
+#import "AMFCashProtocol.h"
 
 @interface AMFAddRecordInteractor () {
     id<AMFCurrencyProtocol> _currency;
@@ -24,6 +25,7 @@
     id<AMFWalletProtocol> _wallet;
     id<AMFWalletProtocol> _wwallet;
     id<AMFPageProtocol> _page;
+    id<AMFCashProtocol> _cash;
 }
 @end
 
@@ -67,6 +69,33 @@
     [self.output recordCreatedWithError:nil];
 }
 
+- (void)setCashForEdit:(id<AMFCashProtocol>)cash {
+    _cash = cash;
+    _page = cash.page;
+    _wallet = cash.wallet;
+    _category = cash.category;
+    _currency = cash.currency;
+    _wwallet = cash.wallet2wallet.wallet;
+}
+
+- (void)updateRecordWithAmount:(double)amount andDescription:(NSString*)descr {
+    id<AMFCashProtocol> cash = [self.storage findCashInStorage:_cash];
+    if (cash) {
+        cash.descr = descr;
+        cash.page = _page;
+        cash.wallet = _wallet;
+        cash.category = _category;
+        cash.currency = [self currentCurrency];
+        [self.storage updateRecord:cash withAmount:amount];
+        [self.output recordCreatedWithError:nil];
+    } else {
+        NSError *er = [NSError errorWithDomain:kDomain
+                                          code:-1
+                                      userInfo:@{@"msg" : AMFLocalize(@"No Record in DB")}];
+        [self.output recordCreatedWithError:er];
+    }
+}
+
 - (void)selectedCategory:(id<AMFCategoryProtocol>)category {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _category = category;
@@ -79,10 +108,13 @@
     [defaults persistObjAsData:_wallet forKey:kLastWallet];
 }
 
+- (void)selectedCurrency:(id<AMFCurrencyProtocol>)currency {
+    _currency = currency;
+}
+
 - (void)withdrawalWallet:(id<AMFWalletProtocol>)wallet {
     _wwallet = wallet;
 }
-
 
 - (id<AMFWalletProtocol>)currentWallet {
     if (!_wallet) {

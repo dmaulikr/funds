@@ -8,5 +8,6 @@
 
 @protocol AMFAddRecordModuleOutput <RamblerViperModuleOutput>
 
+- (void)doneRecordEditing;
 
 @end
