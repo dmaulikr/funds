@@ -18,7 +18,9 @@ static NSString *const chooseCatCellIndentifier = @"chooseCategoryCell";
 @interface AMFChooseCategoryViewController () <UITableViewDelegate,
 UITableViewDataSource,
 AMFChooseCategoryCellDelegate,
-AMFSwipeableCellDelegate>
+AMFSwipeableCellDelegate> {
+    BOOL _firstTimeScroll;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -34,6 +36,8 @@ categories;
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+	_firstTimeScroll = YES;
+
 	[self.output didTriggerViewReadyEvent];
 }
 
@@ -44,7 +48,18 @@ categories;
 }
 
 - (void)refreshContents {
+    // somehow tableView wasn't loaded correctly from nib, do it manually
+    if (!self.tableView)
+        self.tableView = [self.view viewWithTag:555];
     [self.tableView reloadData];
+    if (_firstTimeScroll) {
+        _firstTimeScroll = NO;
+        NSInteger index = [self.categories indexOfObject:self.selectedCategory];
+        if (index >= 0 && index < self.categories.count) {
+            NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
+            [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+        }
+    }
 }
 
 #pragma mark - Table View source

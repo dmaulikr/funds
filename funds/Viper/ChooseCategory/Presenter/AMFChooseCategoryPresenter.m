@@ -25,6 +25,7 @@
 #pragma mark - Methods of AMFChooseCategoryModuleInput
 
 - (void)configureModuleWithCategorySelected:(id<AMFCategoryProtocol>)category {
+    self.view.selectedCategory = category;
     [self.interactor receiveAllCategories];
 }
 
