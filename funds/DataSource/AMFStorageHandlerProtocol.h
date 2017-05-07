@@ -26,6 +26,7 @@
 - (NSArray*)grabAllCurrencies;
 - (NSArray*)grabAllWallets;
 - (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString*)name;
+- (void)updateCategory:(id<AMFCategoryProtocol>)category withName:(NSString*)name andIcon:(NSString*)icon;
 - (void)removeAll;
 
 @end

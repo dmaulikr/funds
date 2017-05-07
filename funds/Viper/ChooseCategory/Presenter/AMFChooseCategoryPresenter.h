@@ -9,7 +9,7 @@
 #import "AMFChooseCategoryViewOutput.h"
 #import "AMFChooseCategoryInteractorOutput.h"
 #import "AMFChooseCategoryModuleInput.h"
-#import "AMFEditCategoryModuleOutput.h"
+#import "AMFNameIconSetterModuleOutput.h"
 
 @protocol AMFChooseCategoryViewInput;
 @protocol AMFChooseCategoryInteractorInput;
@@ -18,7 +18,7 @@
 
 @interface AMFChooseCategoryPresenter : NSObject <AMFChooseCategoryModuleInput,
 AMFChooseCategoryViewOutput,
-AMFEditCategoryModuleOutput,
+AMFNameIconSetterModuleOutput,
 AMFChooseCategoryInteractorOutput>
 
 @property (nonatomic, weak) id<AMFChooseCategoryViewInput> view;

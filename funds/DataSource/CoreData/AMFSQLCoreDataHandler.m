@@ -153,6 +153,15 @@
                                         inContext:[NSManagedObjectContext MR_defaultContext]];
 }
 
+- (void)updateCategory:(id<AMFCategoryProtocol>)category
+              withName:(NSString*)name
+               andIcon:(NSString*)icon {
+    if (![category isKindOfClass:[AMFWallet class]])
+        category = [AMFCategory findOrCreateWithCategory:category];
+    category.name = name;
+    category.icon_path = icon;
+}
+
 - (NSArray*)grabAllWallets {
     return [AMFWallet MR_findAllSortedBy:@"wallet_id" ascending:NO];
 }

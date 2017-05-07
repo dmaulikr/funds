@@ -8,8 +8,8 @@
 
 #import "AMFChooseCategoryRouter.h"
 #import "AMFCategoryProtocol.h"
-#import "AMFEditCategoryModuleOutput.h"
-#import "AMFEditCategoryModuleInput.h"
+#import "AMFNameIconSetterModuleInput.h"
+#import "AMFNameIconSetterModuleOutput.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -21,10 +21,11 @@
     [self.transitionHandler closeCurrentModule:YES];
 }
 
-- (void)editCategoryName:(id<AMFCategoryProtocol>)category
-                                      andOutput:(id<AMFEditCategoryModuleOutput>) output {
-    [[self.transitionHandler openModuleUsingSegue:kSegueEditCategory] thenChainUsingBlock:^id<AMFEditCategoryModuleOutput>(id<AMFEditCategoryModuleInput> moduleInput) {
-        [moduleInput configureModuleWithCategoryName:category];
+- (void)showNameIconSetterWithName:(NSString*)name
+                           andIcon:(NSString*)icon
+                         andOutput:(id<AMFNameIconSetterModuleOutput>) output {
+    [[self.transitionHandler openModuleUsingSegue:kSegueChangeNameIconForCategory] thenChainUsingBlock:^id<AMFNameIconSetterModuleOutput>(id<AMFNameIconSetterModuleInput> moduleInput) {
+        [moduleInput configureModuleWithName:name andIcon:icon];
         return output;
     }];
 }

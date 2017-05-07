@@ -29,8 +29,7 @@ static NSString *const kIcon = @"icon";
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCategory"];
 }
 
-+ (AMFCategory*) findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
-                                andCash:(AMFCashFlow *)cash {
++ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", category.name, category.icon_path];
@@ -46,6 +45,12 @@ static NSString *const kIcon = @"icon";
         c.cat_id = [_gen generateID];
         c.amount = 0;
     }
+    return c;
+}
+
++ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
+                                andCash:(AMFCashFlow *)cash {
+    AMFCategory *c = [self findOrCreateWithCategory:category];
     [c updateWith:category andCash:cash];
     return c;
 }

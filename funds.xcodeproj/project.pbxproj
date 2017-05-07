@@ -873,8 +873,8 @@
 			children = (
 				3860802A978668D755DA00F9 /* Assembly */,
 				20733A982D86D2E8144BEE0A /* View */,
-				075D400DB513D8834E1D3853 /* Interactor */,
 				1EA03CDF1B9360037EEDD376 /* Presenter */,
+				075D400DB513D8834E1D3853 /* Interactor */,
 				63A0F4FBA7953143A91932E4 /* Router */,
 			);
 			path = ChooseCategory;

@@ -12,9 +12,9 @@ NSString *const kSegueChoosePage = @"choosePage";
 NSString *const kSegueAddRecord = @"addRecord";
 NSString *const kSegueAddPage = @"addPage";
 NSString *const kSegueChooseCategory = @"chooseCategory";
-NSString *const kSegueEditCategory = @"editCategory";
 NSString *const kSegueChooseWallet = @"chooseWallet";
 NSString *const kSegueChangeNameIcon = @"changeNameIcon";
+NSString *const kSegueChangeNameIconForCategory = @"nameIconForCategory";
 
 NSString *const kLastCategory = @"lastUsedCategory";
 NSString *const kLastWallet = @"lastUsedWallet";

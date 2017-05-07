@@ -19,4 +19,8 @@
     [self.output categoriesReceived:[self.storage grabAllCategories]];
 }
 
+- (void)changeCategory:(id<AMFCategoryProtocol>)category withName:(NSString*)name andIcon:(NSString*)icon {
+    [self.storage updateCategory:category withName:name andIcon:icon];
+}
+
 @end

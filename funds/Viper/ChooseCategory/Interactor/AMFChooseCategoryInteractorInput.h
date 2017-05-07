@@ -8,11 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFCategoryProtocol;
+
 @protocol AMFChooseCategoryInteractorInput <NSObject>
 
 /**
  receives all availble categories
  */
 - (void)receiveAllCategories;
+
+/**
+ * changes the category
+ */
+- (void)changeCategory:(id<AMFCategoryProtocol>)category
+              withName:(NSString*)name
+               andIcon:(NSString*)icon;
 
 @end

@@ -10,7 +10,7 @@
 #import "AMFAlertProtocol.h"
 
 @protocol AMFCategoryProtocol;
-@protocol AMFEditCategoryModuleOutput;
+@protocol AMFNameIconSetterModuleOutput;
 
 @protocol AMFChooseCategoryRouterInput <AMFAlertProtocol>
 
@@ -22,7 +22,7 @@
 /**
  * opens a dialog for category editing
  */
-- (void)editCategoryName:(id<AMFCategoryProtocol>)category
-               andOutput:(id<AMFEditCategoryModuleOutput>) output;
-
+- (void)showNameIconSetterWithName:(NSString*)name
+                           andIcon:(NSString*)icon
+                         andOutput:(id<AMFNameIconSetterModuleOutput>) output;
 @end

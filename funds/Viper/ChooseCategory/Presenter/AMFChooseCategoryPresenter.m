@@ -14,7 +14,11 @@
 #import "AMFChooseCategoryModuleOutput.h"
 #import "AMFCategoryProtocol.h"
 
-static NSString *const categoryCellIndentifier = @"chooseCategoryCell";
+@interface AMFChooseCategoryPresenter() {
+    id<AMFCategoryProtocol> _category;
+}
+
+@end
 
 @implementation AMFChooseCategoryPresenter
 
@@ -38,8 +42,10 @@ static NSString *const categoryCellIndentifier = @"chooseCategoryCell";
 }
 
 - (void)editCategory:(id<AMFCategoryProtocol>)category {
-    [self.router editCategoryName:category
-                        andOutput:self];
+    _category = category;
+    [self.router showNameIconSetterWithName:category.name
+                                    andIcon:category.icon_path
+                                  andOutput:self];
 }
 
 #pragma mark - Methods of AMFChooseCategoryInteractorOutput
@@ -49,10 +55,10 @@ static NSString *const categoryCellIndentifier = @"chooseCategoryCell";
     [self.view refreshContents];
 }
 
-#pragma mark - Methods of AMFEditCategoryModuleOutput
+#pragma mark - Methods of AMFNameIconSetterModuleOutput
 
-- (void)categoryEditingFinished {
-    // update view
+- (void)editFinishedWithName:(NSString*)name andIcon:(NSString*)icon {
+    [self.interactor changeCategory:_category withName:name andIcon:icon];
     [self.interactor receiveAllCategories];
 }
 

@@ -13,9 +13,9 @@ extern NSString *const kSegueChoosePage;
 extern NSString *const kSegueAddRecord;
 extern NSString *const kSegueAddPage;
 extern NSString *const kSegueChooseCategory;
-extern NSString *const kSegueEditCategory;
 extern NSString *const kSegueChooseWallet;
 extern NSString *const kSegueChangeNameIcon;
+extern NSString *const kSegueChangeNameIconForCategory;
 
 // common constants
 

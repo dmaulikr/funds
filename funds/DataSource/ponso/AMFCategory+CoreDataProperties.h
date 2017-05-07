@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMFCategory (CoreDataProperties) <AMFCategoryProtocol>
 
 + (NSFetchRequest<AMFCategory *> *)fetchRequest;
-+ (AMFCategory*) findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
++ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category;
++ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
                               andCash:(AMFCashFlow *_Nonnull)cash;
 
 @property (nonatomic, assign) NSUInteger cat_id;
