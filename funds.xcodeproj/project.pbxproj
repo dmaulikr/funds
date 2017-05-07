@@ -1058,8 +1058,8 @@
 			children = (
 				4A6FC7988D7AA29D2DCE5862 /* Assembly */,
 				31E711352525B4A62B6A2A42 /* View */,
-				2E9E90E1A6B970DDB7200396 /* Interactor */,
 				0857CFAF01A277DDF35A2345 /* Presenter */,
+				2E9E90E1A6B970DDB7200396 /* Interactor */,
 				3E9FAA71A720BBC1EE3FC4AD /* Router */,
 			);
 			name = Wallet;

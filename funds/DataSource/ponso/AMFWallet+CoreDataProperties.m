@@ -29,10 +29,11 @@ static NSString *const kIcon = @"icon";
 	return [[NSFetchRequest alloc] initWithEntityName:@"AMFWallet"];
 }
 
-+ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
++ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", wallet.name, wallet.icon_path];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)",
+                              wallet.name, wallet.icon_path];
     AMFWallet *w = [AMFWallet MR_findFirstWithPredicate:predicate inContext:con];
     if (!w) {
         w = [AMFWallet MR_createEntityInContext:con];
@@ -45,6 +46,11 @@ static NSString *const kIcon = @"icon";
         w.wallet_id = [_gen generateID];
         w.amount = 0;
     }
+    return w;
+}
+
++ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
+    AMFWallet *w = [self findOrCreateWithWallet:wallet];
     [w updateWith:wallet andCash:cash];
     return w;
 }

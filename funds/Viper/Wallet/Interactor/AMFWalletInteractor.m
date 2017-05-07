@@ -10,6 +10,7 @@
 
 #import "AMFWalletInteractorOutput.h"
 #import "AMFStorageHandlerProtocol.h"
+#import "AMFWalletProtocol.h"
 
 @implementation AMFWalletInteractor
 
@@ -18,6 +19,10 @@
 - (void)receiveAllWallets {
     NSArray *w = [self.storage grabAllWallets];
     [self.output walletsReceived:w];
+}
+
+- (void)changeWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon {
+    [self.storage updateWallet:wallet withName:name andIcon:icon];
 }
 
 @end

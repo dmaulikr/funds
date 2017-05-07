@@ -9,12 +9,17 @@
 #import "AMFWalletViewOutput.h"
 #import "AMFWalletInteractorOutput.h"
 #import "AMFWalletModuleInput.h"
+#import "AMFNameIconSetterModuleOutput.h"
+
 
 @protocol AMFWalletViewInput;
 @protocol AMFWalletInteractorInput;
 @protocol AMFWalletRouterInput;
 
-@interface AMFWalletPresenter : NSObject <AMFWalletModuleInput, AMFWalletViewOutput, AMFWalletInteractorOutput>
+@interface AMFWalletPresenter : NSObject <AMFWalletModuleInput,
+AMFWalletViewOutput,
+AMFNameIconSetterModuleOutput,
+AMFWalletInteractorOutput>
 
 @property (nonatomic, weak) id<AMFWalletViewInput> view;
 @property (nonatomic, strong) id<AMFWalletInteractorInput> interactor;

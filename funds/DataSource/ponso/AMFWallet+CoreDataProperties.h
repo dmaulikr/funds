@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMFWallet (CoreDataProperties) <AMFWalletProtocol, NSCoding>
 
 + (NSFetchRequest<AMFWallet *> *)fetchRequest;
++ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet;
 + (AMFWallet*) findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet
                               andCash:(AMFCashFlow *_Nonnull)cash;
 

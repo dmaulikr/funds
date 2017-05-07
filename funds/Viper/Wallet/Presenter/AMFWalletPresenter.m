@@ -11,6 +11,13 @@
 #import "AMFWalletViewInput.h"
 #import "AMFWalletInteractorInput.h"
 #import "AMFWalletRouterInput.h"
+#import "AMFWalletProtocol.h"
+
+@interface AMFWalletPresenter() {
+    id<AMFWalletProtocol> _wallet;
+}
+
+@end
 
 @implementation AMFWalletPresenter
 
@@ -27,6 +34,10 @@
 }
 
 - (void)cellSelected:(NSUInteger)index {
+    _wallet = self.view.records[index];
+    [self.router showNameIconSetterWithName:_wallet.name
+                                    andIcon:_wallet.icon_path
+                                  andOutput:self];
 }
 
 - (void)editWalletWithIndex:(NSUInteger)index {
@@ -41,6 +52,13 @@
 - (void)walletsReceived:(NSArray*)w {
     self.view.records = w;
     [self.view refreshContents];
+}
+
+#pragma mark - Methods of AMFNameIconSetterModuleOutput
+
+- (void)editFinishedWithName:(NSString*)name andIcon:(NSString*)icon {
+    [self.interactor changeWallet:_wallet withName:name andIcon:icon];
+    [self.interactor receiveAllWallets];
 }
 
 @end

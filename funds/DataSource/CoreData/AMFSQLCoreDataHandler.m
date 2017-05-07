@@ -83,6 +83,13 @@
     }
 }
 
+- (void)updateWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon {
+    if (![wallet isKindOfClass:[AMFWallet class]])
+        wallet = [AMFWallet findOrCreateWithWallet:wallet];
+    wallet.name = name;
+    wallet.icon_path = icon;
+}
+
 - (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name {
     id<AMFPageProtocol> p = [AMFPage findOrCreateWithPage:page];
     p.name = name;

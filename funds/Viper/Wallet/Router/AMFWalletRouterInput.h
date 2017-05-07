@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "AMFAlertProtocol.h"
 
+@protocol AMFNameIconSetterModuleOutput;
+
 @protocol AMFWalletRouterInput <AMFAlertProtocol>
+
+- (void)showNameIconSetterWithName:(NSString*)name
+                           andIcon:(NSString*)icon
+                         andOutput:(id<AMFNameIconSetterModuleOutput>) output;
 
 @end

@@ -9,6 +9,7 @@
 @protocol AMFCashProtocol;
 @protocol AMFPageProtocol;
 @protocol AMFCategoryProtocol;
+@protocol AMFWalletProtocol;
 
 @protocol AMFStorageHandlerProtocol <NSObject>
 
@@ -17,6 +18,7 @@
 - (void)removePage:(id<AMFPageProtocol>)page;
 - (void)addRecord:(id<AMFCashProtocol>)rec;
 - (void)removeRecord:(id<AMFCashProtocol>)rec;
+- (void)updateWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon;
 - (void)addRecords:(NSArray*)ar;
 - (NSArray*)grabRecordsForPage:(id<AMFPageProtocol>)page;
 - (NSArray*)grabAllPages;
