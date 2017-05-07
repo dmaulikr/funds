@@ -563,6 +563,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryName" destination="oKB-b2-Xuz" id="SSn-91-ni3"/>
+                        <outlet property="tableView" destination="cJc-gx-ZRy" id="iO7-5g-NN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPS-eB-0XO" userLabel="First Responder" sceneMemberID="firstResponder"/>

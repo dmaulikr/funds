@@ -15,8 +15,10 @@ static NSString *const kIconCellIndentifier = @"iconCell";
 @interface AMFNameIconSetterViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *_icons;
     NSString *_icon_selected;
+    NSIndexPath *_selectedPath;
 }
 @property (weak, nonatomic) IBOutlet UITextField *categoryName;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation AMFNameIconSetterViewController
@@ -49,6 +51,11 @@ static NSString *const kIconCellIndentifier = @"iconCell";
 - (void)refreshContents {
     self.categoryName.text = self.name;
     _icon_selected = self.icon;
+    NSInteger index = [_icons indexOfObject:_icon_selected];
+    if (index >= 0 && index < _icons.count) {
+        NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
+        [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    }
 }
 
 #pragma mark - Themes
@@ -77,13 +84,27 @@ static NSString *const kIconCellIndentifier = @"iconCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIconCellIndentifier];
     cell.imageView.image = [UIImage imageNamed:_icons[indexPath.row]];
     cell.textLabel.text = _icons[indexPath.row];
+    if ([_icons[indexPath.row] isEqualToString:_icon_selected]) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        _selectedPath = indexPath;
+    }
+    else
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *old = nil;
+    if (_selectedPath)
+        old = _selectedPath;
     _icon_selected = _icons[indexPath.row];
+    _selectedPath = indexPath;
+    NSArray *indexes = [NSArray arrayWithObjects:indexPath, old, nil];
+    [self.tableView beginUpdates];
+    [self.tableView reloadRowsAtIndexPaths:indexes withRowAnimation:NO];
+    [self.tableView endUpdates];
 }
 
 @end
