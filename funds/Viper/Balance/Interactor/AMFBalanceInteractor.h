@@ -9,8 +9,12 @@
 #import "AMFBalanceInteractorInput.h"
 
 @protocol AMFBalanceInteractorOutput;
+@protocol AMFStorageHandlerProtocol;
 
 @interface AMFBalanceInteractor : NSObject <AMFBalanceInteractorInput>
+
+/// through the property we'll get access to data storage
+@property (nonatomic, strong) id<AMFStorageHandlerProtocol> storage;
 
 @property (nonatomic, weak) id<AMFBalanceInteractorOutput> output;
 

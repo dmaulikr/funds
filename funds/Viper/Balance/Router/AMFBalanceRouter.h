@@ -7,11 +7,10 @@
 //
 
 #import "AMFBalanceRouterInput.h"
+#import "AMFCommonRouter.h"
 
 @protocol RamblerViperModuleTransitionHandlerProtocol;
 
-@interface AMFBalanceRouter : NSObject <AMFBalanceRouterInput>
-
-@property (nonatomic, weak) id<RamblerViperModuleTransitionHandlerProtocol> transitionHandler;
+@interface AMFBalanceRouter : AMFCommonRouter <AMFBalanceRouterInput>
 
 @end

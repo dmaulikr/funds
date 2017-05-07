@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMFAlertProtocol.h"
 
-@protocol AMFBalanceRouterInput <NSObject>
+@protocol AMFBalanceRouterInput <AMFAlertProtocol>
 
 @end

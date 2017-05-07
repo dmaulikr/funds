@@ -14,18 +14,17 @@
 
 @implementation AMFBalancePresenter
 
-#pragma mark - Методы AMFBalanceModuleInput
+#pragma mark - Methods of AMFBalanceModuleInput
 
 - (void)configureModule {
-    // Стартовая конфигурация модуля, не привязанная к состоянию view
 }
 
-#pragma mark - Методы AMFBalanceViewOutput
+#pragma mark - Methods of AMFBalanceViewOutput
 
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
 }
 
-#pragma mark - Методы AMFBalanceInteractorOutput
+#pragma mark - Methods of AMFBalanceInteractorOutput
 
 @end

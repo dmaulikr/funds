@@ -13,6 +13,8 @@
 #import "AMFBalancePresenter.h"
 #import "AMFBalanceRouter.h"
 #import "AMFThemeAssembly.h"
+#import "AMFAlertsAssembly.h"
+#import "AMFDataSupplierAssembly.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -35,6 +37,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterBalance]];
+                              [definition injectProperty:@selector(storage)
+                                                    with:_dataProvider.storageHandler];
                           }];
 }
 
@@ -55,6 +59,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewBalance]];
+                              [definition injectProperty:@selector(alertFactory)
+                                                    with:[_alerts alertFactory]];
                           }];
 }
 

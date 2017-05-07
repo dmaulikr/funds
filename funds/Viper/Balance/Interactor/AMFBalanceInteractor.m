@@ -9,9 +9,10 @@
 #import "AMFBalanceInteractor.h"
 
 #import "AMFBalanceInteractorOutput.h"
+#import "AMFStorageHandlerProtocol.h"
 
 @implementation AMFBalanceInteractor
 
-#pragma mark - Методы AMFBalanceInteractorInput
+#pragma mark - Methods of AMFBalanceInteractorInput
 
 @end

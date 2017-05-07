@@ -12,6 +12,6 @@
 
 @implementation AMFBalanceRouter
 
-#pragma mark - Методы AMFBalanceRouterInput
+#pragma mark - Methods of AMFBalanceRouterInput
 
 @end

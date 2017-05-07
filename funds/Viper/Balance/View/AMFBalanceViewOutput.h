@@ -13,7 +13,7 @@
 /**
  @author Michael Artuerhof
 
- Метод сообщает презентеру о том, что view готова к работе
+ method tell the view is ready to work
  */
 - (void)didTriggerViewReadyEvent;
 

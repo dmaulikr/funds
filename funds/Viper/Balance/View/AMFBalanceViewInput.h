@@ -17,4 +17,9 @@
  */
 - (void)setupInitialState;
 
+/**
+ * what to show
+ */
+@property (nonatomic, strong) NSArray *records;
+
 @end
