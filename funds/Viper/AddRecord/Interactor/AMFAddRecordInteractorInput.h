@@ -38,8 +38,9 @@
 /**
  * user changed the current wallet
  * @param wallet from where user wants to take\put money
+ * @return error if one occured nil otherwise
  */
-- (void)selectedWallet:(id<AMFWalletProtocol>)wallet;
+- (NSError *)selectedWallet:(id<AMFWalletProtocol>)wallet;
 
 /**
  * user changed the current currency
@@ -54,10 +55,16 @@
 - (void)setCashForEdit:(id<AMFCashProtocol>)cash;
 
 /**
- * withdraw wallet (if user wants to move money from one account to another)
- * @param wallet from where user wants to take money
+ * sets a wallet where user wants to move its money to
+ * @param wallet where user wants to move the money to
+ * @return error if one occured nil otherwise
  */
-- (void)withdrawalWallet:(id<AMFWalletProtocol>)wallet;
+- (NSError *)moveIntoWallet:(id<AMFWalletProtocol>)wallet;
+
+/**
+ * returns wallet where the user wants its money transfered
+ */
+- (id<AMFWalletProtocol>)currentWWallet;
 
 
 /**

@@ -31,6 +31,8 @@ static NSString *const kIcon = @"icon";
 
 + (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet {
     static AMFgenerateID *_gen = nil;
+    if ([wallet isKindOfClass:[AMFWallet class]]) // it's already AMFWallet
+        return (AMFWallet*)wallet;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)",
                               wallet.name, wallet.icon_path];

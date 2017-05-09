@@ -16,12 +16,14 @@
 @property (nonatomic, weak) IBOutlet UILabel *walletName;
 @property (nonatomic, weak) IBOutlet UIImageView *walletImage;
 @property (nonatomic, weak) IBOutlet UILabel *walletAmount;
-@property (nonatomic, weak) IBOutlet UILabel *walletCurrency;
 @property (nonatomic, weak) IBOutlet UITextField *inputAmount;
 @property (nonatomic, weak) IBOutlet UILabel *inputCurrency;
 @property (nonatomic, weak) IBOutlet UITextField *descr;
 @property (nonatomic, weak) IBOutlet UIImageView *categoryImage;
 @property (nonatomic, weak) IBOutlet UILabel *category;
+@property (nonatomic, weak) IBOutlet UISwitch *anotherWalletSwitch;
+@property (nonatomic, weak) IBOutlet UIButton *anotherWalletButton;
+@property (nonatomic, weak) IBOutlet UILabel *anotherWalletLabel;
 
 @end
 
@@ -29,6 +31,7 @@
 
 @synthesize selectedCategory,
 selectedWallet,
+selectedMoveIntoWallet,
 cash,
 selectedCurrency;
 
@@ -92,7 +95,20 @@ selectedCurrency;
         if (self.selectedWallet.icon_path.length) {
             self.walletImage.image = [UIImage imageNamed:self.selectedWallet.icon_path];
         }
+        self.walletAmount.text = [NSString stringWithFormat:@"%g", self.selectedWallet.amount];
     }
+
+    if (self.selectedMoveIntoWallet) {
+        [self.anotherWalletSwitch setOn:YES];
+        [self intoAnotherWalletChanged:nil];
+        id<AMFWalletProtocol> w = self.selectedMoveIntoWallet;
+        self.anotherWalletLabel.text = [NSString stringWithFormat:@"%@ (%g)", w.name, w.amount];
+        if (w.icon_path.length) {
+            [self.anotherWalletButton setBackgroundImage:[UIImage imageNamed:w.icon_path]
+                                                forState:UIControlStateNormal];
+        }
+    } else
+        [self.anotherWalletSwitch setOn:NO];
 }
 
 #pragma mark - Themes
@@ -105,6 +121,22 @@ selectedCurrency;
 
 - (void)done {
     [self.output editOfRecordDoneWithTitle:self.inputAmount.text andDescription:self.descr.text];
+}
+
+- (IBAction)intoAnotherWalletChanged:(id)sender {
+    if (self.anotherWalletSwitch.on) {
+        self.anotherWalletLabel.hidden = NO;
+        self.anotherWalletButton.hidden = NO;
+        self.anotherWalletLabel.text = @"?";
+    } else {
+        self.anotherWalletLabel.hidden = YES;
+        self.anotherWalletButton.hidden = YES;
+        [self.output nullifyWalletMoveTo];
+    }
+}
+
+- (IBAction)selectAnotherWallet:(id)sender {
+    [self.output changeWalletMoveTo];
 }
 
 - (IBAction)inputCurrencyTouched:(id)sender {

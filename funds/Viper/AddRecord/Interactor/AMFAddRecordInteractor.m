@@ -65,6 +65,14 @@
     cash.category = _category;
     cash.currency = [self currentCurrency];
 
+    if (_wwallet) {
+        AMFCashPlain *cashInto = [[AMFCashPlain alloc] initWithCash:cash];
+        cashInto.amount = -amount;
+        cashInto.wallet = _wwallet;
+        cash.wallet2wallet = cashInto;
+        cashInto.wallet2wallet = cash;
+    }
+
     [self.storage addRecord:cash];
     [self.output recordCreatedWithError:nil];
 }
@@ -83,10 +91,19 @@
     if (cash) {
         cash.descr = descr;
         cash.page = _page;
-        cash.wallet = _wallet;
-        cash.category = _category;
         cash.currency = [self currentCurrency];
-        [self.storage updateRecord:cash withAmount:amount];
+        [self.storage updateRecord:cash
+                        withAmount:amount
+                         andWallet:_wallet
+                       andCategory:_category];
+        if (cash.wallet2wallet) {
+            id<AMFCashProtocol> c = cash.wallet2wallet;
+            [self.storage updateRecord:c withAmount:-amount
+                             andWallet:_wallet
+                           andCategory:_category];
+            c.descr = descr;
+            c.currency = [self currentCurrency];
+        }
         [self.output recordCreatedWithError:nil];
     } else {
         NSError *er = [NSError errorWithDomain:kDomain
@@ -102,18 +119,38 @@
     [defaults persistObjAsData:_category forKey:kLastCategory];
 }
 
-- (void)selectedWallet:(id<AMFWalletProtocol>)wallet {
+- (NSError*)constructErrorTwoWalletsMustDiffer {
+    NSError *er = [NSError errorWithDomain:kDomain
+                                      code:-2
+                                  userInfo:@{@"msg" : AMFLocalize(@"Two wallets must differ")}];
+    return er;
+}
+
+- (NSError *)selectedWallet:(id<AMFWalletProtocol>)wallet {
+    if (_wwallet && wallet == _wwallet)
+        return [self constructErrorTwoWalletsMustDiffer];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _wallet = wallet;
     [defaults persistObjAsData:_wallet forKey:kLastWallet];
+    return nil;
 }
 
 - (void)selectedCurrency:(id<AMFCurrencyProtocol>)currency {
     _currency = currency;
 }
 
-- (void)withdrawalWallet:(id<AMFWalletProtocol>)wallet {
-    _wwallet = wallet;
+- (NSError *)moveIntoWallet:(id<AMFWalletProtocol>)wallet {
+    if (!_wallet)
+        _wallet = [self currentWallet];
+    if (wallet != _wallet)
+        _wwallet = wallet;
+    else
+        return [self constructErrorTwoWalletsMustDiffer];
+    return nil;
+}
+
+- (id<AMFWalletProtocol>)currentWWallet {
+    return _wwallet;
 }
 
 - (id<AMFWalletProtocol>)currentWallet {

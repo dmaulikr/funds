@@ -32,6 +32,21 @@ static NSString *const kDescr = @"descript";
             self.amount];
 }
 
+- (instancetype)initWithCash:(id<AMFCashProtocol>)cash {
+    if (self = [super init]) {
+        self.amount = cash.amount;
+        self.descr = cash.descr;
+        self.pos_lat = cash.pos_lat;
+        self.pos_lon = cash.pos_lon;
+        self.date = cash.date;
+        self.page = cash.page;
+        self.wallet = cash.wallet;
+        self.category = cash.category;
+        self.currency = cash.currency;
+    }
+    return self;
+}
+
 #pragma mark - NSCoding protocol
 
 - (instancetype)initWithCoder:(NSCoder *)aCoder {

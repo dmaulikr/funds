@@ -18,3 +18,4 @@
 "No Record in DB" = "Cannot find a record in inner Database";
 "Income" = "Income";
 "Outcome" = "Outcome";
+"Two wallets must differ" = "Two wallets must differ";

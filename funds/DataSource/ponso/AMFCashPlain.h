@@ -11,4 +11,6 @@
 
 @interface AMFCashPlain : NSObject <AMFCashProtocol, NSCoding>
 
+- (instancetype)initWithCash:(id<AMFCashProtocol>)cash;
+
 @end

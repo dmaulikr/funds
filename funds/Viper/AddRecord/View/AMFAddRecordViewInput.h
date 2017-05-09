@@ -38,8 +38,11 @@
 /// which currency was selected
 @property (nonatomic, strong) id<AMFCurrencyProtocol> selectedCurrency;
 
-/// which currency was selected
+/// which wallet was selected
 @property (nonatomic, strong) id<AMFWalletProtocol> selectedWallet;
+
+/// which wallet (if we want to move cash into it) was selected
+@property (nonatomic, strong) id<AMFWalletProtocol> selectedMoveIntoWallet;
 
 /// in edit mode cash to be edited
 @property (nonatomic, strong) id<AMFCashProtocol> cash;

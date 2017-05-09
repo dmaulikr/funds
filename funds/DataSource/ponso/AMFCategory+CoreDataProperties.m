@@ -31,6 +31,8 @@ static NSString *const kIcon = @"icon";
 
 + (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category {
     static AMFgenerateID *_gen = nil;
+    if ([category isKindOfClass:[AMFCategory class]]) // it's already AMFCategory
+        return (AMFCategory*)category;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", category.name, category.icon_path];
     AMFCategory *c = [AMFCategory MR_findFirstWithPredicate:predicate inContext:con];

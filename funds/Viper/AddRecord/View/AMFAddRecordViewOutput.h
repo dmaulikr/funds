@@ -38,6 +38,16 @@
 - (void)changeWallet;
 
 /**
+ * user wants to change wallet where the money will be moved
+ */
+- (void)changeWalletMoveTo;
+
+/**
+ * user doesn't want to move money into another account any more
+ */
+- (void)nullifyWalletMoveTo;
+
+/**
  * user wants to insert new record and pressed done button
  * @param amount how much to withdraw
  * @param descr record's description

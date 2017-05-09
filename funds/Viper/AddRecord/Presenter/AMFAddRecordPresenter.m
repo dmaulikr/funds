@@ -15,7 +15,7 @@
 #import "AMFAddRecordModuleOutput.h"
 
 @interface AMFAddRecordPresenter () {
-    BOOL _withdrawalSelection;
+    BOOL _selectSecondWallet;
     BOOL _createMode;
 }
 @end
@@ -40,6 +40,7 @@
     self.view.selectedCategory = [self.interactor currentCategory];
     self.view.selectedCurrency = [self.interactor currentCurrency];
     self.view.selectedWallet = [self.interactor currentWallet];
+    self.view.selectedMoveIntoWallet = [self.interactor currentWWallet];
 	[self.view setupInitialState];
 }
 
@@ -55,7 +56,7 @@
 }
 
 - (void)changeWalletCurrency {
-    
+
 }
 
 - (void)changeInputCurrency {
@@ -69,9 +70,19 @@
 }
 
 - (void)changeWallet {
-    _withdrawalSelection = NO;
+    _selectSecondWallet = NO;
     [self.router showWalletChooserWithWalletSelected:[self.interactor currentWallet]
                                            andOutput:self];
+}
+
+- (void)changeWalletMoveTo {
+    _selectSecondWallet = YES;
+    [self.router showWalletChooserWithWalletSelected:[self.interactor currentWallet]
+                                           andOutput:self];
+}
+
+- (void)nullifyWalletMoveTo {
+    [self.interactor moveIntoWallet:nil];
 }
 
 #pragma mark - Methods of AMFAddRecordInteractorOutput
@@ -97,11 +108,25 @@
 #pragma mark - Methods of AMFChooseWalletModuleOutput
 
 - (void)walletChosen:(id<AMFWalletProtocol>)wallet {
-    if (_withdrawalSelection)
-        [self.interactor withdrawalWallet:wallet];
+    NSError *er;
+    // try to set first or second wallet
+    // and find out if there were any errors
+    if (_selectSecondWallet) {
+        er = [self.interactor moveIntoWallet:wallet];
+    }
     else {
-        [self.interactor selectedWallet:wallet];
-        self.view.selectedWallet = [self.interactor currentWallet];
+        er = [self.interactor selectedWallet:wallet];
+    }
+
+    if (!er) { // no errors? proceed with setup of first/second wallets
+        if (_selectSecondWallet)
+            self.view.selectedMoveIntoWallet = wallet;
+        else
+            self.view.selectedWallet = wallet;
+    }
+    else { // error occured? show it to user and exit
+        [self.router showErrorWithMessage:[er.userInfo objectForKey:@"msg"]];
+        return;
     }
     [self.view refreshView];
 }

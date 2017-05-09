@@ -96,10 +96,14 @@
     return nil;
 }
 
-- (void)updateRecord:(id<AMFCashProtocol>)rec withAmount:(double)amount {
+- (void)updateRecord:(id<AMFCashProtocol>)rec withAmount:(double)amount
+           andWallet:(id<AMFWalletProtocol>)wallet
+         andCategory:(id<AMFCategoryProtocol>)category {
     AMFCashFlow *cash = [self restoreAmountOfRecord:rec];
     if (cash) {
         cash.amount = amount;
+        cash.wallet = [AMFWallet findOrCreateWithWallet:wallet];
+        cash.category = [AMFCategory findOrCreateWithCategory:category];
         [cash updateWith:rec];
     }
 }
