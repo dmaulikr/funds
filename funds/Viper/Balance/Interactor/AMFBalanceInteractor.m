@@ -121,6 +121,12 @@
 
     // sort all data:
     [positive sortUsingComparator:^(AMFBalanceItem *i1, AMFBalanceItem *i2) {
+        if (i1.type != i2.type) {
+            if (i1.type == AMFBalanceItemTypeCategory)
+                return (NSComparisonResult)NSOrderedDescending;
+            else
+                return (NSComparisonResult)NSOrderedAscending;
+        }
         if (i1.amount > i2.amount) {
             return (NSComparisonResult)NSOrderedAscending;
         } else if (i1.amount < i2.amount) {
@@ -130,6 +136,12 @@
     }];
 
     [negative sortUsingComparator:^(AMFBalanceItem *i1, AMFBalanceItem *i2) {
+        if (i1.type != i2.type) {
+            if (i1.type == AMFBalanceItemTypeCategory)
+                return (NSComparisonResult)NSOrderedDescending;
+            else
+                return (NSComparisonResult)NSOrderedAscending;
+        }
         if (fabs(i1.amount) > fabs(i2.amount)) {
             return (NSComparisonResult)NSOrderedAscending;
         } else if (fabs(i1.amount) < fabs(i2.amount)) {
