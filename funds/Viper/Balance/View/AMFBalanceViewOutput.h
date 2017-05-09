@@ -17,4 +17,14 @@
  */
 - (void)didTriggerViewReadyEvent;
 
+/**
+ * user wants next report
+ */
+- (void)nextReportButtonPressed;
+
+/**
+ * user wants previous report
+ */
+- (void)prevReportButtonPressed;
+
 @end

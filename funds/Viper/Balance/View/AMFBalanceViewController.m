@@ -9,12 +9,17 @@
 #import "AMFBalanceViewController.h"
 #import "AMFTheme.h"
 #import "AMFBalanceViewOutput.h"
+#import "AMFBalanceItem.h"
+#import "AMFCashProtocol.h"
+#import "AMFCategoryProtocol.h"
 
 static NSString *const balanceCellIndentifier = @"balanceCell";
+static NSString *const titleCellIndentifier = @"pageNameCell";
 
 @interface AMFBalanceViewController () <UITableViewDelegate, UITableViewDataSource> {
     UIBarButtonItem *_right;
     UIBarButtonItem *_left;
+    NSString *_pageTitle;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -37,7 +42,7 @@ static NSString *const balanceCellIndentifier = @"balanceCell";
 
 - (void)setupInitialState {
     if (!self.navigationItem.leftBarButtonItem) {
-        // previous month
+        // previous page
         _left = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"Back")
                                                                  style:UIBarButtonItemStyleBordered
                                                                 target:self
@@ -46,8 +51,8 @@ static NSString *const balanceCellIndentifier = @"balanceCell";
     }
 
     if (!self.navigationItem.rightBarButtonItem) {
-        // next month or total amounts
-        _right = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"Total")
+        // next page or total amounts
+        _right = [[UIBarButtonItem alloc] initWithTitle:AMFLocalize(@"Next")
                                                                   style:UIBarButtonItemStyleBordered
                                                                  target:self
                                                                  action:@selector(goForward)];
@@ -60,9 +65,31 @@ static NSString *const balanceCellIndentifier = @"balanceCell";
 }
 
 - (void)goBackward {
+    [self.output prevReportButtonPressed];
 }
 
 - (void)goForward {
+    [self.output nextReportButtonPressed];
+}
+
+- (void)setNamesOfUpperButtons:(NSString*)left andRight:(NSString*)right {
+    if (left) {
+        _left.title = left;
+        _left.enabled = YES;
+    }
+    else
+        _left.enabled = NO;
+
+    if (right) {
+        _right.title = right;
+        _right.enabled = YES;
+    }
+    else
+        _right.enabled = NO;
+}
+
+- (void)setCurrentPageTitle:(NSString*)title {
+    _pageTitle = title;
 }
 
 #pragma mark - Themes
@@ -78,15 +105,45 @@ static NSString *const balanceCellIndentifier = @"balanceCell";
 #pragma mark - Table View source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2; // title + reports
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) // title cell?
+        return 1;
     return self.records.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:balanceCellIndentifier];
+    UITableViewCell *cell;
+    if (indexPath.section == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:titleCellIndentifier];
+        cell.textLabel.text = _pageTitle;
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    } else if (indexPath.section == 1) {
+        cell = [tableView dequeueReusableCellWithIdentifier:balanceCellIndentifier];
+        AMFBalanceItem *item = self.records[indexPath.row];
+        switch (item.type) {
+            case AMFBalanceItemTypeCategory:
+                cell.textLabel.text = item.category.name;
+                break;
+
+            case AMFBalanceItemTypeTotalAdditions:
+                cell.textLabel.text = AMFLocalize(@"Income");
+                break;
+
+            case AMFBalanceItemTypeTotalLoses:
+                cell.textLabel.text = AMFLocalize(@"Outcome");
+                break;
+
+            default:
+                cell.textLabel.text = @"?";
+                break;
+        }
+        if (item.type == AMFBalanceItemTypeCategory)
+            cell.textLabel.text = item.category.name;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%g", item.amount];
+    }
     return cell;
 }
 

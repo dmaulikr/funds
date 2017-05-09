@@ -22,4 +22,19 @@
  */
 @property (nonatomic, strong) NSArray *records;
 
+/**
+ refreshes data shown to the user
+ */
+- (void)refreshContents;
+
+/**
+ * names to be shown on upper panel
+ */
+- (void)setNamesOfUpperButtons:(NSString*)left andRight:(NSString*)right;
+
+/**
+ * title
+ */
+- (void)setCurrentPageTitle:(NSString*)title;
+
 @end

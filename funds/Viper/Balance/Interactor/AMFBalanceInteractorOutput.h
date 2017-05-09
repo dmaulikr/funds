@@ -10,4 +10,14 @@
 
 @protocol AMFBalanceInteractorOutput <NSObject>
 
+/**
+ * returns object to be shown for view
+ */
+- (void)reportCompleted:(NSArray*)report;
+
+/**
+ * shows which names should be shown on the buttons
+ */
+- (void)availableDirectionsForLeft:(NSString*)left andRight:(NSString*)right;
+
 @end

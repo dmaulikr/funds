@@ -112,6 +112,7 @@
 		4CE159101E72FC790009BAF4 /* AMFReaderFromCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1590F1E72FC790009BAF4 /* AMFReaderFromCSV.m */; };
 		4CE159131E7301320009BAF4 /* AMFAppDelegateForReadingCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE159121E7301320009BAF4 /* AMFAppDelegateForReadingCSV.m */; };
 		4CE159191E73144D0009BAF4 /* AMFFlowData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE159181E73144D0009BAF4 /* AMFFlowData.m */; };
+		4CF3343C1EC0BA7D004B6E59 /* AMFBalanceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF3343B1EC0BA7D004B6E59 /* AMFBalanceItem.m */; };
 		4CFD9C971EB0E18E00825F6E /* AMFChooseCategoryAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD9C961EB0E18E00825F6E /* AMFChooseCategoryAssembly.m */; };
 		4CFD9C9C1EB0E19B00825F6E /* AMFChooseCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD9C991EB0E19B00825F6E /* AMFChooseCategoryViewController.m */; };
 		4CFD9CA01EB0E1AF00825F6E /* AMFChooseCategoryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD9C9F1EB0E1AF00825F6E /* AMFChooseCategoryPresenter.m */; };
@@ -424,6 +425,8 @@
 		4CE159121E7301320009BAF4 /* AMFAppDelegateForReadingCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAppDelegateForReadingCSV.m; path = LaunchSystem/AppDelegates/AMFAppDelegateForReadingCSV.m; sourceTree = "<group>"; };
 		4CE159171E73144D0009BAF4 /* AMFFlowData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFFlowData.h; path = Viper/Flow/AMFFlowData.h; sourceTree = "<group>"; };
 		4CE159181E73144D0009BAF4 /* AMFFlowData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFFlowData.m; path = Viper/Flow/AMFFlowData.m; sourceTree = "<group>"; };
+		4CF3343A1EC0BA7D004B6E59 /* AMFBalanceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFBalanceItem.h; path = Viper/Balance/Ponsos/AMFBalanceItem.h; sourceTree = "<group>"; };
+		4CF3343B1EC0BA7D004B6E59 /* AMFBalanceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFBalanceItem.m; path = Viper/Balance/Ponsos/AMFBalanceItem.m; sourceTree = "<group>"; };
 		4CFD9C951EB0E18E00825F6E /* AMFChooseCategoryAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseCategoryAssembly.h; path = funds/Viper/ChooseCategory/Assembly/AMFChooseCategoryAssembly.h; sourceTree = SOURCE_ROOT; };
 		4CFD9C961EB0E18E00825F6E /* AMFChooseCategoryAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFChooseCategoryAssembly.m; path = funds/Viper/ChooseCategory/Assembly/AMFChooseCategoryAssembly.m; sourceTree = SOURCE_ROOT; };
 		4CFD9C981EB0E19B00825F6E /* AMFChooseCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFChooseCategoryViewController.h; path = funds/Viper/ChooseCategory/View/AMFChooseCategoryViewController.h; sourceTree = SOURCE_ROOT; };
@@ -1007,6 +1010,7 @@
 		4C53EC5A1E70353900725AF8 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
+				4CF334391EC0BA27004B6E59 /* Ponsos */,
 				B6B0DC701E1769D8EFE1773C /* Assembly */,
 				1C9FC664356115B6B91EEC6F /* View */,
 				BBB33395558545766426AD8A /* Presenter */,
@@ -1240,6 +1244,15 @@
 				4CE159181E73144D0009BAF4 /* AMFFlowData.m */,
 			);
 			name = Ponso;
+			sourceTree = "<group>";
+		};
+		4CF334391EC0BA27004B6E59 /* Ponsos */ = {
+			isa = PBXGroup;
+			children = (
+				4CF3343A1EC0BA7D004B6E59 /* AMFBalanceItem.h */,
+				4CF3343B1EC0BA7D004B6E59 /* AMFBalanceItem.m */,
+			);
+			name = Ponsos;
 			sourceTree = "<group>";
 		};
 		52008B251B3D97DCCCA82B0E /* Interactor */ = {
@@ -2204,6 +2217,7 @@
 				4C046FCB1E73CF0A001E73A6 /* AMFPageChooserRouter.m in Sources */,
 				4CFD9CA51EB0E1C200825F6E /* AMFChooseCategoryInteractor.m in Sources */,
 				4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */,
+				4CF3343C1EC0BA7D004B6E59 /* AMFBalanceItem.m in Sources */,
 				4C53ECAB1E70904800725AF8 /* AMFBalancePresenter.m in Sources */,
 				4CFD9CA91EB0E1CF00825F6E /* AMFChooseCategoryRouter.m in Sources */,
 				4C2758F81E7AF4BB0010C011 /* AMFAddRecordPresenter.m in Sources */,
