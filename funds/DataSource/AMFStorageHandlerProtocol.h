@@ -23,6 +23,7 @@
 - (void)updateWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon;
 - (void)addRecords:(NSArray*)ar;
 - (NSArray*)grabRecordsForPage:(id<AMFPageProtocol>)page;
+- (NSArray*)grabAllRecords;
 - (NSArray*)grabAllPages;
 - (NSArray*)grabAllCategories;
 - (NSArray*)grabAllCurrencies;
