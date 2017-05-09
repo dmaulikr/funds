@@ -130,18 +130,23 @@ static NSString *const titleCellIndentifier = @"pageNameCell";
 
             case AMFBalanceItemTypeTotalAdditions:
                 cell.textLabel.text = AMFLocalize(@"Income");
+                cell.imageView.image = nil;
                 break;
 
             case AMFBalanceItemTypeTotalLoses:
                 cell.textLabel.text = AMFLocalize(@"Outcome");
+                cell.imageView.image = nil;
                 break;
 
             default:
                 cell.textLabel.text = @"?";
                 break;
         }
-        if (item.type == AMFBalanceItemTypeCategory)
+        if (item.type == AMFBalanceItemTypeCategory) {
             cell.textLabel.text = item.category.name;
+            cell.imageView.image = [UIImage imageNamed:item.category.icon_path.length ?
+                                    item.category.icon_path : @"help"];
+        }
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%g", item.amount];
     }
     return cell;
