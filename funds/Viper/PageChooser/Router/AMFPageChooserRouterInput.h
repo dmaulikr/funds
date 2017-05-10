@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMFAlertProtocol.h"
 
 @protocol AMFAddPageModuleOutput;
 @protocol AMFPageProtocol;
 
-@protocol AMFPageChooserRouterInput <NSObject>
+@protocol AMFPageChooserRouterInput <AMFAlertProtocol>
 
 /**
  * closes page chooser

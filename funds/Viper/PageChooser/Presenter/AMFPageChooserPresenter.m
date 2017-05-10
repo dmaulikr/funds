@@ -46,9 +46,12 @@
 }
 
 - (void)deleteCell:(NSUInteger)index {
-    id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
-    [self.interactor deletePage:page];
-    [self.interactor receiveAllPages]; // update contents
+    [self.router showAlternativeDialogWithMessage:AMFLocalize(@"Are you sure?")
+                                        andAction:^(UIAlertAction *action) {
+                                            id<AMFPageProtocol> page = [self.view.pages objectAtIndex:index];
+                                            [self.interactor deletePage:page];
+                                            [self.interactor receiveAllPages]; // update contents
+                                        }];
 }
 
 - (void)cancelAction {

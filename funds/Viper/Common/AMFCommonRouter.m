@@ -22,4 +22,11 @@
     [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
 }
 
+- (void)showAlternativeDialogWithMessage:(NSString *_Nonnull)message
+                               andAction:(void(^)(UIAlertAction *_Nonnull action))yesHandler {
+    UIAlertController *ac = [_alertFactory acAlternativeDialogWithMessage:message
+                                                                andAction:yesHandler];
+    [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
+}
+
 @end
