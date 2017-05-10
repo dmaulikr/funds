@@ -21,6 +21,10 @@ extern NSString *const kSegueChangeNameIconForCategory;
 
 extern NSString *const kDomain;
 
+// events
+extern NSString *const kEventRecordAdded;
+extern NSString *const kEventRecordRemoved;
+
 // constants for user defaults
 extern NSString *const kLastCategory;
 extern NSString *const kLastWallet;

@@ -18,6 +18,10 @@ NSString *const kSegueChangeNameIconForCategory = @"nameIconForCategory";
 
 NSString *const kDomain = @"com.micartu";
 
+// events
+NSString *const kEventRecordAdded = @"NewRecordAddedEvent";
+NSString *const kEventRecordRemoved = @"RecordRemovedEvent";
+
 NSString *const kLastCategory = @"lastUsedCategory";
 NSString *const kLastWallet = @"lastUsedWallet";
 NSString *const kLastPage = @"lastUsedPage";

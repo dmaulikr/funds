@@ -89,6 +89,8 @@
 
 - (void)recordCreatedWithError:(NSError*)er {
     if (!er) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kEventRecordAdded
+                                                            object:nil];
         [self.moduleOutput doneRecordEditing];
         [self.router closeMe];
     }

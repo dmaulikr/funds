@@ -84,6 +84,8 @@
     for (id<AMFCashProtocol> rec in recs) {
         [self.storage removeRecord:rec];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kEventRecordRemoved
+                                                        object:nil];
 }
 
 - (id<AMFCashProtocol>)cashFlowWithIndex:(NSInteger)index {

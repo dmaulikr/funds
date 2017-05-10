@@ -14,11 +14,26 @@
 #import "AMFBalancePresenter.h"
 #import "AMFPageProtocol.h"
 
+@interface AMFBalancePresenter () {
+    BOOL _inialized;
+}
+
+@end
+
 @implementation AMFBalancePresenter
 
 #pragma mark - Methods of AMFBalanceModuleInput
 
 - (void)configureModule {
+    _inialized = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(DBChanged)
+                                                 name:kEventRecordAdded
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(DBChanged)
+                                                 name:kEventRecordRemoved
+                                               object:nil];
 }
 
 #pragma mark - Methods of AMFBalanceViewOutput
@@ -29,6 +44,8 @@
 }
 
 - (void)didTriggerViewReadyEvent {
+    if (!_inialized)
+        [self configureModule];
 	[self.view setupInitialState];
     [self setPageForView:[self.interactor currentPage]];
 }
@@ -50,6 +67,12 @@
 
 - (void)availableDirectionsForLeft:(NSString*)left andRight:(NSString*)right {
     [self.view setNamesOfUpperButtons:left andRight:right];
+}
+
+#pragma mark - Inner methods
+
+- (void)DBChanged {
+    [self setPageForView:[self.interactor currentPage]];
 }
 
 @end
