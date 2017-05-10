@@ -10,7 +10,7 @@
 
 @implementation AMFPlainBudgetData
 
--(NSString*) description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"Budget DATA: %@ => description: %@, amount: %g",
             self.date,
             self.descr,

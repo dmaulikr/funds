@@ -1,6 +1,6 @@
 //
 //  AMFCurrency+CoreDataProperties.h
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMFCurrency (CoreDataProperties) <AMFCurrencyProtocol>
 
 + (NSFetchRequest<AMFCurrency *> *)fetchRequest;
-+ (AMFCurrency*) findOrCreateWithPage:(id<AMFCurrencyProtocol>)m
-                              andCash:(AMFCashFlow*)cash;
++ (AMFCurrency *)findOrCreateWithPage:(id<AMFCurrencyProtocol>)m
+                              andCash:(AMFCashFlow *)cash;
 
 @property (nonatomic, assign) NSUInteger cur_id;
 @property (nullable, nonatomic, copy) NSString *name;

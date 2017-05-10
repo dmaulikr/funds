@@ -10,7 +10,7 @@
 
 @protocol AMFSimpleAlertProtocol <NSObject>
 
--(UIAlertController*) acErrorWithMessage:(NSString*) message;
--(UIAlertController*) acWarningWithMessage:(NSString*) message;
+- (UIAlertController *)acErrorWithMessage:(NSString *)message;
+- (UIAlertController *)acWarningWithMessage:(NSString *)message;
 
 @end

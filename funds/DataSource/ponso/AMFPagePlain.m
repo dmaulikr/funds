@@ -15,7 +15,7 @@ static NSString *const kName = @"name";
 
 @synthesize name;
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"Page Plain name: %@",
             self.name];
 }

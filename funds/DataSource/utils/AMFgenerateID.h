@@ -10,7 +10,7 @@
 
 @interface AMFgenerateID : NSObject
 
--(instancetype) initWithID:(NSUInteger) idInit;
--(NSUInteger) generateID;
+- (instancetype)initWithID:(NSUInteger)idInit;
+- (NSUInteger)generateID;
 
 @end

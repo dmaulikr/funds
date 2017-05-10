@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) UIActivityIndicatorView *activeIndicator;
 
-- (void) setupInitialState;
+- (void)setupInitialState;
 
 @end

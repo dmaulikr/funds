@@ -15,7 +15,7 @@
 
 @interface AMFDataSupplierAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
--(id<AMFStorageHandlerProtocol>) storageHandler;
--(id<AMFFileIntoDBReader>) csvReader;
+- (id<AMFStorageHandlerProtocol>)storageHandler;
+- (id<AMFFileIntoDBReader>)csvReader;
 
 @end

@@ -18,7 +18,7 @@ static NSString *const kRate = @"rate";
 symbol,
 rate;
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"Currency Plain name: %@ symbol: %@ rate: %g",
             self.name,
             self.symbol,

@@ -1,6 +1,6 @@
 //
 //  AMFCashFlow+CoreDataClass.m
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //

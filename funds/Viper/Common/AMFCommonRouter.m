@@ -12,12 +12,12 @@
 @implementation AMFCommonRouter
 
 
--(void) showErrorWithMessage:(NSString*) message {
+- (void)showErrorWithMessage:(NSString *)message {
     UIAlertController *ac = [_alertFactory acErrorWithMessage:message];
     [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
 }
 
--(void) showWarningWithMessage:(NSString*) message {
+- (void)showWarningWithMessage:(NSString *)message {
     UIAlertController *ac = [_alertFactory acWarningWithMessage:message];
     [(id)self.transitionHandler presentViewController:ac animated:YES completion:nil];
 }

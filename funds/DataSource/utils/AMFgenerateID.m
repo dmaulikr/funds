@@ -17,11 +17,11 @@
 
 @implementation AMFgenerateID
 
--(instancetype) init {
+- (instancetype)init {
     return [self initWithID:0];
 }
 
--(instancetype) initWithID:(NSUInteger) idInit {
+- (instancetype)initWithID:(NSUInteger)idInit {
     self = [super init];
     if (self) {
         _id = idInit;
@@ -29,7 +29,7 @@
     return self;
 }
 
--(NSUInteger) generateID {
+- (NSUInteger)generateID {
     return _id++;
 }
 

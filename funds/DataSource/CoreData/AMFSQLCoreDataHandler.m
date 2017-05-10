@@ -24,7 +24,7 @@
 
 @implementation AMFSQLCoreDataHandler
 
-- (AMFCashFlow*)addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
+- (AMFCashFlow *)addNoRecurcyWithRecord:(id<AMFCashProtocol>)rec {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date = %@) AND (descr = %@) AND (amount = %g)", rec.date, rec.descr, rec.amount];
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     AMFCashFlow *cash = [AMFCashFlow MR_findFirstWithPredicate:predicate inContext:con];
@@ -57,7 +57,7 @@
     [self saveContext];
 }
 
-- (void)addRecords:(NSArray*)ar {
+- (void)addRecords:(NSArray *)ar {
     for (id<AMFCashProtocol> rec in ar)
         [self addWithRecord:rec];
     [self saveContext];
@@ -81,8 +81,8 @@
     return rec; // already a class in storage
 }
 
-- (AMFCashFlow*)restoreAmountOfRecord:(id<AMFCashProtocol>)rec {
-    AMFCashFlow *cash = (AMFCashFlow*)[self findCashInStorage:rec];
+- (AMFCashFlow *)restoreAmountOfRecord:(id<AMFCashProtocol>)rec {
+    AMFCashFlow *cash = (AMFCashFlow *)[self findCashInStorage:rec];
     if (cash) {
         if (cash.wallet) {
             // restore amount of the wallet
@@ -115,14 +115,14 @@
     }
 }
 
-- (void)updateWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon {
+- (void)updateWallet:(id<AMFWalletProtocol>)wallet withName:(NSString *)name andIcon:(NSString *)icon {
     if (![wallet isKindOfClass:[AMFWallet class]])
         wallet = [AMFWallet findOrCreateWithWallet:wallet];
     wallet.name = name;
     wallet.icon_path = icon;
 }
 
-- (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString*)name {
+- (void)updatePage:(id<AMFPageProtocol>)page withName:(NSString *)name {
     id<AMFPageProtocol> p = [AMFPage findOrCreateWithPage:page];
     p.name = name;
 }
@@ -139,44 +139,40 @@
         }
         page_id--;
     }
-
     if (!page4attach) {
         page.name = @"?";
         page4attach = [AMFPage findOrCreateWithPage:page];
     }
-
     NSArray *cash = [self grabRecordsForPage:p];
     NSSet *cashSet = [NSSet setWithArray:cash];
     [p removeCashflow:cashSet];
-
     [page4attach addCashflow:cashSet];
-
     [p MR_deleteEntity];
 }
 
-- (NSArray*)grabRecordsForPage:(id<AMFPageProtocol>)page {
+- (NSArray *)grabRecordsForPage:(id<AMFPageProtocol>)page {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"page.name == %@",
                               page.name];
     return [AMFCashFlow MR_findAllSortedBy:@"cash_id" ascending:NO withPredicate:predicate];
 }
 
-- (NSArray*)grabAllRecords {
+- (NSArray *)grabAllRecords {
     return [AMFCashFlow MR_findAllSortedBy:@"date" ascending:NO];
 }
 
-- (NSArray*)grabAllCategories {
+- (NSArray *)grabAllCategories {
     return [AMFCategory MR_findAllSortedBy:@"cat_id" ascending:NO];
 }
 
-- (NSArray*)grabAllPages {
+- (NSArray *)grabAllPages {
     return [AMFPage MR_findAllSortedBy:@"page_id" ascending:NO];
 }
 
-- (NSArray*)grabAllCurrencies {
+- (NSArray *)grabAllCurrencies {
     return [AMFCurrency MR_findAllSortedBy:@"cur_id" ascending:NO];
 }
 
-- (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString*)name {
+- (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString *)name {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@",
                               name];
     return [AMFCategory MR_findFirstWithPredicate:predicate
@@ -186,34 +182,29 @@
 }
 
 - (void)updateCategory:(id<AMFCategoryProtocol>)category
-              withName:(NSString*)name
-               andIcon:(NSString*)icon {
+              withName:(NSString *)name
+               andIcon:(NSString *)icon {
     if (![category isKindOfClass:[AMFWallet class]])
         category = [AMFCategory findOrCreateWithCategory:category];
     category.name = name;
     category.icon_path = icon;
 }
 
-- (NSArray*)grabAllWallets {
+- (NSArray *)grabAllWallets {
     return [AMFWallet MR_findAllSortedBy:@"wallet_id" ascending:NO];
 }
 
 - (void)removeAll {
     for (AMFCashFlow *cash in [AMFCashFlow MR_findAll])
         [cash MR_deleteEntity];
-
     for (AMFPage *page in [AMFPage MR_findAll])
         [page MR_deleteEntity];
-
     for (AMFCategory *c in [AMFCategory MR_findAll])
         [c MR_deleteEntity];
-
     for (AMFWallet *w in [AMFWallet MR_findAll])
         [w MR_deleteEntity];
-
     for (AMFCurrency *c in [AMFCurrency MR_findAll])
         [c MR_deleteEntity];
-
     [self saveContext];
 }
 

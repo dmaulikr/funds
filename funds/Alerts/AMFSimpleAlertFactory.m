@@ -12,28 +12,25 @@
 @implementation AMFSimpleAlertFactory
 
 
--(UIAlertController*) acErrorWithMessage:(NSString*) message {
-    UIAlertController* ac = [UIAlertController alertControllerWithTitle:AMFLocalize(@"ERROR")
+- (UIAlertController *)acErrorWithMessage:(NSString *)message {
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:AMFLocalize(@"ERROR")
                                                                 message:message
                                                          preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {}];
     [ac addAction:defaultAction];
-
     return ac;
-
 }
 
--(UIAlertController*) acWarningWithMessage:(NSString*) message {
-    UIAlertController* ac = [UIAlertController alertControllerWithTitle:AMFLocalize(@"WARNING")
+- (UIAlertController *)acWarningWithMessage:(NSString *)message {
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:AMFLocalize(@"WARNING")
                                                                 message:message
                                                          preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {}];
     [ac addAction:defaultAction];
-
     return ac;
 }
 

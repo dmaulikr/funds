@@ -17,7 +17,7 @@ static NSString *const kIcon = @"icon";
 icon_path,
 amount;
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"Wallet Plain name: %@, icon_path: %@ amount: %g",
             self.name,
             self.icon_path,

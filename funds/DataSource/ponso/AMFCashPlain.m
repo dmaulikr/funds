@@ -25,7 +25,7 @@ static NSString *const kDate = @"date";
 static NSString *const kAmount = @"amount";
 static NSString *const kDescr = @"descript";
 
--(NSString*) description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"CASH Plain: %@ => description: %@, amount: %g",
             self.date,
             self.descr,

@@ -18,12 +18,12 @@
 /**
  reads contents of given file wihout its deletion
  */
--(void)populateContentsWithFile:(NSString*)file;
+- (void)populateContentsWithFile:(NSString *)file;
 
 /**
  checks if Documents folder has files of needed type
  then reads and deletes them
  */
--(void)checkDocumentsFolderForFiles;
+- (void)checkDocumentsFolderForFiles;
 
 @end

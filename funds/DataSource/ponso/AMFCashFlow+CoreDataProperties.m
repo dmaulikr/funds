@@ -1,6 +1,6 @@
 //
 //  AMFCashFlow+CoreDataProperties.m
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -12,7 +12,7 @@
 @implementation AMFCashFlow (CoreDataProperties)
 
 + (NSFetchRequest<AMFCashFlow *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCashFlow"];
+    return [[NSFetchRequest alloc] initWithEntityName:@"AMFCashFlow"];
 }
 
 @dynamic cash_id;
@@ -31,14 +31,14 @@ static NSString *const kDate = @"date";
 static NSString *const kAmount = @"amount";
 static NSString *const kDescr = @"descript";
 
--(NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"CASHFLOW: %@ => description: %@, amount: %g",
             self.date,
             self.descr,
             self.amount];
 }
 
--(void)updateWith:(id<AMFCashProtocol>)cash {
+- (void)updateWith:(id<AMFCashProtocol>)cash {
     self.amount = cash.amount;
     self.descr = cash.descr;
     self.date = cash.date;

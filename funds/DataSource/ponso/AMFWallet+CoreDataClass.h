@@ -1,6 +1,6 @@
 //
 //  AMFWallet+CoreDataClass.h
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //

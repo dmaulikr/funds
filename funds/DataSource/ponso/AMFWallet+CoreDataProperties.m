@@ -1,6 +1,6 @@
 //
 //  AMFWallet+CoreDataProperties.m
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -18,7 +18,7 @@ static NSString *const kIcon = @"icon";
 
 @implementation AMFWallet (CoreDataProperties)
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"AMFWallet name: %@, icon_path: %@, amount: %g",
             self.name,
             self.icon_path,
@@ -26,13 +26,13 @@ static NSString *const kIcon = @"icon";
 }
 
 + (NSFetchRequest<AMFWallet *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"AMFWallet"];
+    return [[NSFetchRequest alloc] initWithEntityName:@"AMFWallet"];
 }
 
-+ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet {
++ (AMFWallet *)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet {
     static AMFgenerateID *_gen = nil;
     if ([wallet isKindOfClass:[AMFWallet class]]) // it's already AMFWallet
-        return (AMFWallet*)wallet;
+        return (AMFWallet *)wallet;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)",
                               wallet.name, wallet.icon_path];
@@ -51,7 +51,7 @@ static NSString *const kIcon = @"icon";
     return w;
 }
 
-+ (AMFWallet*)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
++ (AMFWallet *)findOrCreateWithWallet:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow *)cash {
     AMFWallet *w = [self findOrCreateWithWallet:wallet];
     [w updateWith:wallet andCash:cash];
     return w;
@@ -63,7 +63,7 @@ static NSString *const kIcon = @"icon";
 @dynamic cash;
 @dynamic amount;
 
-- (void)updateWith:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow*)cash {
+- (void)updateWith:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow *)cash {
     self.name = wallet.name;
     self.icon_path = wallet.icon_path;
     self.amount += cash.amount;

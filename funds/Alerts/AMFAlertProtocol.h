@@ -8,7 +8,7 @@
 
 @protocol AMFAlertProtocol <NSObject>
 
--(void) showErrorWithMessage:(NSString*) message;
--(void) showWarningWithMessage:(NSString*) message;
+- (void)showErrorWithMessage:(NSString *)message;
+- (void)showWarningWithMessage:(NSString *)message;
 
 @end

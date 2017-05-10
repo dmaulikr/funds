@@ -14,6 +14,6 @@
 
 @interface AMFAlertsAssembly : TyphoonAssembly <RamblerInitialAssembly>
 
--(id<AMFSimpleAlertProtocol>) alertFactory;
+- (id<AMFSimpleAlertProtocol>)alertFactory;
 
 @end

@@ -1,6 +1,6 @@
 //
 //  AMFPage+CoreDataProperties.m
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -16,16 +16,16 @@ static NSString *const kName = @"name";
 
 @implementation AMFPage (CoreDataProperties)
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"AMFPage name: %@",
             self.name];
 }
 
 + (NSFetchRequest<AMFPage *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"AMFPage"];
+    return [[NSFetchRequest alloc] initWithEntityName:@"AMFPage"];
 }
 
-+ (AMFPage*)findOrCreateWithPage:(id<AMFPageProtocol>)page {
++ (AMFPage *)findOrCreateWithPage:(id<AMFPageProtocol>)page {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", page.name];
@@ -44,7 +44,7 @@ static NSString *const kName = @"name";
     return p;
 }
 
-+ (AMFPage*)findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash {
++ (AMFPage *)findOrCreateWithPage:(id<AMFPageProtocol>)page andCash:(AMFCashFlow *)cash {
     AMFPage *p = [self findOrCreateWithPage:page];
     if (p)
         [p updateWith:page andCash:cash];
@@ -55,7 +55,7 @@ static NSString *const kName = @"name";
 @dynamic name;
 @dynamic cashflow;
 
-- (void)updateWith:(id<AMFPageProtocol>)page andCash:(AMFCashFlow*)cash {
+- (void)updateWith:(id<AMFPageProtocol>)page andCash:(AMFCashFlow *)cash {
     self.name = page.name;
     if (![self.cashflow containsObject:cash])
         [self addCashflowObject:cash];

@@ -1,6 +1,6 @@
 //
 //  AMFCategory+CoreDataProperties.m
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -18,7 +18,7 @@ static NSString *const kIcon = @"icon";
 
 @implementation AMFCategory (CoreDataProperties)
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"AMFCategory name: %@, icon_path: %@, amount: %g",
             self.name,
             self.icon_path,
@@ -26,13 +26,13 @@ static NSString *const kIcon = @"icon";
 }
 
 + (NSFetchRequest<AMFCategory *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCategory"];
+    return [[NSFetchRequest alloc] initWithEntityName:@"AMFCategory"];
 }
 
-+ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category {
++ (AMFCategory *)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category {
     static AMFgenerateID *_gen = nil;
     if ([category isKindOfClass:[AMFCategory class]]) // it's already AMFCategory
-        return (AMFCategory*)category;
+        return (AMFCategory *)category;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name = %@) AND (icon_path = %@)", category.name, category.icon_path];
     AMFCategory *c = [AMFCategory MR_findFirstWithPredicate:predicate inContext:con];
@@ -50,8 +50,8 @@ static NSString *const kIcon = @"icon";
     return c;
 }
 
-+ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
-                                andCash:(AMFCashFlow *)cash {
++ (AMFCategory *)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
+                                  andCash:(AMFCashFlow *)cash {
     AMFCategory *c = [self findOrCreateWithCategory:category];
     [c updateWith:category andCash:cash];
     return c;
@@ -63,7 +63,7 @@ static NSString *const kIcon = @"icon";
 @dynamic cash;
 @dynamic amount;
 
-- (void)updateWith:(id<AMFCategoryProtocol>)category andCash:(AMFCashFlow*)cash {
+- (void)updateWith:(id<AMFCategoryProtocol>)category andCash:(AMFCashFlow *)cash {
     self.name = category.name;
     self.icon_path = category.icon_path;
     self.amount += cash.amount;

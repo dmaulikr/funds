@@ -1,6 +1,6 @@
 //
 //  AMFCashFlow+CoreDataProperties.h
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, retain) AMFCurrency *currency;
 @property (nonatomic, retain) AMFPage *page;
 
--(void) updateWith:(id<AMFCashProtocol>)cash;
+- (void)updateWith:(id<AMFCashProtocol>)cash;
 
 @end
 

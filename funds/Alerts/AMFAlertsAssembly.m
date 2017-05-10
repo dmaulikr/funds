@@ -12,11 +12,11 @@
 
 @implementation AMFAlertsAssembly
 
--(id<AMFSimpleAlertProtocol>) alertFactory {
-    return [TyphoonDefinition withClass:[AMFSimpleAlertFactory class] configuration:^(TyphoonDefinition *definition)
-            {
-                definition.scope = TyphoonScopeSingleton;
-            }];
+- (id<AMFSimpleAlertProtocol>)alertFactory {
+    return [TyphoonDefinition withClass:[AMFSimpleAlertFactory class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              definition.scope = TyphoonScopeSingleton;
+    }];
 }
 
 @end

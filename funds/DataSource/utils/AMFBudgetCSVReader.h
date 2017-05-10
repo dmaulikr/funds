@@ -12,8 +12,8 @@
 
 @interface AMFBudgetCSVReader : NSObject
 
--(void)readContentsOfCSVFile:(NSString*)file;
+- (void)readContentsOfCSVFile:(NSString *)file;
 
-@property (nonatomic, strong) NSArray <AMFPlainBudgetData*> *contents;
+@property (nonatomic, strong) NSArray <AMFPlainBudgetData *> *contents;
 
 @end

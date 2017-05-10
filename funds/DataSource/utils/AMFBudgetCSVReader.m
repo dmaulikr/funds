@@ -20,7 +20,7 @@
 
 @implementation AMFBudgetCSVReader
 
--(instancetype) init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _dateFormatter = [[NSDateFormatter alloc] init];
@@ -29,7 +29,7 @@
     return self;
 }
 
--(void)readContentsOfCSVFile:(NSString*)file {
+- (void)readContentsOfCSVFile:(NSString *)file {
     NSStringEncoding encoding = 0;
     NSInputStream *stream = [NSInputStream inputStreamWithFileAtPath:file];
     CHCSVParser *p = [[CHCSVParser alloc] initWithInputStream:stream usedEncoding:&encoding delimiter:','];
@@ -57,43 +57,33 @@
         case 2: // date
             _curData.date = [_dateFormatter dateFromString:field];
             break;
-            
         case 4: // name of category
             _curData.category = field;
             break;
-            
         case 5: // name of page
             _curData.page = field;
             break;
-            
         case 6: // description
             _curData.descr = field;
             break;
-            
         case 7: // name of wallet
             _curData.wallet = field;
             break;
-            
         case 8:
             _curData.currency = field;
             break;
-            
         case 9:
             _curData.amount = [field doubleValue];
             break;
-            
         case 10:
             _curData.toWallet = field;
             break;
-            
         case 11:
             _curData.toWalletCurrency = field;
             break;
-            
         case 12:
             _curData.toWalletAmount = [field doubleValue];
             break;
-            
         default: // an unneeded field
             break;
     }

@@ -27,13 +27,13 @@
 
 @synthesize handler;
 
--(NSString *)applicationDocumentsDirectory {
+- (NSString *)applicationDocumentsDirectory {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = paths.firstObject;
     return basePath;
 }
 
--(void)checkDocumentsFolderForFiles {
+- (void)checkDocumentsFolderForFiles {
     NSString *docs = [self applicationDocumentsDirectory];
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *directoryContent = [fm contentsOfDirectoryAtPath:docs error:nil];
@@ -52,50 +52,42 @@
     }
 }
 
--(void)populateContentsWithFile:(NSString*)file {
+- (void)populateContentsWithFile:(NSString *)file {
     AMFBudgetCSVReader *reader = [[AMFBudgetCSVReader alloc] init];
     [reader readContentsOfCSVFile:file];
     LogDebug(@"Imported from file '%@' => %ld records...",
              file,
              (long)reader.contents.count);
-    NSMutableArray* ar = [NSMutableArray arrayWithCapacity:reader.contents.count];
+    NSMutableArray *ar = [NSMutableArray arrayWithCapacity:reader.contents.count];
     for (AMFPlainBudgetData *rec in reader.contents) {
         AMFCashPlain *cash = [[AMFCashPlain alloc] init];
         AMFWalletPlain *wal = [[AMFWalletPlain alloc] init];
         AMFCategoryPlain *cat = [[AMFCategoryPlain alloc] init];
         AMFPagePlain *page = [[AMFPagePlain alloc] init];
         AMFCurrencyPlain *c = [[AMFCurrencyPlain alloc] init];
-
         wal.name = rec.wallet;
         page.name = rec.page;
         c.name = rec.currency;
         cat.name = rec.category;
-
         cash.date = rec.date;
         cash.descr = rec.descr;
         cash.amount = rec.amount;
-
         cash.wallet = wal;
         cash.currency = c;
         cash.category = cat;
         cash.page = page;
-
         if (rec.toWallet && rec.toWallet.length) {
             // moving money to another account
             AMFWalletPlain *walInto = [[AMFWalletPlain alloc] init];
             AMFCurrencyPlain *cInto = [[AMFCurrencyPlain alloc] init];
             AMFCashPlain *cashInto = [[AMFCashPlain alloc] init];
-
             walInto.name = rec.toWallet;
-
             cashInto.wallet2wallet = cash;
             cash.wallet2wallet = cashInto;
-
             cashInto.amount = rec.toWalletAmount;
             cashInto.date = rec.date;
             cashInto.descr = rec.descr;
             cInto.name = rec.toWalletCurrency;
-
             cashInto.currency = cInto;
             cashInto.wallet =  walInto;
             cashInto.category = cat;

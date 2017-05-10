@@ -1,6 +1,6 @@
 //
 //  AMFCurrency+CoreDataProperties.m
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -18,7 +18,7 @@ static NSString *const kRate = @"crate";
 
 @implementation AMFCurrency (CoreDataProperties)
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"AMFCurrency Plain name: %@ symbol: %@ rate: %g",
             self.name,
             self.symbol,
@@ -26,10 +26,10 @@ static NSString *const kRate = @"crate";
 }
 
 + (NSFetchRequest<AMFCurrency *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"AMFCurrency"];
+    return [[NSFetchRequest alloc] initWithEntityName:@"AMFCurrency"];
 }
 
-+ (AMFCurrency*) findOrCreateWithPage:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow*)cash {
++ (AMFCurrency *)findOrCreateWithPage:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow *)cash {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", m.name];
@@ -55,7 +55,7 @@ static NSString *const kRate = @"crate";
 @dynamic cash;
 @dynamic symbol;
 
-- (void)updateWith:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow*)cash {
+- (void)updateWith:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow *)cash {
     self.name = m.name;
     self.rate = m.rate;
     if (![self.cash containsObject:cash])

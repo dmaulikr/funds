@@ -1,6 +1,6 @@
 //
 //  AMFCategory+CoreDataProperties.h
-//  
+//
 //
 //  Created by Michael on 09.03.17.
 //
@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMFCategory (CoreDataProperties) <AMFCategoryProtocol>
 
 + (NSFetchRequest<AMFCategory *> *)fetchRequest;
-+ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category;
-+ (AMFCategory*)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
-                              andCash:(AMFCashFlow *_Nonnull)cash;
++ (AMFCategory *)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category;
++ (AMFCategory *)findOrCreateWithCategory:(id<AMFCategoryProtocol>)category
+                                  andCash:(AMFCashFlow *_Nonnull)cash;
 
 @property (nonatomic, assign) NSUInteger cat_id;
 @property (nullable, nonatomic, copy) NSString *icon_path;

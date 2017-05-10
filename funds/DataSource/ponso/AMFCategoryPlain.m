@@ -18,7 +18,7 @@ static NSString *const kAmount = @"amount";
 icon_path,
 amount;
 
-- (NSString*)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"Category Plain name: %@, icon_path: %@, amount: %g",
             self.name,
             self.icon_path,

@@ -11,6 +11,8 @@
 
 @interface NSManagedObject (generateID)
 
-+(NSUInteger) nextID:(NSString *)idKey forEntityName:(NSString *)entityName inContext:(NSManagedObjectContext *)context;
++ (NSUInteger)nextID:(NSString *)idKey
+       forEntityName:(NSString *)entityName
+           inContext:(NSManagedObjectContext *)context;
 
 @end
