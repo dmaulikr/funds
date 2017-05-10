@@ -58,8 +58,11 @@
 }
 
 - (void)cellToDelete:(NSUInteger)index {
-    [self.interactor removeCashFlowWithIndex:index];
-    [self setupView];
+    [self.router showAlternativeDialogWithMessage:AMFLocalize(@"Are you sure?")
+                                        andAction:^(UIAlertAction *action) {
+                                            [self.interactor removeCashFlowWithIndex:index];
+                                            [self setupView];
+                                        }];
 }
 
 - (void)choosePage {
