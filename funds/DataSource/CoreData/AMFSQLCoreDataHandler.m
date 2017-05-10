@@ -12,6 +12,7 @@
 #import "AMFCashFlow+CoreDataProperties.h"
 #import "NSManagedObject+generateID.h"
 #import "AMFCategoryProtocol.h"
+#import "AMFCategoryPlain.h"
 #import "AMFgenerateID.h"
 
 @interface AMFSQLCoreDataHandler() {
@@ -179,6 +180,14 @@
                                          sortedBy:@"cat_id"
                                         ascending:NO
                                         inContext:[NSManagedObjectContext MR_defaultContext]];
+}
+
+- (id<AMFCategoryProtocol>)createCategoryWithName:(NSString *)name
+                                          andIcon:(NSString*)icon {
+    AMFCategoryPlain *cat = [[AMFCategoryPlain alloc] init];
+    cat.name = name;
+    cat.icon_path = icon;
+    return [AMFCategory findOrCreateWithCategory:cat];
 }
 
 - (void)updateCategory:(id<AMFCategoryProtocol>)category

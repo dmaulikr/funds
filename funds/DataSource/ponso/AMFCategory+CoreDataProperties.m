@@ -47,6 +47,7 @@ static NSString *const kIcon = @"icon";
         c.cat_id = [_gen generateID];
         c.amount = 0;
     }
+    [c updateWith:category];
     return c;
 }
 
@@ -63,9 +64,12 @@ static NSString *const kIcon = @"icon";
 @dynamic cash;
 @dynamic amount;
 
-- (void)updateWith:(id<AMFCategoryProtocol>)category andCash:(AMFCashFlow *)cash {
+- (void)updateWith:(id<AMFCategoryProtocol>)category {
     self.name = category.name;
     self.icon_path = category.icon_path;
+}
+
+- (void)updateWith:(id<AMFCategoryProtocol>)category andCash:(AMFCashFlow *)cash {
     self.amount += cash.amount;
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];

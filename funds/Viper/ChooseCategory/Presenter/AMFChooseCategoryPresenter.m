@@ -16,6 +16,7 @@
 
 @interface AMFChooseCategoryPresenter() {
     id<AMFCategoryProtocol> _category;
+    BOOL _addCategory;
 }
 
 @end
@@ -49,6 +50,13 @@
                                   andOutput:self];
 }
 
+- (void)addCategory {
+    _category = nil;
+    [self.router showNameIconSetterWithName:@"?"
+                                    andIcon:@""
+                                  andOutput:self];
+}
+
 #pragma mark - Methods of AMFChooseCategoryInteractorOutput
 
 - (void)categoriesReceived:(NSArray*)categories {
@@ -59,7 +67,10 @@
 #pragma mark - Methods of AMFNameIconSetterModuleOutput
 
 - (void)editFinishedWithName:(NSString*)name andIcon:(NSString*)icon {
-    [self.interactor changeCategory:_category withName:name andIcon:icon];
+    if (_category) // edit category
+        [self.interactor changeCategory:_category withName:name andIcon:icon];
+    else  // create category
+        [self.interactor createCategoryWithName:name andIcon:icon];
     [self.interactor receiveAllCategories];
 }
 

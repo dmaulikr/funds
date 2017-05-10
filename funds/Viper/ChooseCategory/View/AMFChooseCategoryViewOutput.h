@@ -28,4 +28,9 @@
  */
 - (void)editCategory:(id<AMFCategoryProtocol>)category;
 
+/**
+ * asks for opening another for category addition
+ */
+- (void)addCategory;
+
 @end

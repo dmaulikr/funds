@@ -24,4 +24,9 @@
               withName:(NSString*)name
                andIcon:(NSString*)icon;
 
+/**
+ * creates a category
+ */
+- (void)createCategoryWithName:(NSString*)name
+                       andIcon:(NSString*)icon;
 @end

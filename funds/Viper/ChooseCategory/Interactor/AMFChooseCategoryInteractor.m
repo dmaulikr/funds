@@ -23,4 +23,8 @@
     [self.storage updateCategory:category withName:name andIcon:icon];
 }
 
+- (void)createCategoryWithName:(NSString*)name andIcon:(NSString*)icon {
+    [self.storage createCategoryWithName:name andIcon:icon];
+}
+
 @end

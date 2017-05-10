@@ -41,10 +41,20 @@ categories;
 	[self.output didTriggerViewReadyEvent];
 }
 
+- (void)addCategory {
+    [self.output addCategory];
+}
+
 #pragma mark - Методы AMFChooseCategoryViewInput
 
 - (void)setupInitialState {
-	// setup anything needed for view for its functioning
+    if (!self.navigationItem.rightBarButtonItem) {
+        // add new category
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                               target:self
+                                                                               action:@selector(addCategory)];
+        self.navigationItem.rightBarButtonItem = right;
+    }
 }
 
 - (void)refreshContents {
