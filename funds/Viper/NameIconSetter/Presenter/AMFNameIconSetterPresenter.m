@@ -30,6 +30,10 @@
 }
 
 - (void)doneEditingWithName:(NSString*)name andIcon:(NSString*)icon {
+    if (!name.length) {
+        [self.router showErrorWithMessage:AMFLocalize(@"Give a name to it!")];
+        return;
+    }
     [self.moduleOutput editFinishedWithName:name andIcon:icon];
     [self.router closeMe];
 }
