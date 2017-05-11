@@ -33,6 +33,8 @@
 - (NSArray *)grabAllCategories;
 - (NSArray *)grabAllCurrencies;
 - (NSArray *)grabAllWallets;
+- (id<AMFWalletProtocol>)createWalletWithName:(NSString *)name
+                                      andIcon:(NSString*)icon;
 - (id<AMFCategoryProtocol>)createCategoryWithName:(NSString *)name
                                           andIcon:(NSString*)icon;
 - (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString *)name;

@@ -44,7 +44,10 @@
 }
 
 - (void)addWallet {
-    [self.router showErrorWithMessage:@"Add me!"];
+    _wallet = nil;
+    [self.router showNameIconSetterWithName:@""
+                                    andIcon:@""
+                                  andOutput:self];
 }
 
 #pragma mark - Методы AMFWalletInteractorOutput
@@ -57,7 +60,11 @@
 #pragma mark - Methods of AMFNameIconSetterModuleOutput
 
 - (void)editFinishedWithName:(NSString*)name andIcon:(NSString*)icon {
-    [self.interactor changeWallet:_wallet withName:name andIcon:icon];
+    if (_wallet) // edit of an existing wallet
+        [self.interactor changeWallet:_wallet withName:name andIcon:icon];
+    else // wallet's creation
+        [self.interactor createWalletWithName:name andIcon:icon];
+
     [self.interactor receiveAllWallets];
 }
 

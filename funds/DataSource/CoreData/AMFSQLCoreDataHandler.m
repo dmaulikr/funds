@@ -13,6 +13,7 @@
 #import "NSManagedObject+generateID.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFCategoryPlain.h"
+#import "AMFWalletPlain.h"
 #import "AMFgenerateID.h"
 
 @interface AMFSQLCoreDataHandler() {
@@ -171,6 +172,13 @@
 
 - (NSArray *)grabAllCurrencies {
     return [AMFCurrency MR_findAllSortedBy:@"cur_id" ascending:NO];
+}
+
+- (id<AMFWalletProtocol>)createWalletWithName:(NSString *)name andIcon:(NSString*)icon {
+    AMFWalletPlain *w = [[AMFWalletPlain alloc] init];
+    w.name = name;
+    w.icon_path = icon;
+    return [AMFWallet findOrCreateWithWallet:w];
 }
 
 - (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString *)name {

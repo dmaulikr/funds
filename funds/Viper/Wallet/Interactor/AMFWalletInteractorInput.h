@@ -23,4 +23,9 @@
  */
 - (void)changeWallet:(id<AMFWalletProtocol>)wallet withName:(NSString*)name andIcon:(NSString*)icon;
 
+/**
+ * creates wallet with given name and icon
+ */
+- (void)createWalletWithName:(NSString*)name andIcon:(NSString*)icon;
+
 @end

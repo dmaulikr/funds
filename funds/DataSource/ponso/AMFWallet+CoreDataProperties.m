@@ -48,6 +48,7 @@ static NSString *const kIcon = @"icon";
         w.wallet_id = [_gen generateID];
         w.amount = 0;
     }
+    [w updateWith:wallet];
     return w;
 }
 
@@ -63,9 +64,12 @@ static NSString *const kIcon = @"icon";
 @dynamic cash;
 @dynamic amount;
 
-- (void)updateWith:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow *)cash {
+- (void)updateWith:(id<AMFWalletProtocol>)wallet {
     self.name = wallet.name;
     self.icon_path = wallet.icon_path;
+}
+
+- (void)updateWith:(id<AMFWalletProtocol>)wallet andCash:(AMFCashFlow *)cash {
     self.amount += cash.amount;
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];

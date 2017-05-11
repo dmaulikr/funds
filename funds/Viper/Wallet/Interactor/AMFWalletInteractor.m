@@ -25,4 +25,8 @@
     [self.storage updateWallet:wallet withName:name andIcon:icon];
 }
 
+- (void)createWalletWithName:(NSString*)name andIcon:(NSString*)icon {
+    [self.storage createWalletWithName:name andIcon:icon];
+}
+
 @end
