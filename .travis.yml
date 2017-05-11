@@ -3,3 +3,4 @@ osx_image: xcode8.2
 xcode_project: funds.xcodeproj
 xcode_scheme: funds
 xcode_sdk: iphonesimulator10.2
+script: xcodebuild clean && xcodebuild build -sdk iphonesimulator10.2 -workspace funds.xcworkspace -scheme funds CODE_SIGNING_REQUIRED=NO
