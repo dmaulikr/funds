@@ -8,6 +8,7 @@
 
 #import "GlobalConstants.h"
 
+
 NSString *const kSegueChoosePage = @"choosePage";
 NSString *const kSegueAddRecord = @"addRecord";
 NSString *const kSegueAddPage = @"addPage";
@@ -98,3 +99,10 @@ NSString *const kPossibleIcons[] = {
     @"wallet-icon"
 };
 
+NSString *const kIconsForWallet[] = {
+    @"coins1",
+    @"coins2",
+    @"coins3",
+    @"video-camera",
+    @"wallet-icon"
+};

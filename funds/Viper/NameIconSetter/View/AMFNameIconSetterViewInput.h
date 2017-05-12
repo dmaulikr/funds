@@ -28,6 +28,11 @@
 @property (nonatomic, strong) NSString *icon;
 
 /**
+ * iconset
+ */
+@property (nonatomic, assign) NSInteger iconset;
+
+/**
  * refreshes data shown to the user
  */
 - (void)refreshContents;

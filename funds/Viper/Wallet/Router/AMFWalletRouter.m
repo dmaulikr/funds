@@ -18,8 +18,9 @@
 - (void)showNameIconSetterWithName:(NSString*)name
                            andIcon:(NSString*)icon
                          andOutput:(id<AMFNameIconSetterModuleOutput>) output {
-    [[self.transitionHandler openModuleUsingSegue:kSegueChangeNameIcon] thenChainUsingBlock:^id<AMFNameIconSetterModuleOutput>(id<AMFNameIconSetterModuleInput> moduleInput) {
-        [moduleInput configureModuleWithName:name andIcon:icon];
+    [[self.transitionHandler openModuleUsingSegue:kSegueChangeNameIcon] thenChainUsingBlock:
+     ^id<AMFNameIconSetterModuleOutput>(id<AMFNameIconSetterModuleInput> moduleInput) {
+        [moduleInput configureModuleWithName:name andIcon:icon andIconSet:kIconForWallet];
         return output;
     }];
 }

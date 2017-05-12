@@ -27,15 +27,26 @@ static NSString *const kIconCellIndentifier = @"iconCell";
 
 @implementation AMFNameIconSetterViewController
 
-@synthesize name, icon;
+@synthesize name,
+iconset,
+icon;
 
 #pragma mark - Life Cycle Methods
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	_icons = [NSArray arrayWithObjects:kPossibleIcons count:sizeof(kPossibleIcons)/sizeof(kPossibleIcons[0])];
-	_icon_selected = _icons[0];
+    switch (self.iconset) {
+        default:
+        case 0:
+            _icons = [NSArray arrayWithObjects:kPossibleIcons count:sizeof(kPossibleIcons)/sizeof(kPossibleIcons[0])];
+            break;
+
+        case kIconForWallet:
+            _icons = [NSArray arrayWithObjects:kIconsForWallet count:sizeof(kIconsForWallet)/sizeof(kIconsForWallet[0])];
+            break;
+    }
+    _icon_selected = _icons[0];
 
 	[self.output didTriggerViewReadyEvent];
 }
@@ -55,7 +66,7 @@ static NSString *const kIconCellIndentifier = @"iconCell";
         self.tableView.hidden = YES;
         self.iconLabel.hidden = YES;
     }
-    
+
     if (_labelName)
         self.nameLabel.text = _labelName;
 }

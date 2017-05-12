@@ -19,6 +19,11 @@
 - (void)configureModuleWithName:(NSString*)name andIcon:(NSString*)icon;
 
 /**
+ * shows different sets of icons to choose from
+ */
+- (void)configureModuleWithName:(NSString*)name andIcon:(NSString*)icon andIconSet:(NSInteger)iset;
+
+/**
  * shows module with label's name changed and its contents filled with name
  */
 - (void)configureModuleWithLabel:(NSString*)label andName:(NSString*)name;

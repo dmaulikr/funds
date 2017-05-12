@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define kIconForWallet  2
+
 // segues
 extern NSString *const kSegueChoosePage;
 extern NSString *const kSegueAddRecord;
@@ -19,7 +21,6 @@ extern NSString *const kSegueChangeNameIconForCategory;
 extern NSString *const kSegueChooseCurrencySymbol;
 
 // common constants
-
 extern NSString *const kDomain;
 
 // events
@@ -32,3 +33,4 @@ extern NSString *const kLastWallet;
 extern NSString *const kLastPage;
 extern NSString *const kLastCurrency;
 extern NSString *const kPossibleIcons[66];
+extern NSString *const kIconsForWallet[5];

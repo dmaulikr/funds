@@ -17,7 +17,10 @@
 
 #pragma mark - Methods of AMFNameIconSetterModuleInput
 
-- (void)configureModuleWithName:(NSString*)name andIcon:(NSString*)icon {
+- (void)configureModuleWithName:(NSString*)name
+                        andIcon:(NSString*)icon
+                     andIconSet:(NSInteger)iset {
+    self.view.iconset = iset;
     self.view.name = name;
     if (icon)
         self.view.icon = icon;
@@ -25,11 +28,17 @@
         [self.view hideIconTable];
 }
 
+- (void)configureModuleWithName:(NSString*)name andIcon:(NSString*)icon {
+    [self configureModuleWithName:name andIcon:icon andIconSet:0];
+}
+
 - (void)configureModuleWithLabel:(NSString*)label andName:(NSString*)name {
     self.view.name = name;
     [self.view changeNameLabel:label];
     [self.view hideIconTable];
 }
+
+
 
 #pragma mark - Methods of AMFNameIconSetterViewOutput
 
