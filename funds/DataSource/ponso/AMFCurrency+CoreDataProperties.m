@@ -29,7 +29,7 @@ static NSString *const kRate = @"crate";
     return [[NSFetchRequest alloc] initWithEntityName:@"AMFCurrency"];
 }
 
-+ (AMFCurrency *)findOrCreateWithPage:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow *)cash {
++ (AMFCurrency *)findOrCreateWithCurrency:(id<AMFCurrencyProtocol>)m {
     static AMFgenerateID *_gen = nil;
     NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", m.name];
@@ -44,7 +44,12 @@ static NSString *const kRate = @"crate";
         }
         mon.cur_id = [_gen generateID];
     }
-    assert(mon);
+    [mon updateWith:m];
+    return mon;
+}
+
++ (AMFCurrency *)findOrCreateWithCurrency:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow *)cash {
+    AMFCurrency *mon = [self findOrCreateWithCurrency:m];
     [mon updateWith:m andCash:cash];
     return mon;
 }
@@ -55,9 +60,12 @@ static NSString *const kRate = @"crate";
 @dynamic cash;
 @dynamic symbol;
 
-- (void)updateWith:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow *)cash {
+- (void)updateWith:(id<AMFCurrencyProtocol>)m {
     self.name = m.name;
     self.rate = m.rate;
+}
+
+- (void)updateWith:(id<AMFCurrencyProtocol>)m andCash:(AMFCashFlow *)cash {
     if (![self.cash containsObject:cash])
         [self addCashObject:cash];
 }

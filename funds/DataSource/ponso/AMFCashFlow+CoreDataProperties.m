@@ -49,7 +49,7 @@ static NSString *const kDescr = @"descript";
     self.category = [AMFCategory findOrCreateWithCategory:cash.category
                                                   andCash:self];
     self.page = [AMFPage findOrCreateWithPage:cash.page andCash:self];
-    self.currency = [AMFCurrency findOrCreateWithPage:cash.currency andCash:self];
+    self.currency = [AMFCurrency findOrCreateWithCurrency:cash.currency andCash:self];
 }
 
 #pragma mark - NSCoding protocol

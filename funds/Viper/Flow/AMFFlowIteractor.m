@@ -55,12 +55,17 @@
             f.realRecords = [NSArray arrayWithObjects:r, nil];
         }
         if (r.currency) {
-            if (r.currency.name.length > 1) {
-                NSRange range = NSMakeRange(0, 1);
-                f.currency = [r.currency.name substringWithRange:range];
+            if (r.currency.symbol.length) {
+                f.currency = r.currency.symbol;
             }
-            else
-                f.currency = r.currency.name;
+            else {
+                if (r.currency.name.length > 1) {
+                    NSRange range = NSMakeRange(0, 1);
+                    f.currency = [r.currency.name substringWithRange:range];
+                }
+                else
+                    f.currency = r.currency.name;
+            }
         }
         [converted addObject:f];
     }

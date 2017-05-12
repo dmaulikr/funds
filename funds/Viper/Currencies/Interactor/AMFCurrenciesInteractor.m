@@ -9,6 +9,7 @@
 #import "AMFCurrenciesInteractor.h"
 #import "AMFStorageHandlerProtocol.h"
 #import "AMFCurrenciesInteractorOutput.h"
+#import "AMFStorageHandlerProtocol.h"
 
 @implementation AMFCurrenciesInteractor
 
@@ -20,6 +21,7 @@
 }
 
 - (void)changeCurrency:(id<AMFCurrencyProtocol>)currency withSymbol:(NSString*)name {
+    [self.storage updateCurrency:currency withSymbol:name];
 }
 
 @end

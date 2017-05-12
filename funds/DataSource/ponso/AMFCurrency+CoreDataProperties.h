@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMFCurrency (CoreDataProperties) <AMFCurrencyProtocol>
 
 + (NSFetchRequest<AMFCurrency *> *)fetchRequest;
-+ (AMFCurrency *)findOrCreateWithPage:(id<AMFCurrencyProtocol>)m
++ (AMFCurrency *)findOrCreateWithCurrency:(id<AMFCurrencyProtocol>)m;
++ (AMFCurrency *)findOrCreateWithCurrency:(id<AMFCurrencyProtocol>)m
                               andCash:(AMFCashFlow *)cash;
 
 @property (nonatomic, assign) NSUInteger cur_id;

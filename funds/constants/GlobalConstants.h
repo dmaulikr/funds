@@ -16,6 +16,7 @@ extern NSString *const kSegueChooseCategory;
 extern NSString *const kSegueChooseWallet;
 extern NSString *const kSegueChangeNameIcon;
 extern NSString *const kSegueChangeNameIconForCategory;
+extern NSString *const kSegueChooseCurrencySymbol;
 
 // common constants
 

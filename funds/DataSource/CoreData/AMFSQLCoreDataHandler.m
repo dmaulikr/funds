@@ -10,6 +10,7 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "AMFCashFlow+CoreDataClass.h"
 #import "AMFCashFlow+CoreDataProperties.h"
+#import "AMFCurrency+CoreDataProperties.h"
 #import "NSManagedObject+generateID.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFCategoryPlain.h"
@@ -205,6 +206,13 @@
         category = [AMFCategory findOrCreateWithCategory:category];
     category.name = name;
     category.icon_path = icon;
+}
+
+- (void)updateCurrency:(id<AMFCurrencyProtocol>)currency
+            withSymbol:(NSString*)symbol {
+    if (![currency isKindOfClass:[AMFCurrency class]])
+        currency = [AMFCurrency findOrCreateWithCurrency:currency];
+    currency.symbol = symbol;
 }
 
 - (NSArray *)grabAllWallets {

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AMFNameIconSetterModuleOutput;
+
 @protocol AMFCurrenciesRouterInput <NSObject>
+
+- (void)showNameIconSetterWithName:(NSString*)name
+                           andIcon:(NSString*)icon
+                         andOutput:(id<AMFNameIconSetterModuleOutput>) output;
 
 @end

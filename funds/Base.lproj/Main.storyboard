@@ -1101,6 +1101,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="xRw-EH-BPv" id="hBn-2x-GZY"/>
+                        <segue destination="hJv-Xh-gCq" kind="show" identifier="chooseCurrencySymbol" id="Jax-gt-i8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zh2-6i-B8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1155,6 +1156,6 @@
         <image name="wallet-icon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O3X-gc-JPp"/>
+        <segue reference="Jax-gt-i8U"/>
     </inferredMetricsTieBreakers>
 </document>

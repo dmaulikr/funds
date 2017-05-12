@@ -9,12 +9,16 @@
 #import "AMFCurrenciesViewOutput.h"
 #import "AMFCurrenciesInteractorOutput.h"
 #import "AMFCurrenciesModuleInput.h"
+#import "AMFNameIconSetterModuleOutput.h"
 
 @protocol AMFCurrenciesViewInput;
 @protocol AMFCurrenciesInteractorInput;
 @protocol AMFCurrenciesRouterInput;
 
-@interface AMFCurrenciesPresenter : NSObject <AMFCurrenciesModuleInput, AMFCurrenciesViewOutput, AMFCurrenciesInteractorOutput>
+@interface AMFCurrenciesPresenter : NSObject <AMFCurrenciesModuleInput,
+AMFCurrenciesViewOutput,
+AMFNameIconSetterModuleOutput,
+AMFCurrenciesInteractorOutput>
 
 @property (nonatomic, weak) id<AMFCurrenciesViewInput> view;
 @property (nonatomic, strong) id<AMFCurrenciesInteractorInput> interactor;

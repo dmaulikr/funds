@@ -15,6 +15,7 @@ NSString *const kSegueChooseCategory = @"chooseCategory";
 NSString *const kSegueChooseWallet = @"chooseWallet";
 NSString *const kSegueChangeNameIcon = @"changeNameIcon";
 NSString *const kSegueChangeNameIconForCategory = @"nameIconForCategory";
+NSString *const kSegueChooseCurrencySymbol = @"chooseCurrencySymbol";
 
 NSString *const kDomain = @"com.micartu";
 

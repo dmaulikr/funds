@@ -10,6 +10,7 @@
 @protocol AMFPageProtocol;
 @protocol AMFCategoryProtocol;
 @protocol AMFWalletProtocol;
+@protocol AMFCurrencyProtocol;
 
 @protocol AMFStorageHandlerProtocol <NSObject>
 
@@ -41,6 +42,8 @@
 - (void)updateCategory:(id<AMFCategoryProtocol>)category
               withName:(NSString *)name
                andIcon:(NSString *)icon;
+- (void)updateCurrency:(id<AMFCurrencyProtocol>)currency
+            withSymbol:(NSString*)symbol;
 - (void)removeAll;
 
 @end
