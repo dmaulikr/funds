@@ -15,6 +15,7 @@
 #import "NSManagedObject+generateID.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFCategoryPlain.h"
+#import "AMFPagePlain.h"
 #import "AMFWalletPlain.h"
 #import "AMFCurrencyPlain.h"
 #import "AMFgenerateID.h"
@@ -145,8 +146,9 @@
         page_id--;
     }
     if (!page4attach) {
-        page.name = @"?";
-        page4attach = [AMFPage findOrCreateWithPage:page];
+        AMFPagePlain *pp = [[AMFPagePlain alloc] init];
+        pp.name = @"?";
+        page4attach = [AMFPage findOrCreateWithPage:pp];
     }
     NSArray *cash = [self grabRecordsForPage:p];
     NSSet *cashSet = [NSSet setWithArray:cash];
