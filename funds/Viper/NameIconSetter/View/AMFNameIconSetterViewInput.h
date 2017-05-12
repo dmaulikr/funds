@@ -37,4 +37,9 @@
  */
 - (void)hideIconTable;
 
+/**
+ * changes the label of name
+ */
+- (void)changeNameLabel:(NSString*)name;
+
 @end

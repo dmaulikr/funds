@@ -45,9 +45,9 @@
 
 - (void)cellSelected:(NSUInteger)index {
     _currency = self.view.records[index];
-    [self.router showNameIconSetterWithName:_currency.symbol
-                                    andIcon:nil
-                                  andOutput:self];
+    [self.router showEditorWithLabel:AMFLocalize(@"Symbol:")
+                         andContents:_currency.symbol
+                           andOutput:self];
     _updated = NO;
 }
 

@@ -16,11 +16,13 @@ static NSString *const kIconCellIndentifier = @"iconCell";
     NSArray *_icons;
     NSString *_icon_selected;
     NSIndexPath *_selectedPath;
+    NSString *_labelName;
     BOOL _hideIcons;
 }
 @property (weak, nonatomic) IBOutlet UITextField *categoryName;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *iconLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @end
 
 @implementation AMFNameIconSetterViewController
@@ -53,6 +55,9 @@ static NSString *const kIconCellIndentifier = @"iconCell";
         self.tableView.hidden = YES;
         self.iconLabel.hidden = YES;
     }
+    
+    if (_labelName)
+        self.nameLabel.text = _labelName;
 }
 
 - (void)refreshContents {
@@ -67,6 +72,10 @@ static NSString *const kIconCellIndentifier = @"iconCell";
 
 - (void)hideIconTable {
     _hideIcons = YES;
+}
+
+- (void)changeNameLabel:(NSString*)n {
+    _labelName = n;
 }
 
 #pragma mark - Themes

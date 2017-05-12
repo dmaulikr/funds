@@ -25,6 +25,12 @@
         [self.view hideIconTable];
 }
 
+- (void)configureModuleWithLabel:(NSString*)label andName:(NSString*)name {
+    self.view.name = name;
+    [self.view changeNameLabel:label];
+    [self.view hideIconTable];
+}
+
 #pragma mark - Methods of AMFNameIconSetterViewOutput
 
 - (void)didTriggerViewReadyEvent {

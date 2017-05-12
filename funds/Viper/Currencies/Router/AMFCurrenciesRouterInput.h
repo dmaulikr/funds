@@ -12,8 +12,8 @@
 
 @protocol AMFCurrenciesRouterInput <NSObject>
 
-- (void)showNameIconSetterWithName:(NSString*)name
-                           andIcon:(NSString*)icon
+- (void)showEditorWithLabel:(NSString*)label
+                           andContents:(NSString*)content
                          andOutput:(id<AMFNameIconSetterModuleOutput>) output;
 
 @end

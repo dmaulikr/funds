@@ -15,12 +15,12 @@
 
 #pragma mark - Methods of AMFCurrenciesRouterInput
 
-- (void)showNameIconSetterWithName:(NSString*)name
-                           andIcon:(NSString*)icon
-                         andOutput:(id<AMFNameIconSetterModuleOutput>) output {
-    [[self.transitionHandler openModuleUsingSegue:kSegueChooseCurrencySymbol] thenChainUsingBlock:
+- (void)showEditorWithLabel:(NSString*)label
+                           andContents:(NSString*)content
+                  andOutput:(id<AMFNameIconSetterModuleOutput>) output {
+     [[self.transitionHandler openModuleUsingSegue:kSegueChooseCurrencySymbol] thenChainUsingBlock:
      ^id<AMFNameIconSetterModuleOutput>(id<AMFNameIconSetterModuleInput> moduleInput) {
-         [moduleInput configureModuleWithName:name andIcon:icon];
+         [moduleInput configureModuleWithLabel:label andName:content];
          return output;
      }];
 }
