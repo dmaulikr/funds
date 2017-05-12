@@ -32,5 +32,5 @@ extern NSString *const kLastCategory;
 extern NSString *const kLastWallet;
 extern NSString *const kLastPage;
 extern NSString *const kLastCurrency;
-extern NSString *const kPossibleIcons[66];
-extern NSString *const kIconsForWallet[5];
+extern NSString *const kPossibleIcons[67];
+extern NSString *const kIconsForWallet[7];

@@ -80,6 +80,7 @@ NSString *const kPossibleIcons[] = {
     @"Phone-Simcard-icon",
     @"phone",
     @"pistol",
+    @"Rifle",
     @"running",
     @"send",
     @"settings-kde",
@@ -100,9 +101,11 @@ NSString *const kPossibleIcons[] = {
 };
 
 NSString *const kIconsForWallet[] = {
+    @"Credit-Card",
     @"coins1",
     @"coins2",
     @"coins3",
+    @"Gold",
     @"video-camera",
     @"wallet-icon"
 };
