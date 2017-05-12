@@ -46,7 +46,7 @@
 - (void)editCategory:(id<AMFCategoryProtocol>)category {
     _category = category;
     [self.router showNameIconSetterWithName:category.name
-                                    andIcon:category.icon_path
+                                    andIcon:category.icon_path ? category.icon_path : @""
                                   andOutput:self];
 }
 
