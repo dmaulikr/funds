@@ -15,6 +15,7 @@
 #import "AMFCategoryProtocol.h"
 #import "AMFCategoryPlain.h"
 #import "AMFWalletPlain.h"
+#import "AMFCurrencyPlain.h"
 #import "AMFgenerateID.h"
 
 @interface AMFSQLCoreDataHandler() {
@@ -206,6 +207,14 @@
         category = [AMFCategory findOrCreateWithCategory:category];
     category.name = name;
     category.icon_path = icon;
+}
+
+- (id<AMFCurrencyProtocol>)createCurrencyWithName:(NSString *)name {
+    AMFCurrencyPlain *cur = [[AMFCurrencyPlain alloc] init];
+    cur.name = name;
+    cur.symbol = @"";
+    cur.rate = 1;
+    return [AMFCurrency findOrCreateWithCurrency:cur];
 }
 
 - (void)updateCurrency:(id<AMFCurrencyProtocol>)currency

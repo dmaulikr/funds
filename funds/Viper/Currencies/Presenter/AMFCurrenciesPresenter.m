@@ -75,6 +75,14 @@ typedef NS_ENUM(NSInteger, AMFCurChangeType) {
     _updated = NO;
 }
 
+- (void)addCurrency {
+    _currency = nil;
+    [self.router showEditorWithLabel:AMFLocalize(@"Name")
+                             andContents:@""
+                               andOutput:self];
+    _updated = NO;
+}
+
 #pragma mark - Methods of AMFCurrenciesInteractorOutput
 
 - (void)currenciesReceived:(NSArray*)c {
@@ -102,6 +110,8 @@ typedef NS_ENUM(NSInteger, AMFCurChangeType) {
         }
         [self.interactor changeCurrency:_currency withCurrency:cur];
     }
+    else
+        [self.interactor createCurrencyWithName:name];
 }
 
 @end

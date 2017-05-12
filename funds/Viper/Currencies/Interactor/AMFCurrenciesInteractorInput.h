@@ -18,8 +18,13 @@
 
 
 /**
- * user wants change wallet's name and icon
+ * user wants change currency's name and icon
  */
 - (void)changeCurrency:(id<AMFCurrencyProtocol>)currency withCurrency:(id<AMFCurrencyProtocol>)cur;
+
+/**
+ * user wants create currency with name
+ */
+- (void)createCurrencyWithName:(NSString*)name;
 
 @end

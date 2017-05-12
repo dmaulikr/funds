@@ -40,10 +40,21 @@ static NSString *const currencyCellIndentifier = @"currencyCell";
 - (void)setupInitialState {
 	// setup anything needed for view for its functioning
     self.title = AMFLocalize(@"Currencies");
+    if (!self.navigationItem.rightBarButtonItem) {
+        // adding new wallets:
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                               target:self
+                                                                               action:@selector(addCurrency)];
+        self.navigationItem.rightBarButtonItem = right;
+    }
 }
 
 - (void)refreshContents {
     [self.tableView reloadData];
+}
+
+- (void)addCurrency {
+    [self.output addCurrency];
 }
 
 #pragma mark - Themes

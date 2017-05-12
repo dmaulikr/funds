@@ -24,4 +24,8 @@
     [self.storage updateCurrency:currency withCurrency:cur];
 }
 
+- (void)createCurrencyWithName:(NSString*)name {
+    [self.storage createCurrencyWithName:name];
+}
+
 @end

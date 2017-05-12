@@ -27,4 +27,9 @@
  */
 - (void)cellSelected:(NSUInteger)index;
 
+/**
+ * add a new currency
+ */
+- (void)addCurrency;
+
 @end

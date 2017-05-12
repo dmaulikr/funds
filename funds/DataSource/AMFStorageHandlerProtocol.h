@@ -38,6 +38,7 @@
                                       andIcon:(NSString*)icon;
 - (id<AMFCategoryProtocol>)createCategoryWithName:(NSString *)name
                                           andIcon:(NSString*)icon;
+- (id<AMFCurrencyProtocol>)createCurrencyWithName:(NSString *)name;
 - (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString *)name;
 - (void)updateCategory:(id<AMFCategoryProtocol>)category
               withName:(NSString *)name
