@@ -28,7 +28,7 @@
 - (void)showEditOptionsWithActionSymbol:(void(^)(UIAlertAction *action))symbolAction
                           andActionRate:(void(^)(UIAlertAction *action))rateAction
                           andActionName:(void(^)(UIAlertAction *action))nameAction {
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:AMFLocalize(@"Choose action")
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:AMFLocalize(@"Choose an action")
                                                                          message:AMFLocalize(@"What to change?")
                                                                   preferredStyle:UIAlertControllerStyleActionSheet];
     [actionSheet addAction:[UIAlertAction actionWithTitle:AMFLocalize(@"Symbol") style:UIAlertActionStyleDefault handler:symbolAction]];

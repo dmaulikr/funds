@@ -69,7 +69,7 @@ static NSString *const currencyCellIndentifier = @"currencyCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:currencyCellIndentifier];
     id<AMFCurrencyProtocol> cur = self.records[indexPath.row];
-    cell.textLabel.text = cur.symbol.length ? cur.symbol : cur.name;
+    cell.textLabel.text = cur.symbol.length ? [NSString stringWithFormat:@"%@-%@", cur.name, cur.symbol] : cur.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%g", cur.rate];
     return cell;
 }
