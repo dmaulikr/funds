@@ -43,7 +43,7 @@
               withName:(NSString *)name
                andIcon:(NSString *)icon;
 - (void)updateCurrency:(id<AMFCurrencyProtocol>)currency
-            withSymbol:(NSString*)symbol;
+          withCurrency:(id<AMFCurrencyProtocol>)cur;
 - (void)removeAll;
 
 @end

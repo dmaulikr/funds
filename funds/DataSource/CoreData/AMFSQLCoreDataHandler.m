@@ -209,10 +209,12 @@
 }
 
 - (void)updateCurrency:(id<AMFCurrencyProtocol>)currency
-            withSymbol:(NSString*)symbol {
+          withCurrency:(id<AMFCurrencyProtocol>)cur {
     if (![currency isKindOfClass:[AMFCurrency class]])
         currency = [AMFCurrency findOrCreateWithCurrency:currency];
-    currency.symbol = symbol;
+    currency.name = cur.name;
+    currency.symbol = cur.symbol;
+    currency.rate = cur.rate;
 }
 
 - (NSArray *)grabAllWallets {

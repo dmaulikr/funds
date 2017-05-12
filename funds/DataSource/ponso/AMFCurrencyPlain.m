@@ -18,6 +18,15 @@ static NSString *const kRate = @"rate";
 symbol,
 rate;
 
+- (instancetype)initWithCurrency:(id<AMFCurrencyProtocol>)cur {
+    if (self = [super init]) {
+        self.name = cur.name;
+        self.symbol = cur.symbol;
+        self.rate = cur.rate;
+    }
+    return self;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"Currency Plain name: %@ symbol: %@ rate: %g",
             self.name,

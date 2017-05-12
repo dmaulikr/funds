@@ -11,4 +11,6 @@
 
 @interface AMFCurrencyPlain : NSObject <AMFCurrencyProtocol, NSCoding>
 
+- (instancetype)initWithCurrency:(id<AMFCurrencyProtocol>)cur;
+
 @end

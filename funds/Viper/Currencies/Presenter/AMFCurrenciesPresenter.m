@@ -11,10 +11,18 @@
 #import "AMFCurrenciesViewInput.h"
 #import "AMFCurrenciesInteractorInput.h"
 #import "AMFCurrenciesRouterInput.h"
+#import "AMFCurrencyPlain.h"
+
+typedef NS_ENUM(NSInteger, AMFCurChangeType) {
+    ChangeTypeSymbol = 0,
+    ChangeTypeRate,
+    ChangeTypeName,
+};
 
 @interface AMFCurrenciesPresenter () {
     id<AMFCurrencyProtocol> _currency;
     BOOL _updated;
+    AMFCurChangeType _type;
 }
 
 
@@ -45,9 +53,25 @@
 
 - (void)cellSelected:(NSUInteger)index {
     _currency = self.view.records[index];
-    [self.router showEditorWithLabel:AMFLocalize(@"Symbol:")
-                         andContents:_currency.symbol
-                           andOutput:self];
+    [self.router showEditOptionsWithActionSymbol:^(UIAlertAction *action) {
+        // symbol
+        _type = ChangeTypeSymbol;
+        [self.router showEditorWithLabel:AMFLocalize(@"Symbol")
+                             andContents:_currency.symbol
+                               andOutput:self];
+    } andActionRate:^(UIAlertAction *action) {
+        // rate
+        _type = ChangeTypeRate;
+        [self.router showEditorWithLabel:AMFLocalize(@"Rate")
+                             andContents:[NSString stringWithFormat:@"%g", _currency.rate]
+                               andOutput:self];
+    } andActionName:^(UIAlertAction *action) {
+        // name
+        _type = ChangeTypeName;
+        [self.router showEditorWithLabel:AMFLocalize(@"Name")
+                             andContents:_currency.name
+                               andOutput:self];
+    }];
     _updated = NO;
 }
 
@@ -61,8 +85,23 @@
 #pragma mark - Methods of AMFNameIconSetterModuleOutput
 
 - (void)editFinishedWithName:(NSString*)name andIcon:(NSString*)icon {
-    if (_currency)
-        [self.interactor changeCurrency:_currency withSymbol:name];
+    if (_currency) {
+        AMFCurrencyPlain *cur = [[AMFCurrencyPlain alloc] initWithCurrency:_currency];
+        switch(_type) {
+            case ChangeTypeSymbol:
+                cur.symbol = name;
+                break;
+
+            case ChangeTypeName:
+                cur.name = name;
+                break;
+
+            case ChangeTypeRate:
+                cur.rate = [name doubleValue];
+                break;
+        }
+        [self.interactor changeCurrency:_currency withCurrency:cur];
+    }
 }
 
 @end

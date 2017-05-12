@@ -20,8 +20,8 @@
     [self.output currenciesReceived:c];
 }
 
-- (void)changeCurrency:(id<AMFCurrencyProtocol>)currency withSymbol:(NSString*)name {
-    [self.storage updateCurrency:currency withSymbol:name];
+- (void)changeCurrency:(id<AMFCurrencyProtocol>)currency withCurrency:(id<AMFCurrencyProtocol>)cur {
+    [self.storage updateCurrency:currency withCurrency:cur];
 }
 
 @end

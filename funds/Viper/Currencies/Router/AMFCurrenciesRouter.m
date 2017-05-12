@@ -25,4 +25,18 @@
      }];
 }
 
+- (void)showEditOptionsWithActionSymbol:(void(^)(UIAlertAction *action))symbolAction
+                          andActionRate:(void(^)(UIAlertAction *action))rateAction
+                          andActionName:(void(^)(UIAlertAction *action))nameAction {
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:AMFLocalize(@"Choose action")
+                                                                         message:AMFLocalize(@"What to change?")
+                                                                  preferredStyle:UIAlertControllerStyleActionSheet];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:AMFLocalize(@"Symbol") style:UIAlertActionStyleDefault handler:symbolAction]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:AMFLocalize(@"Rate") style:UIAlertActionStyleDefault handler:rateAction]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:AMFLocalize(@"Name") style:UIAlertActionStyleDefault handler:nameAction]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:AMFLocalize(@"CANCEL") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}]];
+
+    [(id)self.transitionHandler presentViewController:actionSheet animated:YES completion:nil];
+}
+
 @end

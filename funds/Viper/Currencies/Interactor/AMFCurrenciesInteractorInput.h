@@ -20,6 +20,6 @@
 /**
  * user wants change wallet's name and icon
  */
-- (void)changeCurrency:(id<AMFCurrencyProtocol>)currency withSymbol:(NSString*)name;
+- (void)changeCurrency:(id<AMFCurrencyProtocol>)currency withCurrency:(id<AMFCurrencyProtocol>)cur;
 
 @end
