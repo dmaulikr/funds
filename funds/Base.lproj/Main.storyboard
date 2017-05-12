@@ -590,6 +590,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryName" destination="oKB-b2-Xuz" id="SSn-91-ni3"/>
+                        <outlet property="iconLabel" destination="PIK-pq-8Av" id="4Ef-bn-htr"/>
                         <outlet property="tableView" destination="cJc-gx-ZRy" id="iO7-5g-NN6"/>
                     </connections>
                 </viewController>

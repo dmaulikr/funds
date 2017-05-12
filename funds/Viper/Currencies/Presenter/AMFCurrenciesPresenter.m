@@ -14,6 +14,7 @@
 
 @interface AMFCurrenciesPresenter () {
     id<AMFCurrencyProtocol> _currency;
+    BOOL _updated;
 }
 
 
@@ -32,13 +33,22 @@
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
     [self.interactor receiveAllCurrencies];
+    _updated = YES;
+}
+
+- (void)updateDataBeforeViewWillAppear {
+    if (!_updated) {
+        _updated = YES;
+        [self.interactor receiveAllCurrencies];
+    }
 }
 
 - (void)cellSelected:(NSUInteger)index {
     _currency = self.view.records[index];
     [self.router showNameIconSetterWithName:_currency.symbol
-                                    andIcon:@""
+                                    andIcon:nil
                                   andOutput:self];
+    _updated = NO;
 }
 
 #pragma mark - Methods of AMFCurrenciesInteractorOutput

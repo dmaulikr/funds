@@ -18,6 +18,11 @@
 - (void)didTriggerViewReadyEvent;
 
 /**
+ * called on viewWillAppear
+ */
+- (void)updateDataBeforeViewWillAppear;
+
+/**
  * a cell with a given number was selected
  */
 - (void)cellSelected:(NSUInteger)index;

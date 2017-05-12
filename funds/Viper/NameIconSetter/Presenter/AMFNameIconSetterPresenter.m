@@ -19,7 +19,10 @@
 
 - (void)configureModuleWithName:(NSString*)name andIcon:(NSString*)icon {
     self.view.name = name;
-    self.view.icon = icon;
+    if (icon)
+        self.view.icon = icon;
+    else
+        [self.view hideIconTable];
 }
 
 #pragma mark - Methods of AMFNameIconSetterViewOutput

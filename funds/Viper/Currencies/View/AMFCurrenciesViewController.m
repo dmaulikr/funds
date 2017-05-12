@@ -30,6 +30,11 @@ static NSString *const currencyCellIndentifier = @"currencyCell";
 	[self.output didTriggerViewReadyEvent];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.output updateDataBeforeViewWillAppear];
+}
+
 #pragma mark - Methods of AMFCurrenciesViewInput
 
 - (void)setupInitialState {

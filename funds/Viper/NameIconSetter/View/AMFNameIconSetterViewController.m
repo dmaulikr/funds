@@ -16,9 +16,11 @@ static NSString *const kIconCellIndentifier = @"iconCell";
     NSArray *_icons;
     NSString *_icon_selected;
     NSIndexPath *_selectedPath;
+    BOOL _hideIcons;
 }
 @property (weak, nonatomic) IBOutlet UITextField *categoryName;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *iconLabel;
 @end
 
 @implementation AMFNameIconSetterViewController
@@ -46,6 +48,11 @@ static NSString *const kIconCellIndentifier = @"iconCell";
                                                                 action:@selector(done)];
         self.navigationItem.rightBarButtonItem = done;
     }
+
+    if (_hideIcons) {
+        self.tableView.hidden = YES;
+        self.iconLabel.hidden = YES;
+    }
 }
 
 - (void)refreshContents {
@@ -56,6 +63,10 @@ static NSString *const kIconCellIndentifier = @"iconCell";
         NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
         [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     }
+}
+
+- (void)hideIconTable {
+    _hideIcons = YES;
 }
 
 #pragma mark - Themes

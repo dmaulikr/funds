@@ -32,4 +32,9 @@
  */
 - (void)refreshContents;
 
+/**
+ * hides icon's chooser
+ */
+- (void)hideIconTable;
+
 @end
