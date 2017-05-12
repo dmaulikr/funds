@@ -30,6 +30,7 @@ NSString *const kLastCurrency = @"lastUsedCurrency";
 
 // all asset icons used as logos for categories
 NSString *const kPossibleIcons[] = {
+    @"3d-glasses",
     @"aircraft",
     @"airport",
     @"aquarium",
@@ -54,6 +55,7 @@ NSString *const kPossibleIcons[] = {
     @"dog-paw",
     @"dog",
     @"done",
+    @"dollars-on-hand",
     @"dress-fine",
     @"dress-simple",
     @"drugs-snake",
@@ -83,7 +85,9 @@ NSString *const kPossibleIcons[] = {
     @"settings",
     @"Smartphone-box",
     @"Smartphone-round",
+    @"stamp",
     @"t-shirt",
+    @"theatre",
     @"travel1",
     @"travel2",
     @"travel3",
