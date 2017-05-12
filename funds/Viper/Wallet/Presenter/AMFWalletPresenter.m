@@ -43,6 +43,12 @@
 - (void)editWalletWithIndex:(NSUInteger)index {
 }
 
+- (void)deleteWalletWithIndex:(NSUInteger)index {
+    id <AMFWalletProtocol> wallet = self.view.records[index];
+    [self.interactor deleteWallet:wallet];
+    [self.interactor receiveAllWallets];
+}
+
 - (void)addWallet {
     _wallet = nil;
     [self.router showNameIconSetterWithName:@""

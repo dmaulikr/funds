@@ -95,15 +95,13 @@ static NSString *const walletCellIndentifier = @"walletCell";
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return NO;
+    return YES;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.output cellToDelete:indexPath.row];
+        [self.output deleteWalletWithIndex:indexPath.row];
     }
-     */
 }
 
 #pragma mark - UITableViewDelegate

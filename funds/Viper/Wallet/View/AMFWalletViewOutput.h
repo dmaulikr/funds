@@ -26,6 +26,11 @@
 - (void)editWalletWithIndex:(NSUInteger)index;
 
 /**
+ * delete wallet please
+ */
+- (void)deleteWalletWithIndex:(NSUInteger)index;
+
+/**
  * add a wallet please
  */
 - (void)addWallet;

@@ -29,4 +29,8 @@
     [self.storage createWalletWithName:name andIcon:icon];
 }
 
+- (void)deleteWallet:(id<AMFWalletProtocol>)wallet {
+    [self.storage removeWallet:wallet];
+}
+
 @end

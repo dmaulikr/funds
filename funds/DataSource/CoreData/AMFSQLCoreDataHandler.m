@@ -192,6 +192,45 @@
     return [AMFWallet findOrCreateWithWallet:w];
 }
 
+- (NSArray *)grabAllRecordsForWallet:(id<AMFWalletProtocol>)wallet {
+    NSPredicate *predicate;
+    if (![wallet isKindOfClass:[AMFWallet class]]) {
+        predicate = [NSPredicate predicateWithFormat:@"wallet.name == %@",
+                     wallet.name];
+    }
+    else {
+        AMFWallet *w = (AMFWallet*)wallet;
+        predicate = [NSPredicate predicateWithFormat:@"wallet.wallet_id == %ld",
+                     (long)w.wallet_id];
+    }
+    return [AMFCashFlow MR_findAllSortedBy:@"cash_id" ascending:NO withPredicate:predicate];
+}
+
+- (void)removeWallet:(id<AMFWalletProtocol>)wallet {
+    AMFWallet *w = [AMFWallet findOrCreateWithWallet:wallet];
+    NSUInteger w_id = w.wallet_id > 0 ? w.wallet_id - 1 : 0;
+    AMFWallet *w4attach = nil;
+    NSManagedObjectContext *con = [NSManagedObjectContext MR_defaultContext];
+    while (w_id > 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(wallet_id == %ld)", (long)w_id];
+        if ((w4attach = [AMFWallet MR_findFirstWithPredicate:predicate inContext:con])) {
+            break;
+        }
+        w_id--;
+    }
+    if (!w4attach) {
+        AMFWalletPlain *pw = [[AMFWalletPlain alloc] init];
+        pw.name = @"?";
+        w4attach = [AMFWallet findOrCreateWithWallet:pw];
+    }
+    NSArray *cash = [self grabAllRecordsForWallet:w];
+    NSSet *cashSet = [NSSet setWithArray:cash];
+    [w removeCash:cashSet];
+    [w4attach addCash:cashSet];
+    w4attach.amount += w.amount;
+    [w MR_deleteEntity];
+}
+
 - (id<AMFCategoryProtocol>)grabCategoryWithName:(NSString *)name {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@",
                               name];
