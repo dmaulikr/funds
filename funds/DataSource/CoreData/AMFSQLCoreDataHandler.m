@@ -11,6 +11,7 @@
 #import "AMFCashFlow+CoreDataClass.h"
 #import "AMFCashFlow+CoreDataProperties.h"
 #import "AMFCurrency+CoreDataProperties.h"
+#import "AMFPage+CoreDataProperties.h"
 #import "NSManagedObject+generateID.h"
 #import "AMFCategoryProtocol.h"
 #import "AMFCategoryPlain.h"
@@ -155,8 +156,16 @@
 }
 
 - (NSArray *)grabRecordsForPage:(id<AMFPageProtocol>)page {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"page.name == %@",
+    NSPredicate *predicate;
+    if (![page isKindOfClass:[AMFPage class]]) {
+        predicate = [NSPredicate predicateWithFormat:@"page.name == %@",
                               page.name];
+    }
+    else {
+        AMFPage *p = (AMFPage*)page;
+        predicate = [NSPredicate predicateWithFormat:@"page.page_id == %ld",
+                              (long)p.page_id];
+    }
     return [AMFCashFlow MR_findAllSortedBy:@"cash_id" ascending:NO withPredicate:predicate];
 }
 
