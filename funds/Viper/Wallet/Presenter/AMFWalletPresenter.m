@@ -36,7 +36,7 @@
 - (void)cellSelected:(NSUInteger)index {
     _wallet = self.view.records[index];
     [self.router showNameIconSetterWithName:_wallet.name
-                                    andIcon:_wallet.icon_path
+                                    andIcon:_wallet.icon_path ? _wallet.icon_path : @""
                                   andOutput:self];
 }
 
