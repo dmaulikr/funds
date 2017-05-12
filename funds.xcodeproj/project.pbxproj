@@ -75,6 +75,8 @@
 		4C95E5DB1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5DA1EBCABB400EBE5C9 /* AMFNameIconSetterPresenter.m */; };
 		4C95E5E01EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5DD1EBCABC300EBE5C9 /* AMFNameIconSetterInteractor.m */; };
 		4C95E5E41EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E5E21EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m */; };
+		4C95E6151EC59EE400EBE5C9 /* AMFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E6141EC59EE400EBE5C9 /* AMFSettingsViewController.m */; };
+		4C95E6181EC59F2E00EBE5C9 /* AMFSettingsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95E6171EC59F2E00EBE5C9 /* AMFSettingsAssembly.m */; };
 		4C95F8491E82B48C00D3491A /* AMFAddPageAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */; };
 		4C95F8501E82B4B400D3491A /* AMFAddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F84D1E82B4B400D3491A /* AMFAddPageViewController.m */; };
 		4C95F8541E82B4BF00D3491A /* AMFAddPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95F8531E82B4BF00D3491A /* AMFAddPagePresenter.m */; };
@@ -333,6 +335,10 @@
 		4C95E5E11EBCABD000EBE5C9 /* AMFNameIconSetterRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterRouter.h; path = funds/Viper/NameIconSetter/Router/AMFNameIconSetterRouter.h; sourceTree = SOURCE_ROOT; };
 		4C95E5E21EBCABD000EBE5C9 /* AMFNameIconSetterRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFNameIconSetterRouter.m; path = funds/Viper/NameIconSetter/Router/AMFNameIconSetterRouter.m; sourceTree = SOURCE_ROOT; };
 		4C95E5E31EBCABD000EBE5C9 /* AMFNameIconSetterRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFNameIconSetterRouterInput.h; path = funds/Viper/NameIconSetter/Router/AMFNameIconSetterRouterInput.h; sourceTree = SOURCE_ROOT; };
+		4C95E6131EC59EE400EBE5C9 /* AMFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSettingsViewController.h; path = mvc/Settings/AMFSettingsViewController.h; sourceTree = "<group>"; };
+		4C95E6141EC59EE400EBE5C9 /* AMFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSettingsViewController.m; path = mvc/Settings/AMFSettingsViewController.m; sourceTree = "<group>"; };
+		4C95E6161EC59F2E00EBE5C9 /* AMFSettingsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFSettingsAssembly.h; path = mvc/Settings/AMFSettingsAssembly.h; sourceTree = "<group>"; };
+		4C95E6171EC59F2E00EBE5C9 /* AMFSettingsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFSettingsAssembly.m; path = mvc/Settings/AMFSettingsAssembly.m; sourceTree = "<group>"; };
 		4C95F8471E82B48C00D3491A /* AMFAddPageAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageAssembly.h; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.h; sourceTree = SOURCE_ROOT; };
 		4C95F8481E82B48C00D3491A /* AMFAddPageAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFAddPageAssembly.m; path = funds/Viper/AddPage/Assembly/AMFAddPageAssembly.m; sourceTree = SOURCE_ROOT; };
 		4C95F84C1E82B4B400D3491A /* AMFAddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFAddPageViewController.h; path = funds/Viper/AddPage/View/AMFAddPageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -854,6 +860,14 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		4C3972341EC4E7A4007B4474 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E6121EC59E8B00EBE5C9 /* Settings */,
+			);
+			name = MVC;
+			sourceTree = "<group>";
+		};
 		4C53EC071E6DC7B400725AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -882,6 +896,7 @@
 				4C95F8631E82BF8800D3491A /* Alerts */,
 				4C53EC631E703C8800725AF8 /* DataSource */,
 				4C53EC551E70349E00725AF8 /* Viper */,
+				4C3972341EC4E7A4007B4474 /* MVC */,
 				4C53EC481E700EFB00725AF8 /* Themes */,
 				4C53EC3D1E6EF60200725AF8 /* LaunchSystem */,
 				4C53EC1C1E6DC7B400725AF8 /* Main.storyboard */,
@@ -1094,6 +1109,17 @@
 				4C95E59C1EBB56D600EBE5C9 /* AMFPageChooserCell.m */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		4C95E6121EC59E8B00EBE5C9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4C95E6161EC59F2E00EBE5C9 /* AMFSettingsAssembly.h */,
+				4C95E6171EC59F2E00EBE5C9 /* AMFSettingsAssembly.m */,
+				4C95E6131EC59EE400EBE5C9 /* AMFSettingsViewController.h */,
+				4C95E6141EC59EE400EBE5C9 /* AMFSettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		4C95F8631E82BF8800D3491A /* Alerts */ = {
@@ -2224,9 +2250,11 @@
 				4C53ECA71E70903700725AF8 /* AMFBalanceViewController.m in Sources */,
 				4CE158F21E727F8F0009BAF4 /* AMFFlowModuleAssembly.m in Sources */,
 				4C53EC211E6DC7B400725AF8 /* funds.xcdatamodeld in Sources */,
+				4C95E6151EC59EE400EBE5C9 /* AMFSettingsViewController.m in Sources */,
 				4C53EC8D1E708BFB00725AF8 /* AMFWalletAssembly.m in Sources */,
 				4C95E5B01EBC569F00EBE5C9 /* AMFChooseWalletInteractor.m in Sources */,
 				4CE158E91E71C53B0009BAF4 /* AMFWalletPlain.m in Sources */,
+				4C95E6181EC59F2E00EBE5C9 /* AMFSettingsAssembly.m in Sources */,
 				4CFD9C9C1EB0E19B00825F6E /* AMFChooseCategoryViewController.m in Sources */,
 				4CE158CC1E716BC90009BAF4 /* AMFPage+CoreDataProperties.m in Sources */,
 				4C95E5A21EBC568100EBE5C9 /* AMFChooseWalletAssembly.m in Sources */,
